@@ -1,0 +1,239 @@
+% Miguel A. Carreira-Perpinan's LaTeX macros.
+% Time-stamp: <07/02/08 02:40:12 miguel>
+
+% Definitions that require only standard LaTeX2e things
+
+% Letters used for matrices and vectors (boldface), for functions (roman), etc.
+\newcommand{\A}{\ensuremath{\mathbf{A}}}
+\newcommand{\B}{\ensuremath{\mathbf{B}}}
+\newcommand{\C}{\ensuremath{\mathbf{C}}}
+%\newcommand{\D}{\ensuremath{\mathbf{D}}}
+%\newcommand{\E}{\ensuremath{\mathbf{E}}}
+\newcommand{\F}{\ensuremath{\mathbf{F}}}
+\newcommand{\G}{\ensuremath{\mathbf{G}}}
+\newcommand{\HH}{\ensuremath{\mathbf{H}}}
+\newcommand{\I}{\ensuremath{\mathbf{I}}}
+\newcommand{\J}{\ensuremath{\mathbf{J}}}
+\newcommand{\K}{\ensuremath{\mathbf{K}}}
+\newcommand{\LL}{\ensuremath{\mathbf{L}}}
+\newcommand{\M}{\ensuremath{\mathbf{M}}}
+\newcommand{\N}{\ensuremath{\mathbf{N}}}
+\newcommand{\OO}{\ensuremath{\mathbf{O}}}
+\newcommand{\PP}{\ensuremath{\mathbf{P}}}
+\newcommand{\Q}{\ensuremath{\mathbf{Q}}}
+%\newcommand{\R}{\ensuremath{\mathbf{R}}} % PROSPER defines \R
+\newcommand{\RR}{\ensuremath{\mathbf{R}}}
+\renewcommand{\SS}{\ensuremath{\mathbf{S}}}
+%\newcommand{\T}{\ensuremath{\mathbf{T}}}
+\newcommand{\U}{\ensuremath{\mathbf{U}}}
+\newcommand{\V}{\ensuremath{\mathbf{V}}}
+\newcommand{\W}{\ensuremath{\mathbf{W}}}
+\newcommand{\X}{\ensuremath{\mathbf{X}}}
+\newcommand{\Y}{\ensuremath{\mathbf{Y}}}
+%\newcommand{\Z}{\ensuremath{\mathbf{Z}}}
+\renewcommand{\aa}{\ensuremath{\mathbf{a}}}
+\renewcommand{\b}{\ensuremath{\mathbf{b}}}
+\renewcommand{\c}{\ensuremath{\mathbf{c}}}
+\newcommand{\dd}{\ensuremath{\mathbf{d}}}
+\newcommand{\e}{\ensuremath{\mathbf{e}}}
+\newcommand{\f}{\ensuremath{\mathbf{f}}}
+\newcommand{\g}{\ensuremath{\mathbf{g}}}
+\newcommand{\h}{\ensuremath{\mathbf{h}}}
+%\newcommand{\bk}{\ensuremath{\mathbf{k}}}
+%newcommand{\bl}{\ensuremath{\mathbf{l}}}
+\newcommand{\m}{\ensuremath{\mathbf{m}}}
+\newcommand{\n}{\ensuremath{\mathbf{n}}}
+%\newcommand{\p}{\ensuremath{\mathbf{p}}}
+\newcommand{\q}{\ensuremath{\mathbf{q}}}
+\newcommand{\rr}{\ensuremath{\mathbf{r}}}
+\newcommand{\sss}{\ensuremath{\mathbf{s}}}  % TIPA defines \s and LaTeX \ss!
+\renewcommand{\t}{\ensuremath{\mathbf{t}}}
+\newcommand{\uu}{\ensuremath{\mathbf{u}}}
+\newcommand{\vv}{\ensuremath{\mathbf{v}}}
+%\renewcommand{\v}{\ensuremath{\mathbf{v}}}
+%\newcommand{\w}{\ensuremath{\mathbf{w}}}
+\newcommand{\x}{\ensuremath{\mathbf{x}}}
+\newcommand{\y}{\ensuremath{\mathbf{y}}}
+\newcommand{\z}{\ensuremath{\mathbf{z}}}
+\newcommand{\0}{\ensuremath{\mathbf{0}}}
+
+\newcommand{\bdelta}{\ensuremath{\boldsymbol{\delta}}}
+\newcommand{\binfty}{\ensuremath{\boldsymbol{\infty}}}
+\newcommand{\bkappa}{\ensuremath{\boldsymbol{\kappa}}}
+\newcommand{\blambda}{\ensuremath{\boldsymbol{\lambda}}}
+
+\newcommand{\bDelta}{\ensuremath{\boldsymbol{\Delta}}}
+\newcommand{\bLambda}{\ensuremath{\boldsymbol{\Lambda}}}
+\newcommand{\bPhi}{\ensuremath{\boldsymbol{\Phi}}}
+\newcommand{\bPi}{\ensuremath{\boldsymbol{\Pi}}}
+\newcommand{\bPsi}{\ensuremath{\boldsymbol{\Psi}}}
+\newcommand{\bSigma}{\ensuremath{\boldsymbol{\Sigma}}}
+\newcommand{\bTheta}{\ensuremath{\boldsymbol{\Theta}}}
+\newcommand{\bXi}{\ensuremath{\boldsymbol{\Xi}}}
+\newcommand{\bUpsilon}{\ensuremath{\boldsymbol{\Upsilon}}}
+
+% Blackboard bold
+\newcommand{\bbC}{\ensuremath{\mathbb{C}}}
+\newcommand{\bbH}{\ensuremath{\mathbb{H}}}
+\newcommand{\bbN}{\ensuremath{\mathbb{N}}}
+\newcommand{\bbR}{\ensuremath{\mathbb{R}}}
+\newcommand{\bbS}{\ensuremath{\mathbb{S}}}
+\newcommand{\bbZ}{\ensuremath{\mathbb{Z}}}
+
+% Calligraphic
+\newcommand{\calA}{\ensuremath{\mathcal{A}}}
+\newcommand{\calB}{\ensuremath{\mathcal{B}}}
+\newcommand{\calC}{\ensuremath{\mathcal{C}}}
+\newcommand{\calD}{\ensuremath{\mathcal{D}}}
+\newcommand{\calE}{\ensuremath{\mathcal{E}}}
+\newcommand{\calF}{\ensuremath{\mathcal{F}}}
+\newcommand{\calG}{\ensuremath{\mathcal{G}}}
+\newcommand{\calH}{\ensuremath{\mathcal{H}}}
+\newcommand{\calI}{\ensuremath{\mathcal{I}}}
+\newcommand{\calJ}{\ensuremath{\mathcal{J}}}
+\newcommand{\calL}{\ensuremath{\mathcal{L}}}
+\newcommand{\calM}{\ensuremath{\mathcal{M}}}
+\newcommand{\calN}{\ensuremath{\mathcal{N}}}
+\newcommand{\calO}{\ensuremath{\mathcal{O}}}
+\newcommand{\calP}{\ensuremath{\mathcal{P}}}
+\newcommand{\calR}{\ensuremath{\mathcal{R}}}
+\newcommand{\calS}{\ensuremath{\mathcal{S}}}
+\newcommand{\calT}{\ensuremath{\mathcal{T}}}
+\newcommand{\calU}{\ensuremath{\mathcal{U}}}
+\newcommand{\calV}{\ensuremath{\mathcal{V}}}
+\newcommand{\calW}{\ensuremath{\mathcal{W}}}
+\newcommand{\calX}{\ensuremath{\mathcal{X}}}
+\newcommand{\calY}{\ensuremath{\mathcal{Y}}}
+
+% Relational operators
+% \bydef puts ``def'' over the equals sign and means ``is by definition
+% equal to''. Another possibility is to use the \triangleq symbol.
+\newcommand{\bydef}{\stackrel{\mathrm{\scriptscriptstyle def}}{=}}
+% \simbydef puts ``def'' over the ~ sign and means ``is by definition
+% distributed as''.
+\newcommand{\simbydef}{\stackrel{\mathrm{\scriptscriptstyle def}}{\sim}}
+\newcommand{\proptobydef}{\stackrel{\mathrm{\scriptscriptstyle def}}{\propto}}
+
+% Other functions
+\newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+% Left superscript
+% (from http://www.maths.univ-rennes1.fr/~edix/sgahtml/typesetting_rules.html)
+\newcommand{\leftexp}[2]{{\vphantom{#2}}^{#1}{#2}}
+
+% Box of text (for pictures, tables, etc.), without frames. Arguments:
+%   #1: separation between rows of text as a multiple of LaTeX's default
+%       (optional, default 1).
+%   #2: position (one of t, b, c).
+%   #3: format (one of l, r, c or even p{2cm}).
+%   #4: text, which can include line breaks (\\).
+\newcommand{\caja}[4][1]{{%
+    \renewcommand{\arraystretch}{#1}%
+    \begin{tabular}[#2]{@{}#3@{}}%
+      #4%
+    \end{tabular}%
+    }}
+
+% The amsart class has its own \keywords command, in which case we
+% don't replace it.
+\providecommand{\keywords}[1]{\vspace*{0.5\baselineskip}\par\noindent\textbf{Keywords:} #1}
+
+% The logos (AmSLaTeX, BibTeX, etc.) are defined in texnames.sty.
+
+% List environments
+%
+% "simplelist": useful for compact lists. Use it instead of "itemize".
+% Optional argument: the bullet (default \triangleright). Other nice
+% bullets are available in the Zapf Dingbats font (e.g. \ding{166} in
+% the pifont package).
+%
+\newenvironment{simplelist}[1][$\triangleright$]%
+{%
+\begin{list}{#1}{
+\vspace{-\topsep}
+\vspace{-\partopsep}
+\setlength{\itemindent}{0cm}
+\setlength{\rightmargin}{0cm}
+\setlength{\listparindent}{0cm}
+\settowidth{\labelwidth}{#1}
+\setlength{\leftmargin}{\labelwidth}
+\addtolength{\leftmargin}{\labelsep}
+\setlength{\itemsep}{0cm}
+%\setlength{\leftmargin}{0cm}
+%\setlength{\labelwidth}{0cm}
+}%
+}%
+{%
+\end{list}
+\vspace{-\topsep}
+\vspace{-\partopsep}
+}
+
+%
+% enumthm: an enumerated list intended to appear in theorems and not
+% to be nested. Each item is numbered in Roman numerals in parentheses.
+% A suitable way to refer to an item is:
+% Theorem~\ref{thm:pithagoras}(\ref{en:triangle}) states...
+\newenvironment{enumthm}%
+{\begin{enumerate}%
+\renewcommand{\theenumi}{\roman{enumi}}%
+\renewcommand{\labelenumi}{(\theenumi)}}%
+{\end{enumerate}}
+
+% Commands for the hyperref package (they also require the url package).
+% In all cases the typesetting style is tt by default but can be changed
+% with the \urlstyle command, e.g. \urlstyle{tt}.
+%
+% \MACPhref[text]{link} typesets text (default = link) in tt and
+% hyperlinks to link, e.g. \MACPhref{http://www.dcs.shef.ac.uk/~miguel}.
+\newcommand{\MACPhref}[2][\DefaultOpt]{\def\DefaultOpt{#2}%
+  \href{#2}{\url{#1}}}
+%
+% \MACPmailto[text]{email} typesets text (default = email) in tt and
+% hyperlinks to email as mailto:email, e.g. \MACPmailto{miguel@dcs.shef.ac.uk}.
+\newcommand{\MACPmailto}[2][\DefaultOpt]{\def\DefaultOpt{#2}%
+  \href{mailto:#2}{\url{#1}}}
+
+% Hyphenation
+\hyphenation{elec-tro-pa-la-tog-ra-phy}
+
+% From the amsbook.cls file version 2.04
+\hyphenation{acad-e-my acad-e-mies af-ter-thought anom-aly anom-alies
+an-ti-deriv-a-tive an-tin-o-my an-tin-o-mies apoth-e-o-ses
+apoth-e-o-sis ap-pen-dix ar-che-typ-al as-sign-a-ble as-sist-ant-ship
+as-ymp-tot-ic asyn-chro-nous at-trib-uted at-trib-ut-able bank-rupt
+bank-rupt-cy bi-dif-fer-en-tial blue-print busier busiest
+cat-a-stroph-ic cat-a-stroph-i-cally con-gress cross-hatched data-base
+de-fin-i-tive de-riv-a-tive dis-trib-ute dri-ver dri-vers eco-nom-ics
+econ-o-mist elit-ist equi-vari-ant ex-quis-ite ex-tra-or-di-nary
+flow-chart for-mi-da-ble forth-right friv-o-lous ge-o-des-ic
+ge-o-det-ic geo-met-ric griev-ance griev-ous griev-ous-ly
+hexa-dec-i-mal ho-lo-no-my ho-mo-thetic ideals idio-syn-crasy
+in-fin-ite-ly in-fin-i-tes-i-mal ir-rev-o-ca-ble key-stroke
+lam-en-ta-ble light-weight mal-a-prop-ism man-u-script mar-gin-al
+meta-bol-ic me-tab-o-lism meta-lan-guage me-trop-o-lis
+met-ro-pol-i-tan mi-nut-est mol-e-cule mono-chrome mono-pole
+mo-nop-oly mono-spline mo-not-o-nous mul-ti-fac-eted mul-ti-plic-able
+non-euclid-ean non-iso-mor-phic non-smooth par-a-digm par-a-bol-ic
+pa-rab-o-loid pa-ram-e-trize para-mount pen-ta-gon phe-nom-e-non
+post-script pre-am-ble pro-ce-dur-al pro-hib-i-tive pro-hib-i-tive-ly
+pseu-do-dif-fer-en-tial pseu-do-fi-nite pseu-do-nym qua-drat-ic
+quad-ra-ture qua-si-smooth qua-si-sta-tion-ary qua-si-tri-an-gu-lar
+quin-tes-sence quin-tes-sen-tial re-arrange-ment rec-tan-gle
+ret-ri-bu-tion retro-fit retro-fit-ted right-eous right-eous-ness
+ro-bot ro-bot-ics sched-ul-ing se-mes-ter semi-def-i-nite
+semi-ho-mo-thet-ic set-up se-vere-ly side-step sov-er-eign spe-cious
+spher-oid spher-oid-al star-tling star-tling-ly sta-tis-tics
+sto-chas-tic straight-est strange-ness strat-a-gem strong-hold
+sum-ma-ble symp-to-matic syn-chro-nous topo-graph-i-cal tra-vers-a-ble
+tra-ver-sal tra-ver-sals treach-ery turn-around un-at-tached
+un-err-ing-ly white-space wide-spread wing-spread wretch-ed
+wretch-ed-ly Eng-lish Euler-ian Feb-ru-ary Gauss-ian
+Hamil-ton-ian Her-mit-ian Jan-u-ary Japan-ese Kor-te-weg
+Le-gendre Mar-kov-ian Noe-ther-ian No-vem-ber Rie-mann-ian Sep-tem-ber}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 

@@ -1,0 +1,185 @@
+\documentclass[12pt]{report}
+\usepackage{suthesis}
+
+%\documentstyle[12pt,suthesis]{report}
+
+
+
+% -- Imports --
+% (general libraries)
+\usepackage{times,latexsym,amsfonts,amssymb,amsmath,graphicx,url,bbm,rotating}
+\usepackage{enumitem,multirow,hhline,stmaryrd,bussproofs,mathtools,siunitx,arydshln}
+\usepackage{booktabs,xcolor,csquotes,calligra}
+\usepackage{dsfont,xspace}
+
+% (custom libraries)
+\usepackage{fitch}
+\usepackage{amsmath}
+
+% (inline references)
+\usepackage{natbib}
+% (tikz)
+\usepackage{tikz}
+\usepackage{tikz-dependency,pifont}
+\usetikzlibrary{shapes.arrows,chains,positioning,automata,trees,calc}
+\usetikzlibrary{patterns,matrix}
+\usetikzlibrary{decorations.pathmorphing,decorations.markings}
+% (print algorithms)
+%\usepackage[ruled,lined,linesnumbered]{algorithm2e}
+% (custom)
+\input std-macros.tex
+\input macros.tex	
+% (paper compilation hacks)
+\def\newcite#1{\citet{#1}}
+\def\cite#1{\citep{#1}}
+%\def\newcite#1{\textcite{#1}}
+%\def\cite#1{\autocite{#1}}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.4}
+
+% Common hyphenations
+\hyphenation{Text-Runner}
+\hyphenation{Verb-Ocean}
+
+\newenvironment{tightitemize}%
+  {\begin{itemize}[topsep=0pt, partopsep=0pt] %
+    \setlength{\parskip}{0pt}%
+    }%
+  {\end{itemize}}
+
+%\bibliographystyle{plainnat}
+
+\usepackage{epigraph}
+\renewcommand{\epigraphsize}{\normalsize}
+\setlength{\epigraphwidth}{0.8\textwidth}
+
+\newcommand{\bleu}{{{\sc Bleu}}\xspace}
+\newcommand{\meteor}{{{\sc Meteor}}\xspace}
+\newcommand{\camready}[1]{{{#1}}}
+\newcommand{\eos}{{$\langle \mathrm{eos}\rangle$}\xspace}
+\newcommand{\bos}{{$\langle \mathrm{bos}\rangle$}\xspace}
+\newcommand{\sts}{{{\textsc{Seq2Seq}}}\xspace}
+\newcommand{\dbleu}{{$\Delta${\sc Bleu}}\xspace}
+\newcommand{\fix}{\marginpar{FIX}}
+\newcommand{\new}{\marginpar{NEW}}
+\newcommand{\MINUS}{}
+\DeclareMathOperator{\softmax}{\text{softmax}}
+\DeclareMathOperator{\argsort}{\text{argsort}}
+\usepackage{tabularx}
+\usepackage{tabulary}
+\usepackage{comment}
+
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
+
+
+
+% special packages
+\usepackage{algorithm}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{subfigure}
+\usepackage{amssymb}
+\usepackage[noend]{algpseudocode}
+\usepackage{wrapfig,lipsum,booktabs}
+\usepackage{booktabs, caption}
+\usepackage{tabularx}
+\usepackage{listliketab}
+\usepackage{lipsum} 
+\usepackage{float}
+\usepackage{bm}
+\usepackage{relsize}
+\usepackage{footnote}
+\usepackage{bbding}
+
+\usepackage{kotex}
+
+\usepackage{textcomp}
+\usepackage{url}
+\usepackage{hyperref}
+\urlstyle{same}
+\newcommand{\alert}[1]{\textcolor{red}{#1}}
+\newcommand{\sidebysidecaption}[4]{%
+%\RaggedRight%
+  \begin{minipage}[t]{#1}
+    \vspace*{0pt}
+    #3
+  \end{minipage}
+  \hfill%
+  \begin{minipage}[t]{#2}
+    \vspace*{0pt}
+    #4
+\end{minipage}%
+}
+%\aclfina
+
+
+% other definition used in copynet
+\input{MACPdef}
+
+% -- Document --
+\begin{document}
+
+% Title
+\title{Efficient Neural Machine Translation}
+\author{Jiatao Gu}
+\principaladviser{Victor O.K. Li}
+\firstreader{Kyunghyun Cho}
+\secondreader{Yizhou Yu}
+\thirdreader{Y. C. Wu}
+
+% Preface
+\beforepreface
+\input preface.tex
+\input ack.tex
+\afterpreface
+
+\chapter{Introduction}
+\label{intro}
+\input{chapters/intro}
+
+\chapter[Background]{Background: Neural Machine Translation}
+\label{background}
+\input{chapters/background}
+
+% -- Sections --
+% Introduction
+% Bibliography
+\part{Data-Efficient Neural Machine Translation}
+\chapter[Copying Mechanism]{Incorporating Copying Mechanism in Sequence-to-Sequence Learning}
+\label{copy}
+\input{chapters/copynet}
+
+\chapter[Non-Parametric Neural Machine Translation]{Search-Engine Guided Non-Parametric Neural Machine Translation}
+\label{seg-nmt}
+\input{chapters/seg}
+
+\chapter[Universal Neural Machine Translation]{Universal Neural Machine Translation for Extremely Low Resource Languages}
+\label{ulr}
+\input{chapters/ulr}
+
+\chapter[Meta Learning for Neural Machine Translation]{Meta Learning for Low Resource Neural Machine Translation}
+\label{MetaNMT}
+\input{chapters/meta}
+
+\part{Decoding-Efficient Neural Machine Translation}
+\chapter[Trainable Greedy Decoding]{Trainable Decoding for Neural Machine Translation}
+\label{trainable}
+\input{chapters/trainable}
+
+
+\chapter{Non-Autoregressive Neural Machine Translation}
+\label{nat}
+\input{chapters/nat}
+
+\chapter{Real-Time Neural Machine Translation}
+\label{simul}
+\input{chapters/simultrans}
+
+\chapter{Conclusion and Future Work}
+\label{conclusion}
+% \input{chapters/conclusion}
+
+
+\bibliographystyle{acl}
+\bibliography{ref}
+
+\end{document}

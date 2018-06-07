@@ -1,0 +1,58 @@
+\prefacesection{Abstract}
+The dream of automatic translation that builds the communication bridge between people from different civilizations dates back to thousands of years ago. 
+For the past decades, researchers devoted to proposing practical plans, from rule-based machine translation to statistical machine translation. 
+Till recent years, with the general success of artificial intelligence (AI) and the emergence of neural network models, a.k.a. Deep learning, neural machine translation (NMT), 
+as the new generation of machine translation framework based on sequence-to-sequence learning has achieved the state-of-the-art and even human-level translation performance on a variety of languages.
+
+The impressive achievements brought by NMT mainly owes to its deep neural network structures with massive amounts of parameters, 
+which can be efficiently tuned from vast volume of parallel data in the order of tens or hundreds of millions of sentences. 
+Unfortunately, in spite of the success neural systems also bring about new challenges to machine translation, in which one of the central problems is efficiency. 
+The efficiency issue involves two aspects: 
+(1) NMT is data-hungry because of its vast size of parameters, which makes training a reasonable model difficult in practice for low resource cases. 
+For instance, most of the human languages do not have enough parallel data with other languages to learn an NMT model; 
+Moreover, documents in specialized domains such as law or medical files usually contain tons of professional translations, leading to less efficient for NMT to learn from;
+(2) NMT is slow for computation compared to conventional methods due to its deep structure and limitations of the decoding algorithms. 
+Especially the low efficiency at inference time profoundly affects the real-life application and the smoothness of the communication. 
+In some cases like video conference, we also hope the neural system to translate at real-time which, however, is difficult for the existing NMT models. 
+
+This dissertation attempts to tackle these two challenges, respectively.
+Contributions are twofold: 
+(1) we address the data-efficiency challenges presented by existing NMT models and introduce insights based on the characteristics of the data, which includes 
+(a) developing the copy-mechanism to target on rote memories in translation and general sequence-to-sequence learning; 
+(b) using a non-parametric search-engine to guide the NMT system to perform well in special domains; 
+(c) inventing a universal NMT system to extremely low resource languages; 
+(d) extending the universal NMT system to be able to efficiently adapt to new languages by combing with meta-learning.
+(2) for the decoding-efficiency challenges, we develop novel structures and learning algorithms 
+(a) recasting the decoding of NMT in a trainable manner to achieve state-of-the-art performance with less time; 
+(b) inventing the non-autoregressive NMT system which enables translation in entirely parallel; 
+(c) developing the NMT model that learns to translate in real-time using reinforcement learning.
+
+(449 words)
+
+
+%This dissertation describes a new technique for learning open-domain knowledge from unstructured web-scale text corpora,
+%  making use of a probabilistic relaxation of natural logic -- 
+%  a logic which uses the syntax of natural language as its logical formalism.
+%We begin by reviewing the theory behind natural logic, and propose a novel extension of the logic to handle
+%  propositional formulae.
+%
+%We then show how to capture common sense facts: given a candidate statement about the world and a large corpus of 
+%  known facts, is the statement likely to be true? 
+%This is treated as a search problem 
+%  from the query statement to its appropriate support in the knowledge base over valid (or approximately valid) 
+%  natural logical inference steps.
+%This approach achieves a 4x improvement at retrieval recall compared to lemmatized lookup, 
+%  maintaining above 90\% precision.
+%
+%We then extend the approach to handle longer, more complex premises by segmenting these utterance into a set of 
+%  atomic statements entailed through natural logic.
+%We evaluate this system in isolation by using it as the main component in an Open Information Extraction system, 
+%  and show that it achieves a 3\% absolute improvement in F1 compared to prior work on a competitive knowledge 
+%  base population task.
+%
+%Finally, we address how to elegantly handle situations where we could not find a supporting premise for our query.
+%To address this, we create an analogue of an evaluation function in gameplaying search: a shallow lexical 
+%  classifier is folded into the search program to serve as a heuristic function to assess how likely we would 
+%  have been to find a premise.
+%Results on answering 4th grade science questions show that this method improves over both the classifier in isolation, 
+%  a strong IR baseline, and prior work.
