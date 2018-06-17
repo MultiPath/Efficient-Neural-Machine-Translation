@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2014)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: thesis.aux
+The style file: acl.bst
+Database file #1: ref.bib
+Warning--I didn't find a database entry for "alexis2018word"
+Warning--empty booktitle in dong2015multi
+Warning--empty journal in viegas2016google
+Warning--empty booktitle in Zhang2005AnEP
+You've used 143 entries,
+            2781 wiz_defined-function locations,
+            1215 strings with 31769 characters,
+and the built_in function-call counts, 95976 in all, are:
+= -- 7216
+> -- 6172
+< -- 60
++ -- 2058
+- -- 1873
+* -- 7360
+:= -- 15210
+add.period$ -- 601
+call.type$ -- 143
+change.case$ -- 1428
+chr.to.int$ -- 129
+cite$ -- 146
+duplicate$ -- 7149
+empty$ -- 5920
+format.name$ -- 2326
+if$ -- 18764
+int.to.chr$ -- 15
+int.to.str$ -- 0
+missing$ -- 1414
+newline$ -- 717
+num.names$ -- 574
+pop$ -- 3232
+preamble$ -- 1
+purify$ -- 1192
+quote$ -- 0
+skip$ -- 2428
+stack$ -- 0
+substring$ -- 2916
+swap$ -- 3290
+text.length$ -- 32
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 1287
+warning$ -- 3
+while$ -- 540
+width$ -- 0
+write$ -- 1780
+(There were 4 warnings)

@@ -1,0 +1,24 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces The test accuracy (\%) on synthetic data.\relax }}{21}{table.caption.19}
+\contentsline {table}{\numberline {3.2}{\ignorespaces Some statistics of the LCSTS dataset.\relax }}{22}{table.caption.22}
+\contentsline {table}{\numberline {3.3}{\ignorespaces Testing performance of LCSTS, where ``RNN" is canonical Enc-Dec, and ``RNN context" its attentive variant.\relax }}{23}{table.caption.23}
+\contentsline {table}{\numberline {3.4}{\ignorespaces The decoding accuracy on the two testing sets. Decoding is admitted success only when the answer is found exactly in the Top-K outputs. \relax }}{26}{table.caption.27}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Statistics from the JRC-Acquis corpus. We use BPE subword symbols.\relax }}{41}{table.caption.38}
+\contentsline {table}{\numberline {4.2}{\ignorespaces The BLEU scores on JRC-Acquis corpus.\relax }}{42}{table.caption.41}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Statistics of the available parallel resource in our experiments. All the languages are translated to English.\relax }}{57}{table.caption.61}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Scores over variant source languages (6k sentences for Ro \& Lv, and 10k for Ko). ``Multi" means the Multi-lingual NMT baseline.\relax }}{59}{table.caption.67}
+\contentsline {table}{\numberline {5.3}{\ignorespaces BLEU scores evaluated on test set (6k), compared with ULR and MoLE. ``vanilla" is the standard NMT system trained only on Ro-En training set\relax }}{60}{table.caption.69}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {6.1}{\ignorespaces Statistics of full datasets of the target language pairs. BLEU scores on the dev and test sets are reported from a supervised Transformer model with the same architecture.\relax }}{75}{table.caption.89}
+\contentsline {table}{\numberline {6.2}{\ignorespaces BLEU Scores w.r.t. the source task set for all five target tasks.\relax }}{76}{table.caption.95}
+\contentsline {table}{\numberline {6.3}{\ignorespaces Sample translations for Tr-En and Ko-En highlight the impact of fine-tuning which results in syntactically better formed translations. We highlight tokens of interest in terms of reordering. \relax }}{78}{table.caption.102}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {8.1}{\ignorespaces BLEU scores on official test sets (\texttt {newstest2014} for WMT En-De and \texttt {newstest2016} for WMT En-Ro) or the development set for IWSLT. NAT models without NPD use argmax decoding. Latency is computed as the time to decode a single sentence without minibatching, averaged over the whole test set; decoding is implemented in PyTorch on a single NVIDIA Tesla P100.\relax }}{117}{table.caption.150}
+\contentsline {table}{\numberline {8.2}{\ignorespaces Ablation performance on the IWSLT development set. BLEU (T) refers to the BLEU score on a version of the development set that has been translated by the teacher model. An $\times $ indicates that fine-tuning caused that model to get worse. When uniform copying is used as the decoder inputs, the ground-truth target lengths are provided. All models use argmax decoding.\relax }}{118}{table.caption.151}
+\addvspace {10\p@ }
+\addvspace {10\p@ }

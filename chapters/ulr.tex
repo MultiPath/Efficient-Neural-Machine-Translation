@@ -1,5 +1,5 @@
-\section{Introduction}
-Neural Machine Translation (NMT)~\cite{bahdanau2014neural} has achieved remarkable  translation quality in various  on-line large-scale systems~\cite{wu2016google,devlin:2017:EMNLP2017} as well as achieving  state-of-the-art results on Chinese-English  translation ~\cite{hassan-hp}. With such large systems, NMT showed that it can scale up to immense  amounts of parallel data in the order of tens of millions of sentences. However, such data is not widely available for all language pairs and  domains. In this paper, we propose a novel universal multi-lingual NMT approach   focusing mainly on low resource languages to overcome the  limitations of NMT and leverage the capabilities of multi-lingual NMT  in such scenarios.
+\section{Overview}
+Neural Machine Translation (NMT)~\cite{bahdanau2014neural} has achieved remarkable  translation quality in various  on-line large-scale systems~\cite{wu2016google,devlin:2017:EMNLP2017} as well as achieving  state-of-the-art results on Chinese-English  translation~\cite{hassan-hp}. With such large systems, NMT showed that it can scale up to immense  amounts of parallel data in the order of tens of millions of sentences. However, such data is not widely available for all language pairs and  domains. In this chapter, we propose a novel universal multi-lingual NMT approach  focusing mainly on low resource languages to overcome the  limitations of NMT and leverage the capabilities of multi-lingual NMT  in such scenarios.
 
 Our approach utilizes multi-lingual neural translation system to share lexical and sentence level representations across multiple source languages into one target language. In this setup, some of the source languages may be of extremely limited  or even zero data.  The lexical sharing is represented by a  universal word-level representation where various words from all source languages  share the same underlaying representation. The sharing module utilizes monolingual embeddings along with seed parallel data from all languages to build the universal representation. The sentence-level sharing is represented by a model of language experts which  enables low-resource  languages to  utilize the sentence representation of the higher resource languages.  This allows the system to translate from any language even with tiny amount of parallel resources.  %The sentence-level sharing is represented by a model of experts from all source languages that shares the source encoders with all  other languages, this enables the low-resource  language to  utilize the sentence representation of the higher resource languages. 
 
@@ -7,50 +7,66 @@ We evaluate the proposed approach on 3 different  languages with tiny or even ze
 We show that for the simulated ``zero-resource" settings, our model can consistently outperform a strong multi-lingual NMT baseline with a tiny amount of parallel sentence pairs.
 
 
-\section{Motivation}
+\section{Motivation: Low-Resource NMT}
 %\subsection {Multi-Lingual NMT}
-Neural Machine Translation
-(NMT)~\cite{bahdanau2014neural,sutskever2014sequence}  is based on Sequence-to-Sequence encoder-decoder model along with an attention mechanism to enable better  handling of  longer sentences \cite{bahdanau2014neural}. Attentional sequence-to-sequence models are modeling the log conditional probability of the translation $Y$ given an input sequence $X$.  
-In general, the NMT system $\theta$ consists of two components: an encoder $\theta_e$ which transforms the input sequence into an array of continuous representations,
-and a decoder $\theta_d$ that dynamically reads the encoder's output with an attention mechanism and predicts the distribution of each target word. 
-Generally, $\theta$ is trained to maximize the likelihood on a training set consisting of $N$ parallel sentences: 
-\begin{equation}
-	\begin{split}
-	&\mathcal{L}\left(\theta\right)=\frac{1}{N}\sum_{n=1}^N\log p\left(Y^{(n)}|X^{(n)}; \theta\right) \\
-    &=\frac{1}{N}\sum_{n=1}^N\sum_{t=1}^T\log p\left(y_t^{(n)}|y_{1:t-1}^{(n)}, f^{\text{att}}_t(h^{(n)}_{1:T_s})\right)
-	\end{split}
-	 \label{eq.loss} 
-\end{equation}
-where at each step, $f^{\text{att}}_t$ builds the attention mechanism over the encoder's output $h_{1: T_s}$.
-More precisely, let the vocabulary size of source words as $V$
-\begin{equation}
-%h_{1: T_s} = f^{\text{ext}}\left[E^I(x_1),..., E^I(x_{T_s}) \right]
-h_{1: T_s} = f^{\text{ext}}\left[e_{x_1},..., e_{x_{T_s}} \right], \ \ \ e_x = E^I(x)
-\label{eq.encoder}
-\end{equation}
-where $E^I \in \mathbb{R}^{V \times d}$ is a look-up table of source embeddings, assigning each individual word a unique embedding vector; $f^{\text{ext}}$ is a sentence-level feature extractor and is usually implemented by a multi-layer bidirectional RNN~\cite{bahdanau2014neural,wu2016google}, recent efforts also achieved the state-of-the-art using non-recurrence $f^{\text{ext}}$, e.g. ConvS2S~\cite{gehring2017convolutional}  and Transformer~\cite{vaswani2017attention}.
+%Neural Machine Translation
+%(NMT)~\cite{bahdanau2014neural,sutskever2014sequence}  is based on Sequence-to-Sequence encoder-decoder model along with an attention mechanism to enable better  handling of  longer sentences \cite{bahdanau2014neural}. Attentional sequence-to-sequence models are modeling the log conditional probability of the translation $Y$ given an input sequence $X$.  
+%In general, the NMT system $\theta$ consists of two components: an encoder $\theta_e$ which transforms the input sequence into an array of continuous representations,
+%and a decoder $\theta_d$ that dynamically reads the encoder's output with an attention mechanism and predicts the distribution of each target word. 
+%Generally, $\theta$ is trained to maximize the likelihood on a training set consisting of $N$ parallel sentences: 
+%\begin{equation}
+%	\begin{split}
+%	&\mathcal{L}\left(\theta\right)=\frac{1}{N}\sum_{n=1}^N\log p\left(Y^{(n)}|X^{(n)}; \theta\right) \\
+%    &=\frac{1}{N}\sum_{n=1}^N\sum_{t=1}^T\log p\left(y_t^{(n)}|y_{1:t-1}^{(n)}, f^{\text{att}}_t(h^{(n)}_{1:T_s})\right)
+%	\end{split}
+%	 \label{eq.loss} 
+%\end{equation}
+%where at each step, $f^{\text{att}}_t$ builds the attention mechanism over the encoder's output $h_{1: T_s}$.
+%More precisely, let the vocabulary size of source words as $V$
+%\begin{equation}
+%%h_{1: T_s} = f^{\text{ext}}\left[E^I(x_1),..., E^I(x_{T_s}) \right]
+%h_{1: T_s} = f^{\text{ext}}\left[e_{x_1},..., e_{x_{T_s}} \right], \ \ \ e_x = E^I(x)
+%\label{eq.encoder}
+%\end{equation}
+%where $E^I \in \mathbb{R}^{V \times d}$ is a look-up table of source embeddings, assigning each individual word a unique embedding vector; $f^{\text{ext}}$ is a sentence-level feature extractor and is usually implemented by a multi-layer bidirectional RNN~\cite{bahdanau2014neural,wu2016google}, recent efforts also achieved the state-of-the-art using non-recurrence $f^{\text{ext}}$, e.g. ConvS2S~\cite{gehring2017convolutional}  and Transformer~\cite{vaswani2017attention}.
 % \begin{table}\small
 %     \begin{tabular}{l|lllll}
 %     \# of Sentences & 0k & \textbf{6k}  & \textbf{13k}   & 60k    & 600k   \\\hline
 %     BLEU scores     & 0 & \textbf{1.21} & \textbf{2.45}  & 12.49 & 28.34 \\
 %     \end{tabular}
-%     \caption{\label{fig.data_size} BLEU scores reported on the test set for Ro-En. The amount of training data effects the translation performance dramatically using a single NMT model.}\vspace{-10pt}
+%     \caption{\label{cp5.fig.data_size} BLEU scores reported on the test set for Ro-En. The amount of training data effects the translation performance dramatically using a single NMT model.}\vspace{-10pt}
 % \end{table}
-\begin{figure}[t]
-	\includegraphics[width=\linewidth]{figs/ulr/data_matters.pdf}
-\caption{\label{fig.data_size} BLEU scores reported on the test set for Ro-En. The amount of training data effects the translation performance dramatically using a single NMT model.}\vspace{-10pt}	
+
+
+%\paragraph{Low-Resource NMT} 
+Neural machine translation (NMT) $\theta$  should be trained to converge using parallel training examples (details introduced in Chapter~\ref{background}). However, the performance is highly correlated to the amount of training data.  As shown in Figure.~\ref{cp5.fig.data_size}, the system cannot achieve reasonable translation quality when the number of the parallel examples is extremely small ($N \approx 13k$ sentences,  or not available at all $N =0$).  Inferior performance was also reported in the challenges noted by \newcite{koehn2017six}.
+
+\begin{figure}[hptb]
+	\centering
+	\includegraphics[width=0.85\linewidth]{figs/ulr/data_matters.pdf}
+\caption{\label{cp5.fig.data_size} BLEU scores reported on the test set for Ro-En. The amount of training data effects the translation performance dramatically using a single NMT model.}
  \end{figure}
 
-\paragraph{Extremely Low-Resource NMT} Both $\theta_e$ and $\theta_d$ should be trained to converge using parallel training examples. However, the performance is highly correlated to the amount of training data.  As shown in Figure.~\ref{fig.data_size}, the system cannot achieve reasonable translation quality when the number of the parallel examples is extremely small ($N \approx 13k$ sentences,  or not available at all $N =0$).
+% NMT is known to easily over-fit and result in an
+In general, there are two ways for handling the problem of low resource translation: (1) utilizing the resource of unlabeled monolingual data, and (2) sharing the knowledge between low- and high-resource language pairs. Many research efforts have been spent on incorporating the monolingual corpora into machine translation, such as multi-task learning~\citep{Gulcehre-Orhan-et-al-2015,zhang2016exploiting}, back-translation~\citep{sennrich2015improving}, dual learning~\citep{he2016dual} and unsupervised machine translation with monolingual corpora only~\citep{artetxe2017unsupervised,lample2017unsupervised,yang2018unsupervised}. 
+%By doing so, it is usually assumed the translation pairs share similar semantic information for alignment discovered from monolingual data. 
 
-
-\paragraph{Multi-lingual NMT}\newcite{lee2016fully} and \newcite{johnson2016google} have shown that NMT is quite efficient for  multilingual machine translation. Assuming the translation from $K$ source languages into one target language, a  system is trained with maximum likelihood on the mixed parallel pairs $\{X^{(n, k)}, Y^{(n, k)}\}_{k=1 ... K}^{n=1 ... N_k}$, that is
+\subsection{Multi-lingual NMT}
+Prior researches have worked on methods to exploit the knowledge of auxiliary translations, or even auxiliary tasks. For instance, \citet{cheng2016neural,chen2017teacher,lee2017emergent,chen2018zero} investigate the use of a pivot to build a translation path between two languages even without any directed resource. The pivot can be a third language or even an image in multimodal domains. When pivots are not easy to obtain, \citet{firat2016multi,lee2016fully,johnson2016google} have shown that the structure of NMT is suitable for multilingual translation. %\citet{gu2018universal} also showed that such a multilingual NMT system could improve the performance of low resource translation by using a universal lexical representation to share embedding information across languages. 
+% KC: contradictory with the last sentence of this paragraph.
+% It showed improvement for extremely low resource languages, e.g., with only several thousand sentences. 
+%All the previous work for multilingual NMT assume the joint training of multiple high-resource languages naturally results in a universal space (for both the input representation and the model) which, however, is not necessarily true, especially for very low resource cases. 
+%\newcite{lee2016fully} and \newcite{johnson2016google} have shown that NMT is quite efficient for  multilingual machine translation. 
+Assuming the translation from $K$ source languages into one target language, a  system is trained with maximum likelihood on the mixed parallel pairs $\{X^{n, k}, Y^{n, k}\}_{k=1 ... K}^{n=1 ... N_k}$, that is
 \begin{equation}
-	\mathcal{L}\left(\theta\right)=\frac{1}{N}\sum_{k=1}^{K}\sum_{n=1}^{N_k}\log p\left(Y^{(n, k)}|X^{(n, k)}; \theta\right)
+   %\mathcal{L}^{\text{ML}}(\theta)  = \frac{1}{N} \sum_{n=1}^N \sum_{t=1}^{T_n+1} \log p(y_t^n| y_{0:t-1}^n, x_{1:T'}^n; \theta),
+	\mathcal{L}^{\text{Multi-ML}}\left(\theta\right)=\frac{1}{N}\sum_{k=1}^{K}\sum_{n=1}^{N_k} \sum_{t=1}^{T_{n, k}+1} \log p(y_t^{n,k}| y_{0:t-1}^{n,k}, x_{1:T'_{n,k}}^{n,k}; \theta),
+	%^{N_k}\log p\left(Y^{(n, k)}|X^{(n, k)}; \theta\right)
 \end{equation}
-where $N=\sum_{k=1}^K N_k$. As the input layer, the system assumes a multilingual vocabulary which is usually the union of all  source language vocabularies with a total size as $V=\sum_{k=1}^K V_k$. In practice, it is essential to shuffle the multilingual sentence pairs into mini-batches so that different languages can be trained equally.
+where $N=\sum_{k=1}^K N_k$. As the input layer, the system assumes a vocabulary which is usually the union of all  source language vocabularies with a total size as $V=\sum_{k=1}^K V_k$. In practice, it is essential to shuffle the multilingual sentence pairs into mini-batches so that different languages can be trained equally.
 %% DO THEY REALLY MENTIONED ALLPOINTS BELOW??
-Multi-lingual NMT is quite appealing for low-resource languages; several papers highlighted  the characteristic that make it a good fit for that  such as  \newcite{lee2016fully}, \newcite{johnson2016google}, \newcite{zoph2016transfer} and \newcite{firat2016multi}. Multi-lingual NMT utilizes the training examples of multiple languages to regularize the models  avoiding over-fitting to the limited data of the smaller languages. Moreover, the model transfers the translation knowledge from high-resource languages to low-resource ones. Finlay, the decoder part of the model is sufficiently trained  since it shares  multilingual examples from all languages.
+
+Multi-lingual NMT is quite appealing for low-resource languages; several papers highlighted  the characteristic that make it a good fit for that  such as  \newcite{lee2016fully}, \newcite{johnson2016google}, \newcite{zoph2016transfer} and \newcite{firat2016multi}. Multi-lingual NMT utilizes the training examples of multiple languages to regularize the models  avoiding over-fitting to the limited data of the smaller languages. Moreover, the model transfers the translation knowledge from high-resource languages to low-resource ones. Finally, the decoder part of the model is sufficiently trained  since it shares  multilingual examples from all languages.
 % \begin{itemize}
 % \vspace{-4pt}
 % \item the multilingual examples regularize the models to avoid over-fitting to the limited data;\vspace{-4pt}
@@ -65,19 +81,18 @@ Multi-lingual NMT is quite appealing for low-resource languages; several papers 
 % 	\includegraphics[width=0.9\linewidth]{figs/ulr/cat.jpg}\vspace{-15pt}
 %     \caption{\label{fig.cat}word ``cat'' in different languages}\vspace{-8pt}
 % \end{figure}
-Despite the success of training multi-lingual NMT systems; there are a couple of challenges to leverage them for zero-resource languages:
+Despite the success of training multi-lingual NMT systems; there are a couple of challenges to leverage them for extremely low resource languages:
 
 \paragraph{Lexical-level Sharing} Conventionally, a multi-lingual NMT model has a vocabulary that represents the union of the vocabularies of all source languages. Therefore, the multi-lingual words do not practically share the same embedding space since each word has its own representation. This does not pose a problem for languages  with sufficiently large amount of  data, yet it is a major limitation for extremely low resource languages since most of the vocabulary items will not have enough, if any, training examples to get a reliably trained models.
 
-A possible solution is to share the surface form of  all source languages through sharing sub-units such as subwords ~\cite{sennrich2015neural} or characters~\cite{kim2016character,luong2016achieving,lee2016fully}.  %However,  low-resource languages, that is not lexically quite similar to other languages, will not share surface forms with such languages. It is more crucial in such cases to have a more shared semantic representation across all languages that would enable learning translation for never seen surface forms of a given language given its semantic similarity to other  words in various languages. 
-However, for an arbitrary low-resource language we cannot assume significant overlap in the lexical surface forms compared to the high-resource languages. The low-resource language may not even share the same character set as any high-resource language. It is crucial to create a shared semantic representation across all languages that does not rely on surface form overlap.
+ \begin{figure}[hptb]
+ 	\centering
+ 	\includegraphics[width=0.85\linewidth]{figs/ulr/cat.jpg}
+     \caption{\label{cp5.fig.cat}word ``cat'' in different languages}
+ \end{figure}
 
-\begin{figure*}[t]
-	\centering
-	\includegraphics[width=0.98\linewidth]{figs/ulr/model2x}\vspace{-15pt}
-      \caption{\label{fig.model} An illustration of the proposed architecture of the ULR and MoLE. Shaded parts are trained within NMT model while unshaded parts are not changed during  training.}\vspace{-8pt}
-\end{figure*}
-
+A possible solution is to share the surface form of  all source languages through sharing sub-units such as subwords ~\cite{sennrich2015neural} or characters~\cite{kim2016character,luong2016achieving,lee2016fully}.  %However,  low-resource languages, that is not lexically quite similar to other languages, will not share surface forms with such languages . It is more crucial in such cases to have a more shared semantic representation across all languages that would enable learning translation for never seen surface forms of a given language given its semantic similarity to other  words in various languages. 
+However, for an arbitrary low-resource language we cannot assume significant overlap in the lexical surface forms compared to the high-resource languages. The low-resource language may not even share the same character set as any high-resource language, e.g. as shown in Figure~\ref{cp5.fig.cat}. It is crucial to create a shared semantic representation across all languages that does not rely on surface form overlap.
 
 
 
@@ -95,10 +110,15 @@ However, for an arbitrary low-resource language we cannot assume significant ove
 \section{Universal Neural Machine Translation}
 We propose a Universal NMT system that is focused on the scenario where minimal parallel sentences are available. 
 %We propose a novel approach that enable translation using very a very small amount of parallel data, including ``Zero-Resource'' translation.
-As shown in Fig.~\ref{fig.model}, we introduce two components to extend the conventional multi-lingual NMT system \cite{johnson2016google}: Universal Lexical Representation (ULR) and Mixture of Language Experts (MoLE) to enable both word-level and sentence-level sharing, respectively.
+As shown in Fig.~\ref{cp5.fig.model}, we introduce two components to extend the conventional multi-lingual NMT system \cite{johnson2016google}: Universal Lexical Representation (ULR) and Mixture of Language Experts (MoLE) to enable both word-level and sentence-level sharing, respectively.
+\begin{figure}[hptb]
+	\centering
+	\includegraphics[width=\linewidth]{figs/ulr/model2x}
+      \caption{\label{cp5.fig.model} An illustration of the proposed architecture of the ULR and MoLE. Shaded parts are trained within NMT model while unshaded parts are not changed during  training.}
+  \end{figure}
 
 \subsection{Universal Lexical Representation (ULR)}
-\label{sec.unilex}
+\label{cp5.sec.unilex}
 
 As we highlighted above, it is not straightforward to have a universal representation  for all languages. One potential approach is to use a shared source vocabulary, but this is not adequate since it assumes significant  surface-form overlap in order being able to generalize between high-resource and low-resource languages. Alternatively, we could train monolingual embeddings in a shared space and use these as the input to our MT system. However, since these embeddings are trained on a monolingual objective, they will not be optimal for an NMT objective. If we simply allow them to change during NMT training, then this will not generalize to the low-resource language where many of the words are unseen in the parallel data.
 Therefore, our goal is to create a shared embedding space which (a) is trained towards NMT rather than a monolingual objective, (b) is not based on lexical surface forms, and (c) will generalize from the high-resource languages to the low-resource language. 
@@ -106,130 +126,146 @@ Therefore, our goal is to create a shared embedding space which (a) is trained t
 We propose a novel representation for multi-lingual embedding where each word from any language is represented as a probabilistic mixture of universal-space word embeddings. In this way, semantically similar words from different languages will naturally have similar representations. Our  method achieves this  utilizing a discrete (but probabilistic) ``universal token space'', and then learning the embedding matrix for these universal tokens directly in our NMT training.
 
 \paragraph{Lexicon Mapping to the Universal Token Space}
-We first define a discrete universal token set of size $M$ into which all source languages will be projected. In principle, this could correspond to any human or symbolic language, but all experiments here use English as the basis for the universal token space. As shown in Figure \ref{fig.model}, we have multiple embedding representations. $E^Q$ is language-specific embedding trained on  monolingual data and $E^K$ is universal tokens embedding. The matrices $E^K$ and $E^Q$ are created beforehand and are not trainable during NMT training.  $E^U$ is the embedding matrix for these universal tokens which is learned during  our NMT training.  It is worth noting that shaded parts in Figure\ref{fig.model} are trainable during  NMT training process.
-Therefore, each source word  $e_x$ is represented as a mixture of universal tokens $M$ of $E^U$.
+We first define a discrete universal token set of size $M$ into which all source languages will be projected. In principle, this could correspond to any human or symbolic language, but all experiments here use English as the basis for the universal token space. As shown in Figure \ref{cp5.fig.model}, we have multiple embedding representations. $\epsilon_Q$ is language-specific embedding trained on  monolingual data and $\epsilon_K$ is universal tokens embedding. The matrices $\epsilon_K$ and $\epsilon_Q$ are created beforehand and are not trainable during NMT training.  $\epsilon_U$ is the embedding matrix for these universal tokens which is learned during  our NMT training.  It is worth noting that shaded parts in Figure\ref{cp5.fig.model} are trainable during  NMT training process.
 
+Therefore, each source word  $x$ is represented as a mixture of universal tokens $M$ of $\epsilon_U$.
 \begin{equation}
-	e_x = \sum_{i=1}^M E^U\left(u_i\right) \cdot q(u_i|x)
-    \label{eq.universal_embed}
+	\epsilon[x] = \sum_{i=1}^M \epsilon_U\left[u_i\right] \cdot q(u_i|x)
+    \label{cp5.eq.universal_embed}
 \end{equation}
-where $E^U$ is an NMT embedding matrix, which is learned during NMT training.
-
-
-
-The mapping $q$ projects the multilingual words into the universal space based on their semantic similarity. That is, $q(u|x)$ is a distribution based on the distance $D_s(u, x)$ between $u$ and $x$ as:
+where $\epsilon_U$ is an NMT embedding matrix, which is learned during NMT training.
+The mapping $q$ projects the multilingual words into the universal space based on their semantic similarity. That is, $q(u|x)$ is a distribution based on the similarity between $u$ and $x$ as:
 \begin{equation}
- q(u_i|x) = \frac{e^{D(u_i, x) / \tau}}{\sum_{u_j} e^{D(u_j, x) / \tau}}
- \label{eq.q_softmax}
+ q(u_i|x) = \ssoftmax_{u_i}\left(\epsilon_K[u]^\top \cdot A \cdot \epsilon_Q[x] / \tau \right) % \frac{e^{D(u_i, x) / \tau}}{\sum_{u_j} e^{D(u_j, x) / \tau}}
+ \label{cp5.eq.q_softmax}
 \end{equation}
-where $\tau$ is a temperature and $D(u_i, x)$ is a scalar score which represents the similarity between source word $x$ and universal token $u_i$:
-\begin{equation}
-\label{eq.ds}
-	D(u, x) =  E^K(u)\cdot A\cdot E^Q(x)^T
-\end{equation}
-where $E^K(u)$ is the ``key'' embedding of word $u$, $E^Q(x)$ is the ``query'' embedding of source word $x$.  The transformation matrix $A$, which is initialized to the identity matrix, is learned during NMT training and shared across all languages. 
+where $\tau$ is a temperature hyper-parameter; %and $D(u_i, x)$ is a scalar score which represents the similarity between source word $x$ and universal token $u_i$:
+%\begin{equation}
+%\label{eq.ds}
+%	D(u, x) =  E^K(u)\cdot A\cdot E^Q(x)^T
+%\end{equation}
+$\epsilon_K[u]$ is the ``key'' embedding of word $u$, $\epsilon_Q[x]$ is the ``query'' embedding of source word $x$.  The transformation matrix $A$, which is initialized to the identity matrix, is learned during NMT training and shared across all languages. 
 
 %This representation can effectively represent  unlimited multi-lingual vocabulary that can represent any word that has never been observed in the parallel training data. 
 This is a key-value representation, where the queries  are the monolingual language-specific embedding, the keys are the universal tokens embeddings and the values are a probabilistic distribution over the universal NMT embeddings. 
 This can  represent  unlimited  multi-lingual vocabulary  that has  never been observed in the parallel training data.   
-It is worth noting  that the trainable transformation matrix $A$ is added  to the query matching mechanism  with the main purpose to tune the similarity scores towards the translation task. 
-$A$ is shared across all languages and optimized discriminatively during NMT training such that the system can fine-tune the similarity score $q()$ to be optimal for NMT.
+It is worth noting  that the trainable transformation matrix $A$ is added  to the query matching mechanism  with the main purpose to tune the similarity scores towards the translation task. For example, words like “autumn”, “fall”, “toamna” (autumn in Romanian)  and  “spring” would be quite similar from the monolingual embedding view while  “spring” should be less similar for the translation  task. 
+$A$ is shared across all languages and optimized discriminatively during NMT training such that the system can fine-tune the similarity score $q(\cdot)$ to be optimal for NMT.
 
 %For example, words like “autumn”, “fall”, “toamna” (means autumn in Romanian)  and  “spring” would be quite similar from the monolingual embedding view while  “spring” should be less similar for the translation  task. 
 
 % JIATAO, review above: where $E^K(u)$ is the ``key'' embedding of word $u$, $E^V(x)$ is the ``value'' embedding of source word $x$. The transformation matrix $A$, which is initialized to the identity matrix, is learned during NMT training and shared across all languages. The matrices $E^K$ and $E^Q$ are created beforehand and do not change during NMT training. We next describe how these matrices are created.
 
 \paragraph{Shared Monolingual Embeddings}
-In general, we create one $E^Q$ matrix per source language, as well as a single $E^K$ matrix in our universal token language. For Equation~\ref{eq.ds} to make sense and generalize across language pairs, all of these embedding matrices must live in a similar semantic space. To do this, we first train off-the-shelf monolingual word embeddings in each language, and then learn one projection matrix per source language which maps the original monolingual embeddings into $E^K$ space.
-Typically, we need a list of \textit{source word - universal token} pairs (seeds $S_k$) to train the projection matrix for language $k$. Since vectors are normalized, learning the optimal projection is equivalent to finding an orthogonal transformation $O_k$ that makes the projected word vectors as close as to its corresponded universal tokens:
+In general, we create one $\epsilon_Q$ matrix per source language, as well as a single $\epsilon_K$ matrix in our universal token language. For Eq.~\eqref{cp5.eq.universal_embed} to make sense and generalize across language pairs, all of these embedding matrices must live in a similar semantic space. To do this, we first train off-the-shelf monolingual word embeddings in each language, and then learn one projection matrix per source language which maps the original monolingual embeddings into $\epsilon_K$ space.
+Typically, we need a list of \textit{source - universal token} pairs (seeds $S_k$) to train the projection matrix for language $k$. Since vectors are normalized, learning the optimal projection is equivalent to finding an orthogonal transformation $O_k$ that makes the projected word vectors as close as to its corresponded universal tokens:
 \begin{equation}
   \begin{array}{l}  
-         \max\limits_{O_k}\mathlarger{\sum}\limits_{(\tilde{x}, \tilde{y})\in S_k}  \left(E^{Q_k}(\tilde{x})\cdot O_k\right)\cdot E^K(\tilde{y})^T \\  
-         \text{s.t.       } O_k^TO_k = I, \ \ \ k=1, ..., K
+         \max\limits_{O_k}\mathlarger{\sum}\limits_{(\tilde{x}, \tilde{y})\in S_k}  \epsilon_{Q_k}[\tilde{x}]^\top \cdot O_k \cdot \epsilon_K[\tilde{y}] \\  
+         \text{s.t.       } O_k^\top O_k = I, \ \ \ k=1, ..., K
  \end{array}  
 \end{equation}
-which can be solved by SVD decomposition based on the seeds~\cite{smith2017offline}. In this paper, we chose to use a short list of seeds from automatic word-alignment of parallel sentences  to learn the projection. However, recent efforts~\cite{Artetxe2017LearningBW,Conneau2017WordTW}   also showed that it is possible to learn the transformation without any seeds, which makes it feasible  for our  proposed method to be utilized in purely zero parallel resource cases.
-
+which can be solved by SVD decomposition based on the seeds~\cite{smith2017offline}. We chose to use a short list of seeds from automatic word-alignment of parallel sentences  to learn the projection. However, recent efforts~\cite{Artetxe2017LearningBW,Conneau2017WordTW}   also showed that it is possible to learn the transformation without any seeds, which makes it feasible  for our  proposed method to be utilized in purely zero parallel resource cases.
 It is worth noting that  $O_k$ is a language-specific matrix which maps the monolingual embeddings of each source language into a similar semantic space as the universal token language.
+
+\begin{figure}[hptb]
+	\centering
+	\includegraphics[width=\linewidth]{figs/ulr/preprojection}
+      \caption{\label{cp5.fig.preproj} An illustration of projecting multiple monolingual embeddings (Es, Fr, It, Pt, Ro) to the same universal (En) space.}
+  \end{figure}
+
 %$A$ is shared across all languages and optimized discriminatively during NMT training. Empirically we have found that removing $A$ hurts performance by up to 3 BLEU points, as the system cannot fine-tune the similarity score $q()$ to be optimal for NMT.
 
 \paragraph{Interpolated Embeddings}
-Certain lexical categories (e.g. function words) are poorly captured by Equation~\ref{eq.universal_embed}. Luckily, function words often have very high frequency, and can be estimated robustly from even a tiny amount of data. This motivates an interpolated $e_x$ where embeddings for very frequent words are optimized directly and  not through the universal tokens:
+Certain lexical categories (e.g. function words) are poorly captured by Eq.~\eqref{cp5.eq.universal_embed}. Luckily, function words often have very high frequency, and can be estimated robustly from even a tiny amount of data. This motivates an interpolated $\epsilon[x]$ where embeddings for very frequent words are optimized directly and  not through the universal tokens:
 \begin{equation}
-	\alpha(x) E^I(x) + \beta(x) \sum_{i=1}^M E^U\left(u_i\right) \cdot q(u_i|x)
+	\epsilon[x] = \alpha(x) \cdot \epsilon_E[x] + \beta(x) \cdot \sum_{i=1}^M \epsilon_U[u_i] \cdot q(u_i|x)
 \end{equation}
-Where $E^I(x)$ is a language-specific embedding of word $x$ which is optimized during NMT training. In general, we set $\alpha(x)$ to 1.0 for the top $k$ most frequent words in each language, and 0.0 otherwise, where $k$ is set to 500 in this work. It is worth noting that we do not use an absolute frequency cutoff because this would cause a mismatch between high-resource and low-resource languages, which we want to avoid. We keep $\beta(x)$ fixed to 1.0.
+Where $\epsilon_E[x]$ is a language-specific embedding of word $x$ (as discussed in Chapter ~\ref{background}), which is optimized during NMT training. In general, we set $\alpha(x)$ to 1.0 for the top 500 most frequent words in each language, and 0.0 otherwise. Besides, we do not use an absolute frequency cutoff because this would cause a mismatch between high-resource and low-resource languages, which we want to avoid. We keep $\beta(x)$ fixed to 1.0.
 
 \paragraph{An Example} To give a concrete example, imagine that our target language is English (En), our high-resource auxiliary source languages are Spanish (Es) and French (Fr), and our low-resource source language is Romanian (Ro). En is also used for the universal token set. We assume to have 10M+ parallel Es-En and Fr-En, and a few thousand in Ro-En. We also have millions of monolingual sentences in each language.
 
-We first train word2vec embeddings on monolingual corpora from each of the four languages. We next align the Es-En, Fr-En, and Ro-En parallel corpora and extract a seed dictionary of a few hundred words per language, e.g., ${\tt gato} \rightarrow {\tt cat}$,  ${\tt chien} \rightarrow {\tt dog}$. We then learn three matrices $O_1, O_2, O_3$ to project the Es, Fr and Ro embeddings ($E^{Q_1}, E^{Q_2}, E^{Q_3}$), into En ($E^K$) based on these seed dictionaries. At this point, Equation~\ref{eq.q_softmax} should produce \textit{reasonable} alignments between the source languages and En, e.g., $q(\tt{horse}|\tt{magar}) = 0.5$, $q(\tt{donkey}|\tt{magar}) = 0.3$, $q(\tt{cow}|\tt{magar}) = 0.2$, where {\tt magar} is the Ro word for {\tt donkey}. %Therefore, any word can be represented as  a probabilistic mixture of universal tokens.
+We first train word2vec embeddings on monolingual corpora from each of the four languages. We next align the Es-En, Fr-En, and Ro-En parallel corpora and extract a seed dictionary of a few hundred words per language, e.g., ${\tt gato} \rightarrow {\tt cat}$,  ${\tt chien} \rightarrow {\tt dog}$. We then learn three matrices $O_1, O_2, O_3$ to project the Es, Fr and Ro embeddings ($\epsilon_{Q_1}, \epsilon_{Q_2}, \epsilon_{Q_3}$), into En ($\epsilon_K$) based on these seed dictionaries. At this point, Eq.~\eqref{cp5.eq.q_softmax} should produce \textit{reasonable} alignments between the source languages and En, e.g., $q(\tt{horse}|\tt{magar}) = 0.5$, $q(\tt{donkey}|\tt{magar}) = 0.3$, $q(\tt{cow}|\tt{magar}) = 0.2$, where {\tt magar} is the Ro word for {\tt donkey}. %Therefore, any word can be represented as  a probabilistic mixture of universal tokens.
 
 \subsection{Mixture of Language Experts (MoLE)}
-\label{sec.moe}
+\label{cp5.sec.moe}
 As we paved the road for having a universal embedding representation; it is crucial to have a  language-sensitive module for the encoder that would help in modeling various  language structures which may  vary between different languages. 
-We propose a Mixture of Language Experts (MoLE) to model the sentence-level universal encoder. As shown in Fig.~\ref{fig.model}, 
-an additional module of mixture of experts is used after the last layer of the encoder. Similar to \cite{shazeer2017outrageously}, we have a set of expert networks and a gating network  to control the weight of each expert. More precisely, we have a set of expert networks as $f_1(h), ..., f_{K}(h)$ where for each expert, a two-layer feed-forward network which reads the output hidden states $h$ of the encoder is utilized. The output of the MoLE module $h'$ will be a weighted sum of these experts to replace the encoder's representation:
+We propose a Mixture of Language Experts (MoLE) to model the sentence-level universal encoder. As shown in Fig.~\ref{cp5.fig.model}, 
+an additional module of mixture of experts is used after the last layer of the encoder. Similar to \cite{shazeer2017outrageously}, we have a set of expert networks and a gating network  to control the weight of each expert. More precisely, we have a set of expert networks as $f_1(h), ..., f_{K}(h)$ where for each expert, a two-layer feed-forward network which reads the output encoder hidden states $h$ for each word. The output of the MoLE module $h'$ will be a weighted sum of these experts to replace the encoder's representation:
 \begin{equation}
-h'=\sum_{k=1}^K f_k(h)\cdot \text{softmax}(g(h))_k,
+s'=\sum_{k=1}^K f_k(h)\cdot \ssoftmax_{k}(g(h)_k),
 \end{equation}
-where an one-layer feed-forward network $g(h)$ is used as a gate to compute scores for all the experts.
+where an one-layer feed-forward network $g(h)_k$ is used as a gate to compute score for the  $k$-th expert.
 
-In our case, we create one expert per auxiliary language. In other words, we train to only use expert $f_i$ when training on a parallel sentence from auxiliary language $i$. Assume the language $1 ... K-1$ are the auxiliary languages. That is, we have a multi-task objective as:
+In our case, we create one expert per auxiliary language. In other words, we train to only use expert $f_i$ when training on a parallel sentence from auxiliary language $i$. Assume the language $1 ... K-1$ are the auxiliary languages. That is, we have a multi-task objective:
 \begin{equation}
 \begin{split}
-\mathcal{L}^{\text{gate}} = \sum_{k=1}^{K-1}\sum_{n=1}^{N_k}\log \left[\text{softmax}\left(g(h)\right)_{k}\right]
+\mathcal{L}^{\text{gate}} = \frac{1}{N'}\sum_{k=1}^{K-1}\sum_{n=1}^{N_k}\sum_{\tau=1}^{T'_{n, k}}\log \left[\ssoftmax_{k}\left(g(h^{n, k}_\tau)_k\right)\right],
 \end{split}
 \end{equation}
-
-We do not update the MoLE module for training on a sentence from the low-resource language. Intuitively, this allows us to represent each token in the low-resource language as a context-dependent mixture of the auxiliary language experts.
+where $N'=\sum_{k=1}^{K-1}N_k$. We do not update the MoLE module for training on a sentence from the low-resource language. Intuitively, this allows us to represent each token in the low-resource language as a context-dependent mixture of the auxiliary language experts.
 
 % Note that, in our cases, we only assign the experts for the auxiliary languages so that each language will try to optimize its own expert.
 
 
 \section{Experiments}
-\label{sec.exps}
-We extensively study the effectiveness of the proposed methods by evaluating on three ``almost-zero-resource'' language pairs with variant auxiliary languages. The vanilla single-source NMT and the multi-lingual NMT models are used as baselines.
+\label{cp5.sec.exps}
+We extensively study the effectiveness of the proposed methods by evaluating on three (simulated) extremely low-resource language pairs with variant auxiliary languages. The vanilla single-source NMT and the multi-lingual NMT models are used as baselines.
 \subsection{Settings}
 %\paragraph{Dataset} We empirically evaluate the proposed \textsc{ZR-NMT} on $4$ languages -- Romanian (Ro) / Latvian (LV) / Korean (KO) / Levantine Arabic (LEV)\footnote{A spoken dialect of standard Arabic.} -- translating to English (En) in near zero-resource settings. To achieve this, single or multiple auxiliary languages from Czech (Cs), German (De), Greek (El), Spanish (Es), Finnish (Fi), French (Fr),  Italian (It), Portuguese (Pt), Russian (Ru) and Modern Standard Arabic (MSA) are jointly trained to translate to English.
 
-\paragraph{Dataset} We empirically evaluate the proposed Universal NMT system on $3$ languages -- Romanian (Ro) / Latvian (Lv) / Korean (Ko)  -- translating to English (En) in near zero-resource settings. To achieve this, single or multiple auxiliary languages from Czech (Cs), German (De), Greek (El), Spanish (Es), Finnish (Fi), French (Fr),  Italian (It), Portuguese (Pt) and Russian (Ru) are jointly trained. The detailed statistics and sources of the available parallel resource can be found in Table~\ref{table.data}, where we further down-sample the corpora for the targeted languages to simulate zero-resource. 
+\paragraph{Dataset} We empirically evaluate the proposed Universal NMT system on $3$ languages -- Romanian (Ro) / Latvian (Lv) / Korean (Ko)  -- translating to English (En) in near zero-resource settings. To achieve this, single or multiple auxiliary languages from Czech (Cs), German (De), Greek (El), Spanish (Es), Finnish (Fi), French (Fr),  Italian (It), Portuguese (Pt) and Russian (Ru) are jointly trained. The detailed statistics and sources of the available parallel resource can be found in Table~\ref{cp5.table.data0} and \ref{cp5.table.data1}, where we further down-sample the corpora for the targeted languages to simulate extremely low resource. 
 
 \begin{savenotes}
-\begin{table*}[t]
+\begin{table}[hptb]
 \centering
-\small
 %\begin{tabular}{p{0.7cm}||*{13}{p{0.3cm}}}
-
-\begin{tabular*}{\textwidth}{p{0.7cm}|*{13}{p{0.5cm}}}
+\begin{tabular}{c|ccc}%{p{0.7cm}|*{4}{p{0.5cm}}}
 \hline
-& \multicolumn{3}{c|}{Zero-Resource Translation} & \multicolumn{9}{c}{Auxiliary High-Resource Translation} \\ \hline
 source &  
-\multicolumn{1}{c|}{Ro} & \multicolumn{1}{c|}{Ko} & \multicolumn{1}{c|}{Lv} & 
+\multicolumn{1}{c|}{Ro} & 
+\multicolumn{1}{c|}{Ko} & 
+\multicolumn{1}{c}{Lv}  \\ \hline
+corpora & 
+\multicolumn{1}{c|}{WMT16\footnote{http://www.statmt.org/wmt16/translation-task.html}} & 
+\multicolumn{1}{c|}{KPD\footnote{https://sites.google.com/site/koreanparalleldata/}} &  
+\multicolumn{1}{c}{Europarl v8\footnote{http://www.statmt.org/europarl/}} \\ \hline
+size 
+& \multicolumn{1}{c|}{612k} & \multicolumn{1}{c|}{97k} & \multicolumn{1}{c}{638k}  \\ \hline
+subset & \multicolumn{1}{c|}{0/6k/60k} & \multicolumn{1}{c|}{10k} & \multicolumn{1}{c}{6k} \\ \hline
+\end{tabular}
+\caption{\label{cp5.table.data0}Statistics of the available parallel resource for extremely low-resource languages in our experiments. 	All are translated to English.}
+\end{table}
+\end{savenotes}
+
+\begin{savenotes}
+\begin{table}[hptb]
+\centering
+%\begin{tabular}{p{0.7cm}||*{13}{p{0.3cm}}}
+\begin{tabular}{c|ccccccccc}
+\hline
+source &  
 \multicolumn{1}{c|}{Cs} & \multicolumn{1}{c|}{De} & \multicolumn{1}{c|}{El}  & \multicolumn{1}{c|}{Es}  & \multicolumn{1}{c|}{Fi} & 
 \multicolumn{1}{c|}{Fr} & \multicolumn{1}{c|}{It} & \multicolumn{1}{c|}{Pt} &  
 \multicolumn{1}{c}{Ru}  \\ \hline
-corpora & \multicolumn{1}{c|}{WMT16\footnote{http://www.statmt.org/wmt16/translation-task.html}} & \multicolumn{1}{c|}{KPD\footnote{https://sites.google.com/site/koreanparalleldata/}} &  \multicolumn{9}{c|}{Europarl v8\footnote{http://www.statmt.org/europarl/}} & \multicolumn{1}{c}{UN \footnote{http://opus.lingfil.uu.se/MultiUN.php (subset)}} \\ \hline
+corpora & \multicolumn{8}{c|}{Europarl v8\footnote{http://www.statmt.org/europarl/}} & \multicolumn{1}{c}{UN \footnote{http://opus.lingfil.uu.se/MultiUN.php (we use a subset of 2M sentence pairs.)}} \\ \hline
 size 
-& \multicolumn{1}{c|}{612k} & \multicolumn{1}{c|}{97k} & \multicolumn{1}{c|}{638k} &  \multicolumn{1}{c|}{645k} & \multicolumn{1}{c|}{1.91m} 
+& \multicolumn{1}{c|}{645k} & \multicolumn{1}{c|}{1.91m} 
 & \multicolumn{1}{c|}{1.23m} & \multicolumn{1}{c|}{1.96m} & \multicolumn{1}{c|}{1.92m} & \multicolumn{1}{c|}{2.00m} & \multicolumn{1}{c|}{1.90m} 
-& \multicolumn{1}{c|}{1.96m} & \multicolumn{1}{c}{11.7m}  \\ \hline
-subset & \multicolumn{1}{c|}{0/6k/60k} & \multicolumn{1}{c|}{10k} & \multicolumn{1}{c|}{6k} 
-&\multicolumn{8}{c}{/} &\multicolumn{1}{|c}{2.00m}\\ \hline
-\end{tabular*}
-\vspace{-5pt}
-\caption{\label{table.data}Statistics of the available parallel resource in our experiments. 	All the languages are translated to English.}
-\end{table*}
+& \multicolumn{1}{c|}{1.96m} & \multicolumn{1}{c}{2.00m}  \\ \hline
+%subset & \multicolumn{8}{c}{/} &\multicolumn{1}{|c}{2.00m}\\ \hline
+\end{tabular}
+\caption{\label{cp5.table.data1}Statistics of the available parallel resource in our experiments. 	All the languages are translated to English.}
+\end{table}
 \end{savenotes}
 
-
- 
 
 It also requires additional large amount of monolingual data to obtain the word embeddings for each language, where we use the latest Wikipedia dumps~\footnote{https://dumps.wikimedia.org/} for all the languages. Typically, the monolingual corpora are much larger than the parallel corpora. For validation and testing, the standard validation and testing sets are utilized for each targeted language.
 
 \paragraph{Preprocessing}
 All the data (parallel and monolingual) have been tokenized and segmented into subword symbols using byte-pair encoding (BPE)~\cite{sennrich2015neural}. We use sentences of length up to 50 subword symbols for all languages.  For each language, a maximum number of $40,000$ BPE operations are  learned and  applied to restrict the size of the vocabulary.  We concatenate the vocabularies of all source languages in the multilingual setting where special a ``language marker " have been appended to each word  so that there will be no embedding sharing on the surface form. Thus, we avoid sharing the representation  of words that have similar surface forms though with different meaning in various languages.
 
-\paragraph{Architecture} We implement an attention-based neural machine translation model which consists of a one-layer bidirectional RNN encoder and a two-layer attention-based RNN decoder. All  RNNs have 512 LSTM units~\cite{hochreiter1997long}. Both the dimensions of the source and target embedding vectors are set to 512. The dimensionality of universal embeddings is also the same. For a fair comparison, the same architecture is also utilized for training both the vanilla and multilingual NMT systems. For multilingual experiments, $1\sim 5$ auxiliary languages are used.  When training with the universal tokens, the temperature $\tau$ (in Eq.~\ref{eq.ds}) is fixed to $0.05$ for all the experiments.
+\paragraph{Architecture} We implement an attention-based neural machine translation model which consists of a one-layer bidirectional RNN encoder and a two-layer attention-based RNN decoder. All  RNNs have 512 LSTM units~\cite{hochreiter1997long}. Both the dimensions of the source and target embedding vectors are set to 512. The dimensionality of universal embeddings is also the same. For a fair comparison, the same architecture is also utilized for training both the vanilla and multilingual NMT systems. For multilingual experiments, $1\sim 5$ auxiliary languages are used.  When training with the universal tokens, the temperature $\tau$ (in Eq.~\eqref{cp5.eq.universal_embed}) is fixed to $0.05$ for all the experiments.
 
 \paragraph{Learning}
 All the models are trained to maximize the log-likelihood using Adam~\cite{kingma2014adam} optimizer for 1 million steps on the mixed dataset with a batch size of 128. The dropout rates for both the encoder and the decoder is set to 0.4. % In general, it takes about $4$ days for learning a multilingual model of $8m$ sentences on single GTX Titan.
@@ -244,14 +280,14 @@ We utilize back-translation (BT)~\cite{sennrich2016edinburgh} to encourage the m
 Generally, BT is difficult to apply for zero resource setting since it requires a reasonably good translation system to generate good quality synthetic parallel data. Such a system may not be feasible with tiny or zero parallel data. However, it is possible to start with a trained multi-NMT model.
 
 \subsection{Preliminary Experiments}
-\paragraph{Training Monolingual Embeddings} We train the monolingual embeddings using \texttt{fastText}\footnote{https://github.com/facebookresearch/fastText}~\cite{bojanowski2016enriching}  over the Wikipedia corpora of all the languages.  The vectors are set to 300 dimensions, trained using the default setting of skip-gram . All the vectors are normalized to norm $1$.
+\paragraph{Training Monolingual Embeddings} We train the monolingual embeddings  over the Wikipedia corpora of all the languages using \texttt{fastText}\footnote{https://github.com/facebookresearch/fastText}~\cite{bojanowski2016enriching} .  The vectors are set to 300 dimensions, trained using the default setting of skip-gram . All the vectors are normalized to norm $1$.
 
-\paragraph{Pre-projection} In this paper, the pre-projection requires initial word alignments (seeds) between words of each source language and the universal tokens.  More precisely, for the experiments of Ro/Ko/Lv-En, we use the target language (En) as the universal tokens;  \texttt{fast\_align}\footnote{https://github.com/clab/fast\_align} is used to automatically collect the aligned words between the source languages and English. %Word alignment with the highest probability is picked as a seed.  
+\paragraph{Pre-projection} In this chapter, the pre-projection requires initial word alignments (seeds) between words of each source language and the universal tokens.  More precisely, for the experiments of Ro/Ko/Lv-En, we use the target language (En) as the universal tokens;  \texttt{fast\_align}\footnote{https://github.com/clab/fast\_align} is used to automatically collect the aligned words between the source languages and English. %Word alignment with the highest probability is picked as a seed.  
 
 % On the other hand, for the experiments of LEV-En, MSA will be used as the universal tokens considering LEV is a dialect of MSA and it shares around 40\%  of the vocabularies with MSA. It is possible to directly use the shared words as the seeds to train the projection matrix for LEV. 
 % To increase the robustness,  only words with a frequency larger than $15$ are considered. Pre-projection can be performed based on the seeds off-line and stored for NMT training.
 %  ADD MORE INFO ON NUM OF SEEDS / SENTENCES
-\section{Results}
+\subsection{Results}
 
 % \begin{tabular}{c|ccccccccc|r|r|r}
 % Source & Cs    & De    & El & Es & Fi & Fr & It & Pt & Ru & Multi-NMT & + UnivTok & + MoE \\ \hline
@@ -271,7 +307,11 @@ Generally, BT is difficult to apply for zero resource setting since it requires 
 % KO    & ~     & ~  & ~ & \Checkmark  & ~  &  \Checkmark  &  \Checkmark  &  \Checkmark  & ~  
 % & 2.45    & 5.49    & \textbf{6.14}  \\     
 % \end{tabular}
-\begin{table}[t]
+
+
+
+We show our main results of multiple source languages to English with different auxiliary languages in Table~\ref{cp5.table.bleu}. To have a fair comparison, we use only 6k sentences corpus for both Ro and Lv with all the settings and 10k for Ko. It is obvious that applying both the universal tokens and mixture of experts modules  improve the overall translation quality for all the language pairs and the improvements are additive. 
+\begin{table}[hptb]
 \centering
 \begin{tabular}{l|c|rrr}
 Src & Aux   & Multi & +ULR & + MoLE \\ \hline
@@ -285,25 +325,23 @@ Src & Aux   & Multi & +ULR & + MoLE \\ \hline
 & Es Fr It Pt Ru & 7.88     & 12.40     &  \textbf{13.16} \\  \hline
 Ko    & Es Fr It Pt  & 2.45    & 5.49    & \textbf{6.14}  \\     
 \end{tabular}
-\caption{\label{table.bleu} Scores over variant source languages (6k sentences for Ro \& Lv, and 10k for Ko). ``Multi" means the Multi-lingual NMT baseline.}
+\caption{\label{cp5.table.bleu} Scores over variant source languages (6k sentences for Ro \& Lv, and 10k for Ko). ``Multi" means the Multi-lingual NMT baseline.}
 \end{table}
 
 
-We show our main results of multiple source languages to English with different auxiliary languages in Table~\ref{table.bleu}. To have a fair comparison, we use only 6k sentences corpus for both Ro and Lv with all the settings and 10k for Ko. It is obvious that applying both the universal tokens and mixture of experts modules  improve the overall translation quality for all the language pairs and the improvements are additive. 
-
- \begin{figure*}[t]
+ \begin{figure}[hptb]
 	\centering
-    \begin{minipage}[t]{0.48\textwidth}
+%    \begin{minipage}[t]{0.48\textwidth}
+%    \centering
+    \includegraphics[width=0.85\linewidth]{figs/ulr/size} 
+    \caption{\label{cp5.fig.size}BLEU score vs corpus size}
+    \end{figure}
+    \begin{figure}[hptb]
+%    \begin{minipage}[t]{0.48\textwidth}
     \centering
-    \includegraphics[width=\linewidth]{figs/ulr/size}\hspace{-5pt}
-    \caption{\label{fig.size}BLEU score vs corpus size}
-    \end{minipage}
-    \begin{minipage}[t]{0.48\textwidth}
-    \centering
-    \includegraphics[width=\linewidth]{figs/ulr/missing}\hspace{-5pt}
-    \caption{\label{fig.missing}BLEU score vs unknown tokens}
-    \end{minipage}
-\end{figure*}
+    \includegraphics[width=0.85\linewidth]{figs/ulr/missing} 
+    \caption{\label{cp5.fig.missing}BLEU score vs unknown tokens}
+\end{figure}
 
 To examine the influence  of auxiliary languages, we tested four sets of different combinations of auxiliary languages for Ro-En and two sets for Lv-En. It shows that Ro performs best when the auxiliary languages are all selected in the same family (Ro, Es, Fr, It and Pt are all from the Romance family of European languages) which makes sense as more knowledge can be shared across the same family. Similarly, for the experiment of Lv-En, improvements are also observed when adding Ru as additional auxiliary language as Lv and Ru share many similarities because of the geo-graphical influence even though they don't share the same alphabet. 
 
@@ -311,8 +349,9 @@ We also tested a set of Ko-En experiments to examine the generalization capabili
 
 
 
-\subsection{Ablation Study}
-\begin{table}[t]
+\paragraph{Ablation Study}
+We perform  thorough experiments to examine effectiveness of the proposed method; we do ablation study on Ro-En where  all the models are trained based on the same Ro-En corpus with 6k sentences.  
+\begin{table}[hptb]
  	\centering
     \begin{tabular}{l|r}
     Models                   & BLEU  \\ \hline
@@ -327,36 +366,32 @@ We also tested a set of Ko-En experiments to examine the generalization capabili
     Multi-NMT + ULR + MoLE + BT & \textbf{22.92} \\ \hline\hline
     Full data (612k) NMT & \textbf{28.34} \\
     \end{tabular}
-    \caption{\label{ro_test1} BLEU scores evaluated on test set (6k), compared with ULR and MoLE. ``vanilla" is the standard NMT system trained only on Ro-En training set}
+    \caption{\label{cp5.table.ro_test1} BLEU scores evaluated on test set (6k), compared with ULR and MoLE. ``vanilla" is the standard NMT system trained only on Ro-En training set}
 \end{table}
 
-
-We perform  thorough experiments to examine effectiveness of the proposed method; we do ablation study on Ro-En where  all the models are trained based on the same Ro-En corpus with 6k sentences.  
-
-
-As shown in Table~\ref{ro_test1}, it is obvious that 6k sentences of parallel corpora  completely fails to train a vanilla  NMT model. Using Multi-NMT with the assistance of 7.8M auxiliary language sentence pairs, Ro-En translation performance gets a substantial improvement which, however, is still limited to be usable. By contrast, the proposed ULR boosts the Multi-NMT significantly with +5.07 BLEU, which is further boosted to +7.98 BLEU when incorporating sentence-level information using both MoLE and BT.  Furthermore, it is also shown that ULR works better when a trainable transformation matrix $A$ is used (4th vs 5th row in the table). Note that, although still $5\sim 6$ BLEU scores lower than the full data ($\times 100$ large) model. 
+As shown in Table~\ref{cp5.table.ro_test1}, it is obvious that 6k sentences of parallel corpora  completely fails to train a vanilla  NMT model. Using Multi-NMT with the assistance of 7.8M auxiliary language sentence pairs, Ro-En translation performance gets a substantial improvement which, however, is still limited to be usable. By contrast, the proposed ULR boosts the Multi-NMT significantly with +5.07 BLEU, which is further boosted to +7.98 BLEU when incorporating sentence-level information using both MoLE and BT.  Furthermore, it is also shown that ULR works better when a trainable transformation matrix $A$ is used (4th vs 5th row in the table). Note that, although still $5\sim 6$ BLEU scores lower than the full data ($\times 100$ large) model. 
 
 We also measure the translation quality of simply training the vanilla system while replacing each  token of the Ro sentence with its closet universal token in the projected embedding space, considering we are using the target languages (En) as the universal tokens. Although the performance is much worse than the baseline Multi-NMT, it still outperforms the vanilla model which implies the effectiveness of the embedding alignments.
 
 \paragraph{Monolingual Data}
-In Table.~\ref{ro_test1},  we also showed the performance when incorporating the monolingual Ro corpora to help the UniNMT training in both cases with and without ULR. The back-translation improves in both cases, while the  ULR  still obtains the best score  which indicates that the gains achieved are additive.
+In Table.~\ref{cp5.table.ro_test1},  we also showed the performance when incorporating the monolingual Ro corpora to help the UniNMT training in both cases with and without ULR. The back-translation improves in both cases, while the  ULR  still obtains the best score  which indicates that the gains achieved are additive.
 
 \begin{figure*}[t]
 \centering
 \includegraphics[width=\linewidth]{figs/ulr/examples1} \vspace{-10pt}
-\caption{\label{fig.exp}Three sets of examples on Ro-En translation with variant settings. }
+\caption{\label{cp5.fig.exp}Three sets of examples on Ro-En translation with variant settings. }
 \end{figure*}
 \begin{figure*}[t]
 \centering
 \includegraphics[width=\linewidth]{figs/ulr/vis2}\vspace{-10pt}
-\caption{\label{fig.moe} The activation visualization of mixture of language experts module on one randomly selected Ro source sentences trained together with different auxiliary languages. Darker color means higher activation score. }
+\caption{\label{cp5.fig.moe} The activation visualization of mixture of language experts module on one randomly selected Ro source sentences trained together with different auxiliary languages. Darker color means higher activation score. }
 \end{figure*}
 
 \paragraph{Corpus Size}
-As shown in Fig.~\ref{fig.size}, we also evaluated our methods with varied  sizes -- 0k\footnote{For 0k experiments, we used the pre-projection learned from 6k data. It is also possible to use unsupervised learned dictionary.}, 6k, 60k and 600k -- of the Ro-En corpus. The vanilla NMT and the multi-lingual NMT are used as baselines. It is clear in  all cases that the performance gets better when the training corpus is larger. However, the multilingual with ULR works much better with a small amount of training examples. Note that, the usage of ULR universal tokens also enables us to directly work on a ``pure zero" resource translation with a shared multilingual NMT model. 
+As shown in Fig.~\ref{cp5.fig.size}, we also evaluated our methods with varied  sizes -- 0k\footnote{For 0k experiments, we used the pre-projection learned from 6k data. It is also possible to use unsupervised learned dictionary.}, 6k, 60k and 600k -- of the Ro-En corpus. The vanilla NMT and the multi-lingual NMT are used as baselines. It is clear in  all cases that the performance gets better when the training corpus is larger. However, the multilingual with ULR works much better with a small amount of training examples. Note that, the usage of ULR universal tokens also enables us to directly work on a ``pure zero" resource translation with a shared multilingual NMT model. 
 
 \paragraph{Unknown Tokens}
-One explanation on how ULR help the translation for almost zero resource languages is it greatly cancel out the effects of missing tokens that would cause out-of-vocabularies during testing. As in Fig.~\ref{fig.missing}, the translation performance heavily drops when it has more ``unknown" which cannot be found in the given 6k training set, especially for the typical multilingual NMT.  Instead, these ``unknown" tokens will naturally have their embeddings based on ULR  projected universal tokens even if we never saw them in the training set. When we apply back-translation over the monolingual data, the performance  further improves which can almost catch up with the model trained with 60k data. %BT helps to handle the sentence-level combination of the ``unknown'' tokens.
+One explanation on how ULR help the translation for almost zero resource languages is it greatly cancel out the effects of missing tokens that would cause out-of-vocabularies during testing. As in Fig.~\ref{cp5.fig.missing}, the translation performance heavily drops when it has more ``unknown" which cannot be found in the given 6k training set, especially for the typical multilingual NMT.  Instead, these ``unknown" tokens will naturally have their embeddings based on ULR  projected universal tokens even if we never saw them in the training set. When we apply back-translation over the monolingual data, the performance  further improves which can almost catch up with the model trained with 60k data. %BT helps to handle the sentence-level combination of the ``unknown'' tokens.
 
 
 
@@ -394,14 +429,14 @@ One explanation on how ULR help the translation for almost zero resource languag
 %\end{figure}
 
 % \subsection{Case Study}
-% \paragraph{Examples} As shown in \label{fig.exp}
+% \paragraph{Examples} As shown in \label{cp5.fig.exp}
 
 \subsection{Qualitative Analysis}
-\paragraph{Examples} Figure \ref{fig.exp} shows some cherry-picked examples for Ro-En. Example (a) shows how the lexical selection get enriched when introducing ULR (Lex-6K) as well as when adding Back Translation (Lex-6K-BT). Example (b) shows the effect of using romance vs non-romance languages as the supporting languages for Ro. Example (c) shows the importance of having a trainable $A$ as have been discussed; without trainable $A$ the model confuses "india" and "china" as they may have  close representation in the mono-lingual embeddings.
+\paragraph{Examples} Figure \ref{cp5.fig.exp} shows some cherry-picked examples for Ro-En. Example (a) shows how the lexical selection get enriched when introducing ULR (Lex-6K) as well as when adding Back Translation (Lex-6K-BT). Example (b) shows the effect of using romance vs non-romance languages as the supporting languages for Ro. Example (c) shows the importance of having a trainable $A$ as have been discussed; without trainable $A$ the model confuses ``india'' and ``china'' as they may have  close representation in the mono-lingual embeddings.
 
 \paragraph{Visualization of MoLE}
-Figure \ref{fig.moe} shows the activations along with the same source sentence with various auxiliary languages. It is clear that MoLE is effectively switching between the  experts when dealing with  zero-resource language words. 
-For this particular example of Ro, we can see that the system is utilizing  various auxiliary languages based on their relatedness to the source language. We can approximately rank the relatedness based of the influence of each language. For instance, the influence can be approximately ranked as $Es \approx Pt > Fr \approx It > Cs \approx El > De > Fi$, which is interestingly close to the  grammatical relatedness of Ro to these languages. On the other hand, Cs has a strong influence although it does not fall in the same language family with Ro, we think this is due to the geo-graphical influence between the two languages  since  Cs and Ro share similar phrases and expressions. This shows that MoLE learns to utilize resources from similar languages.
+Figure \ref{cp5.fig.moe} shows the activations along with the same source sentence with various auxiliary languages. It is clear that MoLE is effectively switching between the  experts when dealing with  zero-resource language words. 
+For this particular example of Ro, we can see that the system is utilizing  various auxiliary languages based on their relatedness to the source language. We can approximately rank the relatedness based of the influence of each language. For instance, the influence can be approximately ranked as $\text{Es} \approx \text{Pt} > \text{Fr} \approx \text{It} > \text{Cs} \approx \text{El} > \text{De} > \text{Fi}$, which is interestingly close to the  grammatical relatedness of Ro to these languages. On the other hand, Cs has a strong influence although it does not fall in the same language family with Ro, we think this is due to the geo-graphical influence between the two languages  since  Cs and Ro share similar phrases and expressions. This shows that MoLE learns to utilize resources from similar languages.
 
 
 
@@ -415,28 +450,32 @@ For this particular example of Ro, we can see that the system is utilizing  vari
 %     \end{tabular}
 %     \caption{Zero-resource Dialect translation}
 % \end{table}
-\subsection{Fine-tuning a Pre-trained Model}
-All  the described experiments above had  the low resource languages  jointly trained  with all the auxiliary high-resource languages, where the training of the large amount of high-resource languages can be seen as a sort of regularization.  It is also common to  train a model on high-resource languages first, and then fine-tune the model on a small resource language similar to transfer learning approaches~\citep{zoph2016transfer}. However, it is not trivial to effectively fine-tune NMT models on extremely low resource data since  the models  easily over-fit due to over-parameterization of the neural networks. 
-
-In this experiment, we have explored the  fine-tuning tasks using our approach. First, we train a Multi-NMT model (with ULR)  on \{Es, Fr, It, Pt\}-En  languages only to create a zero-shot setting for Ro-En translation. Then, we start fine-tuning the model with $6k$ parallel corpora of Ro-En, with and without ULR. As shown in Fig.~\ref{fig.finetune}, both  models improve a lot over the baseline. 
-%as the multilingual training has provided a good initialization where the extremely low resource language can easily adapt to.
-With the help of ULR, we can  achieve a BLEU score of around $10.7$ (also shown in Fig.~\ref{fig.size}) for Ro-En translation with ``zero-resource" translation. The BLEU score can  further  improve to almost  $20$ BLEU after 3 epochs of training on $6k$ sentences using ULR. This is almost $6$ BLEU higher than the best score of the baseline. It is worth noting that this fine-tuning is a very efficient  process since it only takes less than 2 minutes to train for 3 epochs over such  tiny amount of data. This is very appealing  for practical applications where  adapting a per-trained system  on-line is a big advantage.  As a future work, we will further investigate a better fine-tuning strategy such as meta-learning~\citep{finn2017model} using ULR.
-
-
-\begin{figure}
-	\centering
-	\includegraphics[width=\linewidth]{figs/ulr/finetuning}\vspace{-20pt}
-	\caption{\label{fig.finetune}Performance comparison of Fine-tuning on 6K RO sentences.}
-
-\end{figure}
+%\subsection{Fine-tuning a Pre-trained Model}
+%All  the described experiments above had  the low resource languages  jointly trained  with all the auxiliary high-resource languages, where the training of the large amount of high-resource languages can be seen as a sort of regularization.  It is also common to  train a model on high-resource languages first, and then fine-tune the model on a small resource language similar to transfer learning approaches~\citep{zoph2016transfer}. However, it is not trivial to effectively fine-tune NMT models on extremely low resource data since  the models  easily over-fit due to over-parameterization of the neural networks. 
+%
+%In this experiment, we have explored the  fine-tuning tasks using our approach. First, we train a Multi-NMT model (with ULR)  on \{Es, Fr, It, Pt\}-En  languages only to create a zero-shot setting for Ro-En translation. Then, we start fine-tuning the model with $6k$ parallel corpora of Ro-En, with and without ULR. As shown in Fig.~\ref{cp5.fig.finetune}, both  models improve a lot over the baseline. 
+%%as the multilingual training has provided a good initialization where the extremely low resource language can easily adapt to.
+%With the help of ULR, we can  achieve a BLEU score of around $10.7$ (also shown in Fig.~\ref{cp5.fig.size}) for Ro-En translation with ``zero-resource" translation. The BLEU score can  further  improve to almost  $20$ BLEU after 3 epochs of training on $6k$ sentences using ULR. This is almost $6$ BLEU higher than the best score of the baseline. It is worth noting that this fine-tuning is a very efficient  process since it only takes less than 2 minutes to train for 3 epochs over such  tiny amount of data. This is very appealing  for practical applications where  adapting a per-trained system  on-line is a big advantage.  As a future work, we will further investigate a better fine-tuning strategy such as meta-learning~\citep{finn2017model} using ULR.
+%
+%
+%\begin{figure}[hptb]
+%	\centering
+%	\includegraphics[width=0.80\linewidth]{figs/ulr/finetuning}
+%	\caption{\label{cp5.fig.finetune}Performance comparison of Fine-tuning on 6K RO sentences.}
+%\end{figure}
 
 
 
 \section{Related Work} 
 Multi-lingual NMT has been extensively studied in a number of papers such as  \newcite{lee2016fully}, \newcite{johnson2016google}, ~\newcite{zoph2016transfer} and \newcite{firat2016multi}. As we discussed, these approaches have significant limitations with zero-resource cases. \newcite{johnson2016google} is more closely related to our current approach, our work is extending  it  to overcome the  limitations with very low-resource languages and enable sharing of  lexical and sentence representation across multiple languages. 
 
-Two recent related works are targeting the same problem of  minimally supervised  or totally unsupervised NMT. \newcite{artetxe2017unsupervised} proposed a totally unsupervised approach depending on multi-lingual embedding similar to ours and dual-learning and reconstruction techniques to train the model from mono-lingual data only. \newcite{lample2017unsupervised} also proposed a quite similar approach while utilizing adversarial learning.   
+Two related works are targeting the same problem of  minimally supervised  or totally unsupervised NMT. \newcite{artetxe2017unsupervised} proposed a totally unsupervised approach depending on multi-lingual embedding similar to ours and dual-learning and reconstruction techniques to train the model from mono-lingual data only. \newcite{lample2017unsupervised} also proposed a quite similar approach while utilizing adversarial learning.   
 
-\section{Conclusion}
- In this paper, we propose a new  universal machine translation approach that enables sharing resources between high resource languages and extremely low resource languages. 
-  Our approach is able to achieve 23 BLEU on Romanian-English WMT2016 using a tiny parallel corpus of 6k sentences, compared to the 18 BLEU of strong multi-lingual baseline system. 
+\section{Conclusion and Next Chapter}
+ In this chapter, tackling on the data inefficiency problem for extremely low resource languages, we propose a new  universal machine translation approach that enables sharing translation knowledge from high resource languages.  Our approach is able to achieve 23 BLEU on Romanian-English WMT2016 using a tiny parallel corpus of 6k sentences, compared to the 18 BLEU of strong multi-lingual baseline system. 
+ 
+ However, there still remains problems in the current solution. One of the main drawback of the proposed method is that it relies on a joint-training over a huge number of examples of high-resource languages to work on the extremely low resource language translation, which is costly and difficult to extend to other new languages. One option is to directly train the model on high resource languages, and fine-tune the trained model on low resource. Also there is no guarantee the pre-trained the parameters will be easily fine-tuned by an unknown language. 
+ In the next chapter, we will discuss a principled way of fine-tuning for extremely low resource languages using meta-learning.
+ 
+ 
+ 

@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2014)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: /Users/jiataogu/Dropbox/Thesis/Efficient-Neural-Machine-Translation/.texpadtmp/thesis.aux
+The style file: ../acl.bst
+Database file #1: ../ref.bib
+Warning--I didn't find a database entry for "alexis2018word"
+Warning--empty booktitle in Zhang2005AnEP
+You've used 131 entries,
+            2781 wiz_defined-function locations,
+            1171 strings with 29826 characters,
+and the built_in function-call counts, 88035 in all, are:
+= -- 6613
+> -- 5686
+< -- 53
++ -- 1895
+- -- 1726
+* -- 6767
+:= -- 13962
+add.period$ -- 551
+call.type$ -- 131
+change.case$ -- 1310
+chr.to.int$ -- 119
+cite$ -- 132
+duplicate$ -- 6552
+empty$ -- 5411
+format.name$ -- 2141
+if$ -- 17196
+int.to.chr$ -- 13
+int.to.str$ -- 0
+missing$ -- 1299
+newline$ -- 658
+num.names$ -- 526
+pop$ -- 2956
+preamble$ -- 1
+purify$ -- 1096
+quote$ -- 0
+skip$ -- 2213
+stack$ -- 0
+substring$ -- 2670
+swap$ -- 3022
+text.length$ -- 28
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 1179
+warning$ -- 1
+while$ -- 495
+width$ -- 0
+write$ -- 1633
+(There were 2 warnings)

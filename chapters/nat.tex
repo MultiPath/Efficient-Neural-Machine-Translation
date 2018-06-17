@@ -1,55 +1,53 @@
 \def \model{NAT}
 
-\section{Introduction}
+\section{Overview}
 Neural network based models outperform traditional statistical models for machine translation (MT) \citep{bahdanau2014neural,luong2015effective}. 
 However, state-of-the-art neural models are much slower than statistical MT approaches at inference time \citep{wu2016google}.
-Both model families use \emph{autoregressive} decoders that operate one step at a time: they generate each token conditioned on the sequence of tokens previously generated. This process is not parallelizable, and, in the case of neural MT models, it is particularly slow because a computationally intensive neural network is used to generate each token.
+Both model families use \emph{autoregressive} decoders that operate one step at a time: they generate each token conditioned on the sequence of tokens previously generated. This process is not parallelizable, and, in the case of NMT models, it is particularly slow because a computationally intensive neural network is used to generate each token.
 
-While several recently proposed models avoid recurrence at train time by leveraging convolutions~\citep{kalchbrenner2016neural, gehring2017convolutional, kaiser2017depthwise} or self-attention~\citep{vaswani2017attention} as more-parallelizable alternatives to recurrent neural networks (RNNs), use of autoregressive decoding makes it impossible to take full advantage of parallelism during inference.
+While several recently proposed models avoid recurrence at train time by leveraging convolutions~\citep{kalchbrenner2016neural, gehring2017convolutional, kaiser2017depthwise} or self-attention (the Transformer network)~\citep{vaswani2017attention} as more-parallelizable alternatives to recurrent neural networks (RNNs), use of autoregressive decoding makes it impossible to take full advantage of parallelism during inference.
 
-We introduce a non-autoregressive translation model based on the Transformer network~\citep{vaswani2017attention}. We modify the encoder of the original Transformer network by adding a module that predicts \emph{fertilities}, sequences of numbers that form an important component of many traditional machine translation models \citep{brown1993mathematics}.
-These fertilities are supervised during training and provide the decoder at inference time with a globally consistent plan on which to condition its simultaneously computed outputs.
+In this chapter, we introduce a non-autoregressive translation model based on the Transformer network~\citep{vaswani2017attention}. We modify the encoder of the original Transformer network by adding a module that predicts \emph{fertilities}, sequences of numbers that form an important component of many traditional machine translation models \citep{brown1993mathematics}. These fertilities are supervised during training and provide the decoder at inference time with a globally consistent plan on which to condition its simultaneously computed outputs. Through knowledge distillation, the use of fertilities as a latent variable, and policy gradient fine-tuning, we achieve this at a cost of as little as 2.0 BLEU points relative to the autoregressive Transformer network used as a teacher.
+We demonstrate substantial cumulative improvements associated with each of the three aspects of our training strategy, and validate our approach on IWSLT 2016 English--German and two WMT language pairs. By sampling fertilities in parallel at inference time, our non-autoregressive model achieves near-state-of-the-art performance of 29.8 BLEU on WMT 2016 English--Romanian.
 
-\section{Background}
-\subsection{Autoregressive Neural Machine Translation}
-Given a source sentence $X=\{x_1, ..., x_{T'}\}$, a neural machine translation model factors the distribution over possible output sentences $Y=\{y_1, ..., y_T\}$ into a chain of conditional probabilities with a left-to-right causal structure:
-\begin{equation}
-p_{\mathcal{AR}}(Y|X; \theta) = \prod_{t=1}^{T+1} p(y_t| y_{0:t-1}, x_{1:T'}; \theta),
-\end{equation}
-where the special tokens $y_0$ (e.g. $\langle \mathrm{bos}\rangle$) and $y_{T+1}$ (e.g. $\langle \mathrm{eos}\rangle$) are used to represent the beginning and end of all target sentences.
-These conditional probabilities are parameterized using a neural network. Typically, an encoder-decoder architecture~\citep{sutskever2014sequence} with a unidirectional RNN-based decoder is used to capture the causal structure of the output distribution.
+%\subsection{Autoregressive Neural Machine Translation}
+%Given a source sentence $X=\{x_1, ..., x_{T'}\}$, a neural machine translation model factors the distribution over possible output sentences $Y=\{y_1, ..., y_T\}$ into a chain of conditional probabilities with a left-to-right causal structure:
+%\begin{equation}
+%p_{\mathcal{AR}}(Y|X; \theta) = \prod_{t=1}^{T+1} p(y_t| y_{0:t-1}, x_{1:T'}; \theta),
+%\end{equation}
+%where the special tokens $y_0$ (e.g. $\langle \mathrm{bos}\rangle$) and $y_{T+1}$ (e.g. $\langle \mathrm{eos}\rangle$) are used to represent the beginning and end of all target sentences.
+%These conditional probabilities are parameterized using a neural network. Typically, an encoder-decoder architecture~\citep{sutskever2014sequence} with a unidirectional RNN-based decoder is used to capture the causal structure of the output distribution.
+%
+%\vspace{-5pt}
+%\paragraph{Maximum Likelihood training}
+%Choosing to factorize the machine translation output distribution autoregressively enables straightforward maximum likelihood training with a cross-entropy loss applied at each decoding step:
+%\begin{equation}
+%\mathcal{L}_{\text{ML}} = \log p_{\mathcal{AR}}(Y|X; \theta) = \sum_{t=1}^{T+1}\log p(y_t|y_{0:t-1},x_{1:T'};\theta).
+%\end{equation}
+%This loss provides direct supervision for each conditional probability prediction.
+%
+%\vspace{-5pt}
+%\paragraph{Autoregressive NMT without RNNs}
+%Since the entire target translation is known at training time, the calculation of later conditional probabilities (and their corresponding losses) does not depend on the output words chosen during earlier decoding steps. Even though decoding must remain entirely sequential during inference, models can take advantage of this parallelism during training.
+%One such approach replaces recurrent layers in the decoder with masked convolution layers~\citep{kalchbrenner2016neural, gehring2017convolutional} that provide the causal structure required by the autoregressive factorization.
+%
+%A recently introduced option which reduces sequential computation still further is to construct the decoder layers out of self-attention computations that have been causally masked in an analogous way.
+%The state-of-the-art Transformer network takes this approach, which allows information to flow in the decoder across arbitrarily long distances in a constant number of operations, asymptotically fewer than required by convolutional architectures \citep{vaswani2017attention}.
 
-\vspace{-5pt}
-\paragraph{Maximum Likelihood training}
-Choosing to factorize the machine translation output distribution autoregressively enables straightforward maximum likelihood training with a cross-entropy loss applied at each decoding step:
-\begin{equation}
-\mathcal{L}_{\text{ML}} = \log p_{\mathcal{AR}}(Y|X; \theta) = \sum_{t=1}^{T+1}\log p(y_t|y_{0:t-1},x_{1:T'};\theta).
-\end{equation}
-This loss provides direct supervision for each conditional probability prediction.
-
-\vspace{-5pt}
-\paragraph{Autoregressive NMT without RNNs}
-Since the entire target translation is known at training time, the calculation of later conditional probabilities (and their corresponding losses) does not depend on the output words chosen during earlier decoding steps. Even though decoding must remain entirely sequential during inference, models can take advantage of this parallelism during training.
-One such approach replaces recurrent layers in the decoder with masked convolution layers~\citep{kalchbrenner2016neural, gehring2017convolutional} that provide the causal structure required by the autoregressive factorization.
-
-A recently introduced option which reduces sequential computation still further is to construct the decoder layers out of self-attention computations that have been causally masked in an analogous way.
-The state-of-the-art Transformer network takes this approach, which allows information to flow in the decoder across arbitrarily long distances in a constant number of operations, asymptotically fewer than required by convolutional architectures \citep{vaswani2017attention}.
-
-\subsection{Non-Autoregressive Decoding}
-\vspace{-5pt}
-\paragraph{Pros and cons of autoregressive decoding}
-The autoregressive factorization used by conventional NMT models has several benefits. It corresponds to the word-by-word nature of human language production and effectively captures the distribution of real translations. Autoregressive models achieve state-of-the-art performance on large-scale corpora and are easy to train, while beam search provides an effective local search method for finding approximately-optimal output translations.
-
-
-\begin{figure}
+\begin{figure}[t]
 \centering
-\includegraphics[width=0.55\linewidth]{figs/nat/ar_nmt}
-\caption{\label{fig.ar_vs_nar} Translating ``A B C'' to ``X Y'' using autoregressive and non-autoregressive neural MT architectures. The latter generates all output tokens in parallel.}\vspace{-20pt}
+\includegraphics[width=0.6\linewidth]{figs/nat/ar_nmt}
+\caption{\label{cp8.fig.ar_vs_nar} Translating ``A B C'' to ``X Y'' using autoregressive and non-autoregressive neural MT architectures. The latter generates all output tokens in parallel.}
 \end{figure}
+
+
+\section{Non-Autoregressive Decoding}
+\paragraph{Pros and cons of autoregressive decoding}
+The autoregressive factorization (i.e. Eq.~\eqref{cp2.eq.auto_sts}, see details in Chapter~\ref{background}) used by conventional NMT models has several benefits. It corresponds to the word-by-word nature of human language production and effectively captures the distribution of real translations. Autoregressive models achieve state-of-the-art performance on large-scale corpora and are easy to train, while beam search provides an effective local search method for finding approximately-optimal output translations.
 
 But there are also drawbacks. As the individual steps of the decoder must be run sequentially rather than in parallel, autoregressive decoding prevents architectures like the Transformer from fully realizing their train-time performance advantage during inference. Meanwhile, beam search suffers from diminishing returns with respect to beam size \citep{koehn2017six} and exhibits limited search parallelism because it introduces computational dependence between beams.
 
-\vspace{-5pt}
+
 \paragraph{Towards non-autoregressive decoding}
 A na\"{i}ve solution is to remove the autoregressive connection directly from an existing encoder-decoder model. Assuming that the target sequence length $T$ can be modeled with a separate conditional distribution $p_L$, this becomes
 \begin{equation}
@@ -69,96 +67,93 @@ In particular, consider an English source sentence like ``Thank you.'' This can 
 The conditional independence assumption prevents a model from properly capturing the highly multimodal distribution of target translations.
 We call this the ``multimodality problem'' and introduce both a modified model and new training techniques to tackle this issue.
 
-\section{The Non-Autoregressive Transformer (NAT)}\label{mainModelSection}
+\section{The Non-Autoregressive Transformer (NAT)}
+\label{cp8.sec.mainModelSection}
 
-\begin{figure}
-\centering
-\includegraphics[width=0.95\textwidth]{figs/nat/NAT-sub}
-\caption{\label{fig.diagram} The architecture of the \model{}, where the black solid arrows represent differentiable connections and the purple dashed arrows are non-differentiable operations. Each sublayer inside the encoder and decoder stacks also includes layer normalization and a residual connection.}
-\vspace{-20pt}
-\end{figure}
-
-We introduce a novel NMT model---the Non-Autoregressive Transformer (\model)---that can produce an entire output translation in parallel.
-As shown in Fig.~\ref{fig.diagram}, the model is composed of the following four modules: 
+In this section, we introduce a novel NMT model---the Non-Autoregressive Transformer (\model)---that can produce an entire output translation in parallel.
+As shown in Fig.~\ref{cp8.fig.diagram}, the model is composed of the following four modules: 
 an encoder stack, 
 a decoder stack, 
-a newly added fertility predictor (details in \ref{sec.fertility}), and a translation predictor for token decoding. 
+a newly added fertility predictor (details in \ref{cp8.sec.fertility}), and a translation predictor for token decoding. 
 
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{figs/nat/NAT-sub}
+\caption{\label{cp8.fig.diagram} The architecture of the \model{}, where the black solid arrows represent differentiable connections and the purple dashed arrows are non-differentiable operations. Each sublayer inside the encoder and decoder stacks also includes layer normalization and a residual connection.}
+\end{figure}
 
 \subsection{Encoder Stack}
 Similar to the autoregressive Transformer, both the encoder and decoder stacks are composed entirely of feed-forward networks (MLPs) and multi-head attention modules. Since no RNNs are used, there is no inherent requirement for sequential execution, making non-autoregressive decoding possible.
 % Each attention operation takes the query (Q), key (K) and value (V) as inputs:
 % \begin{equation}
 % \text{Attention}(Q,K,V)=\text{softmax}\left(\frac{QK^T}{\sqrt{d_{\text{model}}}}\right)\cdot V
-% \label{eq.attention}
+% \label{cp8.eq.attention}
 % \end{equation}
 % where $d_{\text{model}}$ is the model hidden size.
 For our proposed \model{}, the encoder stays unchanged from the original Transformer network.
 
-\subsection{Decoder Stack}\label{sec:decoderStack}
+\subsection{Decoder Stack}\label{cp8.sec.decoderStack}
 In order to translate non-autoregressively and parallelize the decoding process, we modify the decoder stack as follows.
 
-\vspace{-5pt}
 \paragraph{Decoder Inputs}
 Before decoding starts, the \model{} needs to know how long the target sentence will be in order to generate all words in parallel.
 More crucially, we cannot use time-shifted target outputs (during training) or previously predicted outputs (during inference) as the inputs to the first decoder layer.
 Omitting inputs to the first decoder layer entirely, or using only positional embeddings, resulted in very poor performance.
 Instead, we initialize the decoding process using copied source inputs from the encoder side. As the source and target sentences are often of different lengths, we propose two methods:
-\begin{itemize}[leftmargin=*]
-\item \textbf{Copy source inputs uniformly}: Each decoder input $t$ is a copy of the $\text{Round}(T't/T)$-th encoder input. This is equivalent to ``scanning'' source inputs from left to right with a constant ``speed,'' and results in a decoding process that is deterministic given a (predicted) target length.
-\item \textbf{Copy source inputs using fertilities}: A more powerful way, depicted in Fig.~\ref{fig.diagram} and discussed in more detail below, 
+\begin{itemize}
+\item \textbf{Copy source inputs uniformly}: Each decoder input $t$ is a copy of the $\textrm{Round}(T'\cdot t/T)$-th encoder input. This is equivalent to ``scanning'' source inputs from left to right with a constant ``speed,'' and results in a decoding process that is deterministic given a (predicted) target length.
+\item \textbf{Copy source inputs using fertilities}: A more powerful way, depicted in Fig.~\ref{cp8.fig.diagram} and discussed in more detail below, 
 is to copy each encoder input as a decoder input zero or more times, with the number of times each input is copied referred to as that input word's ``fertility.''
 % is to copy the position of $\arg\min_{k}{\sum_{t'=1}^{k}}f_{t'}\geq t$ for each position $t$ where for each source word $x_{t'}$, a special \textit{fertility} score $f_{t'} (\geq 0)$ is predicted.
 In this case the source inputs are scanned from left to right at a ``speed'' that varies inversely with the fertility of each input; the decoding process is now conditioned on the sequence of fertilities, while the resulting output length is determined by the sum of all fertility values. 
 \end{itemize}
 
-\vspace{-5pt}
+
 \paragraph{Non-causal self-attention}
 Without the constraint of an autoregressive factorization of the output distribution, we no longer need to prevent earlier decoding steps from accessing information from later steps. Thus we can avoid the causal mask used in the self-attention module of the conventional Transformer's decoder. Instead, we  mask out each query position only from attending to itself, which we found to improve decoder performance relative to unmasked self-attention.
 
-\vspace{-5pt}
+
 \paragraph{Positional attention}
 We also include an additional positional attention module in each decoder layer, which is a multi-head attention module with the same general attention mechanism used in other parts of the Transformer network, i.e.
 \begin{equation}
 \text{Attention}(Q,K,V)=\text{softmax}\left(\frac{QK^T}{\sqrt{d_\text{model}}}\right)\cdot V,
-\label{eq.attention}
+\label{cp8.eq.attention}
 \end{equation}
 where $d_\text{model}$ is the model hidden size, but with the positional encoding\footnote{The positional encoding $p$ is computed as $p(j, k) =
-\sin{(j/10000^{k/d})}$ (for even $k$) or $\cos{(j/10000^{k/d})}$ (for odd $k$), where $j$ is the timestep index and $k$ is the channel index.} as both query and key and the decoder states as the value. This incorporates positional information directly into the attention process and provides a stronger positional signal than the embedding layer alone. We also hypothesize that this additional information improves the decoder's ability to perform local reordering.
+\sin{(j/10000^{k/d})}$ (for even $k$) or $\cos{(j/10000^{k/d})}$ (for odd $k$), where $j$ is the timestep index and $k$ is the channel index.} as both query ($Q$) and key ($K$) and the decoder states as the value ($V$). This incorporates positional information directly into the attention process and provides a stronger positional signal than the embedding layer alone. We also hypothesize that this additional information improves the decoder's ability to perform local reordering. More details and discussion about this style of multi-head attention can be found in \cite{vaswani2017attention}.
 
 \subsection{Modeling Fertility to Tackle the Multimodality Problem}
-\label{sec.fertility}
+\label{cp8.sec.fertility}
 
-The multimodality problem can be attacked by introducing a latent variable $z$ to directly model the nondeterminism in the translation process: we first sample $z$ from a prior distribution and then condition on $z$ to non-autoregressively generate a translation.
-
-% \begin{equation}
-% \label{latent}
-% p_{\mathcal{NA}}(Y|X; \theta) = \sum_z{\left[p_z(z|x_{1:T'};\theta)\cdot p_L(T|x_{1:T'};\theta;z)\cdot \prod_{t=1}^T p(y_t| x_{1:T'};\theta;z)\right]}.
-% \end{equation}
-One way to interpret this latent variable is as a sentence-level ``plan'' akin to those discussed in the language production literature~\citep{martin2010planning}. There are several desirable properties for this latent variable:
-\begin{itemize}[leftmargin=*]
+\paragraph{Latent Variable Model}
+The multimodality problem can be attacked by introducing a latent variable $\zeta$ to directly model the nondeterminism in the translation process: we first sample $\zeta$ from a prior distribution and then condition on $\zeta$ to non-autoregressively generate a translation. That is:
+ \begin{equation}
+ \label{cp8.eq.latent}
+ p_{\mathcal{NA}}(Y|X; \theta) = \sum_\zeta{\left[p_\zeta(\zeta|x_{1:T'};\theta)\cdot p_L(T|x_{1:T'};\theta;\zeta)\cdot \prod_{t=1}^T p(y_t| x_{1:T'};\theta;\zeta)\right]},
+ \end{equation}
+ where one way to interpret this latent variable $\zeta$  is as a sentence-level ``plan'' akin to those discussed in the language production literature~\citep{martin2010planning}. There are several desirable properties for this latent variable:
+\begin{itemize}
 \item It should be simple to infer a value for the latent variable given a particular input-output pair, as this is needed to train the model end-to-end.
-\item Adding $z$ to the conditioning context should account as much as possible for the correlations across time between different outputs, so that the remaining marginal probabilities at each output location are as close as possible to satisfying conditional independence.
-\item It should not account for the variation in output translations so directly that $p(y|x, z)$ becomes trivial to learn, since that is the function our decoder neural network will approximate.
+\item Adding $\zeta$ to the conditioning context should account as much as possible for the correlations across time between different outputs, so that the remaining marginal probabilities at each output location are as close as possible to satisfying conditional independence.
+\item It should not account for the variation in output translations so directly that $p(y|x, \zeta)$ becomes trivial to learn, since that is the function our decoder neural network will approximate.
 \end{itemize}
-The factorization by length introduced in Eq.~\ref{eq.simple} provides a very weak example of a latent variable model, satisfying the first and third property but not the first. We propose the use of \emph{fertilities} instead. These are integers for each word in the source sentence that correspond to the number of words in the target sentence that can be aligned to that source word using a hard alignment algorithm like IBM Model 2 \citep{brown1993mathematics}.
+The factorization by length introduced in Eq.~\eqref{eq.simple} provides a very weak example of a latent variable model, satisfying the first and third property but not the first. We propose the use of \emph{fertilities} instead. These are integers for each word in the source sentence that correspond to the number of words in the target sentence that can be aligned to that source word using a hard alignment algorithm like IBM Model 2 \citep{brown1993mathematics}\footnote{The concept of fertilities are officially introduced in IBM Model 3. However, we use a simplified version which are computed from the word-alignment used in IBM model 2.}.
 
-%\subsection{Latent Fertility Model}
 
+\paragraph{Latent Fertility Model}
 One of the most important properties of the proposed \model{} is that it naturally introduces an informative latent variable when we choose to copy the encoder inputs based on predicted fertilities.  More precisely, given a source sentence $X$, the conditional probability of a target translation $Y$ is:
 \begin{equation}
 p_{\mathcal{NA}}(Y|X; \theta) = \sum_{f_1,...,f_{T'} \in \mathcal{F}}\left(\prod_{t'=1}^{T'}p_F(f_{t'}|x_{1:T'};\theta)\cdot \prod_{t=1}^{T} p(y_t| x_1\{f_1\}, .., x_{T'}\{f_{T'}\};\theta)\right)
-\label{eq.latent_fer}
+\label{cp8.eq.latent_fer}
 \end{equation}
 where $\mathcal{F}=\{f_1,...,f_{T'}| \sum_{t'=1}^{T'}f_{t'}= T, f_{t'} \in \mathbb{Z^*} \}$ is the set of all fertility sequences---one fertility value per source word---that sum to the length of $Y$ and $x\{f\}$ denotes the token $x$ repeated $f$ times.
 
-\vspace{-5pt}
-\paragraph{Fertility prediction} As shown in Fig.~\ref{fig.diagram}, we model the fertility $p_F(f_{t'}|x_{1:T'})$ at each position independently using a one-layer neural network with a softmax classifier ($L=50$ in our experiments) on top of the output of the last encoder layer. This models the way that fertility values are a property of each input word but depend on information and context from the entire sentence.
+\paragraph{Fertility prediction} As shown in Fig.~\ref{cp8.fig.diagram}, we model the fertility $p_F(f_{t'}|x_{1:T'})$ at each position independently using a one-layer neural network with a softmax classifier ($L=50$ in our experiments) on top of the output of the last encoder layer. This models the way that fertility values are a property of each input word but depend on information and context from the entire sentence.
 
-\vspace{-5pt}
+
 \paragraph{Benefits of fertility} 
 Fertilities possess all three of the properties listed earlier as desired of a latent variable for non-autoregressive machine translation:
-\begin{itemize}[leftmargin=*]
+\begin{itemize}
 \item An external aligner provides a simple and fast approximate inference model that effectively reduces the unsupervised training problem to two supervised ones.
 \item Using fertilities as a latent variable makes significant progress towards solving the multimodality problem by providing a natural factorization of the output space.
 Given a source sentence, restricting the output distribution to those target sentences consistent with a particular fertility sequence dramatically reduces the mode space. Furthermore, the global choice of mode is factored into a set of local mode choices: namely, how to translate each input word. These local mode choices can be effectively supervised because the fertilities provide a fixed ``scaffold.''
@@ -170,33 +165,29 @@ Our use of fertilities as a latent variable also means that there is no need to 
 And fertilities provide a powerful way to condition the decoding process, allowing the model to generate diverse translations by sampling over the fertility space.
 
 \subsection{Translation Predictor and the Decoding Process}
-At inference time, the model can identify the translation with the highest conditional probability (see Eq.~\ref{eq.latent_fer}) by marginalizing over all possible latent fertility sequences. 
+At inference time, the model can identify the translation with the highest conditional probability (see Eq.~\eqref{cp8.eq.latent_fer}) by marginalizing over all possible latent fertility sequences. 
 Given a fertility sequence, however, identifying the optimal translation only requires independently maximizing the local probability for each output position.
 % \begin{equation}
 % \hat{Y} = \argmax_{Y}p_{\mathcal{NA}}(Y|X;\theta)=\argmax_{Y\in \mathcal{M}}p_{\mathcal{NA}}(Y|X;\theta),
 % \end{equation}
 % where $\mathcal{M}=\{\hat{y}_{1: T}|\hat{y}_t  = \argmax_{y_t} p\left(y_t|x_1\{f_1\}, .., x_{T'}\{f_{T'}\}\right);\theta), t=1, ..., T, \forall f_{1:T'}\}$.  
 We define $Y = G(x_{1:T'}, f_{1:T'}; \theta)$ to represent the optimal translation given a source sentence and a sequence of fertility values.
-
 But searching and marginalizing over the whole fertility space is still intractable. We propose three heuristic decoding algorithms to reduce the search space of the \model{} model:
 
-\vspace{-5pt}
 \paragraph{Argmax decoding} Since the fertility sequence is also modeled with a conditionally independent factorization, we can simply estimate the best translation by choosing the highest-probability fertility for each input word:
 \begin{equation}
 	\hat{Y}_\text{argmax} = G(x_{1:T'}, \hat{f}_{1:T'};\theta), \textrm{where} \ \ \hat{f}_{t'}=\argmax_f p_F(f_{t'}|x_{1:T'};\theta)
 \end{equation}
 %When not otherwise specified, our experiments use argmax decoding.
 
-\vspace{-5pt}
 \paragraph{Average decoding}
 We can also estimate each fertility as the expectation of its corresponding softmax distribution:
 \begin{equation}
 	\hat{Y}_\text{average} = G(x_{1:T'}, \hat{f}_{1:T'};\theta), \textrm{where} \ \ \hat{f}_{t'}=\textrm{Round}\left(\sum_{f_{t'}=1}^L p_F(f_{t'}|x_{1:T'};\theta)f_{t'}\right)
-    \label{eq.average}
+    \label{cp8.eq.average}
 \end{equation}
 
-\vspace{-5pt}
-\paragraph{Noisy parallel decoding (NPD)} A more accurate approximation of the true optimum of the target distribution, inspired by~\citet{cho2016noisy}, is to draw samples from the fertility space and compute the best translation for each fertility sequence.
+\paragraph{Noisy / Exact parallel decoding (NPD/EPD)} A more accurate approximation of the true optimum of the target distribution, inspired by~\citet{cho2016noisy} (which is also been discussed in \S\ref{cp2.sec.noisy}), is to draw samples from the fertility space and compute the best translation for each fertility sequence based on  a re-rank function.
 % %it is possible by injecting unstructured noise to the hidden states of the NMT models and decoding in completely parallel to find the best translation. In \model{},  we can do similar noisy decoding by directly sampling in the fertility space where the best translation can be re-ranked based on the probabilities, that is:
 % \begin{equation}
 % \hat{Y}_\text{NPD} = G(x_{1:T'}, \argmax_{f_{t'} \sim p_F(f_{t'}|x_{1:T'})} p_{\mathcal{NA}}(G(x_{1:T'}, f_{1:T'})|X))
@@ -208,15 +199,22 @@ We can then use the autoregressive teacher to identify the best overall translat
 \begin{equation}
 \hat{Y}_\text{NPD} = G(x_{1:T'}, \argmax_{f_{t'} \sim p_F} p_{\mathcal{AR}}(G(x_{1:T'}, f_{1:T'};\theta)|X;\theta);\theta)
 \end{equation}
-Note that, when using an autoregressive model as a scoring function for a set of decoded translations, it can run as fast as it does at train time because it can be provided with all decoder inputs in parallel.
 
-NPD is a stochastic search method, and it also increases the computational resources required linearly by the sample size. However, because all the search samples can be computed and scored entirely independently, the process only doubles the latency compared to computing a single translation if sufficient parallelism is available.
+NPD is a stochastic search method which cannot make sure to result in the same translation for each run. Also, it is likely to produce duplicated fertilities when we simply sample from the distribution. An alternative is to incorporate an ``Exact parallel decoding'' in the fertility space instead of sampling, considering its factorized formulation of the distribution of fertility. In such cases, everything will be the same except we use the searched fertilities  to compute the translation. That is:
+\begin{equation}
+\hat{Y}_\text{EPD} = G(x_{1:T'}, \argmax_{f_{t'}  \in \argsort^K p_F} p_{\mathcal{AR}}(G(x_{1:T'}, f_{1:T'};\theta)|X;\theta);\theta)
+\end{equation}
+Searching in the fertility space usually costs another $10\sim20\%$ overhead of the computational time compared to sampling, in the meantime, it generally improves the final performance by $0.5$ BLEU scores.
+Also, when using an autoregressive model as a scoring function for a set of decoded translations, it can run as fast as it does at train time because it can be provided with all decoder inputs in parallel.
+
+Both NPD and EPD also increase the computational resources required linearly by the sample size. However, because all the search samples can be computed and scored entirely independently, the process only doubles the latency compared to computing a single translation if sufficient parallelism is available.
 %the latency caused by autoregressive models, all our search samples are completely independent with each other, and theoretically can be computed without any latency, which will be more applicable in industry settings.
 
-\section{Training}
+
+\section{Learning}
 The proposed \model{} contains a discrete sequential latent variable $f_{1:T'}$, whose conditional posterior distribution $p(f_{1:T'} | x_{1:T'}, y_{1:T}; \theta)$ we can approximate using a proposal distribution $q(f_{1:T'} | x_{1:T'}, y_{1:T})$. This provides a variational bound for the overall maximum likelihood loss:
 \begin{equation}
-\label{eq.variational}
+\label{cp8.eq.variational}
 \begin{split}
 \mathcal{L}_{\text{ML}} &= \log p_{\mathcal{NA}}(Y|X; \theta) = \log \sum_{f_{1:T'}\in \mathcal{F}}{p_F(f_{1:T'}|x_{1:T'}; \theta)\cdot p(y_{1:T} | x_{1:T'}, f_{1:T'}; \theta)} \\
 &\geq \mathop{\mathbb{E}}_{f_{1:T'} \sim q}\left(\underbrace{\sum_{t=1}^T\log p(y_t| x_1\{f_1\}, .., x_{T'}\{f_{T'}\}; \theta)}_{\text{Translation Loss}} + \underbrace{\sum_{t'=1}^{T'}\log p_F(f_{t'}|x_{1:T'}; \theta)}_{\text{Fertility Loss}} \right) + \mathcal{H}(q)
@@ -225,9 +223,9 @@ The proposed \model{} contains a discrete sequential latent variable $f_{1:T'}$,
 
 We choose a proposal distribution $q$ defined by a separate, fixed fertility model. Possible options include the output of an external aligner, which produces a deterministic sequence of integer fertilities for each (source, target) pair in a training corpus, or fertilities computed from the attention weights used in our fixed autoregressive teacher model. This simplifies the inference process considerably, as the expectation over $q$ is deterministic.
 
-The resulting loss function, consisting of the two bracketed terms in Eq.~\ref{eq.variational}, allows us to train the entire model in a supervised fashion, using the inferred fertilities to simultaneously train the translation model $p$ and supervise the fertility neural network model $p_F$.
+The resulting loss function, consisting of the two bracketed terms in Eq.~\eqref{cp8.eq.variational}, allows us to train the entire model in a supervised fashion, using the inferred fertilities to simultaneously train the translation model $p$ and supervise the fertility network model $p_F$.
 
-\subsection{Sequence-Level Knowledge Distillation}\label{sec.seqkd}
+\subsection{Sequence-Level Knowledge Distillation}\label{cp8.sec.seqkd}
 
 While the latent fertility model substantially improves the ability of the non-autoregressive output distribution to approximate the multimodal target distribution, it does not completely solve the problem of nondeterminism in the training data. In many cases, there are multiple correct translations consistent with a single sequence of fertilities---for instance, both ``Danke sch\"{o}n.'' and ``Vielen dank.'' are consistent with the English input ``Thank you.'' and the fertility sequence $[2, 0, 1]$, because ``you'' is not directly translated in either German sentence.
 
@@ -246,90 +244,85 @@ In particular, it heavily relies on the deterministic, approximate inference mod
 Thus we propose a fine-tuning step after training the \model{} to convergence. We introduce an additional loss term consisting of the reverse K-L divergence with the teacher output distribution, a form of word-level knowledge distillation:
 \begin{equation}
 \mathcal{L}_\text{RKL}\left(f_{1:T'}; \theta \right)=  \sum_{t=1}^T\sum_{y_t}\left[\log p_{\mathcal{AR}}\left(y_t|\hat{y}_{1:t-1}, x_{1:T'}\right)\cdot p_{\mathcal{NA}}\left(y_t|x_{1:T'}, f_{1:T'}; \theta \right)\right],
-\label{eq.soft-conceptual}
+\label{cp8.eq.soft-conceptual}
 \end{equation}
-where $\hat{y}_{1:T}=G(x_{1:T'}, f_{1:T'};\theta)$. Such a loss is more favorable towards highly peaked student output distributions than a standard cross-entropy error would be.
+where $\hat{y}_{1:T}=G(x_{1:T'}, f_{1:T'};\theta)$. %Such a loss is more favorable towards highly peaked student output distributions than a standard cross-entropy error would be.
 
 Then we train the whole model jointly with a weighted sum of the original distillation loss and two such terms, one an expectation over the predicted fertility distribution, normalized with a baseline, and the other based on the external fertility inference model:
 \begin{equation}
 \mathcal{L}_\text{FT} = \lambda \left(\underbrace{\mathop{\mathbb{E}}_{f_{1:T'} \sim p_F}\left(\mathcal{L}_\text{RKL}\left(f_{1:T'}\right) - \mathcal{L}_\text{RKL}\left(\bar{f}_{1:T'}\right)\right)}_{\mathcal{L}_\text{RL}} + \underbrace{\mathop{\mathbb{E}}_{f_{1:T'} \sim q}\left(\mathcal{L}_\text{RKL}\left(f_{1:T'}\right)\right)}_{\mathcal{L}_\text{BP}}\right) + (1 - \lambda)\mathcal{L}_\text{KD}
 \end{equation}
-where $\bar{f}_{1:T'}$ is the average fertility computed by Eq.~\ref{eq.average}.
+where $\bar{f}_{1:T'}$ is the average fertility computed by Eq.~\eqref{cp8.eq.average}.
 The gradient with respect to the non-differentiable $\mathcal{L}_\text{RL}$ term can be estimated with REINFORCE~\citep{williams1992simple}, while the $\mathcal{L}_\text{BP}$ term can be trained using ordinary backpropagation.
 
-% \paragraph{Reinforcement Learning}
-% Use teacher scores to fine-tune fertility predictions using REINFORCE
-% If we don't use reinforcement learning, then our latent fertility model is actually just a supervised fertility model.
+
 \section{Experiments}
-\subsection{Experimental Settings}
-\vspace{-5pt}
-\paragraph{Dataset} We evaluate the proposed \model{} on three widely used public machine translation corpora: IWSLT16 En--De\footnote{https://wit3.fbk.eu/}, WMT14 En--De,\footnote{http://www.statmt.org/wmt14/translation-task} and WMT16 En--Ro\footnote{http://www.statmt.org/wmt16/translation-task}. We use IWSLT---which is smaller than the other two datasets---as the development dataset for ablation experiments, and additionally train and test our primary models on both directions of both WMT datasets.
+\subsection{Settings}
+\paragraph{Dataset} We evaluate the proposed \model{} on three widely used public machine translation corpora: IWSLT16 En--De\footnote{https://wit3.fbk.eu/}, WMT14 En--De,\footnote{http://www.statmt.org/wmt14/translation-task} and WMT16 En--Ro\footnote{http://www.statmt.org/wmt16/translation-task}. We use IWSLT---which is smaller than the other two datasets---as the development dataset for ablation experiments, and additionally train and test our primary models on both directions of both WMT datasets. The detailed statistics can be seen as follows in Table.~\ref{cp8.table.dataset}.
 All the data are tokenized and segmented into subword symbols using byte-pair encoding (BPE)~\citep{sennrich2015neural} to restrict the size of the vocabulary. For both WMT datasets, we use shared BPE vocabulary and additionally share encoder and decoder word embeddings; for IWSLT, we use separate English and German vocabulary and embeddings.
-% \begin{wraptable}{L}{0.5\textwidth}
-% \small
-% \centering
-% \begin{tabular}{l|r|r|r}
-% % \toprule
-% %  Dataset& IWSLT En--De & WMT En--De  & WMT En--Ro\\
-% % \midrule
-% % \# Train & 208389 & 4500966 & 608319 \\
-% % \# Dev   & 993 & 3000 & 1999 \\
-% % \# Test  & 1305 & 3003 & 1999 \\
-% % \bottomrule
-% \toprule
-%  Dataset& \# Train & \# Dev & \# Test\\
-% \midrule
-% IWSLT En--De & 208,389 & 993 & 1,305 \\
-% WMT14 En--De & 4,500,966 & 3,000 & 3,003 \\
-% WMT16 En--Ro & 608,319 & 1,999 & 1,999 \\
-% \bottomrule
-% \end{tabular} 
-% \caption{\label{table.dataset} Dataset statistics.}
-% \end{wraptable}   
-\vspace{-5pt}
-\paragraph{Teacher} Sequence-level knowledge distillation is applied to alleviate multimodality in the training dataset, using autoregressive models as the teachers. The same teacher model used for distillation is also used as a scoring function for fine-tuning and noisy parallel decoding.
+
+ \begin{table}[hptb]
+ \small
+ \centering
+ \begin{tabular}{l|r|r|r}
+ % \toprule
+ %  Dataset& IWSLT En--De & WMT En--De  & WMT En--Ro\\
+ % \midrule
+ % \# Train & 208389 & 4500966 & 608319 \\
+ % \# Dev   & 993 & 3000 & 1999 \\
+ % \# Test  & 1305 & 3003 & 1999 \\
+ % \bottomrule
+ \toprule
+  Dataset& \# Train & \# Dev & \# Test\\
+ \midrule
+ IWSLT En--De & 208,389 & 993 & 1,305 \\
+ WMT14 En--De & 4,500,966 & 3,000 & 3,003 \\
+ WMT16 En--Ro & 608,319 & 1,999 & 1,999 \\
+ \bottomrule
+ \end{tabular} 
+ \caption{\label{cp8.table.dataset} Dataset statistics (\# of sentence pairs).}
+ \end{table}   
+
+\paragraph{Teacher Model} Sequence-level knowledge distillation is applied to alleviate multimodality in the training dataset, using autoregressive models as the teachers. The same teacher model used for distillation is also used as a scoring function for fine-tuning and noisy parallel decoding.
 
 To enable a fair comparison, and benefit from its high translation quality, we implemented the autoregressive teachers using the state-of-the-art Transformer architecture. In addition, we use the same sizes and hyperparameters for each student and its respective teacher, with the exception of the newly added positional self-attention and fertility prediction modules.
 
-\begin{wrapfigure}{r}{0.45\textwidth} 
-\vspace{-10pt}
+\begin{figure}[htpb]
 \centering
-\includegraphics[width=\linewidth]{figs/nat/NAT-sample-bleu}
-\caption{\label{fig.noisy_decoding} BLEU scores on IWSLT development set as a function of sample size for noisy parallel decoding. NPD matches the performance of the other two decoding strategies after two samples, and exceeds the performance of the autoregressive teacher with around 1000.}
-\vspace{-20pt}
-\end{wrapfigure}
+\includegraphics[width=0.8\linewidth]{figs/nat/NAT-sample-bleu}
+\caption{\label{cp8.fig.noisy_decoding} BLEU scores on IWSLT development set as a function of sample size for noisy parallel decoding. NPD matches the performance of the other two decoding strategies after two samples, and exceeds the performance of the autoregressive teacher with around 1000.}
+\end{figure}
 
-\vspace{-5pt}
+
 \paragraph{Preparation for knowledge distillation} We first train all teacher models using maximum likelihood, then freeze their parameters. To avoid the redundancy of running fixed teacher models repeatedly on the same data, we decode the entire training set once using each teacher to create a new training dataset for its respective student.
 
-\vspace{-5pt}
+
 \paragraph{Encoder initialization}
 We find it helpful to initialize the weights in the NAT student's encoder with the encoder weights from its teacher, as the autoregressive and non-autoregressive models share the same encoder input and architecture.
 
-\vspace{-5pt}
-\paragraph{Fertility supervision during training}~~
+
+\paragraph{Fertility supervision during training}
 As described above, we supervise the fertility predictions at train time by using a fixed aligner as a fertility inference function. We use the \texttt{fast\_align}\footnote{https://github.com/clab/fast\_align} implementation of IBM Model 2 for this purpose, with default parameters
 \citep{dyer2013simple}.
 
-\vspace{-5pt}
+
 \paragraph{Hyperparameters}
 For experiments on WMT datasets, we use the hyperparameter settings of the \texttt{base} Transformer model described in \citet{vaswani2017attention}, though without label smoothing. As IWSLT is a smaller corpus, and to reduce training time, we use a set of smaller hyperparameters ($d_{\text{model}}=287, d_{\text{hidden}}=507, n_{\text{layer}}=5, n_{\text{head}}=2$, and $t_\text{warmup}=746$) for all experiments on that dataset.
 %the result of a limited hyperparameter search using the autoregressive model. 
 For fine-tuning we use $\lambda=0.25$.
 
-\vspace{-5pt}
-\paragraph{Evaluation metrics} We evaluate using tokenized and cased BLEU scores~\citep{papineni2002bleu}.
 
-\vspace{-5pt}
+\paragraph{Evaluation} We evaluate using tokenized and cased BLEU scores~\citep{papineni2002bleu}.
+
 \paragraph{Implementation} We have open-sourced our PyTorch implementation of the \model{}\footnote{https://github.com/salesforce/nonauto-nmt}.
 
 \subsection{Results}
 Across the three datasets we used, the \model{} performs between 2-5 BLEU points worse than its autoregressive teacher, with part or all of this gap addressed by the use of noisy parallel decoding. In the case of WMT16 English--Romanian, NPD improves the performance of our non-autoregressive model to within 0.2 BLEU points of the previous overall state of the art \citep{gehring2017convolutional}.
 
 \begin{table}[t]
-\small
 %\vspace{-4mm}
   \centering
+  \resizebox{\textwidth}{!}{
     \begin{tabular}{l|cccc|crr}
     \toprule
     Models                  & \multicolumn{2}{c}{WMT14} & \multicolumn{2}{c|}{WMT16} & \multicolumn{2}{c}{IWSLT16} \\
@@ -353,20 +346,20 @@ Across the three datasets we used, the \model{} performs between 2-5 BLEU points
     
     \bottomrule
     \end{tabular}
+    }
      \caption{BLEU scores on official test sets (\texttt{newstest2014} for WMT En-De and \texttt{newstest2016} for WMT En-Ro) or the development set for IWSLT. NAT models without NPD use argmax decoding. Latency is computed as the time to decode a single sentence without minibatching, averaged over the whole test set; decoding is implemented in PyTorch on a single NVIDIA Tesla P100.}
-     \vspace{-10pt}
-  \label{tab:bleu}%
+  \label{cp8.table.bleu}%
 %\end{wraptable}
 \end{table}
 
 Comparing latencies on the development model shows a speedup of more than a factor of 10 over greedy autoregressive decoding, or a factor of 15 over beam search.  Latencies for decoding with NPD, regardless of sample size, could be reduced to about 80ms by parallelizing across multiple GPUs because each sample can be generated, then scored, independently from the others.
 
-\subsection{Ablation Study}
+\paragraph{Ablation Study}
 We also conduct an extensive ablation study with the proposed \model{} on the IWSLT dataset. First, we note that the model fails to train when provided with only positional embeddings as input to the decoder. Second, we see that training on the distillation corpus rather than the ground truth provides a fairly consistent improvement of around 5 BLEU points. Third, switching from uniform copying of source inputs to fertility-based copying improves performance by four BLEU points when using ground-truth training or two when using distillation.
 
 
 
-\begin{table}[h!]
+\begin{table}[hptb]
 \small\centering
 \begin{tabular}{cc|ccc|ccc|rr}
 \toprule
@@ -413,42 +406,48 @@ Fine-tuning does not converge with reinforcement learning alone, or with the $\m
 
 \begin{figure}[htpb]
 \includegraphics[width=\textwidth]{figs/nat/examples1}
-\caption{\label{fig.ex} Two examples comparing translations produced by an autoregressive (AR) and non-autoregressive Transformer as well as the result of noisy parallel decoding with sample size 100. Repeated words are highlighted in gray.}
+\caption{\label{cp8.fig.ex} Two examples comparing translations produced by an autoregressive (AR) and non-autoregressive Transformer as well as the result of noisy parallel decoding with sample size 100. Repeated words are highlighted in gray.}
 \end{figure}
 \begin{figure}[htpb]
 \centering
-\includegraphics[width=0.9\textwidth]{figs/nat/fertility_example2}
-\caption{\label{fig.fer} A Romanian--English example translated with noisy parallel decoding. At left are eight sampled fertility sequences from the encoder, represented with their corresponding decoder input sequences. Each of these values for the latent variable leads to a different possible output translation, shown at right. The autoregressive Transformer then picks the best translation, shown in red, a process which is much faster than directly using it to generate output.}
+\includegraphics[width=\textwidth]{figs/nat/fertility_example2}
+\caption{\label{cp8.fig.fer} A Romanian--English example translated with noisy parallel decoding. At left are eight sampled fertility sequences from the encoder, represented with their corresponding decoder input sequences. Each of these values for the latent variable leads to a different possible output translation, shown at right. The autoregressive Transformer then picks the best translation, shown in red, a process which is much faster than directly using it to generate output.}
 \end{figure}
 
-We include two examples of translations from the IWSLT development set in Fig.~\ref{fig.ex}.
+\begin{figure}[hptb]
+\centering
+\includegraphics[width=0.75\textwidth]{figs/nat/length_vs_latency}
+\caption{\label{cp8.fig.latency}The translation latency, computed as the time to decode a single sentence without minibatching, for each sentence in the IWSLT development set as a function of its length. The autoregressive model has latency linear in the decoding length, while the latency of the NAT is nearly constant for typical lengths, even with NPD with sample size 10. When using NPD with sample size 100, the level of parallelism is enough to more than saturate the GPU, leading again to linear latencies.}
+\end{figure}
+
+\begin{figure}[hptb]
+\centering
+\includegraphics[width=0.75\textwidth]{figs/nat/learning_curve}
+\caption{\label{cp8.fig.curve}Learning curves for training and fine-tuning of the \model{} on IWSLT. BLEU scores are on the development set.}
+\end{figure}
+
+\paragraph{Examples}
+We include two examples of translations from the IWSLT development set in Fig.~\ref{cp8.fig.ex}.
 Instances of repeated words or phrases, highlighted in gray, are most prevalent in the non-autoregressive output for the relatively complex first example sentence. Two pairs of repeated words in the first example, as well as a pair in the second, are not present in the versions with noisy parallel decoding, suggesting that NPD scoring using the teacher model can filter out such mistakes. The translations produced by the \model{} with NPD, while of a similar quality to those produced by the autoregressive model, are also noticeably more literal. 
+We also show an example of the noisy parallel decoding process in Fig.~\ref{cp8.fig.fer}, demonstrating the diversity of translations that can be found by sampling.
 
-We also show an example of the noisy parallel decoding process in Fig.~\ref{fig.fer}, demonstrating the diversity of translations that can be found by sampling from the fertility space.
-
-
-
-\section{Schematic and Analysis}
-
-
-\begin{figure}[htbp]
+\subsection{Analysis and Schematic}
+We also show more detailed analysis and the overall schematic structure in this section as shown in Fig \ref{cp8.fig.latency}, \ref{cp8.fig.curve} and \ref{cp8.fig.sch}. 
+\begin{figure}[hptb]
 \centering
-\includegraphics[width=\textwidth]{figs/nat/NAT-overall}
-\caption{The schematic structure of training and inference for the \model. The ``distilled data'' contains target sentences decoded by the autoregressive model and ground-truth source sentences.}
+\includegraphics[width=0.75\textwidth]{figs/nat/NAT-overall}
+\caption{\label{cp8.fig.sch}The schematic structure of training and inference for the \model. The ``distilled data'' contains target sentences decoded by the autoregressive model and ground-truth source sentences.}
 \end{figure}
 
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.85\textwidth]{figs/nat/length_vs_latency}
-\caption{The translation latency, computed as the time to decode a single sentence without minibatching, for each sentence in the IWSLT development set as a function of its length. The autoregressive model has latency linear in the decoding length, while the latency of the NAT is nearly constant for typical lengths, even with NPD with sample size 10. When using NPD with sample size 100, the level of parallelism is enough to more than saturate the GPU, leading again to linear latencies.}
-\end{figure}
 
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.85\textwidth]{figs/nat/learning_curve}
-\caption{Learning curves for training and fine-tuning of the \model{} on IWSLT. BLEU scores are on the development set.}
-\end{figure}
 
-\section{Conclusion}
-We introduce a latent variable model for non-autoregressive machine translation that enables a decoder based on \citet{vaswani2017attention} to take full advantage of its exceptional degree of internal parallelism even at inference time. As a result, we measure translation latencies of one-tenth that of an equal-sized autoregressive model, while maintaining competitive BLEU scores.
+\section{Conclusion and Next Chapter}
+In this chapter, we introduce a latent variable model for non-autoregressive machine translation that enables a decoder based on \citet{vaswani2017attention} to take full advantage of its exceptional degree of internal parallelism even at inference time. As a result, we measure translation latencies of one-tenth that of an equal-sized autoregressive model, while maintaining competitive BLEU scores. As the first attempt, the proposed method also broads a new research direction which allows us to explore on the non-autoregressive decoding.
 
+Although the proposed \model{} aims to overcome the fundamental restriction of the existing NMT models that relies on autoregressive decoding.
+There still exists one situation of inefficiency in the decoding of all NMT models, that is,  real-time translation (or so-called simultaneous translation).
+Because all the NMT models we discussed up to now (including the proposed \model{}) assumes the model to read the whole source sentence before start to translate, which means the MT system has to wait until the speaker finish his words.
+It is not suitable for cases where timing is very important, e,g. international conference. In the next chapter, we will demonstrate one method which can help to do real-time translation using NMT.
+
+
+  

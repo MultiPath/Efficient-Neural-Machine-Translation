@@ -11,7 +11,7 @@
 \usepackage{enumitem,multirow,hhline,stmaryrd,bussproofs,mathtools,siunitx,arydshln}
 \usepackage{booktabs,xcolor,csquotes,calligra}
 \usepackage{dsfont,xspace}
-
+\usepackage{rotating}
 % (custom libraries)
 \usepackage{fitch}
 \usepackage{amsmath}
@@ -55,8 +55,14 @@
 \newcommand{\bleu}{{{\sc Bleu}}\xspace}
 \newcommand{\meteor}{{{\sc Meteor}}\xspace}
 \newcommand{\camready}[1]{{{#1}}}
+
 \newcommand{\eos}{{$\langle \mathrm{eos}\rangle$}\xspace}
 \newcommand{\bos}{{$\langle \mathrm{bos}\rangle$}\xspace}
+\newcommand{\unk}{{$\langle \mathrm{unk}\rangle$}\xspace}
+
+\newcommand{\copynet}{{\textsc{CopyNet}}\xspace}
+
+\newcommand{\uunk}{{\langle \mathrm{unk}\rangle}}
 \newcommand{\sts}{{{\textsc{Seq2Seq}}}\xspace}
 \newcommand{\dbleu}{{$\Delta${\sc Bleu}}\xspace}
 \newcommand{\fix}{\marginpar{FIX}}
@@ -64,6 +70,7 @@
 \newcommand{\MINUS}{}
 \DeclareMathOperator{\softmax}{\text{softmax}}
 \DeclareMathOperator{\argsort}{\text{argsort}}
+\newcommand{\ssoftmax}{\mathop{\softmax}\limits}
 \usepackage{tabularx}
 \usepackage{tabulary}
 \usepackage{comment}
@@ -122,9 +129,9 @@
 \title{Efficient Neural Machine Translation}
 \author{Jiatao Gu}
 \principaladviser{Victor O.K. Li}
-\firstreader{Kyunghyun Cho}
-\secondreader{Yizhou Yu}
-\thirdreader{Y. C. Wu}
+\firstreader{Maggie Li}
+\secondreader{Kaibin Huang}
+\thirdreader{Laurence Young}
 
 % Preface
 \beforepreface
@@ -161,7 +168,7 @@
 \input{chapters/meta}
 
 \part{Decoding-Efficient Neural Machine Translation}
-\chapter[Trainable Greedy Decoding]{Trainable Decoding for Neural Machine Translation}
+\chapter[Trainable Greedy Decoding]{Trainable Greedy Decoding for Neural Machine Translation}
 \label{trainable}
 \input{chapters/trainable}
 
@@ -170,13 +177,13 @@
 \label{nat}
 \input{chapters/nat}
 
-\chapter{Real-Time Neural Machine Translation}
+\chapter{Simultaneous Neural Machine Translation}
 \label{simul}
 \input{chapters/simultrans}
 
-\chapter{Conclusion and Future Work}
+\chapter{Conclusion}
 \label{conclusion}
-% \input{chapters/conclusion}
+\input{chapters/conclusion}
 
 
 \bibliographystyle{acl}

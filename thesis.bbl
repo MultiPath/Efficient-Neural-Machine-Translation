@@ -1,0 +1,957 @@
+\begin{thebibliography}{}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{Andrychowicz et~al.(2016)Andrychowicz, Denil, Gomez, Hoffman, Pfau,
+  Schaul, and de~Freitas}]{andrychowicz2016learning}
+Marcin Andrychowicz, Misha Denil, Sergio Gomez, Matthew~W Hoffman, David Pfau,
+  Tom Schaul, and Nando de~Freitas. 2016.
+\newblock Learning to learn by gradient descent by gradient descent.
+\newblock In {\em Advances in Neural Information Processing Systems\/}. pages
+  3981--3989.
+
+\bibitem[{Artetxe et~al.(2017{\natexlab{a}})Artetxe, Labaka, and
+  Agirre}]{Artetxe2017LearningBW}
+Mikel Artetxe, Gorka Labaka, and Eneko Agirre. 2017{\natexlab{a}}.
+\newblock Learning bilingual word embeddings with (almost) no bilingual data.
+\newblock In {\em ACL\/}.
+
+\bibitem[{Artetxe et~al.(2017{\natexlab{b}})Artetxe, Labaka, and
+  Agirre}]{artetxe2017learning}
+Mikel Artetxe, Gorka Labaka, and Eneko Agirre. 2017{\natexlab{b}}.
+\newblock Learning bilingual word embeddings with (almost) no bilingual data.
+\newblock In {\em Proceedings of the 55th Annual Meeting of the Association for
+  Computational Linguistics (Volume 1: Long Papers)\/}. volume~1, pages
+  451--462.
+
+\bibitem[{Artetxe et~al.(2018)Artetxe, Labaka, Agirre, and
+  Cho}]{artetxe2017unsupervised}
+Mikel Artetxe, Gorka Labaka, Eneko Agirre, and Kyunghyun Cho. 2018.
+\newblock Unsupervised neural machine translation.
+\newblock In {\em Proceedings of International Conference on Learning
+  Representations (ICLR)\/}. Vancouver, Canada.
+
+\bibitem[{Bahdanau et~al.(2016)Bahdanau, Brakel, Xu, Goyal, Lowe, Pineau,
+  Courville, and Bengio}]{bahdanau2016actor}
+Dzmitry Bahdanau, Philemon Brakel, Kelvin Xu, Anirudh Goyal, Ryan Lowe, Joelle
+  Pineau, Aaron Courville, and Yoshua Bengio. 2016.
+\newblock An actor-critic algorithm for sequence prediction.
+\newblock {\em arXiv preprint arXiv:1607.07086\/} .
+
+\bibitem[{Bahdanau et~al.(2014)Bahdanau, Cho, and Bengio}]{bahdanau2014neural}
+Dzmitry Bahdanau, Kyunghyun Cho, and Yoshua Bengio. 2014.
+\newblock Neural machine translation by jointly learning to align and
+  translate.
+\newblock {\em arXiv preprint arXiv:1409.0473\/} .
+
+\bibitem[{Bangalore et~al.(2012)Bangalore, Rangarajan~Sridhar, Kolan, Golipour,
+  and Jimenez}]{bangalore2012real}
+Srinivas Bangalore, Vivek~Kumar Rangarajan~Sridhar, Prakash Kolan, Ladan
+  Golipour, and Aura Jimenez. 2012.
+\newblock Real-time incremental speech-to-speech translation of dialogs.
+\newblock In {\em Proceedings of the 2012 Conference of the North American
+  Chapter of the Association for Computational Linguistics: Human Language
+  Technologies\/}. Association for Computational Linguistics, pages 437--445.
+
+\bibitem[{Bengio et~al.(2003)Bengio, Ducharme, and Vincent}]{bengio2003neural}
+Yoshua Bengio, Rejean Ducharme, and Pascal Vincent. 2003.
+\newblock A neural probabilistic language model.
+\newblock {\em Journal of Machine Learning Research\/} 3:1137--1155.
+
+\bibitem[{Bojanowski et~al.(2017)Bojanowski, Grave, Joulin, and
+  Mikolov}]{bojanowski2016enriching}
+Piotr Bojanowski, Edouard Grave, Armand Joulin, and Tomas Mikolov. 2017.
+\newblock Enriching word vectors with subword information.
+\newblock {\em Transactions of the Association for Computational Linguistics\/}
+  5:135--146.
+
+\bibitem[{Bollacker et~al.(2008)Bollacker, Evans, Paritosh, Sturge, and
+  Taylor}]{bollacker2008freebase}
+Kurt Bollacker, Colin Evans, Praveen Paritosh, Tim Sturge, and Jamie Taylor.
+  2008.
+\newblock Freebase: a collaboratively created graph database for structuring
+  human knowledge.
+\newblock In {\em Proceedings of the 2008 ACM SIGMOD international conference
+  on Management of data\/}. AcM, pages 1247--1250.
+
+\bibitem[{Bordes et~al.(2015)Bordes, Usunier, Chopra, and
+  Weston}]{bordes2015large}
+Antoine Bordes, Nicolas Usunier, Sumit Chopra, and Jason Weston. 2015.
+\newblock Large-scale simple question answering with memory networks.
+\newblock {\em arXiv preprint arXiv:1506.02075\/} .
+
+\bibitem[{Brown et~al.(1993)Brown, Pietra, Pietra, and
+  Mercer}]{brown1993mathematics}
+Peter~F Brown, Vincent J~Della Pietra, Stephen A~Della Pietra, and Robert~L
+  Mercer. 1993.
+\newblock The mathematics of statistical machine translation: Parameter
+  estimation.
+\newblock {\em Computational linguistics\/} 19(2):263--311.
+
+\bibitem[{Caglayan et~al.(2016)Caglayan, Aransa, Wang, Masana,
+  Garc{\'\i}a-Mart{\'\i}nez, Bougares, Barrault, and van~de
+  Weijer}]{caglayan2016does}
+Ozan Caglayan, Walid Aransa, Yaxing Wang, Marc Masana, Mercedes
+  Garc{\'\i}a-Mart{\'\i}nez, Fethi Bougares, Lo{\"\i}c Barrault, and Joost
+  van~de Weijer. 2016.
+\newblock Does multimodality help human and machine for translation and image
+  captioning?
+\newblock {\em arXiv preprint arXiv:1605.09186\/} .
+
+\bibitem[{Callison-Burch et~al.(2005)Callison-Burch, Bannard, and
+  Schroeder}]{callison2005scaling}
+Chris Callison-Burch, Colin Bannard, and Josh Schroeder. 2005.
+\newblock Scaling phrase-based statistical machine translation to larger
+  corpora and longer phrases.
+\newblock In {\em Proceedings of the 43rd Annual Meeting on Association for
+  Computational Linguistics\/}. Association for Computational Linguistics,
+  pages 255--262.
+
+\bibitem[{Chen et~al.(2017)Chen, Liu, Cheng, and Li}]{chen2017teacher}
+Yun Chen, Yang Liu, Yong Cheng, and Victor~OK Li. 2017.
+\newblock A teacher-student framework for zero-resource neural machine
+  translation.
+\newblock {\em arXiv preprint arXiv:1705.00753\/} .
+
+\bibitem[{Chen et~al.(2018)Chen, Liu, and Li}]{chen2018zero}
+Yun Chen, Yang Liu, and Victor~OK Li. 2018.
+\newblock Zero-resource neural machine translation with multi-agent
+  communication game.
+\newblock {\em arXiv preprint arXiv:1802.03116\/} .
+
+\bibitem[{Cheng et~al.(2016)Cheng, Liu, Yang, Sun, and Xu}]{cheng2016neural}
+Yong Cheng, Yang Liu, Qian Yang, Maosong Sun, and Wei Xu. 2016.
+\newblock Neural machine translation with pivot languages.
+\newblock {\em arXiv preprint arXiv:1611.04928\/} .
+
+\bibitem[{Cho(2015)}]{cho2015natural}
+Kyunghyun Cho. 2015.
+\newblock Natural language understanding with distributed representation.
+\newblock {\em arXiv preprint arXiv:1511.07916\/} .
+
+\bibitem[{Cho(2016)}]{cho2016noisy}
+Kyunghyun Cho. 2016.
+\newblock Noisy parallel approximate decoding for conditional recurrent
+  language model.
+\newblock {\em arXiv preprint arXiv:1605.03835\/} .
+
+\bibitem[{Cho and Esipova(2016)}]{cho2016can}
+Kyunghyun Cho and Masha Esipova. 2016.
+\newblock Can neural machine translation do simultaneous translation?
+\newblock {\em arXiv preprint arXiv:1606.02012\/} .
+
+\bibitem[{Cho et~al.(2014{\natexlab{a}})Cho, van Merri\"enboer, Bahdanau, and
+  Bengio}]{Cho2014a}
+Kyunghyun Cho, Bart van Merri\"enboer, Dzmitry Bahdanau, and Yoshua Bengio.
+  2014{\natexlab{a}}.
+\newblock On the properties of neural machine translation: {E}ncoder--{D}ecoder
+  approaches.
+\newblock In {\em Eighth Workshop on Syntax, Semantics and Structure in
+  Statistical Translation\/}.
+
+\bibitem[{Cho et~al.(2014{\natexlab{b}})Cho, Van~Merri{\"e}nboer, Gulcehre,
+  Bahdanau, Bougares, Schwenk, and Bengio}]{cho2014learning}
+Kyunghyun Cho, Bart Van~Merri{\"e}nboer, Caglar Gulcehre, Dzmitry Bahdanau,
+  Fethi Bougares, Holger Schwenk, and Yoshua Bengio. 2014{\natexlab{b}}.
+\newblock Learning phrase representations using rnn encoder-decoder for
+  statistical machine translation.
+\newblock {\em arXiv preprint arXiv:1406.1078\/} .
+
+\bibitem[{Chung et~al.(2016)Chung, Cho, and Bengio}]{chung2016nyu}
+Junyoung Chung, Kyunghyun Cho, and Yoshua Bengio. 2016.
+\newblock Nyu-mila neural machine translation systems for wmt16.
+\newblock In {\em Proceedings of the First Conference on Machine Translation,
+  Berlin, Germany. Association for Computational Linguistics\/}.
+
+\bibitem[{Cohn et~al.(2016)Cohn, Hoang, Vymolova, Yao, Dyer, and
+  Haffari}]{cohn2016incorporating}
+Trevor Cohn, Cong Duy~Vu Hoang, Ekaterina Vymolova, Kaisheng Yao, Chris Dyer,
+  and Gholamreza Haffari. 2016.
+\newblock Incorporating structural alignment biases into an attentional neural
+  translation model.
+\newblock {\em arXiv preprint arXiv:1601.01085\/} .
+
+\bibitem[{Conneau et~al.(2018)Conneau, Lample, Ranzato, Denoyer, and
+  J{\'e}gou}]{Conneau2017WordTW}
+Alexis Conneau, Guillaume Lample, Marc'Aurelio Ranzato, Ludovic Denoyer, and
+  Herv{\'e} J{\'e}gou. 2018.
+\newblock Word translation without parallel data.
+\newblock In {\em ICLR\/}.
+
+\bibitem[{Costa-Jussa and Fonollosa(2016)}]{costa2016character}
+Marta~R Costa-Jussa and Jos{\'e}~AR Fonollosa. 2016.
+\newblock Character-based neural machine translation.
+\newblock {\em arXiv preprint arXiv:1603.00810\/} .
+
+\bibitem[{Crego et~al.(2016)Crego, Kim, Klein, Rebollo, Yang, Senellart,
+  Akhanov, Brunelle, Coquard, Deng et~al.}]{crego2016systran}
+Josep Crego, Jungi Kim, Guillaume Klein, Anabel Rebollo, Kathy Yang, Jean
+  Senellart, Egor Akhanov, Patrice Brunelle, Aurelien Coquard, Yongchao Deng,
+  et~al. 2016.
+\newblock Systran's pure neural machine translation systems.
+\newblock {\em arXiv preprint arXiv:1610.05540\/} .
+
+\bibitem[{Devlin(2017)}]{devlin:2017:EMNLP2017}
+Jacob Devlin. 2017.
+\newblock Sharp models on dull hardware: Fast and accurate neural machine
+  translation decoding on the cpu.
+\newblock In {\em Proceedings of the 2017 Conference on Empirical Methods in
+  Natural Language Processing\/}. Association for Computational Linguistics,
+  Copenhagen, Denmark, pages 2810--2815.
+
+\bibitem[{Devlin et~al.(2015)Devlin, Gupta, Girshick, Mitchell, and
+  Zitnick}]{devlin2015exploring}
+Jacob Devlin, Saurabh Gupta, Ross Girshick, Margaret Mitchell, and C~Lawrence
+  Zitnick. 2015.
+\newblock Exploring nearest neighbor approaches for image captioning.
+\newblock {\em arXiv preprint arXiv:1505.04467\/} .
+
+\bibitem[{Dong et~al.(2015)Dong, Wu, He, Yu, and Wang}]{dong2015multi}
+Daxiang Dong, Hua Wu, Wei He, Dianhai Yu, and Haifeng Wang. 2015.
+\newblock Multi-task learning for multiple language translation.
+\newblock ACL.
+
+\bibitem[{Dyer et~al.(2013)Dyer, Chahuneau, and Smith}]{dyer2013simple}
+Chris Dyer, Victor Chahuneau, and Noah Smith. 2013.
+\newblock A simple, fast, and effective reparameterization of {IBM Model 2}.
+\newblock In {\em NAACL\/}.
+
+\bibitem[{Eriguchi et~al.(2017)Eriguchi, Tsuruoka, and
+  Cho}]{eriguchi2017learning}
+Akiko Eriguchi, Yoshimasa Tsuruoka, and Kyunghyun Cho. 2017.
+\newblock Learning to parse and translate improves neural machine translation.
+\newblock {\em arXiv preprint arXiv:1702.03525\/} .
+
+\bibitem[{Finn et~al.(2017)Finn, Abbeel, and Levine}]{finn2017model}
+Chelsea Finn, Pieter Abbeel, and Sergey Levine. 2017.
+\newblock Model-agnostic meta-learning for fast adaptation of deep networks.
+\newblock In {\em International Conference on Machine Learning (ICML)\/}.
+
+\bibitem[{Firat et~al.(2016{\natexlab{a}})Firat, Cho, and
+  Bengio}]{firat2016multi}
+Orhan Firat, Kyunghyun Cho, and Yoshua Bengio. 2016{\natexlab{a}}.
+\newblock Multi-way, multilingual neural machine translation with a shared
+  attention mechanism.
+\newblock In {\em NAACL\/}.
+
+\bibitem[{Firat et~al.(2016{\natexlab{b}})Firat, Sankaran, Al-Onaizan, Vural,
+  and Cho}]{firat2016zero}
+Orhan Firat, Baskaran Sankaran, Yaser Al-Onaizan, Fatos T~Yarman Vural, and
+  Kyunghyun Cho. 2016{\natexlab{b}}.
+\newblock Zero-resource translation with multi-lingual neural machine
+  translation.
+\newblock In {\em EMNLP\/}.
+
+\bibitem[{F{\"u}gen et~al.(2007)F{\"u}gen, Waibel, and
+  Kolss}]{fugen2007simultaneous}
+Christian F{\"u}gen, Alex Waibel, and Muntsin Kolss. 2007.
+\newblock Simultaneous translation of lectures and speeches.
+\newblock {\em Machine Translation\/} 21(4):209--252.
+
+\bibitem[{Fujita et~al.(2013)Fujita, Neubig, Sakti, Toda, and
+  Nakamura}]{fujita2013simple}
+Tomoki Fujita, Graham Neubig, Sakriani Sakti, Tomoki Toda, and Satoshi
+  Nakamura. 2013.
+\newblock Simple, lexicalized choice of translation timing for simultaneous
+  speech translation.
+\newblock In {\em INTERSPEECH\/}.
+
+\bibitem[{Gehring et~al.(2016)Gehring, Auli, Grangier, and
+  Dauphin}]{gehring2016convolutional}
+Jonas Gehring, Michael Auli, David Grangier, and Yann~N Dauphin. 2016.
+\newblock A convolutional encoder model for neural machine translation.
+\newblock {\em arXiv preprint arXiv:1611.02344\/} .
+
+\bibitem[{Gehring et~al.(2017)Gehring, Auli, Grangier, Yarats, and
+  Dauphin}]{gehring2017convolutional}
+Jonas Gehring, Michael Auli, David Grangier, Denis Yarats, and Yann Dauphin.
+  2017.
+\newblock Convolutional sequence to sequence learning.
+\newblock In {\em Proceedings of International Conference on Machine Learning
+  (ICML)\/}.
+
+\bibitem[{Graves et~al.(2014)Graves, Wayne, and Danihelka}]{graves2014neural}
+Alex Graves, Greg Wayne, and Ivo Danihelka. 2014.
+\newblock Neural turing machines.
+\newblock {\em arXiv preprint arXiv:1410.5401\/} .
+
+\bibitem[{Grissom~II et~al.(2014)Grissom~II, He, Boyd-Graber, Morgan, and
+  Daum\'{e}~III}]{grissomii2014don}
+Alvin Grissom~II, He~He, Jordan Boyd-Graber, John Morgan, and Hal
+  Daum\'{e}~III. 2014.
+\newblock Don't until the final verb wait: Reinforcement learning for
+  simultaneous machine translation.
+\newblock In {\em Proceedings of the 2014 Conference on Empirical Methods in
+  Natural Language Processing (EMNLP)\/}. Association for Computational
+  Linguistics, Doha, Qatar, pages 1342--1352.
+
+\bibitem[{Gu et~al.(2018{\natexlab{a}})Gu, Bradbury, Xiong, Li, and
+  Socher}]{Gu2017NonAutoregressiveNM}
+Jiatao Gu, James Bradbury, Caiming Xiong, Victor O.~K. Li, and Richard Socher.
+  2018{\natexlab{a}}.
+\newblock Non-autoregressive neural machine translation.
+\newblock {\em ICLR\/} .
+
+\bibitem[{Gu et~al.(2018{\natexlab{b}})Gu, Hassan, Devlin, and
+  Li}]{gu2018universal}
+Jiatao Gu, Hany Hassan, Jacob Devlin, and Victor~OK Li. 2018{\natexlab{b}}.
+\newblock Universal neural machine translation for extremely low resource
+  languages.
+\newblock {\em arXiv preprint arXiv:1802.05368\/} .
+
+\bibitem[{Gu et~al.(2016{\natexlab{a}})Gu, Lu, Li, and
+  Li}]{gu2016incorporating}
+Jiatao Gu, Zhengdong Lu, Hang Li, and Victor~OK Li. 2016{\natexlab{a}}.
+\newblock Incorporating copying mechanism in sequence-to-sequence learning.
+\newblock {\em arXiv preprint arXiv:1603.06393\/} .
+
+\bibitem[{Gu et~al.(2016{\natexlab{b}})Gu, Neubig, Cho, and
+  Li}]{gu2016learning}
+Jiatao Gu, Graham Neubig, Kyunghyun Cho, and Victor~OK Li. 2016{\natexlab{b}}.
+\newblock Learning to translate in real-time with neural machine translation.
+\newblock {\em arXiv preprint arXiv:1610.00388\/} .
+
+\bibitem[{Gulcehre et~al.(2016)Gulcehre, Ahn, Nallapati, Zhou, and
+  Bengio}]{gulcehre2016pointing}
+Caglar Gulcehre, Sungjin Ahn, Ramesh Nallapati, Bowen Zhou, and Yoshua Bengio.
+  2016.
+\newblock Pointing the unknown words.
+\newblock {\em arXiv preprint arXiv:1603.08148\/} .
+
+\bibitem[{Gulcehre et~al.(2018)Gulcehre, Chandar, Cho, and
+  Bengio}]{gulcehre2018dynamic}
+Caglar Gulcehre, Sarath Chandar, Kyunghyun Cho, and Yoshua Bengio. 2018.
+\newblock Dynamic neural turing machine with continuous and discrete addressing
+  schemes.
+\newblock {\em Neural computation\/} 30(4):857--884.
+
+\bibitem[{Gulcehre et~al.(2015)Gulcehre, Firat, Xu, Cho, Barrault, Lin,
+  Bougares, Schwenk, and Bengio}]{Gulcehre-Orhan-et-al-2015}
+Caglar Gulcehre, Orhan Firat, Kelvin Xu, Kyunghyun Cho, Loic Barrault, Huei-Chi
+  Lin, Fethi Bougares, Holger Schwenk, and Yoshua Bengio. 2015.
+\newblock On using monolingual corpora in neural machine translation.
+\newblock {\em arXiv preprint arXiv:1503.03535\/} .
+
+\bibitem[{Ha et~al.(2016{\natexlab{a}})Ha, Dai, and Le}]{ha2016hypernetworks}
+David Ha, Andrew Dai, and Quoc~V Le. 2016{\natexlab{a}}.
+\newblock Hypernetworks.
+\newblock {\em arXiv preprint arXiv:1609.09106\/} .
+
+\bibitem[{Ha et~al.(2016{\natexlab{b}})Ha, Niehues, and Waibel}]{ha2016toward}
+Thanh-Le Ha, Jan Niehues, and Alexander Waibel. 2016{\natexlab{b}}.
+\newblock Toward multilingual neural machine translation with universal encoder
+  and decoder.
+\newblock {\em arXiv preprint arXiv:1611.04798\/} .
+
+\bibitem[{Hassan et~al.(2018)Hassan, Aue, Chen, Chowdhary, Clark, Federmann,
+  Huang, Junczys{-}Dowmunt, Lewis, Li, Liu, Liu, Luo, Menezes, Qin, Seide, Tan,
+  Tian, Wu, Wu, Xia, Zhang, Zhang, and Zhou}]{hassan-hp}
+Hany Hassan, Anthony Aue, Chang Chen, Vishal Chowdhary, Jonathan Clark,
+  Christian Federmann, Xuedong Huang, Marcin Junczys{-}Dowmunt, William Lewis,
+  Mu~Li, Shujie Liu, Tie{-}Yan Liu, Renqian Luo, Arul Menezes, Tao Qin, Frank
+  Seide, Xu~Tan, Fei Tian, Lijun Wu, Shuangzhi Wu, Yingce Xia, Dongdong Zhang,
+  Zhirui Zhang, and Ming Zhou. 2018.
+\newblock Achieving human parity on automatic chinese to english news
+  translation.
+\newblock {\em CoRR\/} abs/1803.05567.
+
+\bibitem[{He et~al.(2016)He, Xia, Qin, Wang, Yu, Liu, and Ma}]{he2016dual}
+Di~He, Yingce Xia, Tao Qin, Liwei Wang, Nenghai Yu, Tieyan Liu, and Wei-Ying
+  Ma. 2016.
+\newblock Dual learning for machine translation.
+\newblock In {\em Advances in Neural Information Processing Systems\/}. pages
+  820--828.
+
+\bibitem[{He et~al.(2015)He, Zhang, Ren, and Sun}]{he2015deep}
+Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun. 2015.
+\newblock Deep residual learning for image recognition.
+\newblock {\em arXiv preprint arXiv:1512.03385\/} .
+
+\bibitem[{Heess et~al.(2015)Heess, Wayne, Silver, Lillicrap, Erez, and
+  Tassa}]{heess2015learning}
+Nicolas Heess, Gregory Wayne, David Silver, Tim Lillicrap, Tom Erez, and Yuval
+  Tassa. 2015.
+\newblock Learning continuous control policies by stochastic value gradients.
+\newblock In {\em Advances in Neural Information Processing Systems\/}. pages
+  2944--2952.
+
+\bibitem[{Hochreiter and Schmidhuber(1997)}]{hochreiter1997long}
+Sepp Hochreiter and J{\"u}rgen Schmidhuber. 1997.
+\newblock Long short-term memory.
+\newblock {\em Neural computation\/} 9(8):1735--1780.
+
+\bibitem[{Hu et~al.(2015)Hu, Chen, and Zhu}]{hu2015lcsts}
+Baotian Hu, Qingcai Chen, and Fangze Zhu. 2015.
+\newblock Lcsts: a large scale chinese short text summarization dataset.
+\newblock {\em arXiv preprint arXiv:1506.05865\/} .
+
+\bibitem[{Jaitly et~al.(2015)Jaitly, Le, Vinyals, Sutskeyver, and
+  Bengio}]{jaitly2015online}
+Navdeep Jaitly, Quoc~V Le, Oriol Vinyals, Ilya Sutskeyver, and Samy Bengio.
+  2015.
+\newblock An online sequence-to-sequence model using partial conditioning.
+\newblock {\em arXiv preprint arXiv:1511.04868\/} .
+
+\bibitem[{Jean et~al.(2017)Jean, Lauly, Firat, and Cho}]{jean2017does}
+Sebastien Jean, Stanislas Lauly, Orhan Firat, and Kyunghyun Cho. 2017.
+\newblock Does neural machine translation benefit from larger context?
+\newblock {\em arXiv preprint arXiv:1704.05135\/} .
+
+\bibitem[{Johnson et~al.(2017{\natexlab{a}})Johnson, Douze, and
+  J{\'e}gou}]{FAISS}
+Jeff Johnson, Matthijs Douze, and Herv{\'e} J{\'e}gou. 2017{\natexlab{a}}.
+\newblock Billion-scale similarity search with gpus.
+\newblock {\em arXiv preprint arXiv:1702.08734\/} .
+
+\bibitem[{Johnson et~al.(2017{\natexlab{b}})Johnson, Schuster, Le, Krikun, Wu,
+  Chen, Thorat, Vi{\'e}gas, Wattenberg, Corrado, Hughes, and
+  Dean}]{johnson2016google}
+Melvin Johnson, Mike Schuster, Quoc~V. Le, Maxim Krikun, Yonghui Wu, Zhifeng
+  Chen, Nikhil Thorat, Fernanda Vi{\'e}gas, Martin Wattenberg, Greg Corrado,
+  Macduff Hughes, and Jeffrey Dean. 2017{\natexlab{b}}.
+\newblock Google's multilingual neural machine translation system: Enabling
+  zero-shot translation.
+\newblock {\em Transactions of the Association for Computational Linguistics\/}
+  5:339--351.
+
+\bibitem[{Kaiser et~al.(2017{\natexlab{a}})Kaiser, Gomez, and
+  Chollet}]{kaiser2017depthwise}
+\L{}ukasz Kaiser, Aidan Gomez, and Fran\c{c}ois Chollet. 2017{\natexlab{a}}.
+\newblock Depthwise separable convolutions for neural machine translation.
+\newblock {\em arXiv preprint arXiv:1706.03059\/} .
+
+\bibitem[{Kaiser et~al.(2017{\natexlab{b}})Kaiser, Nachum, Roy, and
+  Bengio}]{kaiser2017learning}
+{\L}ukasz Kaiser, Ofir Nachum, Aurko Roy, and Samy Bengio. 2017{\natexlab{b}}.
+\newblock Learning to remember rare events.
+\newblock {\em arXiv preprint arXiv:1703.03129\/} .
+
+\bibitem[{Kalchbrenner and Blunsom(2013)}]{kalchbrenner2013recurrent}
+Nal Kalchbrenner and Phil Blunsom. 2013.
+\newblock Recurrent continuous translation models.
+\newblock In {\em EMNLP\/}. pages 1700--1709.
+
+\bibitem[{Kalchbrenner et~al.(2016)Kalchbrenner, Espeholt, Simonyan, Oord,
+  Graves, and Kavukcuoglu}]{kalchbrenner2016neural}
+Nal Kalchbrenner, Lasse Espeholt, Karen Simonyan, Aaron van~den Oord, Alex
+  Graves, and Koray Kavukcuoglu. 2016.
+\newblock Neural machine translation in linear time.
+\newblock {\em arXiv preprint arXiv:1610.10099\/} .
+
+\bibitem[{Kim et~al.(2016)Kim, Jernite, Sontag, and Rush}]{kim2016character}
+Yoon Kim, Yacine Jernite, David Sontag, and Alexander~M. Rush. 2016.
+\newblock Character-aware neural language models.
+\newblock In {\em Proceedings of the Thirtieth AAAI Conference on Artificial
+  Intelligence\/}. AAAI Press, AAAI'16, pages 2741--2749.
+
+\bibitem[{Kim and Rush(2016)}]{kim2016sequence}
+Yoon Kim and Alexander Rush. 2016.
+\newblock Sequence-level knowledge distillation.
+\newblock In {\em EMNLP\/}.
+
+\bibitem[{Kingma and Ba(2014)}]{kingma2014adam}
+Diederik Kingma and Jimmy Ba. 2014.
+\newblock Adam: A method for stochastic optimization.
+\newblock {\em arXiv preprint arXiv:1412.6980\/} .
+
+\bibitem[{Koehn(2004)}]{koehn2004statistical}
+Philipp Koehn. 2004.
+\newblock Statistical significance tests for machine translation evaluation.
+\newblock In {\em EMNLP\/}. pages 388--395.
+
+\bibitem[{Koehn and Knowles(2017)}]{koehn2017six}
+Philipp Koehn and Rebecca Knowles. 2017.
+\newblock Six challenges for neural machine translation.
+\newblock {\em arXiv preprint arXiv:1706.03872\/} .
+
+\bibitem[{Koehn et~al.(2003)Koehn, Och, and Marcu}]{koehn2003statistical}
+Philipp Koehn, Franz~Josef Och, and Daniel Marcu. 2003.
+\newblock Statistical phrase-based translation.
+\newblock In {\em Proceedings of the 2003 Conference of the North American
+  Chapter of the Association for Computational Linguistics on Human Language
+  Technology-Volume 1\/}. Association for Computational Linguistics, pages
+  48--54.
+
+\bibitem[{Kurach et~al.(2015)Kurach, Andrychowicz, and
+  Sutskever}]{kurach2015neural}
+Karol Kurach, Marcin Andrychowicz, and Ilya Sutskever. 2015.
+\newblock Neural random-access machines.
+\newblock {\em arXiv preprint arXiv:1511.06392\/} .
+
+\bibitem[{Lake et~al.(2015)Lake, Salakhutdinov, and Tenenbaum}]{lake2015human}
+Brenden~M Lake, Ruslan Salakhutdinov, and Joshua~B Tenenbaum. 2015.
+\newblock Human-level concept learning through probabilistic program induction.
+\newblock {\em Science\/} 350(6266):1332--1338.
+
+\bibitem[{Lample et~al.(2018)Lample, Denoyer, and
+  Ranzato}]{lample2017unsupervised}
+Guillaume Lample, Ludovic Denoyer, and Marc'Aurelio Ranzato. 2018.
+\newblock Unsupervised machine translation using monolingual corpora only.
+\newblock In {\em Proceedings of International Conference on Learning
+  Representations (ICLR)\/}. Vancouver, Canada.
+
+\bibitem[{Lee et~al.(2016)Lee, Cho, and Hofmann}]{lee2016fully}
+Jason Lee, Kyunghyun Cho, and Thomas Hofmann. 2016.
+\newblock Fully character-level neural machine translation without explicit
+  segmentation.
+\newblock {\em arXiv preprint arXiv:1610.03017\/} .
+
+\bibitem[{Lee et~al.(2017)Lee, Cho, Weston, and Kiela}]{lee2017emergent}
+Jason Lee, Kyunghyun Cho, Jason Weston, and Douwe Kiela. 2017.
+\newblock Emergent translation in multi-agent communication.
+\newblock {\em arXiv preprint arXiv:1710.06922\/} .
+
+\bibitem[{Li et~al.(2016{\natexlab{a}})Li, Monroe, and Jurafsky}]{li2016simple}
+Jiwei Li, Will Monroe, and Dan Jurafsky. 2016{\natexlab{a}}.
+\newblock A simple, fast diverse decoding algorithm for neural generation.
+\newblock {\em arXiv preprint arXiv:1611.08562\/} .
+
+\bibitem[{Li et~al.(2017)Li, Monroe, and Jurafsky}]{li2017learning}
+Jiwei Li, Will Monroe, and Dan Jurafsky. 2017.
+\newblock Learning to decode for future success.
+\newblock {\em arXiv preprint arXiv:1701.06549\/} .
+
+\bibitem[{Li et~al.(2016{\natexlab{b}})Li, Way, and Liu}]{li2016phrase}
+Liangyou Li, Andy Way, and Qun Liu. 2016{\natexlab{b}}.
+\newblock Phrase-level combination of smt and tm using constrained word
+  lattice.
+\newblock In {\em The 54th Annual Meeting of the Association for Computational
+  Linguistics\/}. page 275.
+
+\bibitem[{Lillicrap et~al.(2015)Lillicrap, Hunt, Pritzel, Heess, Erez, Tassa,
+  Silver, and Wierstra}]{lillicrap2015continuous}
+Timothy~P Lillicrap, Jonathan~J Hunt, Alexander Pritzel, Nicolas Heess, Tom
+  Erez, Yuval Tassa, David Silver, and Daan Wierstra. 2015.
+\newblock Continuous control with deep reinforcement learning.
+\newblock {\em arXiv preprint arXiv:1509.02971\/} .
+
+\bibitem[{Lin(2004)}]{lin:2004:ACLsummarization}
+Chin-Yew Lin. 2004.
+\newblock Rouge: A package for automatic evaluation of summaries.
+\newblock In Stan~Szpakowicz Marie-Francine~Moens, editor, {\em Text
+  Summarization Branches Out: Proceedings of the ACL-04 Workshop\/}.
+  Association for Computational Linguistics, Barcelona, Spain, pages 74--81.
+
+\bibitem[{Lin and Och(2004)}]{lin2004automatic}
+Chin-Yew Lin and Franz~Josef Och. 2004.
+\newblock Automatic evaluation of machine translation quality using longest
+  common subsequence and skip-bigram statistics.
+\newblock In {\em Proceedings of the 42nd Annual Meeting on Association for
+  Computational Linguistics\/}. Association for Computational Linguistics, page
+  605.
+
+\bibitem[{Ling et~al.(2015)Ling, Trancoso, Dyer, and Black}]{ling2015character}
+Wang Ling, Isabel Trancoso, Chris Dyer, and Alan~W Black. 2015.
+\newblock Character-based neural machine translation.
+\newblock {\em arXiv preprint arXiv:1511.04586\/} .
+
+\bibitem[{Luo et~al.(2016)Luo, Chiu, Jaitly, and Sutskever}]{luo2016learning}
+Yuping Luo, Chung{-}Cheng Chiu, Navdeep Jaitly, and Ilya Sutskever. 2016.
+\newblock Learning online alignments with continuous rewards policy gradient.
+\newblock {\em arXiv preprint arXiv:1608.01281\/} .
+
+\bibitem[{Luong et~al.(2015{\natexlab{a}})Luong, Le, Sutskever, Vinyals, and
+  Kaiser}]{luong2015multi}
+Minh-Thang Luong, Quoc~V Le, Ilya Sutskever, Oriol Vinyals, and Lukasz Kaiser.
+  2015{\natexlab{a}}.
+\newblock Multi-task sequence to sequence learning.
+\newblock {\em arXiv preprint arXiv:1511.06114\/} .
+
+\bibitem[{Luong and Manning(2016)}]{luong2016achieving}
+Minh-Thang Luong and Christopher~D Manning. 2016.
+\newblock Achieving open vocabulary neural machine translation with hybrid
+  word-character models.
+\newblock {\em arXiv preprint arXiv:1604.00788\/} .
+
+\bibitem[{Luong et~al.(2015{\natexlab{b}})Luong, Pham, and
+  Manning}]{luong2015effective}
+Minh-Thang Luong, Hieu Pham, and Christopher~D Manning. 2015{\natexlab{b}}.
+\newblock Effective approaches to attention-based neural machine translation.
+\newblock {\em arXiv preprint arXiv:1508.04025\/} .
+
+\bibitem[{Luong et~al.(2015{\natexlab{c}})Luong, Sutskever, Le, Vinyals, and
+  Zaremba}]{luong-EtAl:2015:ACL-IJCNLP}
+Thang Luong, Ilya Sutskever, Quoc Le, Oriol Vinyals, and Wojciech Zaremba.
+  2015{\natexlab{c}}.
+\newblock Addressing the rare word problem in neural machine translation.
+\newblock In {\em Proceedings of the 53rd Annual Meeting of the Association for
+  Computational Linguistics and the 7th International Joint Conference on
+  Natural Language Processing (Volume 1: Long Papers)\/}. Association for
+  Computational Linguistics, Beijing, China, pages 11--19.
+
+\bibitem[{Martin et~al.(2010)Martin, Crowther, Knight, Tamborello, and
+  Yang}]{martin2010planning}
+Randi Martin, Jason Crowther, Meredith Knight, Franklin Tamborello, and
+  Chin-Lung Yang. 2010.
+\newblock Planning in sentence production: Evidence for the phrase as a default
+  planning scope.
+\newblock {\em Cognition\/} 116(2):177--192.
+
+\bibitem[{McLachlan and Basford(1988)}]{GaussianMixture}
+Geoffrey~J McLachlan and Kaye~E Basford. 1988.
+\newblock Mixture models. inference and applications to clustering.
+\newblock {\em Statistics: Textbooks and Monographs, New York: Dekker, 1988\/}
+  1.
+
+\bibitem[{Mieno et~al.(2015)Mieno, Neubig, Sakti, Toda, and
+  Nakamura}]{mieno2015speed}
+Takashi Mieno, Graham Neubig, Sakriani Sakti, Tomoki Toda, and Satoshi
+  Nakamura. 2015.
+\newblock Speed or accuracy? a study in evaluation of simultaneous speech
+  translation.
+\newblock In {\em INTERSPEECH\/}.
+
+\bibitem[{Mikolov et~al.(2010)Mikolov, Karafi{\'a}t, Burget, Cernock{\`y}, and
+  Khudanpur}]{mikolov2010recurrent}
+Tomas Mikolov, Martin Karafi{\'a}t, Lukas Burget, Jan Cernock{\`y}, and Sanjeev
+  Khudanpur. 2010.
+\newblock Recurrent neural network based language model.
+\newblock {\em INTERSPEECH\/} 2:3.
+
+\bibitem[{Miller et~al.(2016)Miller, Fisch, Dodge, Karimi, Bordes, and
+  Weston}]{miller2016key}
+Alexander Miller, Adam Fisch, Jesse Dodge, Amir-Hossein Karimi, Antoine Bordes,
+  and Jason Weston. 2016.
+\newblock Key-value memory networks for directly reading documents.
+\newblock {\em arXiv preprint arXiv:1606.03126\/} .
+
+\bibitem[{Mishra et~al.(2017)Mishra, Rohaninejad, Chen, and
+  Abbeel}]{mishra2017meta}
+Nikhil Mishra, Mostafa Rohaninejad, Xi~Chen, and Pieter Abbeel. 2017.
+\newblock Meta-learning with temporal convolutions.
+\newblock {\em arXiv preprint arXiv:1707.03141\/} .
+
+\bibitem[{Mnih and Gregor(2014)}]{mnih2014neural}
+Andriy Mnih and Karol Gregor. 2014.
+\newblock Neural variational inference and learning in belief networks.
+\newblock {\em arXiv preprint arXiv:1402.0030\/} .
+
+\bibitem[{Nadejde et~al.(2017)Nadejde, Reddy, Sennrich, Dwojak,
+  Junczys-Dowmunt, Koehn, and Birch}]{nadejde2017syntax}
+Maria Nadejde, Siva Reddy, Rico Sennrich, Tomasz Dwojak, Marcin
+  Junczys-Dowmunt, Philipp Koehn, and Alexandra Birch. 2017.
+\newblock Syntax-aware neural machine translation using ccg.
+\newblock {\em arXiv preprint arXiv:1702.01147\/} .
+
+\bibitem[{Nogueira and Cho(2017)}]{nogueira2017task}
+Rodrigo Nogueira and Kyunghyun Cho. 2017.
+\newblock Task-oriented query reformulation with reinforcement learning.
+\newblock {\em arXiv preprint arXiv:1704.04572\/} .
+
+\bibitem[{Oda et~al.(2014)Oda, Neubig, Sakti, Toda, and
+  Nakamura}]{oda-EtAl:2014:P14-2}
+Yusuke Oda, Graham Neubig, Sakriani Sakti, Tomoki Toda, and Satoshi Nakamura.
+  2014.
+\newblock Optimizing segmentation strategies for simultaneous speech
+  translation.
+\newblock In {\em Proceedings of the 52nd Annual Meeting of the Association for
+  Computational Linguistics (Volume 2: Short Papers)\/}. Association for
+  Computational Linguistics, Baltimore, Maryland, pages 551--556.
+
+\bibitem[{Papineni et~al.(2002)Papineni, Roukos, Ward, and
+  Zhu}]{papineni2002bleu}
+Kishore Papineni, Salim Roukos, Todd Ward, and Wei-Jing Zhu. 2002.
+\newblock Bleu: a method for automatic evaluation of machine translation.
+\newblock In {\em Proceedings of the 40th annual meeting on association for
+  computational linguistics\/}. Association for Computational Linguistics,
+  pages 311--318.
+
+\bibitem[{Phillips(2012)}]{phillips2012modeling}
+Aaron~B Phillips. 2012.
+\newblock {\em Modeling, Relevance in Statistical Machine Translation: Scoring
+  Aligment, Context, and Annotations of Translation Instances\/}.
+\newblock Ph.D. thesis, Carnegie Mellon University.
+
+\bibitem[{Pritzel et~al.(2017)Pritzel, Uria, Srinivasan, Puigdom{\`e}nech,
+  Vinyals, Hassabis, Wierstra, and Blundell}]{pritzel2017neural}
+Alexander Pritzel, Benigno Uria, Sriram Srinivasan, Adri{\`a} Puigdom{\`e}nech,
+  Oriol Vinyals, Demis Hassabis, Daan Wierstra, and Charles Blundell. 2017.
+\newblock Neural episodic control.
+\newblock {\em arXiv preprint arXiv:1703.01988\/} .
+
+\bibitem[{Rangarajan~Sridhar et~al.(2013)Rangarajan~Sridhar, Chen, Bangalore,
+  Ljolje, and Chengalvarayan}]{sridhar2013segmentation}
+Vivek~Kumar Rangarajan~Sridhar, John Chen, Srinivas Bangalore, Andrej Ljolje,
+  and Rathinavelu Chengalvarayan. 2013.
+\newblock Segmentation strategies for streaming speech translation.
+\newblock In {\em Proceedings of the 2013 Conference of the North American
+  Chapter of the Association for Computational Linguistics: Human Language
+  Technologies\/}. Association for Computational Linguistics, Atlanta, Georgia,
+  pages 230--238.
+
+\bibitem[{Ranzato et~al.(2015)Ranzato, Chopra, Auli, and
+  Zaremba}]{ranzato2015sequence}
+Marc'Aurelio Ranzato, Sumit Chopra, Michael Auli, and Wojciech Zaremba. 2015.
+\newblock Sequence level training with recurrent neural networks.
+\newblock {\em arXiv preprint arXiv:1511.06732\/} .
+
+\bibitem[{Robbins and Monro(1951)}]{robbins1951stochastic}
+Herbert Robbins and Sutton Monro. 1951.
+\newblock A stochastic approximation method.
+\newblock {\em The annals of mathematical statistics\/} pages 400--407.
+
+\bibitem[{Rumelhart et~al.(1986)Rumelhart, Hinton, and
+  Williams}]{rumelhart1986learning}
+David Rumelhart, Geoffrey Hinton, and Ronald Williams. 1986.
+\newblock Learning representations by back-propagating errors.
+\newblock {\em Nature\/} pages 323--533.
+
+\bibitem[{Rush et~al.(2015)Rush, Chopra, and Weston}]{rush2015neural}
+Alexander~M Rush, Sumit Chopra, and Jason Weston. 2015.
+\newblock A neural attention model for abstractive sentence summarization.
+\newblock {\em arXiv preprint arXiv:1509.00685\/} .
+
+\bibitem[{Satija and Pineau(2016)}]{satija2016simultaneous}
+Harsh Satija and Joelle Pineau. 2016.
+\newblock Simultaneous machine translation using deep reinforcement learning.
+\newblock {\em Abstraction in Reinforcement Learning Workshop, ICML2016\/} .
+
+\bibitem[{Sennrich et~al.(2015{\natexlab{a}})Sennrich, Haddow, and
+  Birch}]{sennrich2015improving}
+Rico Sennrich, Barry Haddow, and Alexandra Birch. 2015{\natexlab{a}}.
+\newblock Improving neural machine translation models with monolingual data.
+\newblock {\em arXiv preprint arXiv:1511.06709\/} .
+
+\bibitem[{Sennrich et~al.(2015{\natexlab{b}})Sennrich, Haddow, and
+  Birch}]{sennrich2015neural}
+Rico Sennrich, Barry Haddow, and Alexandra Birch. 2015{\natexlab{b}}.
+\newblock Neural machine translation of rare words with subword units.
+\newblock {\em arXiv preprint arXiv:1508.07909\/} .
+
+\bibitem[{Sennrich et~al.(2016)Sennrich, Haddow, and
+  Birch}]{sennrich2016edinburgh}
+Rico Sennrich, Barry Haddow, and Alexandra Birch. 2016.
+\newblock Edinburgh neural machine translation systems for wmt 16.
+\newblock {\em arXiv preprint arXiv:1606.02891\/} .
+
+\bibitem[{Shang et~al.(2015)Shang, Lu, and Li}]{shang2015neural}
+Lifeng Shang, Zhengdong Lu, and Hang Li. 2015.
+\newblock Neural responding machine for short-text conversation.
+\newblock {\em arXiv preprint arXiv:1503.02364\/} .
+
+\bibitem[{Shazeer et~al.(2017)Shazeer, Mirhoseini, Maziarz, Davis, Le, Hinton,
+  and Dean}]{shazeer2017outrageously}
+Noam Shazeer, Azalia Mirhoseini, Krzysztof Maziarz, Andy Davis, Quoc Le,
+  Geoffrey Hinton, and Jeff Dean. 2017.
+\newblock Outrageously large neural networks: The sparsely-gated
+  mixture-of-experts layer.
+\newblock In {\em Proceedings of International Conference on Learning
+  Representations (ICLR)\/}.
+
+\bibitem[{Shen et~al.(2015)Shen, Cheng, He, He, Wu, Sun, and
+  Liu}]{shen2015minimum}
+Shiqi Shen, Yong Cheng, Zhongjun He, Wei He, Hua Wu, Maosong Sun, and Yang Liu.
+  2015.
+\newblock Minimum risk training for neural machine translation.
+\newblock {\em arXiv preprint arXiv:1512.02433\/} .
+
+\bibitem[{Silver et~al.(2014)Silver, Lever, Heess, Degris, Wierstra, and
+  Riedmiller}]{silver2014deterministic}
+David Silver, Guy Lever, Nicolas Heess, Thomas Degris, Daan Wierstra, and
+  Martin Riedmiller. 2014.
+\newblock Deterministic policy gradient algorithms.
+\newblock In {\em ICML\/}.
+
+\bibitem[{Smith et~al.(2017)Smith, Turban, Hamblin, and
+  Hammerla}]{smith2017offline}
+Samuel~L Smith, David~HP Turban, Steven Hamblin, and Nils~Y Hammerla. 2017.
+\newblock Offline bilingual word vectors, orthogonal transformations and the
+  inverted softmax.
+\newblock In {\em Proceedings of International Conference on Learning
+  Representations (ICLR)\/}.
+
+\bibitem[{Snell et~al.(2017)Snell, Swersky, and Zemel}]{snell2017prototypical}
+Jake Snell, Kevin Swersky, and Richard Zemel. 2017.
+\newblock Prototypical networks for few-shot learning.
+\newblock In {\em Advances in Neural Information Processing Systems\/}. pages
+  4080--4090.
+
+\bibitem[{Sordoni et~al.(2015)Sordoni, Galley, Auli, Brockett, Ji, Mitchell,
+  Nie, Gao, and Dolan}]{sordoni2015neural}
+Alessandro Sordoni, Michel Galley, Michael Auli, Chris Brockett, Yangfeng Ji,
+  Margaret Mitchell, Jian-Yun Nie, Jianfeng Gao, and Bill Dolan. 2015.
+\newblock A neural network approach to context-sensitive generation of
+  conversational responses.
+\newblock {\em arXiv preprint arXiv:1506.06714\/} .
+
+\bibitem[{Srivastava et~al.(2015)Srivastava, Greff, and
+  Schmidhuber}]{srivastava2015highway}
+Rupesh~Kumar Srivastava, Klaus Greff, and J{\"u}rgen Schmidhuber. 2015.
+\newblock Highway networks.
+\newblock {\em arXiv preprint arXiv:1505.00387\/} .
+
+\bibitem[{Steinberger et~al.(2006)Steinberger, Pouliquen, Widiger, Ignat,
+  Erjavec, Tufis, and Varga}]{steinberger2006jrc}
+Ralf Steinberger, Bruno Pouliquen, Anna Widiger, Camelia Ignat, Tomaz Erjavec,
+  Dan Tufis, and D{\'a}niel Varga. 2006.
+\newblock The jrc-acquis: A multilingual aligned parallel corpus with 20+
+  languages.
+\newblock {\em arXiv preprint cs/0609058\/} .
+
+\bibitem[{Sukhbaatar et~al.(2015)Sukhbaatar, Weston, Fergus
+  et~al.}]{sukhbaatar2015end}
+Sainbayar Sukhbaatar, Jason Weston, Rob Fergus, et~al. 2015.
+\newblock End-to-end memory networks.
+\newblock In {\em Advances in Neural Information Processing Systems\/}. pages
+  2431--2439.
+
+\bibitem[{Sutskever et~al.(2014)Sutskever, Vinyals, and
+  Le}]{sutskever2014sequence}
+Ilya Sutskever, Oriol Vinyals, and Quoc~V Le. 2014.
+\newblock Sequence to sequence learning with neural networks.
+\newblock {\em NIPS\/} .
+
+\bibitem[{Tieleman and Hinton(2012)}]{tieleman2012lecture}
+Tijmen Tieleman and Geoffrey Hinton. 2012.
+\newblock Lecture 6.5-rmsprop: Divide the gradient by a running average of its
+  recent magnitude.
+\newblock {\em COURSERA: Neural networks for machine learning\/} 4(2).
+
+\bibitem[{Tu et~al.(2016{\natexlab{a}})Tu, Liu, Shang, Liu, and
+  Li}]{tu2016neural}
+Zhaopeng Tu, Yang Liu, Lifeng Shang, Xiaohua Liu, and Hang Li.
+  2016{\natexlab{a}}.
+\newblock Neural machine translation with reconstruction.
+\newblock {\em arXiv preprint arXiv:1611.01874\/} .
+
+\bibitem[{Tu et~al.(2016{\natexlab{b}})Tu, Lu, Liu, Liu, and
+  Li}]{tu2016modeling}
+Zhaopeng Tu, Zhengdong Lu, Yang Liu, Xiaohua Liu, and Hang Li.
+  2016{\natexlab{b}}.
+\newblock Modeling coverage for neural machine translation.
+\newblock {\em arXiv preprint arXiv:1601.04811\/} .
+
+\bibitem[{Vaswani et~al.(2017)Vaswani, Shazeer, Parmar, Uszkoreit, Jones,
+  Gomez, Kaiser, and Polosukhin}]{vaswani2017attention}
+Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones,
+  Aidan~N. Gomez, Lukasz Kaiser, and Illia Polosukhin. 2017.
+\newblock Attention is all you need.
+\newblock In {\em Proceedings of the Annual Conference on Neural Information
+  Processing Systems (NIPS)\/}.
+
+\bibitem[{Vi{\'e}gas et~al.(2016)Vi{\'e}gas, Corrado, Dean, Hughes, Wattenberg,
+  Krikun, Johnson, Schuster, Thorat, Le et~al.}]{viegas2016google}
+Fernanda Vi{\'e}gas, Greg Corrado, Jeffrey Dean, Macduff Hughes, Martin
+  Wattenberg, Maxim Krikun, Melvin Johnson, Mike Schuster, Nikhil Thorat,
+  Quoc~V Le, et~al. 2016.
+\newblock Google's multilingual neural machine translation system: Enabling
+  zero-shot translation .
+
+\bibitem[{Vinyals et~al.(2016)Vinyals, Blundell, Lillicrap, Wierstra
+  et~al.}]{vinyals2016matching}
+Oriol Vinyals, Charles Blundell, Tim Lillicrap, Daan Wierstra, et~al. 2016.
+\newblock Matching networks for one shot learning.
+\newblock In {\em Advances in Neural Information Processing Systems\/}. pages
+  3630--3638.
+
+\bibitem[{Vinyals et~al.(2015{\natexlab{a}})Vinyals, Fortunato, and
+  Jaitly}]{vinyals2015pointer}
+Oriol Vinyals, Meire Fortunato, and Navdeep Jaitly. 2015{\natexlab{a}}.
+\newblock Pointer networks.
+\newblock In {\em Advances in Neural Information Processing Systems\/}. pages
+  2692--2700.
+
+\bibitem[{Vinyals et~al.(2015{\natexlab{b}})Vinyals, Kaiser, Koo, Petrov,
+  Sutskever, and Hinton}]{vinyals2015grammar}
+Oriol Vinyals, {\L}ukasz Kaiser, Terry Koo, Slav Petrov, Ilya Sutskever, and
+  Geoffrey Hinton. 2015{\natexlab{b}}.
+\newblock Grammar as a foreign language.
+\newblock In {\em Advances in Neural Information Processing Systems\/}. pages
+  2755--2763.
+
+\bibitem[{Vinyals and Le(2015)}]{vinyals2015neural}
+Oriol Vinyals and Quoc Le. 2015.
+\newblock A neural conversational model.
+\newblock {\em arXiv preprint arXiv:1506.05869\/} .
+
+\bibitem[{Wang et~al.(2017)Wang, Tu, Way, and Liu}]{wang2017exploiting}
+Longyue Wang, Zhaopeng Tu, Andy Way, and Qun Liu. 2017.
+\newblock Exploiting cross-sentence context for neural machine translation.
+\newblock {\em arXiv preprint arXiv:1704.04347\/} .
+
+\bibitem[{Weston et~al.(2014)Weston, Chopra, and Bordes}]{weston2014memory}
+Jason Weston, Sumit Chopra, and Antoine Bordes. 2014.
+\newblock Memory networks.
+\newblock {\em arXiv preprint arXiv:1410.3916\/} .
+
+\bibitem[{Williams(1992)}]{williams1992simple}
+Ronald~J Williams. 1992.
+\newblock Simple statistical gradient-following algorithms for connectionist
+  reinforcement learning.
+\newblock {\em Machine learning\/} 8(3-4):229--256.
+
+\bibitem[{Wiseman and Rush(2016)}]{wiseman2016sequence}
+Sam Wiseman and Alexander~M Rush. 2016.
+\newblock Sequence-to-sequence learning as beam-search optimization.
+\newblock {\em arXiv preprint arXiv:1606.02960\/} .
+
+\bibitem[{{Wu} et~al.(2016){Wu}, {Schuster}, {Chen}, {Le}, {Norouzi},
+  {Macherey}, {Krikun}, {Cao}, {Gao}, {Macherey}, {Klingner}, {Shah},
+  {Johnson}, {Liu}, {Kaiser}, {Gouws}, {Kato}, {Kudo}, {Kazawa}, {Stevens},
+  {Kurian}, {Patil}, {Wang}, {Young}, {Smith}, {Riesa}, {Rudnick}, {Vinyals},
+  {Corrado}, {Hughes}, and {Dean}}]{wu2016google}
+Y.~{Wu}, M.~{Schuster}, Z.~{Chen}, Q.~V. {Le}, M.~{Norouzi}, W.~{Macherey},
+  M.~{Krikun}, Y.~{Cao}, Q.~{Gao}, K.~{Macherey}, J.~{Klingner}, A.~{Shah},
+  M.~{Johnson}, X.~{Liu}, {\L}.~{Kaiser}, S.~{Gouws}, Y.~{Kato}, T.~{Kudo},
+  H.~{Kazawa}, K.~{Stevens}, G.~{Kurian}, N.~{Patil}, W.~{Wang}, C.~{Young},
+  J.~{Smith}, J.~{Riesa}, A.~{Rudnick}, O.~{Vinyals}, G.~{Corrado},
+  M.~{Hughes}, and J.~{Dean}. 2016.
+\newblock {Google's Neural Machine Translation System: Bridging the Gap between
+  Human and Machine Translation}.
+\newblock {\em ArXiv e-prints\/} .
+
+\bibitem[{Yang et~al.(2018)Yang, Chen, Wang, and Xu}]{yang2018unsupervised}
+Zhen Yang, Wei Chen, Feng Wang, and Bo~Xu. 2018.
+\newblock Unsupervised neural machine translation with weight sharing.
+\newblock {\em arXiv preprint arXiv:1804.09057\/} .
+
+\bibitem[{Yarmohammadi et~al.(2013)Yarmohammadi, Sridhar, Bangalore, and
+  Sankaran}]{yarmohammadi2013incremental}
+Mahsa Yarmohammadi, Vivek Kumar~Rangarajan Sridhar, Srinivas Bangalore, and
+  Baskaran Sankaran. 2013.
+\newblock Incremental segmentation and decoding strategies for simultaneous
+  translation.
+\newblock In {\em IJCNLP\/}. pages 1032--1036.
+
+\bibitem[{Yu et~al.(2016)Yu, Buys, and Blunsom}]{yu2016online}
+Lei Yu, Jan Buys, and Phil Blunsom. 2016.
+\newblock Online segment to segment neural transduction.
+\newblock {\em arXiv preprint arXiv:1609.08194\/} .
+
+\bibitem[{Zeiler(2012)}]{zeiler2012adadelta}
+Matthew~D Zeiler. 2012.
+\newblock Adadelta: an adaptive learning rate method.
+\newblock {\em arXiv preprint arXiv:1212.5701\/} .
+
+\bibitem[{Zhang and Zong(2016)}]{zhang2016exploiting}
+Jiajun Zhang and Chengqing Zong. 2016.
+\newblock Exploiting source-side monolingual data in neural machine
+  translation.
+\newblock In {\em Proceedings of the 2016 Conference on Empirical Methods in
+  Natural Language Processing\/}. pages 1535--1545.
+
+\bibitem[{Zhang et~al.(2017)Zhang, Liu, Luan, and Sun}]{zhang2017earth}
+Meng Zhang, Yang Liu, Huanbo Luan, and Maosong Sun. 2017.
+\newblock Earth mover's distance minimization for unsupervised bilingual
+  lexicon induction.
+\newblock In {\em Proceedings of the 2017 Conference on Empirical Methods in
+  Natural Language Processing\/}. Association for Computational Linguistics,
+  pages 1934--1945.
+
+\bibitem[{Zhang and Vogel(2005)}]{Zhang2005AnEP}
+Ying Zhang and Stephan Vogel. 2005.
+\newblock An efficient phrase-to-phrase alignment model for arbitrarily long
+  phrase and large corpora.
+
+\bibitem[{Zoph and Knight(2016)}]{zoph2016multi}
+Barret Zoph and Kevin Knight. 2016.
+\newblock Multi-source neural translation.
+\newblock {\em arXiv preprint arXiv:1601.00710\/} .
+
+\bibitem[{Zoph et~al.(2016)Zoph, Yuret, May, and Knight}]{zoph2016transfer}
+Barret Zoph, Deniz Yuret, Jonathan May, and Kevin Knight. 2016.
+\newblock Transfer learning for low-resource neural machine translation.
+\newblock In {\em Proceedings of the 2016 Conference on Empirical Methods in
+  Natural Language Processing\/}. Association for Computational Linguistics,
+  pages 1568--1575.
+
+\end{thebibliography}

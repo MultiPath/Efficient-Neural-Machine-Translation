@@ -1,0 +1,125 @@
+\BOOKMARK [0][-]{chapter*.1}{Abstract}{}% 1
+\BOOKMARK [0][-]{chapter*.2}{Acknowledgments}{}% 2
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 3
+\BOOKMARK [1][-]{section.1.1}{A Brief Review of Machine Translation \(MT\)}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.2}{Towards Efficient Neural Machine Translation}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.3}{Thesis Outline}{chapter.1}% 6
+\BOOKMARK [0][-]{chapter.2}{Background}{}% 7
+\BOOKMARK [1][-]{section.2.1}{Modeling}{chapter.2}% 8
+\BOOKMARK [2][-]{subsection.2.1.1}{Neural Language Modeling}{section.2.1}% 9
+\BOOKMARK [2][-]{subsection.2.1.2}{Sequence-to-Sequence Learning}{section.2.1}% 10
+\BOOKMARK [2][-]{subsection.2.1.3}{Attention Mechanism}{section.2.1}% 11
+\BOOKMARK [2][-]{subsection.2.1.4}{Neural Machine Translation without RNNs}{section.2.1}% 12
+\BOOKMARK [1][-]{section.2.2}{Training}{chapter.2}% 13
+\BOOKMARK [2][-]{subsection.2.2.1}{Data}{section.2.2}% 14
+\BOOKMARK [2][-]{subsection.2.2.2}{Maximum Likelihood Learning}{section.2.2}% 15
+\BOOKMARK [2][-]{subsection.2.2.3}{Advanced Learning Algorithms}{section.2.2}% 16
+\BOOKMARK [1][-]{section.2.3}{Decoding}{chapter.2}% 17
+\BOOKMARK [2][-]{subsection.2.3.1}{Greedy Decoding}{section.2.3}% 18
+\BOOKMARK [2][-]{subsection.2.3.2}{Beam Search}{section.2.3}% 19
+\BOOKMARK [2][-]{subsection.2.3.3}{Noisy Parallel Decoding}{section.2.3}% 20
+\BOOKMARK [-1][-]{part.1}{I Data-Efficient Neural Machine Translation}{}% 21
+\BOOKMARK [0][-]{chapter.3}{Copying Mechanism}{part.1}% 22
+\BOOKMARK [1][-]{section.3.1}{Overview}{chapter.3}% 23
+\BOOKMARK [1][-]{section.3.2}{CopyNet}{chapter.3}% 24
+\BOOKMARK [2][-]{subsection.3.2.1}{Model Overview}{section.3.2}% 25
+\BOOKMARK [2][-]{subsection.3.2.2}{Prediction with Copying and Generation}{section.3.2}% 26
+\BOOKMARK [2][-]{subsection.3.2.3}{State Update}{section.3.2}% 27
+\BOOKMARK [2][-]{subsection.3.2.4}{Hybrid Addressing of Short-Term Memory}{section.3.2}% 28
+\BOOKMARK [1][-]{section.3.3}{Learning}{chapter.3}% 29
+\BOOKMARK [1][-]{section.3.4}{Experiments}{chapter.3}% 30
+\BOOKMARK [2][-]{subsection.3.4.1}{Synthetic Dataset}{section.3.4}% 31
+\BOOKMARK [2][-]{subsection.3.4.2}{Text Summarization}{section.3.4}% 32
+\BOOKMARK [2][-]{subsection.3.4.3}{Single-turn Dialogue}{section.3.4}% 33
+\BOOKMARK [1][-]{section.3.5}{Related Work}{chapter.3}% 34
+\BOOKMARK [1][-]{section.3.6}{Conclusion and Next Chapter}{chapter.3}% 35
+\BOOKMARK [0][-]{chapter.4}{Non-Parametric Neural Machine Translation}{part.1}% 36
+\BOOKMARK [1][-]{section.4.1}{Overview}{chapter.4}% 37
+\BOOKMARK [2][-]{subsection.4.1.1}{Background: Translation Memory}{section.4.1}% 38
+\BOOKMARK [1][-]{section.4.2}{Search Engine Guided Non-Parametric Neural Machine Translation}{chapter.4}% 39
+\BOOKMARK [2][-]{subsection.4.2.1}{Retrieval Stage}{section.4.2}% 40
+\BOOKMARK [2][-]{subsection.4.2.2}{Translation Stage}{section.4.2}% 41
+\BOOKMARK [1][-]{section.4.3}{Learning and Inference}{chapter.4}% 42
+\BOOKMARK [1][-]{section.4.4}{Experiments}{chapter.4}% 43
+\BOOKMARK [2][-]{subsection.4.4.1}{Settings}{section.4.4}% 44
+\BOOKMARK [2][-]{subsection.4.4.2}{Result and Analysis}{section.4.4}% 45
+\BOOKMARK [1][-]{section.4.5}{Related Work}{chapter.4}% 46
+\BOOKMARK [1][-]{section.4.6}{Conclusion and Next Chapter}{chapter.4}% 47
+\BOOKMARK [0][-]{chapter.5}{Universal Neural Machine Translation}{part.1}% 48
+\BOOKMARK [1][-]{section.5.1}{Overview}{chapter.5}% 49
+\BOOKMARK [1][-]{section.5.2}{Motivation: Low-Resource NMT}{chapter.5}% 50
+\BOOKMARK [2][-]{subsection.5.2.1}{Multi-lingual NMT}{section.5.2}% 51
+\BOOKMARK [2][-]{subsection.5.2.2}{Challenges}{section.5.2}% 52
+\BOOKMARK [1][-]{section.5.3}{Universal Neural Machine Translation}{chapter.5}% 53
+\BOOKMARK [2][-]{subsection.5.3.1}{Universal Lexical Representation \(ULR\)}{section.5.3}% 54
+\BOOKMARK [2][-]{subsection.5.3.2}{Mixture of Language Experts \(MoLE\)}{section.5.3}% 55
+\BOOKMARK [1][-]{section.5.4}{Experiments}{chapter.5}% 56
+\BOOKMARK [2][-]{subsection.5.4.1}{Settings}{section.5.4}% 57
+\BOOKMARK [2][-]{subsection.5.4.2}{Back-Translation}{section.5.4}% 58
+\BOOKMARK [2][-]{subsection.5.4.3}{Preliminary Experiments}{section.5.4}% 59
+\BOOKMARK [2][-]{subsection.5.4.4}{Results}{section.5.4}% 60
+\BOOKMARK [2][-]{subsection.5.4.5}{Qualitative Analysis}{section.5.4}% 61
+\BOOKMARK [1][-]{section.5.5}{Related Work}{chapter.5}% 62
+\BOOKMARK [1][-]{section.5.6}{Conclusion and Next Chapter}{chapter.5}% 63
+\BOOKMARK [0][-]{chapter.6}{Meta Learning for Neural Machine Translation}{part.1}% 64
+\BOOKMARK [1][-]{section.6.1}{Overview}{chapter.6}% 65
+\BOOKMARK [1][-]{section.6.2}{Background: Meta-Learning}{chapter.6}% 66
+\BOOKMARK [1][-]{section.6.3}{Meta-Learning for Extremely Low-Resource Neural Machine Translation}{chapter.6}% 67
+\BOOKMARK [2][-]{subsection.6.3.1}{Learn: language-specific learning}{section.6.3}% 68
+\BOOKMARK [2][-]{subsection.6.3.2}{MetaLearn}{section.6.3}% 69
+\BOOKMARK [2][-]{subsection.6.3.3}{Unified Lexical Representation}{section.6.3}% 70
+\BOOKMARK [1][-]{section.6.4}{Experiments}{chapter.6}% 71
+\BOOKMARK [2][-]{subsection.6.4.1}{Dataset}{section.6.4}% 72
+\BOOKMARK [2][-]{subsection.6.4.2}{Model and Learning}{section.6.4}% 73
+\BOOKMARK [2][-]{subsection.6.4.3}{Results}{section.6.4}% 74
+\BOOKMARK [1][-]{section.6.5}{Conclusion and Next Chapter}{chapter.6}% 75
+\BOOKMARK [-1][-]{part.2}{II Decoding-Efficient Neural Machine Translation}{}% 76
+\BOOKMARK [0][-]{chapter.7}{Trainable Greedy Decoding}{part.2}% 77
+\BOOKMARK [1][-]{section.7.1}{Overview}{chapter.7}% 78
+\BOOKMARK [1][-]{section.7.2}{Trainable Greedy Decoding}{chapter.7}% 79
+\BOOKMARK [2][-]{subsection.7.2.1}{Many Decoding Objectives}{section.7.2}% 80
+\BOOKMARK [2][-]{subsection.7.2.2}{Trainable Greedy Decoding}{section.7.2}% 81
+\BOOKMARK [2][-]{subsection.7.2.3}{Learning and Challenges}{section.7.2}% 82
+\BOOKMARK [1][-]{section.7.3}{Deterministic Policy Gradient with Critic-Aware Actor Learning}{chapter.7}% 83
+\BOOKMARK [2][-]{subsection.7.3.1}{Deterministic Policy Gradient}{section.7.3}% 84
+\BOOKMARK [2][-]{subsection.7.3.2}{Critic-Aware Actor Learning}{section.7.3}% 85
+\BOOKMARK [1][-]{section.7.4}{Experiments}{chapter.7}% 86
+\BOOKMARK [2][-]{subsection.7.4.1}{Settings}{section.7.4}% 87
+\BOOKMARK [2][-]{subsection.7.4.2}{Results and Analysis}{section.7.4}% 88
+\BOOKMARK [1][-]{section.7.5}{Conclusion and Next Chapter}{chapter.7}% 89
+\BOOKMARK [0][-]{chapter.8}{Non-Autoregressive Neural Machine Translation}{part.2}% 90
+\BOOKMARK [1][-]{section.8.1}{Overview}{chapter.8}% 91
+\BOOKMARK [1][-]{section.8.2}{Non-Autoregressive Decoding}{chapter.8}% 92
+\BOOKMARK [2][-]{subsection.8.2.1}{The Multimodality Problem}{section.8.2}% 93
+\BOOKMARK [1][-]{section.8.3}{The Non-Autoregressive Transformer \(NAT\)}{chapter.8}% 94
+\BOOKMARK [2][-]{subsection.8.3.1}{Encoder Stack}{section.8.3}% 95
+\BOOKMARK [2][-]{subsection.8.3.2}{Decoder Stack}{section.8.3}% 96
+\BOOKMARK [2][-]{subsection.8.3.3}{Modeling Fertility to Tackle the Multimodality Problem}{section.8.3}% 97
+\BOOKMARK [2][-]{subsection.8.3.4}{Translation Predictor and the Decoding Process}{section.8.3}% 98
+\BOOKMARK [1][-]{section.8.4}{Learning}{chapter.8}% 99
+\BOOKMARK [2][-]{subsection.8.4.1}{Sequence-Level Knowledge Distillation}{section.8.4}% 100
+\BOOKMARK [2][-]{subsection.8.4.2}{Fine-Tuning}{section.8.4}% 101
+\BOOKMARK [1][-]{section.8.5}{Experiments}{chapter.8}% 102
+\BOOKMARK [2][-]{subsection.8.5.1}{Settings}{section.8.5}% 103
+\BOOKMARK [2][-]{subsection.8.5.2}{Results}{section.8.5}% 104
+\BOOKMARK [2][-]{subsection.8.5.3}{Analysis and Schematic}{section.8.5}% 105
+\BOOKMARK [1][-]{section.8.6}{Conclusion and Next Chapter}{chapter.8}% 106
+\BOOKMARK [0][-]{chapter.9}{Simultaneous Neural Machine Translation}{part.2}% 107
+\BOOKMARK [1][-]{section.9.1}{Overview}{chapter.9}% 108
+\BOOKMARK [1][-]{section.9.2}{Problem Definition: Simultaneous Translation}{chapter.9}% 109
+\BOOKMARK [1][-]{section.9.3}{Simultaneous Neural Machine Translation}{chapter.9}% 110
+\BOOKMARK [2][-]{subsection.9.3.1}{Environment}{section.9.3}% 111
+\BOOKMARK [2][-]{subsection.9.3.2}{Agent}{section.9.3}% 112
+\BOOKMARK [1][-]{section.9.4}{Learning}{chapter.9}% 113
+\BOOKMARK [2][-]{subsection.9.4.1}{Pre-training}{section.9.4}% 114
+\BOOKMARK [2][-]{subsection.9.4.2}{Reward Function}{section.9.4}% 115
+\BOOKMARK [2][-]{subsection.9.4.3}{Reinforcement Learning}{section.9.4}% 116
+\BOOKMARK [1][-]{section.9.5}{Simultaneous Beam Search}{chapter.9}% 117
+\BOOKMARK [1][-]{section.9.6}{Experiments}{chapter.9}% 118
+\BOOKMARK [2][-]{subsection.9.6.1}{Settings}{section.9.6}% 119
+\BOOKMARK [2][-]{subsection.9.6.2}{Quantitative Analysis}{section.9.6}% 120
+\BOOKMARK [2][-]{subsection.9.6.3}{Qualitative Analysis}{section.9.6}% 121
+\BOOKMARK [1][-]{section.9.7}{Related Work}{chapter.9}% 122
+\BOOKMARK [1][-]{section.9.8}{Conclusion}{chapter.9}% 123
+\BOOKMARK [0][-]{chapter.10}{Conclusion}{part.2}% 124
+\BOOKMARK [1][-]{section.10.1}{Future Work}{chapter.10}% 125

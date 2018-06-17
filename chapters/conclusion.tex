@@ -1,0 +1,24 @@
+In this dissertation, we have presented methods for developing an efficient neural machine translation system. 
+We discussed  our methods tackling on twofolds: {\it data-efficient} and {\it decoding-efficient}.
+In this section, we will conclude this thesis by chapters with detailed contributions, and discuss the challenges that are still faced by building a more efficient and also more effective neural machine translation, and suggest future work to tackle them.
+
+In \textbf{Chapter~\ref{copy}}, we developed the copying mechanism as a new component  which targets on rote memories in general sequence-to-sequence (\sts) learning. The proposed \copynet also provided a general way in NMT to deal with out-of-vocabulary (OOV) words; 
+
+In \textbf{Chapter~\ref{seg-nmt}}, we used a non-parametric search-engine to search similar translation pairs for guiding the target translation of a standard NMT system. The introduced method was a direct derivation from \copynet in NMT, but forms a novel non-parametric NMT system that was able to work on translation for professional domains; 
+
+In \textbf{Chapter~\ref{ulr}}, we targeted on the other direction of data-inefficiency, which invents a universal NMT system for extremely low resource languages. Different from prior works on multi-lingual translation, we specially designed two additional modules which enable a jointly-trained model to work well on extremely low resource languages with around $6,000$ sentences; 
+
+In \textbf{Chapter~\ref{MetaNMT}}, we extended the previously proposed universal NMT system to enable a pre-trained multilingual NMT model to adapt to any new languages efficiently. Moreover, the usage of meta-learning provided a principled way of finding a better initialization of parameters that is easy to fine-tune on new languages.
+
+
+In \textbf{Chapter~\ref{trainable}}, we recasted the NMT decoding as a trainable process. The proposed {\it trainable greedy decoding} not only helped a trained model to decode more efficiently with greedy decoding while achieving better translation quality, but it opened an interesting direction where we can optimize the decoding towards any favorable objectives.
+
+In \textbf{Chapter~\ref{nat}}, we invented the non-autoregressive NMT system that enabled translation in entirely parallel. The proposed method, with {\it fertility} as latent variables and sequence-level knowledge distillation, was one of the first NMT systems that was able to fundamentally remove the restriction of word-by-word decoding in conventional NMT models while keeping a close translation quality.
+
+In \textbf{Chapter~\ref{simul}}, we developed the NMT model that learns to translate in real-time using reinforcement learning. More precisely, we formulated the simultaneous translation as a reinforcement learning setting where two actions -- read and write -- were taken on a pre-trained normal NMT.  The resulted model successfully achieved a balance between delay and quality. 
+
+
+\section{Future Work}
+We will conclude this dissertation with a discussion of the challenges to build an efficient neural machine translation that are still facing. 
+
+
