@@ -134,6 +134,12 @@ Kyunghyun Cho, Bart Van~Merri{\"e}nboer, Caglar Gulcehre, Dzmitry Bahdanau,
   statistical machine translation.
 \newblock {\em arXiv preprint arXiv:1406.1078\/} .
 
+\bibitem[{Chung et~al.(2016)Chung, Cho, and Bengio}]{chung2016character}
+Junyoung Chung, Kyunghyun Cho, and Yoshua Bengio. 2016.
+\newblock A character-level decoder without explicit segmentation for neural
+  machine translation.
+\newblock In {\em ACL\/}.
+
 \bibitem[{Conneau et~al.(2018)Conneau, Lample, Ranzato, Denoyer, and
   J{\'e}gou}]{Conneau2017WordTW}
 Alexis Conneau, Guillaume Lample, Marc'Aurelio Ranzato, Ludovic Denoyer, and

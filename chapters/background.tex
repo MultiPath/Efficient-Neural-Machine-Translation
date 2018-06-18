@@ -81,22 +81,33 @@ Note that in~\newcite{bahdanau2014neural}, the source sentence is encoded with a
 
 The attention mechanism nicely solved the information compression problem in machine translation, and is the key for NMT to be able to achieve the state-of-the-art performance. See a comparison with a conventional \sts model in Fig.~\ref{cp2.fig.comparison}. For the following sections and chapters, without special notification, we in default consider the RNN-based \sts model with attention mechanism as the basic NMT model we used for exploration. 
 
+
+
 \subsection{Neural Machine Translation without RNNs}
 Since the entire target translation is known at training time (see more details in \S\ref{cp2.sec.mle}), the calculation of later conditional probabilities (and their corresponding losses) does not depend on the output words chosen during earlier decoding steps. 
 Even though decoding must remain entirely sequential during inference, models can take advantage of this parallelism during training. Therefore, a trend of series of new approaches without RNN connections are quickly taking place the original RNN-based models.
-For instance, such approaches replace RNN layers in the decoder with parallelzable modules like  masked convolution layers~\cite{kalchbrenner2016neural, gehring2017convolutional} or self-attention~\cite{vaswani2017attention}. %that provide the causal structure required by the autoregressive factorization.
+For instance, such approaches replace RNNs in the decoder with parallelizable modules like  masked convolution~\cite{kalchbrenner2016neural, gehring2017convolutional} or self-attention (the Transformer)~\cite{vaswani2017attention}. A detailed illustration of the latter model is shown in Fig.~\ref{cp2.fig.transformer}. %that provide the causal structure required by the autoregressive factorization.
+\begin{figure}[hptb]
+	\includegraphics[width=\linewidth]{figs/background/transformer.pdf}
+	\caption{\label{cp2.fig.transformer} A flow-chart of the Transformer model witch taken from \newcite{vaswani2017attention}. }
+\end{figure}
 
-\paragraph{The Transformer Model}
-We specially introduce the Transformer model proposed in \newcite{vaswani2017attention} as an inportant example. 
+%\paragraph{The Transformer Model}
+%We specially introduce the Transformer model proposed in \newcite{vaswani2017attention} as an important example. 
+%The Transformer model 
 %A recently introduced option which reduces sequential computation still further is to construct the decoder layers out of self-attention computations that have been causally masked in an analogous way.
 %The state-of-the-art Transformer network takes this approach, which allows information to flow in the decoder across arbitrarily long distances in a constant number of operations, asymptotically fewer than required by convolutional architectures \citep{vaswani2017attention}.
 
 \section{Training}
 \subsection{Data}
-\paragraph{Parallel corpora} The training  of a typical NMT system requires large amount of parallel corpus, which is usually collected from bilingual documents done by human translators.  However, as we have already noted before, a typical NMT model usually requires millions of translated sentence pairs
-\paragraph{Monolingual corpora}
+\paragraph{Parallel corpora} The training  of a typical NMT system requires large amount of parallel corpus, which is usually collected from bilingual documents done by human translators.  However, as we have already noted before, a typical NMT model usually requires millions of translated sentence pairs. 
+%\paragraph{Monolingual corpora}
 \paragraph{Vocabulary and Sub-word level translation}  
-We will address this problem in the later chapters.
+Training a standard NMT system usually needs a dictionary to store all the words which we normally call it the vocabulary. Typically, the size of the vocabulary has to be big (around $40,000$) so that it can generally assign embeddings for the majority of the words. If some words appear too rare to be calculated, a special symbol out-of-vocabulary (OOV) would be used as a replacement. 
+
+To overcome the large vocabulary issue and the OOV problem to some extent, \newcite{sennrich2015neural} proposed to preprocess the training data by splitting rare words into pieces -- byte-pair-encoding (BPE) --  and then we run the NMT model at this sub-word level on both source and target sides. In general, the usage of BPE can normally increase the translation performance by $2$ BLEU scores compared to the word-level models. Moreover, research works such as \newcite{kim2016character,chung2016character,lee2016fully} keep one step further and model the translation directly in a character-level.
+
+We will address the data problem in the later chapters.
 
 \subsection{Maximum Likelihood Learning}
 \label{cp2.sec.mle}
@@ -109,8 +120,8 @@ given a training set consisting of $N$ parallel sentence pairs. One of the fasci
 
 It is important to note that this maximum likelihood learning does not take into account how a trained model would be used. Rather, it is only concerned with learning a distribution over all possible translations. 
 
-\subsection{Advanced Learning Algorithms}
-Unfortunately, MLE training has some limitations. More advanced training algorithms for NMT have been proposed in recent years~\citep{wiseman2016sequence,shen2015minimum,bahdanau2016actor,ranzato2015sequence}.
+%\subsection{Advanced Learning Algorithms}
+%. More advanced training algorithms for NMT have been proposed in recent years~\citep{wiseman2016sequence,shen2015minimum,bahdanau2016actor,ranzato2015sequence}.
 
 %\subsection{Multilingual Training of Neural Machine Translation}
 

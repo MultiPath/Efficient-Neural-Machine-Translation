@@ -19,6 +19,18 @@ In \textbf{Chapter~\ref{simul}}, we developed the NMT model that learns to trans
 
 
 \section{Future Work}
-We will conclude this dissertation with a discussion of the challenges to build an efficient neural machine translation that are still facing. 
+We will conclude this dissertation with a discussion of the challenges to build an efficient neural machine translation that are still facing, which would be a clear goal of future work. 
+\paragraph{Same quality, Better efficiency }
+For most cases we have discussed in this dissertation, especially for the discussion of decoding-efficient NMT, we usually find algorithms with much better decoding efficiency with no matter non-autoregressive decoding (Chapter~\ref{nat}) or simultaneous translation (Chapter~\ref{simul}), which loses the translation quality like a paradox. 
 
+Although real application sometimes cares more on efficiency than the degradation of the translation quality, it is still meaningful to stand on the current methods by exploring strategies which can keep the translation quality with almost no lost compared to the normal NMT system.  For example, it is reasonable trade-off to develop a semi-autoregressive NMT which learns to run parallel decoding only without hurting the translation accuracy; For simultaneous translation, we can also achieve a better  quality by learning to predict future words before outputting the target translation (Chapter~\ref{simul}).
+
+
+\paragraph{Light-weight NMT}
+In this thesis, we only discussed situations where the {\it efficient} NMT keeps the same or similar size of parameters as the baseline NMT model. Whereas, we did not cover another trend of building the efficient models by compressing the neural network parameters directly to a light-weight model so that it can fit for the computation resource of a moving device (e.g. mobile phone), which has also been investigated by years. A widely used method is to compress the model size with knowledge distillation to compress knowledge from a big pre-trained model~\cite{kim2016sequence}.  However, more investigation is still needed by combining the proposed methods in previous chapters, say, the light-weight simultaneous translation.
+
+\paragraph{Incorporate Linguistic Information}
+In  human translation, linguistic structures and similarity usually helps to derive the correct translation when the paired translation data is limited. Thus, it is also important to build a data-efficient by considering additional information from linguistic perspective. For example, it is possible to train multiple pre-trained models via meta-learning (Chapter~\ref{MetaNMT}) on a variety of high-resource languages, and match the associated linguistic features to guide any new coming language to find the best model for adaptation.
+
+%\paragraph{Beyond Machine Translation}
 

@@ -19,6 +19,7 @@
 \@writefile{toc}{\contentsline {chapter}{Abstract}{iv}{chapter*.1}}
 \@writefile{toc}{\contentsline {chapter}{Acknowledgments}{vi}{chapter*.2}}
 \citation{koehn2017six}
+\citation{vaswani2017attention}
 \citation{koehn2004statistical}
 \citation{Zhang2005AnEP,callison2005scaling,phillips2012modeling}
 \@writefile{toc}{\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}}
@@ -74,118 +75,119 @@
 \citation{kalchbrenner2016neural,gehring2017convolutional}
 \citation{vaswani2017attention}
 \citation{vaswani2017attention}
+\citation{vaswani2017attention}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1.4}Neural Machine Translation without RNNs}{12}{subsection.2.1.4}}
-\@writefile{toc}{\contentsline {paragraph}{The Transformer Model}{12}{section*.17}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Training}{12}{section.2.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}Data}{12}{subsection.2.2.1}}
+\@writefile{toc}{\contentsline {paragraph}{Parallel corpora}{12}{section*.18}}
+\citation{sennrich2015neural}
+\citation{kim2016character,chung2016character,lee2016fully}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces  A flow-chart of the Transformer model witch taken from \citet  {vaswani2017attention}. \relax }}{13}{figure.caption.17}}
+\newlabel{cp2.fig.transformer}{{2.2}{13}{A flow-chart of the Transformer model witch taken from \newcite {vaswani2017attention}. \relax }{figure.caption.17}{}}
+\@writefile{toc}{\contentsline {paragraph}{Vocabulary and Sub-word level translation}{13}{section*.19}}
 \citation{rumelhart1986learning}
 \citation{zeiler2012adadelta}
 \citation{kingma2014adam}
-\citation{wiseman2016sequence,shen2015minimum,bahdanau2016actor,ranzato2015sequence}
-\@writefile{toc}{\contentsline {section}{\numberline {2.2}Training}{13}{section.2.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}Data}{13}{subsection.2.2.1}}
-\@writefile{toc}{\contentsline {paragraph}{Parallel corpora}{13}{section*.18}}
-\@writefile{toc}{\contentsline {paragraph}{Monolingual corpora}{13}{section*.19}}
-\@writefile{toc}{\contentsline {paragraph}{Vocabulary and Sub-word level translation}{13}{section*.20}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}Maximum Likelihood Learning}{13}{subsection.2.2.2}}
-\newlabel{cp2.sec.mle}{{2.2.2}{13}{Maximum Likelihood Learning}{subsection.2.2.2}{}}
-\newlabel{cp2.eq.learning}{{2.8}{13}{Maximum Likelihood Learning}{equation.2.2.8}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.3}Advanced Learning Algorithms}{14}{subsection.2.2.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}Maximum Likelihood Learning}{14}{subsection.2.2.2}}
+\newlabel{cp2.sec.mle}{{2.2.2}{14}{Maximum Likelihood Learning}{subsection.2.2.2}{}}
+\newlabel{cp2.eq.learning}{{2.8}{14}{Maximum Likelihood Learning}{equation.2.2.8}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.3}Decoding}{14}{section.2.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}Greedy Decoding}{14}{subsection.2.3.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}Greedy Decoding}{15}{subsection.2.3.1}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Beam Search}{15}{subsection.2.3.2}}
 \newlabel{cp2.sec.bs}{{2.3.2}{15}{Beam Search}{subsection.2.3.2}{}}
 \citation{cho2016noisy}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3.3}Noisy Parallel Decoding}{16}{subsection.2.3.3}}
 \newlabel{cp2.sec.noisy}{{2.3.3}{16}{Noisy Parallel Decoding}{subsection.2.3.3}{}}
-\@writefile{toc}{\contentsline {part}{I\hspace  {1em}Data-Efficient Neural Machine Translation}{17}{part.1}}
+\@writefile{toc}{\contentsline {part}{I\hspace  {1em}Data-Efficient Neural Machine Translation}{18}{part.1}}
 \citation{cho2014learning,bahdanau2014neural}
 \citation{vinyals2015grammar}
 \citation{rush2015neural}
 \citation{vinyals2015neural}
 \citation{bahdanau2014neural}
 \citation{shang2015neural,rush2015neural}
-\@writefile{toc}{\contentsline {chapter}{\numberline {3}Copying Mechanism}{18}{chapter.3}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Copying Mechanism}{19}{chapter.3}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{copy}{{3}{18}{Copying Mechanism}{chapter.3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.1}Overview}{18}{section.3.1}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.2}{\textsc  {CopyNet}}\xspace  }{19}{section.3.2}}
+\newlabel{copy}{{3}{19}{Copying Mechanism}{chapter.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Overview}{19}{section.3.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}{\textsc  {CopyNet}}\xspace  }{20}{section.3.2}}
 \citation{bahdanau2014neural}
 \citation{bahdanau2014neural}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces  The overall diagram of {\textsc  {CopyNet}}\xspace  . For simplicity, we omit some links for prediction. \relax }}{20}{figure.caption.21}}
-\newlabel{cp3.fig.model}{{3.1}{20}{The overall diagram of \copynet . For simplicity, we omit some links for prediction. \relax }{figure.caption.21}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Model Overview}{20}{subsection.3.2.1}}
-\@writefile{toc}{\contentsline {paragraph}{Encoder:}{20}{section*.22}}
-\@writefile{toc}{\contentsline {paragraph}{Decoder:}{20}{section*.23}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces  The overall diagram of {\textsc  {CopyNet}}\xspace  . For simplicity, we omit some links for prediction. \relax }}{21}{figure.caption.20}}
+\newlabel{cp3.fig.model}{{3.1}{21}{The overall diagram of \copynet . For simplicity, we omit some links for prediction. \relax }{figure.caption.20}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Model Overview}{21}{subsection.3.2.1}}
+\@writefile{toc}{\contentsline {paragraph}{Encoder:}{21}{section*.21}}
+\@writefile{toc}{\contentsline {paragraph}{Decoder:}{21}{section*.22}}
 \citation{GaussianMixture}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Prediction with Copying and Generation}{21}{subsection.3.2.2}}
-\newlabel{cp3.sec.predict}{{3.2.2}{21}{Prediction with Copying and Generation}{subsection.3.2.2}{}}
-\newlabel{cp3.eq.mix}{{3.1}{21}{Prediction with Copying and Generation}{equation.3.2.1}{}}
-\newlabel{cp3.eq.pg}{{3.2}{21}{Prediction with Copying and Generation}{equation.3.2.2}{}}
-\newlabel{cp3.eq.pc}{{3.3}{21}{Prediction with Copying and Generation}{equation.3.2.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Prediction with Copying and Generation}{22}{subsection.3.2.2}}
+\newlabel{cp3.sec.predict}{{3.2.2}{22}{Prediction with Copying and Generation}{subsection.3.2.2}{}}
+\newlabel{cp3.eq.mix}{{3.1}{22}{Prediction with Copying and Generation}{equation.3.2.1}{}}
+\newlabel{cp3.eq.pg}{{3.2}{22}{Prediction with Copying and Generation}{equation.3.2.2}{}}
+\newlabel{cp3.eq.pc}{{3.3}{22}{Prediction with Copying and Generation}{equation.3.2.2}{}}
 \citation{bahdanau2014neural}
-\@writefile{toc}{\contentsline {paragraph}{Generate-Mode:}{22}{section*.24}}
-\newlabel{cp3.eq.gen}{{3.4}{22}{Generate-Mode:}{equation.3.2.4}{}}
-\@writefile{toc}{\contentsline {paragraph}{Copy-Mode:}{22}{section*.25}}
-\newlabel{cp3.eq.cp}{{3.5}{22}{Copy-Mode:}{equation.3.2.5}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces  The illustration of the decoding probability $p(y_t|\cdot )$ as a 4-class classifier. \relax }}{23}{figure.caption.26}}
-\newlabel{cp3.fig.oov}{{3.2}{23}{The illustration of the decoding probability $p(y_t|\cdot )$ as a 4-class classifier. \relax }{figure.caption.26}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}State Update}{23}{subsection.3.2.3}}
-\newlabel{cp3.sec.stateupdate}{{3.2.3}{23}{State Update}{subsection.3.2.3}{}}
-\newlabel{cp3.eq.loc}{{3.6}{23}{State Update}{equation.3.2.6}{}}
+\@writefile{toc}{\contentsline {paragraph}{Generate-Mode:}{23}{section*.23}}
+\newlabel{cp3.eq.gen}{{3.4}{23}{Generate-Mode:}{equation.3.2.4}{}}
+\@writefile{toc}{\contentsline {paragraph}{Copy-Mode:}{23}{section*.24}}
+\newlabel{cp3.eq.cp}{{3.5}{23}{Copy-Mode:}{equation.3.2.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces  The illustration of the decoding probability $p(y_t|\cdot )$ as a 4-class classifier. \relax }}{24}{figure.caption.25}}
+\newlabel{cp3.fig.oov}{{3.2}{24}{The illustration of the decoding probability $p(y_t|\cdot )$ as a 4-class classifier. \relax }{figure.caption.25}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}State Update}{24}{subsection.3.2.3}}
+\newlabel{cp3.sec.stateupdate}{{3.2.3}{24}{State Update}{subsection.3.2.3}{}}
+\newlabel{cp3.eq.loc}{{3.6}{24}{State Update}{equation.3.2.6}{}}
 \citation{graves2014neural,kurach2015neural}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.4}Hybrid Addressing of Short-Term Memory}{24}{subsection.3.2.4}}
-\newlabel{cp3.sec.reading}{{3.2.4}{24}{Hybrid Addressing of Short-Term Memory}{subsection.3.2.4}{}}
-\@writefile{toc}{\contentsline {paragraph}{Location-based Addressing}{24}{section*.27}}
-\@writefile{toc}{\contentsline {paragraph}{Handling Out-of-Vocabulary Words}{25}{section*.28}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.3}Learning}{25}{section.3.3}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.4}Experiments}{25}{section.3.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.4}Hybrid Addressing of Short-Term Memory}{25}{subsection.3.2.4}}
+\newlabel{cp3.sec.reading}{{3.2.4}{25}{Hybrid Addressing of Short-Term Memory}{subsection.3.2.4}{}}
+\@writefile{toc}{\contentsline {paragraph}{Location-based Addressing}{25}{section*.26}}
+\@writefile{toc}{\contentsline {paragraph}{Handling Out-of-Vocabulary Words}{26}{section*.27}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Learning}{26}{section.3.3}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Experiments}{26}{section.3.4}}
 \citation{cho2014learning}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Synthetic Dataset}{26}{subsection.3.4.1}}
-\newlabel{cp3.sec.synthetic}{{3.4.1}{26}{Synthetic Dataset}{subsection.3.4.1}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces  Examples of synthetic rules and examples\relax }}{26}{table.caption.29}}
-\newlabel{cp3.table.syn_exp}{{3.1}{26}{Examples of synthetic rules and examples\relax }{table.caption.29}{}}
-\@writefile{toc}{\contentsline {paragraph}{Experimental Setting}{26}{section*.30}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Synthetic Dataset}{27}{subsection.3.4.1}}
+\newlabel{cp3.sec.synthetic}{{3.4.1}{27}{Synthetic Dataset}{subsection.3.4.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces  Examples of synthetic rules and examples\relax }}{27}{table.caption.28}}
+\newlabel{cp3.table.syn_exp}{{3.1}{27}{Examples of synthetic rules and examples\relax }{table.caption.28}{}}
+\@writefile{toc}{\contentsline {paragraph}{Experimental Setting}{27}{section*.29}}
 \citation{rush2015neural,hu2015lcsts}
 \citation{hu2015lcsts}
 \citation{hu2015lcsts}
-\@writefile{lot}{\contentsline {table}{\numberline {3.2}{\ignorespaces  The test accuracy (\%) on synthetic data.\relax }}{27}{table.caption.31}}
-\newlabel{cp3.table.acc}{{3.2}{27}{The test accuracy (\%) on synthetic data.\relax }{table.caption.31}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}Text Summarization}{27}{subsection.3.4.2}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.2}{\ignorespaces  The test accuracy (\%) on synthetic data.\relax }}{28}{table.caption.30}}
+\newlabel{cp3.table.acc}{{3.2}{28}{The test accuracy (\%) on synthetic data.\relax }{table.caption.30}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}Text Summarization}{28}{subsection.3.4.2}}
 \citation{hu2015lcsts}
 \citation{lin:2004:ACLsummarization}
 \citation{hu2015lcsts}
 \citation{hu2015lcsts}
 \citation{hu2015lcsts}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces  Example output of {\textsc  {CopyNet}}\xspace  on the synthetic dataset. The heatmap represents the activations of the copy-mode over the input sequence (left) during the decoding process (bottom).\relax }}{28}{figure.caption.32}}
-\newlabel{cp3.fig.syn}{{3.3}{28}{Example output of \copynet on the synthetic dataset. The heatmap represents the activations of the copy-mode over the input sequence (left) during the decoding process (bottom).\relax }{figure.caption.32}{}}
-\@writefile{toc}{\contentsline {paragraph}{Dataset}{28}{section*.33}}
-\@writefile{lot}{\contentsline {table}{\numberline {3.3}{\ignorespaces  The statistics of the LCSTS dataset.\relax }}{28}{table.caption.34}}
-\newlabel{cp3.table.lcsts}{{3.3}{28}{The statistics of the LCSTS dataset.\relax }{table.caption.34}{}}
-\@writefile{toc}{\contentsline {paragraph}{Experimental Setting}{28}{section*.35}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces  Example output of {\textsc  {CopyNet}}\xspace  on the synthetic dataset. The heatmap represents the activations of the copy-mode over the input sequence (left) during the decoding process (bottom).\relax }}{29}{figure.caption.31}}
+\newlabel{cp3.fig.syn}{{3.3}{29}{Example output of \copynet on the synthetic dataset. The heatmap represents the activations of the copy-mode over the input sequence (left) during the decoding process (bottom).\relax }{figure.caption.31}{}}
+\@writefile{toc}{\contentsline {paragraph}{Dataset}{29}{section*.32}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.3}{\ignorespaces  The statistics of the LCSTS dataset.\relax }}{29}{table.caption.33}}
+\newlabel{cp3.table.lcsts}{{3.3}{29}{The statistics of the LCSTS dataset.\relax }{table.caption.33}{}}
+\@writefile{toc}{\contentsline {paragraph}{Experimental Setting}{29}{section*.34}}
 \citation{hu2015lcsts}
 \citation{hu2015lcsts}
-\@writefile{lot}{\contentsline {table}{\numberline {3.4}{\ignorespaces  Testing performance of LCSTS, where ``RNN" is canonical Enc-Dec, and ``RNN context" its attentive variant.\relax }}{29}{table.caption.36}}
-\newlabel{cp3.table.summary}{{3.4}{29}{Testing performance of LCSTS, where ``RNN" is canonical Enc-Dec, and ``RNN context" its attentive variant.\relax }{table.caption.36}{}}
-\@writefile{toc}{\contentsline {paragraph}{Case Study}{29}{section*.38}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces  Examples of {\textsc  {CopyNet}}\xspace  on LCSTS compared with RNN context. Word segmentation is applied on the input, where underlined are OOV words. The highlighted words (with different colors) are those words with copy-mode probability higher than the generate-mode. We also provide literal English translation for the document, the golden, and {\textsc  {CopyNet}}\xspace  , while omitting that for RNN context since the language is broken.\relax }}{30}{figure.caption.37}}
-\newlabel{cp3.fig.summary}{{3.4}{30}{Examples of \copynet on LCSTS compared with RNN context. Word segmentation is applied on the input, where underlined are OOV words. The highlighted words (with different colors) are those words with copy-mode probability higher than the generate-mode. We also provide literal English translation for the document, the golden, and \copynet , while omitting that for RNN context since the language is broken.\relax }{figure.caption.37}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.4}{\ignorespaces  Testing performance of LCSTS, where ``RNN" is canonical Enc-Dec, and ``RNN context" its attentive variant.\relax }}{30}{table.caption.35}}
+\newlabel{cp3.table.summary}{{3.4}{30}{Testing performance of LCSTS, where ``RNN" is canonical Enc-Dec, and ``RNN context" its attentive variant.\relax }{table.caption.35}{}}
+\@writefile{toc}{\contentsline {paragraph}{Case Study}{30}{section*.37}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces  Examples of {\textsc  {CopyNet}}\xspace  on LCSTS compared with RNN context. Word segmentation is applied on the input, where underlined are OOV words. The highlighted words (with different colors) are those words with copy-mode probability higher than the generate-mode. We also provide literal English translation for the document, the golden, and {\textsc  {CopyNet}}\xspace  , while omitting that for RNN context since the language is broken.\relax }}{31}{figure.caption.36}}
+\newlabel{cp3.fig.summary}{{3.4}{31}{Examples of \copynet on LCSTS compared with RNN context. Word segmentation is applied on the input, where underlined are OOV words. The highlighted words (with different colors) are those words with copy-mode probability higher than the generate-mode. We also provide literal English translation for the document, the golden, and \copynet , while omitting that for RNN context since the language is broken.\relax }{figure.caption.36}{}}
 \citation{shang2015neural,vinyals2015neural,sordoni2015neural}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}Single-turn Dialogue}{31}{subsection.3.4.3}}
-\@writefile{toc}{\contentsline {paragraph}{Dataset}{31}{section*.39}}
-\@writefile{toc}{\contentsline {paragraph}{Experimental Setting}{31}{section*.40}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces  Examples on the testing set of DS-II shown as the input text and golden, with the outputs of RNNSearch and CopyNet. Words in red rectangles are unseen in the training set. The highlighted words (with different colors) are those words with copy-mode probability higher than the generate-mode. Green cirles (meaning correct) and red cross (meaning incorrect) are given based on human judgment on whether the response is appropriate. \relax }}{32}{figure.caption.41}}
-\newlabel{cp3.fig.ds-exp}{{3.5}{32}{Examples on the testing set of DS-II shown as the input text and golden, with the outputs of RNNSearch and CopyNet. Words in red rectangles are unseen in the training set. The highlighted words (with different colors) are those words with copy-mode probability higher than the generate-mode. Green cirles (meaning correct) and red cross (meaning incorrect) are given based on human judgment on whether the response is appropriate. \relax }{figure.caption.41}{}}
-\@writefile{toc}{\contentsline {paragraph}{Case Study}{32}{section*.43}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}Single-turn Dialogue}{32}{subsection.3.4.3}}
+\@writefile{toc}{\contentsline {paragraph}{Dataset}{32}{section*.38}}
+\@writefile{toc}{\contentsline {paragraph}{Experimental Setting}{32}{section*.39}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces  Examples on the testing set of DS-II shown as the input text and golden, with the outputs of RNNSearch and CopyNet. Words in red rectangles are unseen in the training set. The highlighted words (with different colors) are those words with copy-mode probability higher than the generate-mode. Green cirles (meaning correct) and red cross (meaning incorrect) are given based on human judgment on whether the response is appropriate. \relax }}{33}{figure.caption.40}}
+\newlabel{cp3.fig.ds-exp}{{3.5}{33}{Examples on the testing set of DS-II shown as the input text and golden, with the outputs of RNNSearch and CopyNet. Words in red rectangles are unseen in the training set. The highlighted words (with different colors) are those words with copy-mode probability higher than the generate-mode. Green cirles (meaning correct) and red cross (meaning incorrect) are given based on human judgment on whether the response is appropriate. \relax }{figure.caption.40}{}}
+\@writefile{toc}{\contentsline {paragraph}{Case Study}{33}{section*.42}}
 \citation{vinyals2015pointer}
 \citation{vinyals2015pointer}
 \citation{luong-EtAl:2015:ACL-IJCNLP}
 \citation{srivastava2015highway,he2015deep}
 \citation{weston2014memory,sukhbaatar2015end,graves2014neural}
-\@writefile{lot}{\contentsline {table}{\numberline {3.5}{\ignorespaces  The decoding accuracy on the two testing sets. Decoding is admitted success only when the answer is found exactly in the Top-K outputs. \relax }}{33}{table.caption.42}}
-\newlabel{cp3.table.ds-exp}{{3.5}{33}{The decoding accuracy on the two testing sets. Decoding is admitted success only when the answer is found exactly in the Top-K outputs. \relax }{table.caption.42}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.5}Related Work}{33}{section.3.5}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.5}{\ignorespaces  The decoding accuracy on the two testing sets. Decoding is admitted success only when the answer is found exactly in the Top-K outputs. \relax }}{34}{table.caption.41}}
+\newlabel{cp3.table.ds-exp}{{3.5}{34}{The decoding accuracy on the two testing sets. Decoding is admitted success only when the answer is found exactly in the Top-K outputs. \relax }{table.caption.41}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}Related Work}{34}{section.3.5}}
 \citation{gulcehre2016pointing}
-\@writefile{toc}{\contentsline {section}{\numberline {3.6}Conclusion and Next Chapter}{34}{section.3.6}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.6}Conclusion and Next Chapter}{35}{section.3.6}}
 \citation{bahdanau2014neural}
 \citation{wu2016google,crego2016systran,hassan-hp}
 \citation{koehn2003statistical}
@@ -193,72 +195,72 @@
 \citation{zoph2016multi,firat2016zero}
 \citation{caglayan2016does}
 \citation{nadejde2017syntax,eriguchi2017learning}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Non-Parametric Neural Machine Translation}{35}{chapter.4}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Non-Parametric Neural Machine Translation}{36}{chapter.4}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{seg-nmt}{{4}{35}{Non-Parametric Neural Machine Translation}{chapter.4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Overview}{35}{section.4.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces An illustration of the proposed search-engine guided non-parametric neural machine translation.\relax }}{36}{figure.caption.44}}
-\newlabel{cp4.fig.illustration}{{4.1}{36}{An illustration of the proposed search-engine guided non-parametric neural machine translation.\relax }{figure.caption.44}{}}
+\newlabel{seg-nmt}{{4}{36}{Non-Parametric Neural Machine Translation}{chapter.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Overview}{36}{section.4.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces An illustration of the proposed search-engine guided non-parametric neural machine translation.\relax }}{37}{figure.caption.43}}
+\newlabel{cp4.fig.illustration}{{4.1}{37}{An illustration of the proposed search-engine guided non-parametric neural machine translation.\relax }{figure.caption.43}{}}
 \citation{steinberger2006jrc}
 \citation{bahdanau2014neural}
 \citation{koehn2003statistical}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Background: Translation Memory}{37}{subsection.4.1.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces  The overall architecture of the proposed SEG-NMT. The shaded box includes the module which handles a set of translation pairs retrieved in the first stage. The heat maps represent the attention scores between the source sentences (left-to-right) and the corresponding translations (top-to-down).\relax }}{38}{figure.caption.45}}
-\newlabel{cp4.fig.tmnmt}{{4.2}{38}{The overall architecture of the proposed SEG-NMT. The shaded box includes the module which handles a set of translation pairs retrieved in the first stage. The heat maps represent the attention scores between the source sentences (left-to-right) and the corresponding translations (top-to-down).\relax }{figure.caption.45}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Search Engine Guided Non-Parametric Neural Machine Translation}{38}{section.4.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Background: Translation Memory}{38}{subsection.4.1.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces  The overall architecture of the proposed SEG-NMT. The shaded box includes the module which handles a set of translation pairs retrieved in the first stage. The heat maps represent the attention scores between the source sentences (left-to-right) and the corresponding translations (top-to-down).\relax }}{39}{figure.caption.44}}
+\newlabel{cp4.fig.tmnmt}{{4.2}{39}{The overall architecture of the proposed SEG-NMT. The shaded box includes the module which handles a set of translation pairs retrieved in the first stage. The heat maps represent the attention scores between the source sentences (left-to-right) and the corresponding translations (top-to-down).\relax }{figure.caption.44}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Search Engine Guided Non-Parametric Neural Machine Translation}{39}{section.4.2}}
 \citation{li2016phrase}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Retrieval Stage}{39}{subsection.4.2.1}}
-\@writefile{toc}{\contentsline {paragraph}{Similarity score function $\ensuremath  {\mathcal  {S}}$}{39}{section*.46}}
-\newlabel{cp4.eq.fuzzy}{{4.1}{39}{Similarity score function $\calS $}{equation.4.2.1}{}}
-\@writefile{toc}{\contentsline {paragraph}{Off-the-shelf Search Engine}{39}{section*.47}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Retrieval Stage}{40}{subsection.4.2.1}}
+\@writefile{toc}{\contentsline {paragraph}{Similarity score function $\ensuremath  {\mathcal  {S}}$}{40}{section*.45}}
+\newlabel{cp4.eq.fuzzy}{{4.1}{40}{Similarity score function $\calS $}{equation.4.2.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{Off-the-shelf Search Engine}{40}{section*.46}}
 \citation{miller2016key}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Greedy selection procedure to maximize the coverage of the source symbols.\relax }}{40}{algorithm.1}}
-\newlabel{cp4.algo.alg1}{{1}{40}{Greedy selection procedure to maximize the coverage of the source symbols.\relax }{algorithm.1}{}}
-\@writefile{toc}{\contentsline {paragraph}{Final selection process}{40}{section*.48}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Translation Stage}{40}{subsection.4.2.2}}
-\@writefile{toc}{\contentsline {paragraph}{Key-Value Memory}{41}{section*.49}}
-\@writefile{toc}{\contentsline {paragraph}{Matching and Retrieval}{41}{section*.50}}
-\newlabel{cp4.eq.score}{{4.2}{41}{Matching and Retrieval}{equation.4.2.2}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Greedy selection procedure to maximize the coverage of the source symbols.\relax }}{41}{algorithm.1}}
+\newlabel{cp4.algo.alg1}{{1}{41}{Greedy selection procedure to maximize the coverage of the source symbols.\relax }{algorithm.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{Final selection process}{41}{section*.47}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Translation Stage}{41}{subsection.4.2.2}}
+\@writefile{toc}{\contentsline {paragraph}{Key-Value Memory}{42}{section*.48}}
+\@writefile{toc}{\contentsline {paragraph}{Matching and Retrieval}{42}{section*.49}}
+\newlabel{cp4.eq.score}{{4.2}{42}{Matching and Retrieval}{equation.4.2.2}{}}
 \citation{gu2016incorporating}
 \citation{tu2016modeling}
-\@writefile{toc}{\contentsline {paragraph}{Incorporation}{42}{section*.51}}
-\newlabel{cp4.eq.deep}{{4.4}{42}{Incorporation}{equation.4.2.4}{}}
-\newlabel{cp4.eq.shallow}{{4.5}{42}{Incorporation}{equation.4.2.5}{}}
-\@writefile{toc}{\contentsline {paragraph}{Coverage}{42}{section*.52}}
-\newlabel{cp4.eq.match}{{4.6}{42}{Coverage}{equation.4.2.6}{}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces Learning for SEG-NMT\relax }}{43}{algorithm.2}}
-\newlabel{cp4.algo.alg2}{{2}{43}{Learning for SEG-NMT\relax }{algorithm.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{Incorporation}{43}{section*.50}}
+\newlabel{cp4.eq.deep}{{4.4}{43}{Incorporation}{equation.4.2.4}{}}
+\newlabel{cp4.eq.shallow}{{4.5}{43}{Incorporation}{equation.4.2.5}{}}
+\@writefile{toc}{\contentsline {paragraph}{Coverage}{43}{section*.51}}
+\newlabel{cp4.eq.match}{{4.6}{43}{Coverage}{equation.4.2.6}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces Learning for SEG-NMT\relax }}{44}{algorithm.2}}
+\newlabel{cp4.algo.alg2}{{2}{44}{Learning for SEG-NMT\relax }{algorithm.2}{}}
 \citation{steinberger2006jrc}
 \citation{li2016phrase}
 \citation{sennrich2015neural}
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Learning and Inference}{44}{section.4.3}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}Experiments}{44}{section.4.4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}Settings}{44}{subsection.4.4.1}}
-\@writefile{toc}{\contentsline {paragraph}{Data}{44}{section*.53}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Learning and Inference}{45}{section.4.3}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Experiments}{45}{section.4.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}Settings}{45}{subsection.4.4.1}}
+\@writefile{toc}{\contentsline {paragraph}{Data}{45}{section*.52}}
 \citation{bahdanau2014neural}
 \citation{cho2014learning}
 \citation{kingma2014adam}
-\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces  Statistics from the JRC-Acquis corpus. We use BPE subword symbols.\relax }}{45}{table.caption.54}}
-\newlabel{cp4.table.dataset}{{4.1}{45}{Statistics from the JRC-Acquis corpus. We use BPE subword symbols.\relax }{table.caption.54}{}}
-\@writefile{toc}{\contentsline {paragraph}{Retrieval Stage}{45}{section*.55}}
-\@writefile{toc}{\contentsline {paragraph}{Translation Stage}{45}{section*.56}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces  Statistics from the JRC-Acquis corpus. We use BPE subword symbols.\relax }}{46}{table.caption.53}}
+\newlabel{cp4.table.dataset}{{4.1}{46}{Statistics from the JRC-Acquis corpus. We use BPE subword symbols.\relax }{table.caption.53}{}}
+\@writefile{toc}{\contentsline {paragraph}{Retrieval Stage}{46}{section*.54}}
+\@writefile{toc}{\contentsline {paragraph}{Translation Stage}{46}{section*.55}}
 \citation{gu2016incorporating}
-\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces The BLEU scores on JRC-Acquis corpus.\relax }}{46}{table.caption.57}}
-\newlabel{cp4.table.bleu}{{4.2}{46}{The BLEU scores on JRC-Acquis corpus.\relax }{table.caption.57}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}Result and Analysis}{46}{subsection.4.4.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces   The improvement over the baseline by SEG-NMT on Fr$\to $En w.r.t. the fuzzy matching scores of one retrieved translation pair. \relax }}{47}{figure.caption.59}}
-\newlabel{cp4.fig.fuzzy_improv}{{4.3}{47}{The improvement over the baseline by SEG-NMT on Fr$\to $En w.r.t. the fuzzy matching scores of one retrieved translation pair. \relax }{figure.caption.59}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces   The BLEU scores on Fr$\to $En using varying numbers of retrieved translation pairs during testing. The model was trained once. ``Adaptive'' refers to the proposed greedy selection in Alg.\nobreakspace  {}\ref  {cp4.algo.alg1}. \relax }}{47}{figure.caption.60}}
-\newlabel{cp4.fig.bleu_retrieved}{{4.4}{47}{The BLEU scores on Fr$\to $En using varying numbers of retrieved translation pairs during testing. The model was trained once. ``Adaptive'' refers to the proposed greedy selection in Alg.~\ref {cp4.algo.alg1}. \relax }{figure.caption.60}{}}
-\@writefile{toc}{\contentsline {paragraph}{Fuzzy matching score v.s. Quality}{47}{section*.58}}
-\@writefile{toc}{\contentsline {paragraph}{Effect of the \# of Retrieved Translation Pairs}{47}{section*.61}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces The BLEU scores on JRC-Acquis corpus.\relax }}{47}{table.caption.56}}
+\newlabel{cp4.table.bleu}{{4.2}{47}{The BLEU scores on JRC-Acquis corpus.\relax }{table.caption.56}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}Result and Analysis}{47}{subsection.4.4.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces   The improvement over the baseline by SEG-NMT on Fr$\to $En w.r.t. the fuzzy matching scores of one retrieved translation pair. \relax }}{48}{figure.caption.58}}
+\newlabel{cp4.fig.fuzzy_improv}{{4.3}{48}{The improvement over the baseline by SEG-NMT on Fr$\to $En w.r.t. the fuzzy matching scores of one retrieved translation pair. \relax }{figure.caption.58}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces   The BLEU scores on Fr$\to $En using varying numbers of retrieved translation pairs during testing. The model was trained once. ``Adaptive'' refers to the proposed greedy selection in Alg.\nobreakspace  {}\ref  {cp4.algo.alg1}. \relax }}{48}{figure.caption.59}}
+\newlabel{cp4.fig.bleu_retrieved}{{4.4}{48}{The BLEU scores on Fr$\to $En using varying numbers of retrieved translation pairs during testing. The model was trained once. ``Adaptive'' refers to the proposed greedy selection in Alg.~\ref {cp4.algo.alg1}. \relax }{figure.caption.59}{}}
+\@writefile{toc}{\contentsline {paragraph}{Fuzzy matching score v.s. Quality}{48}{section*.57}}
+\@writefile{toc}{\contentsline {paragraph}{Effect of the \# of Retrieved Translation Pairs}{48}{section*.60}}
 \citation{Zhang2005AnEP,callison2005scaling,phillips2012modeling}
-\@writefile{toc}{\contentsline {paragraph}{Deep vs. Shallow Fusion}{48}{section*.62}}
-\@writefile{toc}{\contentsline {paragraph}{Examples}{48}{section*.63}}
-\@writefile{toc}{\contentsline {paragraph}{Efficiency}{48}{section*.65}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces  Three examples from the Fr$\to $En test set. For the proposed SEG-NMT model, one translation pair is retrieved from the training set. Each token in the translation by the proposed approach and its corresponded token (if it exists) in the retrieved pair are shaded in blue according to the gating variable $\zeta _t$ from Eq.\nobreakspace  {}\textup  {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref  {cp4.eq.shallow}\unskip \@@italiccorr )}}. In all, we show: (S) the source sentence. (RS) the source side of a retrieved pair. (RT) the target side of the retrieved pair. (A) the translation by the proposed approach. (B) the translation by the baseline. (T) the reference translation. \relax }}{49}{figure.caption.64}}
-\newlabel{cp4.fig.examples}{{4.5}{49}{Three examples from the Fr$\to $En test set. For the proposed SEG-NMT model, one translation pair is retrieved from the training set. Each token in the translation by the proposed approach and its corresponded token (if it exists) in the retrieved pair are shaded in blue according to the gating variable $\zeta _t$ from Eq.~\eqref {cp4.eq.shallow}. In all, we show: (S) the source sentence. (RS) the source side of a retrieved pair. (RT) the target side of the retrieved pair. (A) the translation by the proposed approach. (B) the translation by the baseline. (T) the reference translation. \relax }{figure.caption.64}{}}
+\@writefile{toc}{\contentsline {paragraph}{Deep vs. Shallow Fusion}{49}{section*.61}}
+\@writefile{toc}{\contentsline {paragraph}{Examples}{49}{section*.62}}
+\@writefile{toc}{\contentsline {paragraph}{Efficiency}{49}{section*.64}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces  Three examples from the Fr$\to $En test set. For the proposed SEG-NMT model, one translation pair is retrieved from the training set. Each token in the translation by the proposed approach and its corresponded token (if it exists) in the retrieved pair are shaded in blue according to the gating variable $\zeta _t$ from Eq.\nobreakspace  {}\textup  {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref  {cp4.eq.shallow}\unskip \@@italiccorr )}}. In all, we show: (S) the source sentence. (RS) the source side of a retrieved pair. (RT) the target side of the retrieved pair. (A) the translation by the proposed approach. (B) the translation by the baseline. (T) the reference translation. \relax }}{50}{figure.caption.63}}
+\newlabel{cp4.fig.examples}{{4.5}{50}{Three examples from the Fr$\to $En test set. For the proposed SEG-NMT model, one translation pair is retrieved from the training set. Each token in the translation by the proposed approach and its corresponded token (if it exists) in the retrieved pair are shaded in blue according to the gating variable $\zeta _t$ from Eq.~\eqref {cp4.eq.shallow}. In all, we show: (S) the source sentence. (RS) the source side of a retrieved pair. (RT) the target side of the retrieved pair. (A) the translation by the proposed approach. (B) the translation by the baseline. (T) the reference translation. \relax }{figure.caption.63}{}}
 \citation{firat2016multi,zoph2016multi}
 \citation{jean2017does,wang2017exploiting}
 \citation{devlin2015exploring}
@@ -266,98 +268,98 @@
 \citation{bollacker2008freebase}
 \citation{pritzel2017neural}
 \citation{kaiser2017learning}
-\@writefile{toc}{\contentsline {section}{\numberline {4.5}Related Work}{50}{section.4.5}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}Related Work}{51}{section.4.5}}
 \citation{nogueira2017task}
 \citation{FAISS}
-\@writefile{toc}{\contentsline {section}{\numberline {4.6}Conclusion and Next Chapter}{51}{section.4.6}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.6}Conclusion and Next Chapter}{52}{section.4.6}}
 \citation{bahdanau2014neural}
 \citation{wu2016google,devlin:2017:EMNLP2017}
 \citation{hassan-hp}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Universal Neural Machine Translation}{53}{chapter.5}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Universal Neural Machine Translation}{54}{chapter.5}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ulr}{{5}{53}{Universal Neural Machine Translation}{chapter.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Overview}{53}{section.5.1}}
+\newlabel{ulr}{{5}{54}{Universal Neural Machine Translation}{chapter.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Overview}{54}{section.5.1}}
 \citation{koehn2017six}
 \citation{Gulcehre-Orhan-et-al-2015,zhang2016exploiting}
 \citation{sennrich2015improving}
 \citation{he2016dual}
 \citation{artetxe2017unsupervised,lample2017unsupervised,yang2018unsupervised}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Motivation: Low-Resource NMT}{54}{section.5.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces  BLEU scores reported on the test set for Ro-En. The amount of training data effects the translation performance dramatically using a single NMT model.\relax }}{54}{figure.caption.66}}
-\newlabel{cp5.fig.data_size}{{5.1}{54}{BLEU scores reported on the test set for Ro-En. The amount of training data effects the translation performance dramatically using a single NMT model.\relax }{figure.caption.66}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Motivation: Low-Resource NMT}{55}{section.5.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces  BLEU scores reported on the test set for Ro-En. The amount of training data effects the translation performance dramatically using a single NMT model.\relax }}{55}{figure.caption.65}}
+\newlabel{cp5.fig.data_size}{{5.1}{55}{BLEU scores reported on the test set for Ro-En. The amount of training data effects the translation performance dramatically using a single NMT model.\relax }{figure.caption.65}{}}
 \citation{cheng2016neural,chen2017teacher,lee2017emergent,chen2018zero}
 \citation{firat2016multi,lee2016fully,johnson2016google}
 \citation{lee2016fully}
 \citation{johnson2016google}
 \citation{zoph2016transfer}
 \citation{firat2016multi}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Multi-lingual NMT}{55}{subsection.5.2.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Multi-lingual NMT}{56}{subsection.5.2.1}}
 \citation{sennrich2015neural}
 \citation{kim2016character,luong2016achieving,lee2016fully}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}Challenges}{56}{subsection.5.2.2}}
-\@writefile{toc}{\contentsline {paragraph}{Lexical-level Sharing}{56}{section*.67}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces word ``cat'' in different languages\relax }}{56}{figure.caption.68}}
-\newlabel{cp5.fig.cat}{{5.2}{56}{word ``cat'' in different languages\relax }{figure.caption.68}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}Challenges}{57}{subsection.5.2.2}}
+\@writefile{toc}{\contentsline {paragraph}{Lexical-level Sharing}{57}{section*.66}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces word ``cat'' in different languages\relax }}{57}{figure.caption.67}}
+\newlabel{cp5.fig.cat}{{5.2}{57}{word ``cat'' in different languages\relax }{figure.caption.67}{}}
 \citation{johnson2016google}
-\@writefile{toc}{\contentsline {paragraph}{Sentence-level Sharing}{57}{section*.69}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}Universal Neural Machine Translation}{57}{section.5.3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces  An illustration of the proposed architecture of the ULR and MoLE. Shaded parts are trained within NMT model while unshaded parts are not changed during training.\relax }}{57}{figure.caption.70}}
-\newlabel{cp5.fig.model}{{5.3}{57}{An illustration of the proposed architecture of the ULR and MoLE. Shaded parts are trained within NMT model while unshaded parts are not changed during training.\relax }{figure.caption.70}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Universal Lexical Representation (ULR)}{57}{subsection.5.3.1}}
-\newlabel{cp5.sec.unilex}{{5.3.1}{57}{Universal Lexical Representation (ULR)}{subsection.5.3.1}{}}
-\@writefile{toc}{\contentsline {paragraph}{Lexicon Mapping to the Universal Token Space}{58}{section*.71}}
-\newlabel{cp5.eq.universal_embed}{{5.2}{58}{Lexicon Mapping to the Universal Token Space}{equation.5.3.2}{}}
-\newlabel{cp5.eq.q_softmax}{{5.3}{59}{Lexicon Mapping to the Universal Token Space}{equation.5.3.3}{}}
-\@writefile{toc}{\contentsline {paragraph}{Shared Monolingual Embeddings}{59}{section*.72}}
+\@writefile{toc}{\contentsline {paragraph}{Sentence-level Sharing}{58}{section*.68}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Universal Neural Machine Translation}{58}{section.5.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces  An illustration of the proposed architecture of the ULR and MoLE. Shaded parts are trained within NMT model while unshaded parts are not changed during training.\relax }}{58}{figure.caption.69}}
+\newlabel{cp5.fig.model}{{5.3}{58}{An illustration of the proposed architecture of the ULR and MoLE. Shaded parts are trained within NMT model while unshaded parts are not changed during training.\relax }{figure.caption.69}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Universal Lexical Representation (ULR)}{58}{subsection.5.3.1}}
+\newlabel{cp5.sec.unilex}{{5.3.1}{58}{Universal Lexical Representation (ULR)}{subsection.5.3.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{Lexicon Mapping to the Universal Token Space}{59}{section*.70}}
+\newlabel{cp5.eq.universal_embed}{{5.2}{59}{Lexicon Mapping to the Universal Token Space}{equation.5.3.2}{}}
+\newlabel{cp5.eq.q_softmax}{{5.3}{60}{Lexicon Mapping to the Universal Token Space}{equation.5.3.3}{}}
+\@writefile{toc}{\contentsline {paragraph}{Shared Monolingual Embeddings}{60}{section*.71}}
 \citation{smith2017offline}
 \citation{Artetxe2017LearningBW,Conneau2017WordTW}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces  An illustration of projecting multiple monolingual embeddings (Es, Fr, It, Pt, Ro) to the same universal (En) space.\relax }}{60}{figure.caption.73}}
-\newlabel{cp5.fig.preproj}{{5.4}{60}{An illustration of projecting multiple monolingual embeddings (Es, Fr, It, Pt, Ro) to the same universal (En) space.\relax }{figure.caption.73}{}}
-\@writefile{toc}{\contentsline {paragraph}{Interpolated Embeddings}{60}{section*.74}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces  An illustration of projecting multiple monolingual embeddings (Es, Fr, It, Pt, Ro) to the same universal (En) space.\relax }}{61}{figure.caption.72}}
+\newlabel{cp5.fig.preproj}{{5.4}{61}{An illustration of projecting multiple monolingual embeddings (Es, Fr, It, Pt, Ro) to the same universal (En) space.\relax }{figure.caption.72}{}}
+\@writefile{toc}{\contentsline {paragraph}{Interpolated Embeddings}{61}{section*.73}}
 \citation{shazeer2017outrageously}
-\@writefile{toc}{\contentsline {paragraph}{An Example}{61}{section*.75}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Mixture of Language Experts (MoLE)}{61}{subsection.5.3.2}}
-\newlabel{cp5.sec.moe}{{5.3.2}{61}{Mixture of Language Experts (MoLE)}{subsection.5.3.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.4}Experiments}{62}{section.5.4}}
-\newlabel{cp5.sec.exps}{{5.4}{62}{Experiments}{section.5.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}Settings}{62}{subsection.5.4.1}}
-\@writefile{toc}{\contentsline {paragraph}{Dataset}{62}{section*.76}}
+\@writefile{toc}{\contentsline {paragraph}{An Example}{62}{section*.74}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Mixture of Language Experts (MoLE)}{62}{subsection.5.3.2}}
+\newlabel{cp5.sec.moe}{{5.3.2}{62}{Mixture of Language Experts (MoLE)}{subsection.5.3.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}Experiments}{63}{section.5.4}}
+\newlabel{cp5.sec.exps}{{5.4}{63}{Experiments}{section.5.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}Settings}{63}{subsection.5.4.1}}
+\@writefile{toc}{\contentsline {paragraph}{Dataset}{63}{section*.75}}
 \citation{sennrich2015neural}
-\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces Statistics of the available parallel resource for extremely low-resource languages in our experiments. All are translated to English.\relax }}{63}{table.caption.77}}
-\newlabel{cp5.table.data0}{{5.1}{63}{Statistics of the available parallel resource for extremely low-resource languages in our experiments. All are translated to English.\relax }{table.caption.77}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces Statistics of the available parallel resource in our experiments. All the languages are translated to English.\relax }}{63}{table.caption.78}}
-\newlabel{cp5.table.data1}{{5.2}{63}{Statistics of the available parallel resource in our experiments. All the languages are translated to English.\relax }{table.caption.78}{}}
-\@writefile{toc}{\contentsline {paragraph}{Preprocessing}{63}{section*.79}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces Statistics of the available parallel resource for extremely low-resource languages in our experiments. All are translated to English.\relax }}{64}{table.caption.76}}
+\newlabel{cp5.table.data0}{{5.1}{64}{Statistics of the available parallel resource for extremely low-resource languages in our experiments. All are translated to English.\relax }{table.caption.76}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces Statistics of the available parallel resource in our experiments. All the languages are translated to English.\relax }}{64}{table.caption.77}}
+\newlabel{cp5.table.data1}{{5.2}{64}{Statistics of the available parallel resource in our experiments. All the languages are translated to English.\relax }{table.caption.77}{}}
+\@writefile{toc}{\contentsline {paragraph}{Preprocessing}{64}{section*.78}}
 \citation{hochreiter1997long}
 \citation{kingma2014adam}
 \citation{sennrich2016edinburgh}
 \citation{bojanowski2016enriching}
-\@writefile{toc}{\contentsline {paragraph}{Architecture}{64}{section*.80}}
-\@writefile{toc}{\contentsline {paragraph}{Learning}{64}{section*.81}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}Back-Translation}{64}{subsection.5.4.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.3}Preliminary Experiments}{65}{subsection.5.4.3}}
-\@writefile{toc}{\contentsline {paragraph}{Training Monolingual Embeddings}{65}{section*.82}}
-\@writefile{toc}{\contentsline {paragraph}{Pre-projection}{65}{section*.83}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.4}Results}{65}{subsection.5.4.4}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.3}{\ignorespaces  Scores over variant source languages (6k sentences for Ro \& Lv, and 10k for Ko). ``Multi" means the Multi-lingual NMT baseline.\relax }}{65}{table.caption.84}}
-\newlabel{cp5.table.bleu}{{5.3}{65}{Scores over variant source languages (6k sentences for Ro \& Lv, and 10k for Ko). ``Multi" means the Multi-lingual NMT baseline.\relax }{table.caption.84}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces BLEU score vs corpus size\relax }}{66}{figure.caption.85}}
-\newlabel{cp5.fig.size}{{5.5}{66}{BLEU score vs corpus size\relax }{figure.caption.85}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces BLEU score vs unknown tokens\relax }}{66}{figure.caption.86}}
-\newlabel{cp5.fig.missing}{{5.6}{66}{BLEU score vs unknown tokens\relax }{figure.caption.86}{}}
-\@writefile{toc}{\contentsline {paragraph}{Ablation Study}{67}{section*.87}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.4}{\ignorespaces  BLEU scores evaluated on test set (6k), compared with ULR and MoLE. ``vanilla" is the standard NMT system trained only on Ro-En training set\relax }}{67}{table.caption.88}}
-\newlabel{cp5.table.ro_test1}{{5.4}{67}{BLEU scores evaluated on test set (6k), compared with ULR and MoLE. ``vanilla" is the standard NMT system trained only on Ro-En training set\relax }{table.caption.88}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces Three sets of examples on Ro-En translation with variant settings. \relax }}{68}{figure.caption.90}}
-\newlabel{cp5.fig.exp}{{5.7}{68}{Three sets of examples on Ro-En translation with variant settings. \relax }{figure.caption.90}{}}
-\@writefile{toc}{\contentsline {paragraph}{Monolingual Data}{68}{section*.89}}
-\@writefile{toc}{\contentsline {paragraph}{Corpus Size}{68}{section*.92}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces  The activation visualization of mixture of language experts module on one randomly selected Ro source sentences trained together with different auxiliary languages. Darker color means higher activation score. \relax }}{69}{figure.caption.91}}
-\newlabel{cp5.fig.moe}{{5.8}{69}{The activation visualization of mixture of language experts module on one randomly selected Ro source sentences trained together with different auxiliary languages. Darker color means higher activation score. \relax }{figure.caption.91}{}}
-\@writefile{toc}{\contentsline {paragraph}{Unknown Tokens}{69}{section*.93}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.5}Qualitative Analysis}{69}{subsection.5.4.5}}
-\@writefile{toc}{\contentsline {paragraph}{Examples}{69}{section*.94}}
+\@writefile{toc}{\contentsline {paragraph}{Architecture}{65}{section*.79}}
+\@writefile{toc}{\contentsline {paragraph}{Learning}{65}{section*.80}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}Back-Translation}{65}{subsection.5.4.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.3}Preliminary Experiments}{66}{subsection.5.4.3}}
+\@writefile{toc}{\contentsline {paragraph}{Training Monolingual Embeddings}{66}{section*.81}}
+\@writefile{toc}{\contentsline {paragraph}{Pre-projection}{66}{section*.82}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.4}Results}{66}{subsection.5.4.4}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.3}{\ignorespaces  Scores over variant source languages (6k sentences for Ro \& Lv, and 10k for Ko). ``Multi" means the Multi-lingual NMT baseline.\relax }}{66}{table.caption.83}}
+\newlabel{cp5.table.bleu}{{5.3}{66}{Scores over variant source languages (6k sentences for Ro \& Lv, and 10k for Ko). ``Multi" means the Multi-lingual NMT baseline.\relax }{table.caption.83}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces BLEU score vs corpus size\relax }}{67}{figure.caption.84}}
+\newlabel{cp5.fig.size}{{5.5}{67}{BLEU score vs corpus size\relax }{figure.caption.84}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces BLEU score vs unknown tokens\relax }}{67}{figure.caption.85}}
+\newlabel{cp5.fig.missing}{{5.6}{67}{BLEU score vs unknown tokens\relax }{figure.caption.85}{}}
+\@writefile{toc}{\contentsline {paragraph}{Ablation Study}{68}{section*.86}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.4}{\ignorespaces  BLEU scores evaluated on test set (6k), compared with ULR and MoLE. ``vanilla" is the standard NMT system trained only on Ro-En training set\relax }}{68}{table.caption.87}}
+\newlabel{cp5.table.ro_test1}{{5.4}{68}{BLEU scores evaluated on test set (6k), compared with ULR and MoLE. ``vanilla" is the standard NMT system trained only on Ro-En training set\relax }{table.caption.87}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces Three sets of examples on Ro-En translation with variant settings. \relax }}{69}{figure.caption.89}}
+\newlabel{cp5.fig.exp}{{5.7}{69}{Three sets of examples on Ro-En translation with variant settings. \relax }{figure.caption.89}{}}
+\@writefile{toc}{\contentsline {paragraph}{Monolingual Data}{69}{section*.88}}
+\@writefile{toc}{\contentsline {paragraph}{Corpus Size}{69}{section*.91}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces  The activation visualization of mixture of language experts module on one randomly selected Ro source sentences trained together with different auxiliary languages. Darker color means higher activation score. \relax }}{70}{figure.caption.90}}
+\newlabel{cp5.fig.moe}{{5.8}{70}{The activation visualization of mixture of language experts module on one randomly selected Ro source sentences trained together with different auxiliary languages. Darker color means higher activation score. \relax }{figure.caption.90}{}}
+\@writefile{toc}{\contentsline {paragraph}{Unknown Tokens}{70}{section*.92}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.5}Qualitative Analysis}{70}{subsection.5.4.5}}
+\@writefile{toc}{\contentsline {paragraph}{Examples}{70}{section*.93}}
 \citation{lee2016fully}
 \citation{johnson2016google}
 \citation{zoph2016transfer}
@@ -365,9 +367,9 @@
 \citation{johnson2016google}
 \citation{artetxe2017unsupervised}
 \citation{lample2017unsupervised}
-\@writefile{toc}{\contentsline {paragraph}{Visualization of MoLE}{70}{section*.95}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.5}Related Work}{70}{section.5.5}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.6}Conclusion and Next Chapter}{71}{section.5.6}}
+\@writefile{toc}{\contentsline {paragraph}{Visualization of MoLE}{71}{section*.94}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}Related Work}{71}{section.5.5}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.6}Conclusion and Next Chapter}{72}{section.5.6}}
 \citation{sutskever2014sequence,bahdanau2014neural,vaswani2017attention}
 \citation{koehn2003statistical}
 \citation{koehn2017six}
@@ -375,91 +377,91 @@
 \citation{firat2016multi,firat2016zero,lee2016fully,johnson2016google,ha2016toward}
 \citation{zoph2016transfer}
 \citation{finn2017model}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Meta Learning for Neural Machine Translation}{72}{chapter.6}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Meta Learning for Neural Machine Translation}{73}{chapter.6}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{MetaNMT}{{6}{72}{Meta Learning for Neural Machine Translation}{chapter.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}Overview}{72}{section.6.1}}
+\newlabel{MetaNMT}{{6}{73}{Meta Learning for Neural Machine Translation}{chapter.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Overview}{73}{section.6.1}}
 \citation{lake2015human}
 \citation{andrychowicz2016learning,ha2016hypernetworks,mishra2017meta}
 \citation{finn2017model,vinyals2016matching,snell2017prototypical}
 \citation{finn2017model}
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}Background: Meta-Learning}{73}{section.6.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.3}Meta-Learning for Extremely Low-Resource Neural Machine Translation}{74}{section.6.3}}
-\newlabel{cp6.sec.maml-mt}{{6.3}{74}{Meta-Learning for Extremely Low-Resource Neural Machine Translation}{section.6.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.1}Learn: language-specific learning}{74}{subsection.6.3.1}}
-\newlabel{cp6.sec.lsl}{{6.3.1}{74}{Learn: language-specific learning}{subsection.6.3.1}{}}
-\newlabel{RF1}{75}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces The graphical illustration of the training process of the proposed MetaNMT. For each episode, one task (language pair) is sampled for meta-learning. The boxes and arrows in blue are mainly involved in language-specific learning (\textsection \ref  {cp6.sec.lsl}), and those in purple in meta-learning (\textsection \ref  {cp6.sec.ml}).\relax }}{75}{figure.caption.96}}
-\newlabel{cp6.fig.framework}{{6.1}{75}{The graphical illustration of the training process of the proposed MetaNMT. For each episode, one task (language pair) is sampled for meta-learning. The boxes and arrows in blue are mainly involved in language-specific learning (\textsection \ref {cp6.sec.lsl}), and those in purple in meta-learning (\textsection \ref {cp6.sec.ml}).\relax }{figure.caption.96}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Background: Meta-Learning}{74}{section.6.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}Meta-Learning for Extremely Low-Resource Neural Machine Translation}{75}{section.6.3}}
+\newlabel{cp6.sec.maml-mt}{{6.3}{75}{Meta-Learning for Extremely Low-Resource Neural Machine Translation}{section.6.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.1}Learn: language-specific learning}{75}{subsection.6.3.1}}
+\newlabel{cp6.sec.lsl}{{6.3.1}{75}{Learn: language-specific learning}{subsection.6.3.1}{}}
+\newlabel{RF1}{76}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces The graphical illustration of the training process of the proposed MetaNMT. For each episode, one task (language pair) is sampled for meta-learning. The boxes and arrows in blue are mainly involved in language-specific learning (\textsection \ref  {cp6.sec.lsl}), and those in purple in meta-learning (\textsection \ref  {cp6.sec.ml}).\relax }}{76}{figure.caption.95}}
+\newlabel{cp6.fig.framework}{{6.1}{76}{The graphical illustration of the training process of the proposed MetaNMT. For each episode, one task (language pair) is sampled for meta-learning. The boxes and arrows in blue are mainly involved in language-specific learning (\textsection \ref {cp6.sec.lsl}), and those in purple in meta-learning (\textsection \ref {cp6.sec.ml}).\relax }{figure.caption.95}{}}
 \citation{finn2017model}
 \citation{robbins1951stochastic}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.2}MetaLearn}{76}{subsection.6.3.2}}
-\newlabel{cp6.sec.ml}{{6.3.2}{76}{MetaLearn}{subsection.6.3.2}{}}
-\newlabel{cp6.eq.meta}{{6.4}{76}{MetaLearn}{equation.6.3.4}{}}
-\@writefile{toc}{\contentsline {paragraph}{Meta-Gradient}{77}{section*.97}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.2}MetaLearn}{77}{subsection.6.3.2}}
+\newlabel{cp6.sec.ml}{{6.3.2}{77}{MetaLearn}{subsection.6.3.2}{}}
+\newlabel{cp6.eq.meta}{{6.4}{77}{MetaLearn}{equation.6.3.4}{}}
+\@writefile{toc}{\contentsline {paragraph}{Meta-Gradient}{78}{section*.96}}
 \citation{lee2016fully,johnson2016google,gu2018universal}
 \citation{zoph2016transfer}
-\newlabel{cp6.eq.meta-grad-first}{{6.10}{78}{Meta-Gradient}{equation.6.3.10}{}}
-\@writefile{toc}{\contentsline {paragraph}{Related Work: Multilingual Transfer Learning}{78}{section*.98}}
-\@writefile{toc}{\contentsline {paragraph}{Illustration}{78}{figure.6.2}}
+\newlabel{cp6.eq.meta-grad-first}{{6.10}{79}{Meta-Gradient}{equation.6.3.10}{}}
+\@writefile{toc}{\contentsline {paragraph}{Related Work: Multilingual Transfer Learning}{79}{section*.97}}
+\@writefile{toc}{\contentsline {paragraph}{Illustration}{79}{figure.6.2}}
 \citation{sennrich2015improving}
 \citation{lee2016fully}
 \citation{miller2016key,gulcehre2018dynamic}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.2}{\ignorespaces An intuitive illustration in which we use solid lines to represent the learning of initialization, and dashed lines to show the path of fine-tuning.\relax }}{79}{figure.6.2}}
-\newlabel{cp6.fig.illustration}{{6.2}{79}{An intuitive illustration in which we use solid lines to represent the learning of initialization, and dashed lines to show the path of fine-tuning.\relax }{figure.6.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.3}Unified Lexical Representation}{79}{subsection.6.3.3}}
-\newlabel{cp6.sec.ulr}{{6.3.3}{79}{Unified Lexical Representation}{subsection.6.3.3}{}}
-\@writefile{toc}{\contentsline {paragraph}{I/O mismatch across language pairs}{79}{section*.101}}
-\@writefile{toc}{\contentsline {paragraph}{Universal Lexical Representation (ULR)}{79}{section*.102}}
-\@writefile{toc}{\contentsline {paragraph}{Learning of ULR}{80}{section*.103}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.4}Experiments}{80}{section.6.4}}
-\newlabel{cp6.sec.exps}{{6.4}{80}{Experiments}{section.6.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.1}Dataset}{80}{subsection.6.4.1}}
-\@writefile{toc}{\contentsline {paragraph}{Target Tasks}{80}{section*.104}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.2}{\ignorespaces An intuitive illustration in which we use solid lines to represent the learning of initialization, and dashed lines to show the path of fine-tuning.\relax }}{80}{figure.6.2}}
+\newlabel{cp6.fig.illustration}{{6.2}{80}{An intuitive illustration in which we use solid lines to represent the learning of initialization, and dashed lines to show the path of fine-tuning.\relax }{figure.6.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.3}Unified Lexical Representation}{80}{subsection.6.3.3}}
+\newlabel{cp6.sec.ulr}{{6.3.3}{80}{Unified Lexical Representation}{subsection.6.3.3}{}}
+\@writefile{toc}{\contentsline {paragraph}{I/O mismatch across language pairs}{80}{section*.100}}
+\@writefile{toc}{\contentsline {paragraph}{Universal Lexical Representation (ULR)}{80}{section*.101}}
+\@writefile{toc}{\contentsline {paragraph}{Learning of ULR}{81}{section*.102}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.4}Experiments}{81}{section.6.4}}
+\newlabel{cp6.sec.exps}{{6.4}{81}{Experiments}{section.6.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.1}Dataset}{81}{subsection.6.4.1}}
+\@writefile{toc}{\contentsline {paragraph}{Target Tasks}{81}{section*.103}}
 \citation{sennrich2016edinburgh}
 \citation{bojanowski2016enriching}
 \citation{alexis2018word}
-\@writefile{lot}{\contentsline {table}{\numberline {6.1}{\ignorespaces Statistics of full datasets of the target language pairs. BLEU scores on the dev and test sets are reported from a supervised Transformer model with the same architecture.\relax }}{81}{table.caption.105}}
-\newlabel{cp6.table.full-dataset}{{6.1}{81}{Statistics of full datasets of the target language pairs. BLEU scores on the dev and test sets are reported from a supervised Transformer model with the same architecture.\relax }{table.caption.105}{}}
-\@writefile{toc}{\contentsline {paragraph}{Source Tasks}{81}{section*.106}}
-\@writefile{toc}{\contentsline {paragraph}{Validation}{81}{section*.107}}
-\@writefile{toc}{\contentsline {paragraph}{Preprocessing and ULR Initialization}{81}{section*.108}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.1}{\ignorespaces Statistics of full datasets of the target language pairs. BLEU scores on the dev and test sets are reported from a supervised Transformer model with the same architecture.\relax }}{82}{table.caption.104}}
+\newlabel{cp6.table.full-dataset}{{6.1}{82}{Statistics of full datasets of the target language pairs. BLEU scores on the dev and test sets are reported from a supervised Transformer model with the same architecture.\relax }{table.caption.104}{}}
+\@writefile{toc}{\contentsline {paragraph}{Source Tasks}{82}{section*.105}}
+\@writefile{toc}{\contentsline {paragraph}{Validation}{82}{section*.106}}
+\@writefile{toc}{\contentsline {paragraph}{Preprocessing and ULR Initialization}{82}{section*.107}}
 \citation{vaswani2017attention}
 \citation{Gu2017NonAutoregressiveNM}
 \citation{vaswani2017attention,Gu2017NonAutoregressiveNM}
 \citation{bahdanau2014neural}
 \citation{kingma2014adam}
 \citation{zoph2016transfer}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.2}Model and Learning}{82}{subsection.6.4.2}}
-\@writefile{toc}{\contentsline {paragraph}{Model}{82}{section*.109}}
-\@writefile{toc}{\contentsline {paragraph}{Learning}{82}{section*.110}}
-\@writefile{toc}{\contentsline {paragraph}{Fine-tuning Strategies}{82}{section*.111}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.3}{\ignorespaces BLEU scores reported on test sets for \{Ro, Lv, Fi, Tr\} to En, where each model is first learned from 6 source tasks (Es, Fr, It, Pt, De, Ru) and then fine-tuned on randomly sampled training sets with around 16,000 English tokens per run. The error bars show the standard deviation calculated from 5 runs.\relax }}{83}{figure.caption.112}}
-\newlabel{cp6.fig.compare}{{6.3}{83}{BLEU scores reported on test sets for \{Ro, Lv, Fi, Tr\} to En, where each model is first learned from 6 source tasks (Es, Fr, It, Pt, De, Ru) and then fine-tuned on randomly sampled training sets with around 16,000 English tokens per run. The error bars show the standard deviation calculated from 5 runs.\relax }{figure.caption.112}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Ro-En}}}{83}{figure.caption.112}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Lv-En}}}{83}{figure.caption.112}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Fi-En}}}{83}{figure.caption.112}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {Tr-En}}}{83}{figure.caption.112}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.3}Results}{83}{subsection.6.4.3}}
-\@writefile{toc}{\contentsline {paragraph}{vs. Multilingual Transfer Learning}{83}{section*.113}}
-\@writefile{toc}{\contentsline {paragraph}{Impact of Validation Tasks}{84}{section*.114}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.4}{\ignorespaces BLEU Scores w.r.t. the size of the target task's training set.\relax }}{84}{figure.caption.115}}
-\newlabel{cp6.fig.support}{{6.4}{84}{BLEU Scores w.r.t. the size of the target task's training set.\relax }{figure.caption.115}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.2}Model and Learning}{83}{subsection.6.4.2}}
+\@writefile{toc}{\contentsline {paragraph}{Model}{83}{section*.108}}
+\@writefile{toc}{\contentsline {paragraph}{Learning}{83}{section*.109}}
+\@writefile{toc}{\contentsline {paragraph}{Fine-tuning Strategies}{83}{section*.110}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.3}{\ignorespaces BLEU scores reported on test sets for \{Ro, Lv, Fi, Tr\} to En, where each model is first learned from 6 source tasks (Es, Fr, It, Pt, De, Ru) and then fine-tuned on randomly sampled training sets with around 16,000 English tokens per run. The error bars show the standard deviation calculated from 5 runs.\relax }}{84}{figure.caption.111}}
+\newlabel{cp6.fig.compare}{{6.3}{84}{BLEU scores reported on test sets for \{Ro, Lv, Fi, Tr\} to En, where each model is first learned from 6 source tasks (Es, Fr, It, Pt, De, Ru) and then fine-tuned on randomly sampled training sets with around 16,000 English tokens per run. The error bars show the standard deviation calculated from 5 runs.\relax }{figure.caption.111}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Ro-En}}}{84}{figure.caption.111}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Lv-En}}}{84}{figure.caption.111}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Fi-En}}}{84}{figure.caption.111}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {Tr-En}}}{84}{figure.caption.111}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.3}Results}{84}{subsection.6.4.3}}
+\@writefile{toc}{\contentsline {paragraph}{vs. Multilingual Transfer Learning}{84}{section*.112}}
+\@writefile{toc}{\contentsline {paragraph}{Impact of Validation Tasks}{85}{section*.113}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.4}{\ignorespaces BLEU Scores w.r.t. the size of the target task's training set.\relax }}{85}{figure.caption.114}}
+\newlabel{cp6.fig.support}{{6.4}{85}{BLEU Scores w.r.t. the size of the target task's training set.\relax }{figure.caption.114}{}}
 \citation{lample2017unsupervised,artetxe2017unsupervised}
-\@writefile{toc}{\contentsline {paragraph}{Training Set Size}{85}{section*.116}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.5}{\ignorespaces The learning curves of BLEU scores on the validation task (Ro-En).\relax }}{85}{figure.caption.117}}
-\newlabel{cp6.fig.train_curve}{{6.5}{85}{The learning curves of BLEU scores on the validation task (Ro-En).\relax }{figure.caption.117}{}}
-\@writefile{toc}{\contentsline {paragraph}{Impact of Source Tasks}{85}{section*.120}}
-\@writefile{toc}{\contentsline {paragraph}{Training Curves}{85}{section*.121}}
-\newlabel{RF2}{86}
-\@writefile{lot}{\contentsline {table}{\numberline {6.2}{\ignorespaces  BLEU Scores w.r.t. the source task set for all five target tasks.\relax }}{86}{table.caption.118}}
-\newlabel{cp6.table.aux}{{6.2}{86}{BLEU Scores w.r.t. the source task set for all five target tasks.\relax }{table.caption.118}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.3}{\ignorespaces  Sample translations for Tr-En and Ko-En highlight the impact of fine-tuning which results in syntactically better formed translations. We highlight tokens of interest in terms of reordering. \relax }}{87}{table.caption.119}}
-\newlabel{cp6.table.example}{{6.3}{87}{Sample translations for Tr-En and Ko-En highlight the impact of fine-tuning which results in syntactically better formed translations. We highlight tokens of interest in terms of reordering. \relax }{table.caption.119}{}}
-\@writefile{toc}{\contentsline {paragraph}{Sample Translations}{87}{section*.122}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.5}Conclusion and Next Chapter}{88}{section.6.5}}
-\@writefile{toc}{\contentsline {part}{II\hspace  {1em}Decoding-Efficient Neural Machine Translation}{89}{part.2}}
+\@writefile{toc}{\contentsline {paragraph}{Training Set Size}{86}{section*.115}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.5}{\ignorespaces The learning curves of BLEU scores on the validation task (Ro-En).\relax }}{86}{figure.caption.116}}
+\newlabel{cp6.fig.train_curve}{{6.5}{86}{The learning curves of BLEU scores on the validation task (Ro-En).\relax }{figure.caption.116}{}}
+\@writefile{toc}{\contentsline {paragraph}{Impact of Source Tasks}{86}{section*.119}}
+\@writefile{toc}{\contentsline {paragraph}{Training Curves}{86}{section*.120}}
+\newlabel{RF2}{87}
+\@writefile{lot}{\contentsline {table}{\numberline {6.2}{\ignorespaces  BLEU Scores w.r.t. the source task set for all five target tasks.\relax }}{87}{table.caption.117}}
+\newlabel{cp6.table.aux}{{6.2}{87}{BLEU Scores w.r.t. the source task set for all five target tasks.\relax }{table.caption.117}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.3}{\ignorespaces  Sample translations for Tr-En and Ko-En highlight the impact of fine-tuning which results in syntactically better formed translations. We highlight tokens of interest in terms of reordering. \relax }}{88}{table.caption.118}}
+\newlabel{cp6.table.example}{{6.3}{88}{Sample translations for Tr-En and Ko-En highlight the impact of fine-tuning which results in syntactically better formed translations. We highlight tokens of interest in terms of reordering. \relax }{table.caption.118}{}}
+\@writefile{toc}{\contentsline {paragraph}{Sample Translations}{88}{section*.121}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.5}Conclusion and Next Chapter}{89}{section.6.5}}
+\@writefile{toc}{\contentsline {part}{II\hspace  {1em}Decoding-Efficient Neural Machine Translation}{90}{part.2}}
 \citation{wiseman2016sequence}
 \citation{shen2015minimum}
 \citation{ranzato2015sequence}
@@ -467,164 +469,164 @@
 \citation{cho2016noisy}
 \citation{tu2016neural}
 \citation{li2016simple}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Trainable Greedy Decoding}{90}{chapter.7}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Trainable Greedy Decoding}{91}{chapter.7}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{trainable}{{7}{90}{Trainable Greedy Decoding}{chapter.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.1}Overview}{90}{section.7.1}}
-\newlabel{cp7.sec.introduction}{{7.1}{90}{Overview}{section.7.1}{}}
+\newlabel{trainable}{{7}{91}{Trainable Greedy Decoding}{chapter.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.1}Overview}{91}{section.7.1}}
+\newlabel{cp7.sec.introduction}{{7.1}{91}{Overview}{section.7.1}{}}
 \citation{silver2014deterministic}
 \citation{gu2016learning}
 \citation{cho2016noisy}
 \citation{tu2016neural}
 \citation{cho2016noisy}
-\@writefile{toc}{\contentsline {section}{\numberline {7.2}Trainable Greedy Decoding}{92}{section.7.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.2.1}Many Decoding Objectives}{92}{subsection.7.2.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.2}Trainable Greedy Decoding}{93}{section.7.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2.1}Many Decoding Objectives}{93}{subsection.7.2.1}}
 \citation{li2017learning}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.1}{\ignorespaces  The graphical illustration of the proposal trainable greedy decoding. $\theta $, $\phi $ and $\psi $ respectively correspond to the parameters of the underlying neural machine translation model, the trainable greedy decoding (actor) and the critic. \relax }}{93}{figure.caption.123}}
-\newlabel{cp7.fig.framework0}{{7.1}{93}{The graphical illustration of the proposal trainable greedy decoding. $\theta $, $\phi $ and $\psi $ respectively correspond to the parameters of the underlying neural machine translation model, the trainable greedy decoding (actor) and the critic. \relax }{figure.caption.123}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.2.2}Trainable Greedy Decoding}{93}{subsection.7.2.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.1}{\ignorespaces  The graphical illustration of the proposal trainable greedy decoding. $\theta $, $\phi $ and $\psi $ respectively correspond to the parameters of the underlying neural machine translation model, the trainable greedy decoding (actor) and the critic. \relax }}{94}{figure.caption.122}}
+\newlabel{cp7.fig.framework0}{{7.1}{94}{The graphical illustration of the proposal trainable greedy decoding. $\theta $, $\phi $ and $\psi $ respectively correspond to the parameters of the underlying neural machine translation model, the trainable greedy decoding (actor) and the critic. \relax }{figure.caption.122}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2.2}Trainable Greedy Decoding}{94}{subsection.7.2.2}}
 \citation{silver2014deterministic,lillicrap2015continuous}
-\@writefile{toc}{\contentsline {paragraph}{Related Work: Soothsayer prediction function}{94}{section*.124}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.2.3}Learning and Challenges}{94}{subsection.7.2.3}}
+\@writefile{toc}{\contentsline {paragraph}{Related Work: Soothsayer prediction function}{95}{section*.123}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2.3}Learning and Challenges}{95}{subsection.7.2.3}}
 \citation{silver2014deterministic,lillicrap2015continuous}
-\@writefile{toc}{\contentsline {section}{\numberline {7.3}Deterministic Policy Gradient with Critic-Aware Actor Learning}{95}{section.7.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.1}Deterministic Policy Gradient}{95}{subsection.7.3.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.3}Deterministic Policy Gradient with Critic-Aware Actor Learning}{96}{section.7.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.1}Deterministic Policy Gradient}{96}{subsection.7.3.1}}
 \citation{cho2016noisy}
 \citation{heess2015learning}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.2}Critic-Aware Actor Learning}{96}{subsection.7.3.2}}
-\@writefile{toc}{\contentsline {paragraph}{Challenges}{96}{section*.125}}
-\@writefile{toc}{\contentsline {paragraph}{Critic-Aware Actor Learning}{96}{section*.126}}
-\newlabel{eq:noisy_actor}{{7.4}{97}{Critic-Aware Actor Learning}{equation.7.3.4}{}}
-\newlabel{eq:critic-aware}{{7.5}{97}{Critic-Aware Actor Learning}{equation.7.3.5}{}}
-\newlabel{eq:critic-aware-Q}{{7.6}{97}{Critic-Aware Actor Learning}{equation.7.3.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.2}Critic-Aware Actor Learning}{97}{subsection.7.3.2}}
+\@writefile{toc}{\contentsline {paragraph}{Challenges}{97}{section*.124}}
+\@writefile{toc}{\contentsline {paragraph}{Critic-Aware Actor Learning}{97}{section*.125}}
+\newlabel{eq:noisy_actor}{{7.4}{98}{Critic-Aware Actor Learning}{equation.7.3.4}{}}
+\newlabel{eq:critic-aware}{{7.5}{98}{Critic-Aware Actor Learning}{equation.7.3.5}{}}
+\newlabel{eq:critic-aware-Q}{{7.6}{98}{Critic-Aware Actor Learning}{equation.7.3.6}{}}
 \citation{bahdanau2014neural}
 \citation{sennrich2015neural}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.2}{\ignorespaces  Graphical illustrations of the trainable greedy decoding. The left panel shows a single step of the actor interacting with the underlying neural translation model, and The right panel the interaction among the underlying neural translation system (dashed-border boxes), actor (red-border boxes), and critic (blue-border boxes). The solid arrows indicate the forward pass, and the dashed yellow arrows the actor's backward pass. The dotted-border box shows the use of a reference translation.\relax }}{98}{figure.caption.128}}
-\newlabel{cp7.fig.tgd}{{7.2}{98}{Graphical illustrations of the trainable greedy decoding. The left panel shows a single step of the actor interacting with the underlying neural translation model, and The right panel the interaction among the underlying neural translation system (dashed-border boxes), actor (red-border boxes), and critic (blue-border boxes). The solid arrows indicate the forward pass, and the dashed yellow arrows the actor's backward pass. The dotted-border box shows the use of a reference translation.\relax }{figure.caption.128}{}}
-\@writefile{toc}{\contentsline {paragraph}{Reference Translations for Training the Critic}{98}{section*.127}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {3}{\ignorespaces Trainable Greedy Decoding\relax }}{99}{algorithm.3}}
-\newlabel{cp7.alg.algo2}{{3}{99}{Trainable Greedy Decoding\relax }{algorithm.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.2}{\ignorespaces  Graphical illustrations of the trainable greedy decoding. The left panel shows a single step of the actor interacting with the underlying neural translation model, and The right panel the interaction among the underlying neural translation system (dashed-border boxes), actor (red-border boxes), and critic (blue-border boxes). The solid arrows indicate the forward pass, and the dashed yellow arrows the actor's backward pass. The dotted-border box shows the use of a reference translation.\relax }}{99}{figure.caption.127}}
+\newlabel{cp7.fig.tgd}{{7.2}{99}{Graphical illustrations of the trainable greedy decoding. The left panel shows a single step of the actor interacting with the underlying neural translation model, and The right panel the interaction among the underlying neural translation system (dashed-border boxes), actor (red-border boxes), and critic (blue-border boxes). The solid arrows indicate the forward pass, and the dashed yellow arrows the actor's backward pass. The dotted-border box shows the use of a reference translation.\relax }{figure.caption.127}{}}
+\@writefile{toc}{\contentsline {paragraph}{Reference Translations for Training the Critic}{99}{section*.126}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {3}{\ignorespaces Trainable Greedy Decoding\relax }}{100}{algorithm.3}}
+\newlabel{cp7.alg.algo2}{{3}{100}{Trainable Greedy Decoding\relax }{algorithm.3}{}}
 \citation{cho2014learning}
 \citation{zeiler2012adadelta}
-\@writefile{toc}{\contentsline {section}{\numberline {7.4}Experiments}{100}{section.7.4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.4.1}Settings}{100}{subsection.7.4.1}}
-\@writefile{toc}{\contentsline {paragraph}{Underlying NMT Model}{100}{section*.129}}
-\@writefile{toc}{\contentsline {paragraph}{Actor $\pi $}{100}{section*.130}}
-\@writefile{toc}{\contentsline {paragraph}{Critic $R^c$}{100}{section*.131}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.4}Experiments}{101}{section.7.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.4.1}Settings}{101}{subsection.7.4.1}}
+\@writefile{toc}{\contentsline {paragraph}{Underlying NMT Model}{101}{section*.128}}
+\@writefile{toc}{\contentsline {paragraph}{Actor $\pi $}{101}{section*.129}}
+\@writefile{toc}{\contentsline {paragraph}{Critic $R^c$}{101}{section*.130}}
 \citation{tieleman2012lecture}
 \citation{lin2004automatic}
-\@writefile{toc}{\contentsline {paragraph}{Learning}{101}{section*.132}}
-\@writefile{toc}{\contentsline {paragraph}{Decoding Objectives}{101}{section*.133}}
-\@writefile{toc}{\contentsline {paragraph}{Evaluation}{101}{section*.134}}
+\@writefile{toc}{\contentsline {paragraph}{Learning}{102}{section*.131}}
+\@writefile{toc}{\contentsline {paragraph}{Decoding Objectives}{102}{section*.132}}
+\@writefile{toc}{\contentsline {paragraph}{Evaluation}{102}{section*.133}}
 \citation{koehn2004statistical}
 \citation{koehn2004statistical}
 \citation{wu2016google,crego2016systran}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.4.2}Results and Analysis}{102}{subsection.7.4.2}}
-\@writefile{toc}{\contentsline {paragraph}{Importance of Critic-Aware Actor Learning}{102}{section*.138}}
-\newlabel{cp7.fig.r1}{{\caption@xref {cp7.fig.r1}{ on input line 446}}{103}{Results and Analysis}{figure.caption.135}{}}
-\newlabel{cp7.fig.r2}{{\caption@xref {cp7.fig.r2}{ on input line 460}}{103}{Results and Analysis}{figure.caption.135}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.3}{\ignorespaces   The plots draw the improvements by the trainable greedy decoding on the test set. The x-axes correspond to the objectives used to train trainable greedy decoding, and the y-axes to the changes in the achieved objectives (BLEU for the figures on the left, and negative perplexity on the right.) The top row (a) shows the cases when the trainable greedy decoder is used on its own, and the bottom row (b) when it is used together with beam search. When training and evaluation are both done with BLEU, we test the statistical significance \citep  {koehn2004statistical}, and we mark significant cases with red stars ($p < 0.05$.) The underlying neural machine translation models achieved the BLEU scores of 14.49/16.20 for En-Cs, 18.90/21.20 for Cs-En, 18.97/21.33 for En-De, 21.63/24.46 for De-En, 16.97/19.68 for En-Ru, 21.06/23.34 for Ru-En, 7.53/8.82 for En-Fi and 9.79/11.03 for Fi-En (greedy/beam). \relax }}{103}{figure.caption.135}}
-\newlabel{cp7.fig.result1}{{7.3}{103}{The plots draw the improvements by the trainable greedy decoding on the test set. The x-axes correspond to the objectives used to train trainable greedy decoding, and the y-axes to the changes in the achieved objectives (BLEU for the figures on the left, and negative perplexity on the right.) The top row (a) shows the cases when the trainable greedy decoder is used on its own, and the bottom row (b) when it is used together with beam search. When training and evaluation are both done with BLEU, we test the statistical significance \citep {koehn2004statistical}, and we mark significant cases with red stars ($p < 0.05$.) The underlying neural machine translation models achieved the BLEU scores of 14.49/16.20 for En-Cs, 18.90/21.20 for Cs-En, 18.97/21.33 for En-De, 21.63/24.46 for De-En, 16.97/19.68 for En-Ru, 21.06/23.34 for Ru-En, 7.53/8.82 for En-Fi and 9.79/11.03 for Fi-En (greedy/beam). \relax }{figure.caption.135}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.4}{\ignorespaces  Comparison of greedy BLEU scores whether using the critic-aware exploration or not on Ru-En Dataset. The green line means the BLEU score achieved by greedy decoding from the underlying NMT model.\relax }}{104}{figure.caption.136}}
-\newlabel{cp7.fig.lr}{{7.4}{104}{Comparison of greedy BLEU scores whether using the critic-aware exploration or not on Ru-En Dataset. The green line means the BLEU score achieved by greedy decoding from the underlying NMT model.\relax }{figure.caption.136}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.5}{\ignorespaces  Three Ru-En examples in which the difference between the trainable greedy decoding (A) and the conventional greedy decoding (G) is large. Each step is marked with magenta, when the actor significantly influenced the output distribution.\relax }}{104}{figure.caption.137}}
-\newlabel{cp7.fig.exp}{{7.5}{104}{Three Ru-En examples in which the difference between the trainable greedy decoding (A) and the conventional greedy decoding (G) is large. Each step is marked with magenta, when the actor significantly influenced the output distribution.\relax }{figure.caption.137}{}}
-\@writefile{toc}{\contentsline {paragraph}{Examples}{105}{section*.139}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.5}Conclusion and Next Chapter}{105}{section.7.5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.4.2}Results and Analysis}{103}{subsection.7.4.2}}
+\@writefile{toc}{\contentsline {paragraph}{Importance of Critic-Aware Actor Learning}{103}{section*.137}}
+\newlabel{cp7.fig.r1}{{\caption@xref {cp7.fig.r1}{ on input line 446}}{104}{Results and Analysis}{figure.caption.134}{}}
+\newlabel{cp7.fig.r2}{{\caption@xref {cp7.fig.r2}{ on input line 460}}{104}{Results and Analysis}{figure.caption.134}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.3}{\ignorespaces   The plots draw the improvements by the trainable greedy decoding on the test set. The x-axes correspond to the objectives used to train trainable greedy decoding, and the y-axes to the changes in the achieved objectives (BLEU for the figures on the left, and negative perplexity on the right.) The top row (a) shows the cases when the trainable greedy decoder is used on its own, and the bottom row (b) when it is used together with beam search. When training and evaluation are both done with BLEU, we test the statistical significance \citep  {koehn2004statistical}, and we mark significant cases with red stars ($p < 0.05$.) The underlying neural machine translation models achieved the BLEU scores of 14.49/16.20 for En-Cs, 18.90/21.20 for Cs-En, 18.97/21.33 for En-De, 21.63/24.46 for De-En, 16.97/19.68 for En-Ru, 21.06/23.34 for Ru-En, 7.53/8.82 for En-Fi and 9.79/11.03 for Fi-En (greedy/beam). \relax }}{104}{figure.caption.134}}
+\newlabel{cp7.fig.result1}{{7.3}{104}{The plots draw the improvements by the trainable greedy decoding on the test set. The x-axes correspond to the objectives used to train trainable greedy decoding, and the y-axes to the changes in the achieved objectives (BLEU for the figures on the left, and negative perplexity on the right.) The top row (a) shows the cases when the trainable greedy decoder is used on its own, and the bottom row (b) when it is used together with beam search. When training and evaluation are both done with BLEU, we test the statistical significance \citep {koehn2004statistical}, and we mark significant cases with red stars ($p < 0.05$.) The underlying neural machine translation models achieved the BLEU scores of 14.49/16.20 for En-Cs, 18.90/21.20 for Cs-En, 18.97/21.33 for En-De, 21.63/24.46 for De-En, 16.97/19.68 for En-Ru, 21.06/23.34 for Ru-En, 7.53/8.82 for En-Fi and 9.79/11.03 for Fi-En (greedy/beam). \relax }{figure.caption.134}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.4}{\ignorespaces  Comparison of greedy BLEU scores whether using the critic-aware exploration or not on Ru-En Dataset. The green line means the BLEU score achieved by greedy decoding from the underlying NMT model.\relax }}{105}{figure.caption.135}}
+\newlabel{cp7.fig.lr}{{7.4}{105}{Comparison of greedy BLEU scores whether using the critic-aware exploration or not on Ru-En Dataset. The green line means the BLEU score achieved by greedy decoding from the underlying NMT model.\relax }{figure.caption.135}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.5}{\ignorespaces  Three Ru-En examples in which the difference between the trainable greedy decoding (A) and the conventional greedy decoding (G) is large. Each step is marked with magenta, when the actor significantly influenced the output distribution.\relax }}{105}{figure.caption.136}}
+\newlabel{cp7.fig.exp}{{7.5}{105}{Three Ru-En examples in which the difference between the trainable greedy decoding (A) and the conventional greedy decoding (G) is large. Each step is marked with magenta, when the actor significantly influenced the output distribution.\relax }{figure.caption.136}{}}
+\@writefile{toc}{\contentsline {paragraph}{Examples}{106}{section*.138}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.5}Conclusion and Next Chapter}{106}{section.7.5}}
 \citation{bahdanau2014neural,luong2015effective}
 \citation{wu2016google}
 \citation{kalchbrenner2016neural,gehring2017convolutional,kaiser2017depthwise}
 \citation{vaswani2017attention}
 \citation{vaswani2017attention}
 \citation{brown1993mathematics}
-\@writefile{toc}{\contentsline {chapter}{\numberline {8}Non-Autoregressive Neural Machine Translation}{106}{chapter.8}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {8}Non-Autoregressive Neural Machine Translation}{107}{chapter.8}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{nat}{{8}{106}{Non-Autoregressive Neural Machine Translation}{chapter.8}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {8.1}Overview}{106}{section.8.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8.1}{\ignorespaces  Translating ``A B C'' to ``X Y'' using autoregressive and non-autoregressive neural MT architectures. The latter generates all output tokens in parallel.\relax }}{107}{figure.caption.140}}
-\newlabel{cp8.fig.ar_vs_nar}{{8.1}{107}{Translating ``A B C'' to ``X Y'' using autoregressive and non-autoregressive neural MT architectures. The latter generates all output tokens in parallel.\relax }{figure.caption.140}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {8.2}Non-Autoregressive Decoding}{107}{section.8.2}}
-\@writefile{toc}{\contentsline {paragraph}{Pros and cons of autoregressive decoding}{107}{section*.141}}
+\newlabel{nat}{{8}{107}{Non-Autoregressive Neural Machine Translation}{chapter.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8.1}Overview}{107}{section.8.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8.1}{\ignorespaces  Translating ``A B C'' to ``X Y'' using autoregressive and non-autoregressive neural MT architectures. The latter generates all output tokens in parallel.\relax }}{108}{figure.caption.139}}
+\newlabel{cp8.fig.ar_vs_nar}{{8.1}{108}{Translating ``A B C'' to ``X Y'' using autoregressive and non-autoregressive neural MT architectures. The latter generates all output tokens in parallel.\relax }{figure.caption.139}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8.2}Non-Autoregressive Decoding}{108}{section.8.2}}
+\@writefile{toc}{\contentsline {paragraph}{Pros and cons of autoregressive decoding}{108}{section*.140}}
 \citation{koehn2017six}
-\@writefile{toc}{\contentsline {paragraph}{Towards non-autoregressive decoding}{108}{section*.142}}
-\newlabel{eq.simple}{{8.1}{108}{Towards non-autoregressive decoding}{equation.8.2.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.2.1}The Multimodality Problem}{108}{subsection.8.2.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8.2}{\ignorespaces  The architecture of the NAT{}, where the black solid arrows represent differentiable connections and the purple dashed arrows are non-differentiable operations. Each sublayer inside the encoder and decoder stacks also includes layer normalization and a residual connection.\relax }}{109}{figure.caption.143}}
-\newlabel{cp8.fig.diagram}{{8.2}{109}{The architecture of the \model {}, where the black solid arrows represent differentiable connections and the purple dashed arrows are non-differentiable operations. Each sublayer inside the encoder and decoder stacks also includes layer normalization and a residual connection.\relax }{figure.caption.143}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {8.3}The Non-Autoregressive Transformer (NAT)}{109}{section.8.3}}
-\newlabel{cp8.sec.mainModelSection}{{8.3}{109}{The Non-Autoregressive Transformer (NAT)}{section.8.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.3.1}Encoder Stack}{110}{subsection.8.3.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.3.2}Decoder Stack}{110}{subsection.8.3.2}}
-\newlabel{cp8.sec.decoderStack}{{8.3.2}{110}{Decoder Stack}{subsection.8.3.2}{}}
-\@writefile{toc}{\contentsline {paragraph}{Decoder Inputs}{110}{section*.144}}
+\@writefile{toc}{\contentsline {paragraph}{Towards non-autoregressive decoding}{109}{section*.141}}
+\newlabel{eq.simple}{{8.1}{109}{Towards non-autoregressive decoding}{equation.8.2.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.2.1}The Multimodality Problem}{109}{subsection.8.2.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8.2}{\ignorespaces  The architecture of the NAT{}, where the black solid arrows represent differentiable connections and the purple dashed arrows are non-differentiable operations. Each sublayer inside the encoder and decoder stacks also includes layer normalization and a residual connection.\relax }}{110}{figure.caption.142}}
+\newlabel{cp8.fig.diagram}{{8.2}{110}{The architecture of the \model {}, where the black solid arrows represent differentiable connections and the purple dashed arrows are non-differentiable operations. Each sublayer inside the encoder and decoder stacks also includes layer normalization and a residual connection.\relax }{figure.caption.142}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8.3}The Non-Autoregressive Transformer (NAT)}{110}{section.8.3}}
+\newlabel{cp8.sec.mainModelSection}{{8.3}{110}{The Non-Autoregressive Transformer (NAT)}{section.8.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.3.1}Encoder Stack}{111}{subsection.8.3.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.3.2}Decoder Stack}{111}{subsection.8.3.2}}
+\newlabel{cp8.sec.decoderStack}{{8.3.2}{111}{Decoder Stack}{subsection.8.3.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{Decoder Inputs}{111}{section*.143}}
 \citation{vaswani2017attention}
 \citation{martin2010planning}
-\@writefile{toc}{\contentsline {paragraph}{Non-causal self-attention}{111}{section*.145}}
-\@writefile{toc}{\contentsline {paragraph}{Positional attention}{111}{section*.146}}
-\newlabel{cp8.eq.attention}{{8.2}{111}{Positional attention}{equation.8.3.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.3.3}Modeling Fertility to Tackle the Multimodality Problem}{111}{subsection.8.3.3}}
-\newlabel{cp8.sec.fertility}{{8.3.3}{111}{Modeling Fertility to Tackle the Multimodality Problem}{subsection.8.3.3}{}}
-\@writefile{toc}{\contentsline {paragraph}{Latent Variable Model}{111}{section*.147}}
-\newlabel{cp8.eq.latent}{{8.3}{111}{Latent Variable Model}{equation.8.3.3}{}}
+\@writefile{toc}{\contentsline {paragraph}{Non-causal self-attention}{112}{section*.144}}
+\@writefile{toc}{\contentsline {paragraph}{Positional attention}{112}{section*.145}}
+\newlabel{cp8.eq.attention}{{8.2}{112}{Positional attention}{equation.8.3.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.3.3}Modeling Fertility to Tackle the Multimodality Problem}{112}{subsection.8.3.3}}
+\newlabel{cp8.sec.fertility}{{8.3.3}{112}{Modeling Fertility to Tackle the Multimodality Problem}{subsection.8.3.3}{}}
+\@writefile{toc}{\contentsline {paragraph}{Latent Variable Model}{112}{section*.146}}
+\newlabel{cp8.eq.latent}{{8.3}{112}{Latent Variable Model}{equation.8.3.3}{}}
 \citation{brown1993mathematics}
-\@writefile{toc}{\contentsline {paragraph}{Latent Fertility Model}{112}{section*.148}}
-\newlabel{cp8.eq.latent_fer}{{8.4}{112}{Latent Fertility Model}{equation.8.3.4}{}}
-\@writefile{toc}{\contentsline {paragraph}{Fertility prediction}{113}{section*.149}}
-\@writefile{toc}{\contentsline {paragraph}{Benefits of fertility}{113}{section*.150}}
+\@writefile{toc}{\contentsline {paragraph}{Latent Fertility Model}{113}{section*.147}}
+\newlabel{cp8.eq.latent_fer}{{8.4}{113}{Latent Fertility Model}{equation.8.3.4}{}}
+\@writefile{toc}{\contentsline {paragraph}{Fertility prediction}{114}{section*.148}}
+\@writefile{toc}{\contentsline {paragraph}{Benefits of fertility}{114}{section*.149}}
 \citation{cho2016noisy}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.3.4}Translation Predictor and the Decoding Process}{114}{subsection.8.3.4}}
-\@writefile{toc}{\contentsline {paragraph}{Argmax decoding}{114}{section*.151}}
-\@writefile{toc}{\contentsline {paragraph}{Average decoding}{114}{section*.152}}
-\newlabel{cp8.eq.average}{{8.6}{114}{Average decoding}{equation.8.3.6}{}}
-\@writefile{toc}{\contentsline {paragraph}{Noisy / Exact parallel decoding (NPD/EPD)}{114}{section*.153}}
-\@writefile{toc}{\contentsline {section}{\numberline {8.4}Learning}{115}{section.8.4}}
-\newlabel{cp8.eq.variational}{{8.9}{115}{Learning}{equation.8.4.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.3.4}Translation Predictor and the Decoding Process}{115}{subsection.8.3.4}}
+\@writefile{toc}{\contentsline {paragraph}{Argmax decoding}{115}{section*.150}}
+\@writefile{toc}{\contentsline {paragraph}{Average decoding}{115}{section*.151}}
+\newlabel{cp8.eq.average}{{8.6}{115}{Average decoding}{equation.8.3.6}{}}
+\@writefile{toc}{\contentsline {paragraph}{Noisy / Exact parallel decoding (NPD/EPD)}{115}{section*.152}}
+\@writefile{toc}{\contentsline {section}{\numberline {8.4}Learning}{116}{section.8.4}}
+\newlabel{cp8.eq.variational}{{8.9}{116}{Learning}{equation.8.4.9}{}}
 \citation{kim2016sequence}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.4.1}Sequence-Level Knowledge Distillation}{116}{subsection.8.4.1}}
-\newlabel{cp8.sec.seqkd}{{8.4.1}{116}{Sequence-Level Knowledge Distillation}{subsection.8.4.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.4.2}Fine-Tuning}{116}{subsection.8.4.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.4.1}Sequence-Level Knowledge Distillation}{117}{subsection.8.4.1}}
+\newlabel{cp8.sec.seqkd}{{8.4.1}{117}{Sequence-Level Knowledge Distillation}{subsection.8.4.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.4.2}Fine-Tuning}{117}{subsection.8.4.2}}
 \citation{williams1992simple}
 \citation{sennrich2015neural}
-\newlabel{cp8.eq.soft-conceptual}{{8.10}{117}{Fine-Tuning}{equation.8.4.10}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {8.5}Experiments}{117}{section.8.5}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.5.1}Settings}{117}{subsection.8.5.1}}
-\@writefile{toc}{\contentsline {paragraph}{Dataset}{117}{section*.154}}
+\newlabel{cp8.eq.soft-conceptual}{{8.10}{118}{Fine-Tuning}{equation.8.4.10}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8.5}Experiments}{118}{section.8.5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.5.1}Settings}{118}{subsection.8.5.1}}
+\@writefile{toc}{\contentsline {paragraph}{Dataset}{118}{section*.153}}
 \citation{dyer2013simple}
-\@writefile{lot}{\contentsline {table}{\numberline {8.1}{\ignorespaces  Dataset statistics (\# of sentence pairs).\relax }}{118}{table.caption.155}}
-\newlabel{cp8.table.dataset}{{8.1}{118}{Dataset statistics (\# of sentence pairs).\relax }{table.caption.155}{}}
-\@writefile{toc}{\contentsline {paragraph}{Teacher Model}{118}{section*.156}}
-\@writefile{toc}{\contentsline {paragraph}{Preparation for knowledge distillation}{118}{section*.158}}
-\@writefile{toc}{\contentsline {paragraph}{Encoder initialization}{118}{section*.159}}
+\@writefile{lot}{\contentsline {table}{\numberline {8.1}{\ignorespaces  Dataset statistics (\# of sentence pairs).\relax }}{119}{table.caption.154}}
+\newlabel{cp8.table.dataset}{{8.1}{119}{Dataset statistics (\# of sentence pairs).\relax }{table.caption.154}{}}
+\@writefile{toc}{\contentsline {paragraph}{Teacher Model}{119}{section*.155}}
+\@writefile{toc}{\contentsline {paragraph}{Preparation for knowledge distillation}{119}{section*.157}}
+\@writefile{toc}{\contentsline {paragraph}{Encoder initialization}{119}{section*.158}}
 \citation{vaswani2017attention}
 \citation{papineni2002bleu}
-\@writefile{lof}{\contentsline {figure}{\numberline {8.3}{\ignorespaces  BLEU scores on IWSLT development set as a function of sample size for noisy parallel decoding. NPD matches the performance of the other two decoding strategies after two samples, and exceeds the performance of the autoregressive teacher with around 1000.\relax }}{119}{figure.caption.157}}
-\newlabel{cp8.fig.noisy_decoding}{{8.3}{119}{BLEU scores on IWSLT development set as a function of sample size for noisy parallel decoding. NPD matches the performance of the other two decoding strategies after two samples, and exceeds the performance of the autoregressive teacher with around 1000.\relax }{figure.caption.157}{}}
-\@writefile{toc}{\contentsline {paragraph}{Fertility supervision during training}{119}{section*.160}}
-\@writefile{toc}{\contentsline {paragraph}{Hyperparameters}{119}{section*.161}}
-\@writefile{toc}{\contentsline {paragraph}{Evaluation}{119}{section*.162}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8.3}{\ignorespaces  BLEU scores on IWSLT development set as a function of sample size for noisy parallel decoding. NPD matches the performance of the other two decoding strategies after two samples, and exceeds the performance of the autoregressive teacher with around 1000.\relax }}{120}{figure.caption.156}}
+\newlabel{cp8.fig.noisy_decoding}{{8.3}{120}{BLEU scores on IWSLT development set as a function of sample size for noisy parallel decoding. NPD matches the performance of the other two decoding strategies after two samples, and exceeds the performance of the autoregressive teacher with around 1000.\relax }{figure.caption.156}{}}
+\@writefile{toc}{\contentsline {paragraph}{Fertility supervision during training}{120}{section*.159}}
+\@writefile{toc}{\contentsline {paragraph}{Hyperparameters}{120}{section*.160}}
+\@writefile{toc}{\contentsline {paragraph}{Evaluation}{120}{section*.161}}
 \citation{gehring2017convolutional}
-\@writefile{lot}{\contentsline {table}{\numberline {8.2}{\ignorespaces BLEU scores on official test sets (\texttt  {newstest2014} for WMT En-De and \texttt  {newstest2016} for WMT En-Ro) or the development set for IWSLT. NAT models without NPD use argmax decoding. Latency is computed as the time to decode a single sentence without minibatching, averaged over the whole test set; decoding is implemented in PyTorch on a single NVIDIA Tesla P100.\relax }}{120}{table.caption.164}}
-\newlabel{cp8.table.bleu}{{8.2}{120}{BLEU scores on official test sets (\texttt {newstest2014} for WMT En-De and \texttt {newstest2016} for WMT En-Ro) or the development set for IWSLT. NAT models without NPD use argmax decoding. Latency is computed as the time to decode a single sentence without minibatching, averaged over the whole test set; decoding is implemented in PyTorch on a single NVIDIA Tesla P100.\relax }{table.caption.164}{}}
-\@writefile{toc}{\contentsline {paragraph}{Implementation}{120}{section*.163}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.5.2}Results}{120}{subsection.8.5.2}}
-\@writefile{toc}{\contentsline {paragraph}{Ablation Study}{120}{section*.165}}
-\@writefile{lot}{\contentsline {table}{\numberline {8.3}{\ignorespaces Ablation performance on the IWSLT development set. BLEU (T) refers to the BLEU score on a version of the development set that has been translated by the teacher model. An $\times $ indicates that fine-tuning caused that model to get worse. When uniform copying is used as the decoder inputs, the ground-truth target lengths are provided. All models use argmax decoding.\relax }}{121}{table.caption.166}}
-\@writefile{toc}{\contentsline {paragraph}{Examples}{121}{section*.171}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8.4}{\ignorespaces  Two examples comparing translations produced by an autoregressive (AR) and non-autoregressive Transformer as well as the result of noisy parallel decoding with sample size 100. Repeated words are highlighted in gray.\relax }}{122}{figure.caption.167}}
-\newlabel{cp8.fig.ex}{{8.4}{122}{Two examples comparing translations produced by an autoregressive (AR) and non-autoregressive Transformer as well as the result of noisy parallel decoding with sample size 100. Repeated words are highlighted in gray.\relax }{figure.caption.167}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8.5}{\ignorespaces  A Romanian--English example translated with noisy parallel decoding. At left are eight sampled fertility sequences from the encoder, represented with their corresponding decoder input sequences. Each of these values for the latent variable leads to a different possible output translation, shown at right. The autoregressive Transformer then picks the best translation, shown in red, a process which is much faster than directly using it to generate output.\relax }}{122}{figure.caption.168}}
-\newlabel{cp8.fig.fer}{{8.5}{122}{A Romanian--English example translated with noisy parallel decoding. At left are eight sampled fertility sequences from the encoder, represented with their corresponding decoder input sequences. Each of these values for the latent variable leads to a different possible output translation, shown at right. The autoregressive Transformer then picks the best translation, shown in red, a process which is much faster than directly using it to generate output.\relax }{figure.caption.168}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8.6}{\ignorespaces The translation latency, computed as the time to decode a single sentence without minibatching, for each sentence in the IWSLT development set as a function of its length. The autoregressive model has latency linear in the decoding length, while the latency of the NAT is nearly constant for typical lengths, even with NPD with sample size 10. When using NPD with sample size 100, the level of parallelism is enough to more than saturate the GPU, leading again to linear latencies.\relax }}{123}{figure.caption.169}}
-\newlabel{cp8.fig.latency}{{8.6}{123}{The translation latency, computed as the time to decode a single sentence without minibatching, for each sentence in the IWSLT development set as a function of its length. The autoregressive model has latency linear in the decoding length, while the latency of the NAT is nearly constant for typical lengths, even with NPD with sample size 10. When using NPD with sample size 100, the level of parallelism is enough to more than saturate the GPU, leading again to linear latencies.\relax }{figure.caption.169}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8.7}{\ignorespaces Learning curves for training and fine-tuning of the NAT{} on IWSLT. BLEU scores are on the development set.\relax }}{123}{figure.caption.170}}
-\newlabel{cp8.fig.curve}{{8.7}{123}{Learning curves for training and fine-tuning of the \model {} on IWSLT. BLEU scores are on the development set.\relax }{figure.caption.170}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {8.2}{\ignorespaces BLEU scores on official test sets (\texttt  {newstest2014} for WMT En-De and \texttt  {newstest2016} for WMT En-Ro) or the development set for IWSLT. NAT models without NPD use argmax decoding. Latency is computed as the time to decode a single sentence without minibatching, averaged over the whole test set; decoding is implemented in PyTorch on a single NVIDIA Tesla P100.\relax }}{121}{table.caption.163}}
+\newlabel{cp8.table.bleu}{{8.2}{121}{BLEU scores on official test sets (\texttt {newstest2014} for WMT En-De and \texttt {newstest2016} for WMT En-Ro) or the development set for IWSLT. NAT models without NPD use argmax decoding. Latency is computed as the time to decode a single sentence without minibatching, averaged over the whole test set; decoding is implemented in PyTorch on a single NVIDIA Tesla P100.\relax }{table.caption.163}{}}
+\@writefile{toc}{\contentsline {paragraph}{Implementation}{121}{section*.162}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.5.2}Results}{121}{subsection.8.5.2}}
+\@writefile{toc}{\contentsline {paragraph}{Ablation Study}{121}{section*.164}}
+\@writefile{lot}{\contentsline {table}{\numberline {8.3}{\ignorespaces Ablation performance on the IWSLT development set. BLEU (T) refers to the BLEU score on a version of the development set that has been translated by the teacher model. An $\times $ indicates that fine-tuning caused that model to get worse. When uniform copying is used as the decoder inputs, the ground-truth target lengths are provided. All models use argmax decoding.\relax }}{122}{table.caption.165}}
+\@writefile{toc}{\contentsline {paragraph}{Examples}{122}{section*.170}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8.4}{\ignorespaces  Two examples comparing translations produced by an autoregressive (AR) and non-autoregressive Transformer as well as the result of noisy parallel decoding with sample size 100. Repeated words are highlighted in gray.\relax }}{123}{figure.caption.166}}
+\newlabel{cp8.fig.ex}{{8.4}{123}{Two examples comparing translations produced by an autoregressive (AR) and non-autoregressive Transformer as well as the result of noisy parallel decoding with sample size 100. Repeated words are highlighted in gray.\relax }{figure.caption.166}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8.5}{\ignorespaces  A Romanian--English example translated with noisy parallel decoding. At left are eight sampled fertility sequences from the encoder, represented with their corresponding decoder input sequences. Each of these values for the latent variable leads to a different possible output translation, shown at right. The autoregressive Transformer then picks the best translation, shown in red, a process which is much faster than directly using it to generate output.\relax }}{123}{figure.caption.167}}
+\newlabel{cp8.fig.fer}{{8.5}{123}{A Romanian--English example translated with noisy parallel decoding. At left are eight sampled fertility sequences from the encoder, represented with their corresponding decoder input sequences. Each of these values for the latent variable leads to a different possible output translation, shown at right. The autoregressive Transformer then picks the best translation, shown in red, a process which is much faster than directly using it to generate output.\relax }{figure.caption.167}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8.6}{\ignorespaces The translation latency, computed as the time to decode a single sentence without minibatching, for each sentence in the IWSLT development set as a function of its length. The autoregressive model has latency linear in the decoding length, while the latency of the NAT is nearly constant for typical lengths, even with NPD with sample size 10. When using NPD with sample size 100, the level of parallelism is enough to more than saturate the GPU, leading again to linear latencies.\relax }}{124}{figure.caption.168}}
+\newlabel{cp8.fig.latency}{{8.6}{124}{The translation latency, computed as the time to decode a single sentence without minibatching, for each sentence in the IWSLT development set as a function of its length. The autoregressive model has latency linear in the decoding length, while the latency of the NAT is nearly constant for typical lengths, even with NPD with sample size 10. When using NPD with sample size 100, the level of parallelism is enough to more than saturate the GPU, leading again to linear latencies.\relax }{figure.caption.168}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8.7}{\ignorespaces Learning curves for training and fine-tuning of the NAT{} on IWSLT. BLEU scores are on the development set.\relax }}{124}{figure.caption.169}}
+\newlabel{cp8.fig.curve}{{8.7}{124}{Learning curves for training and fine-tuning of the \model {} on IWSLT. BLEU scores are on the development set.\relax }{figure.caption.169}{}}
 \citation{vaswani2017attention}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.5.3}Analysis and Schematic}{124}{subsection.8.5.3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8.8}{\ignorespaces The schematic structure of training and inference for the NAT. The ``distilled data'' contains target sentences decoded by the autoregressive model and ground-truth source sentences.\relax }}{124}{figure.caption.172}}
-\newlabel{cp8.fig.sch}{{8.8}{124}{The schematic structure of training and inference for the \model . The ``distilled data'' contains target sentences decoded by the autoregressive model and ground-truth source sentences.\relax }{figure.caption.172}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {8.6}Conclusion and Next Chapter}{124}{section.8.6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.5.3}Analysis and Schematic}{125}{subsection.8.5.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8.8}{\ignorespaces The schematic structure of training and inference for the NAT. The ``distilled data'' contains target sentences decoded by the autoregressive model and ground-truth source sentences.\relax }}{125}{figure.caption.171}}
+\newlabel{cp8.fig.sch}{{8.8}{125}{The schematic structure of training and inference for the \model . The ``distilled data'' contains target sentences decoded by the autoregressive model and ground-truth source sentences.\relax }{figure.caption.171}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8.6}Conclusion and Next Chapter}{125}{section.8.6}}
 \citation{fugen2007simultaneous,bangalore2012real}
 \citation{mieno2015speed}
 \citation{oda-EtAl:2014:P14-2}
@@ -632,118 +634,122 @@
 \citation{sutskever2014sequence,bahdanau2014neural,vaswani2017attention}
 \citation{cho2016can}
 \citation{satija2016simultaneous}
-\@writefile{toc}{\contentsline {chapter}{\numberline {9}Simultaneous Neural Machine Translation}{126}{chapter.9}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {9}Simultaneous Neural Machine Translation}{127}{chapter.9}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{simul}{{9}{126}{Simultaneous Neural Machine Translation}{chapter.9}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {9.1}Overview}{126}{section.9.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9.1}{\ignorespaces  {Example output from the proposed framework in DE $\rightarrow $ EN simultaneous translation. The heat-map represents the soft alignment between the incoming source sentence (left, up-to-down) and the emitted translation (top, left-to-right). The length of each column represents the number of source words being waited for before emitting the translation. Best viewed when zoomed digitally.}\relax }}{127}{figure.caption.173}}
-\newlabel{cp9.fig.crop}{{9.1}{127}{{Example output from the proposed framework in DE $\rightarrow $ EN simultaneous translation. The heat-map represents the soft alignment between the incoming source sentence (left, up-to-down) and the emitted translation (top, left-to-right). The length of each column represents the number of source words being waited for before emitting the translation. Best viewed when zoomed digitally.}\relax }{figure.caption.173}{}}
+\newlabel{simul}{{9}{127}{Simultaneous Neural Machine Translation}{chapter.9}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {9.1}Overview}{127}{section.9.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9.1}{\ignorespaces  {Example output from the proposed framework in DE $\rightarrow $ EN simultaneous translation. The heat-map represents the soft alignment between the incoming source sentence (left, up-to-down) and the emitted translation (top, left-to-right). The length of each column represents the number of source words being waited for before emitting the translation. Best viewed when zoomed digitally.}\relax }}{128}{figure.caption.172}}
+\newlabel{cp9.fig.crop}{{9.1}{128}{{Example output from the proposed framework in DE $\rightarrow $ EN simultaneous translation. The heat-map represents the soft alignment between the incoming source sentence (left, up-to-down) and the emitted translation (top, left-to-right). The length of each column represents the number of source words being waited for before emitting the translation. Best viewed when zoomed digitally.}\relax }{figure.caption.172}{}}
 \citation{papineni2002bleu}
-\@writefile{toc}{\contentsline {section}{\numberline {9.2}Problem Definition: Simultaneous Translation}{128}{section.9.2}}
-\newlabel{cp9.sec.definition}{{9.2}{128}{Problem Definition: Simultaneous Translation}{section.9.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {9.2}Problem Definition: Simultaneous Translation}{129}{section.9.2}}
+\newlabel{cp9.sec.definition}{{9.2}{129}{Problem Definition: Simultaneous Translation}{section.9.2}{}}
 \citation{bahdanau2014neural}
-\@writefile{toc}{\contentsline {section}{\numberline {9.3}Simultaneous Neural Machine Translation}{129}{section.9.3}}
-\newlabel{cp9.sec.framework}{{9.3}{129}{Simultaneous Neural Machine Translation}{section.9.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9.2}{\ignorespaces  {Illustration of the proposed framework: at each step, the NMT environment (left) computes a candidate translation. The recurrent agent (right) will the observation including the candidates and send back decisions--\textsc  {read} or \textsc  {write}.}\relax }}{129}{figure.caption.174}}
-\newlabel{cp9.fig.snmt}{{9.2}{129}{{Illustration of the proposed framework: at each step, the NMT environment (left) computes a candidate translation. The recurrent agent (right) will the observation including the candidates and send back decisions--\textsc {read} or \textsc {write}.}\relax }{figure.caption.174}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.3.1}Environment}{129}{subsection.9.3.1}}
-\newlabel{cp9.sec.environment}{{9.3.1}{129}{Environment}{subsection.9.3.1}{}}
-\@writefile{toc}{\contentsline {paragraph}{Encoder:\nobreakspace  {}\textsc  {read}}{129}{section*.175}}
-\newlabel{cp9.eq.enc}{{9.1}{130}{Encoder:~\textsc {read}}{equation.9.3.1}{}}
-\@writefile{toc}{\contentsline {paragraph}{Decoder:\nobreakspace  {}\textsc  {write}}{130}{section*.176}}
-\newlabel{cp9.eq.dec}{{9.2}{130}{Decoder:~\textsc {write}}{equation.9.3.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.3.2}Agent}{130}{subsection.9.3.2}}
-\newlabel{cp9.sec.agent}{{9.3.2}{130}{Agent}{subsection.9.3.2}{}}
-\@writefile{toc}{\contentsline {paragraph}{Observation}{130}{section*.177}}
+\@writefile{toc}{\contentsline {section}{\numberline {9.3}Simultaneous Neural Machine Translation}{130}{section.9.3}}
+\newlabel{cp9.sec.framework}{{9.3}{130}{Simultaneous Neural Machine Translation}{section.9.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9.2}{\ignorespaces  {Illustration of the proposed framework: at each step, the NMT environment (left) computes a candidate translation. The recurrent agent (right) will the observation including the candidates and send back decisions--\textsc  {read} or \textsc  {write}.}\relax }}{130}{figure.caption.173}}
+\newlabel{cp9.fig.snmt}{{9.2}{130}{{Illustration of the proposed framework: at each step, the NMT environment (left) computes a candidate translation. The recurrent agent (right) will the observation including the candidates and send back decisions--\textsc {read} or \textsc {write}.}\relax }{figure.caption.173}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.3.1}Environment}{130}{subsection.9.3.1}}
+\newlabel{cp9.sec.environment}{{9.3.1}{130}{Environment}{subsection.9.3.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{Encoder:\nobreakspace  {}\textsc  {read}}{130}{section*.174}}
+\newlabel{cp9.eq.enc}{{9.1}{131}{Encoder:~\textsc {read}}{equation.9.3.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{Decoder:\nobreakspace  {}\textsc  {write}}{131}{section*.175}}
+\newlabel{cp9.eq.dec}{{9.2}{131}{Decoder:~\textsc {write}}{equation.9.3.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.3.2}Agent}{131}{subsection.9.3.2}}
+\newlabel{cp9.sec.agent}{{9.3.2}{131}{Agent}{subsection.9.3.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{Observation}{131}{section*.176}}
 \citation{grissomii2014don}
-\@writefile{toc}{\contentsline {paragraph}{Action}{131}{section*.178}}
-\@writefile{toc}{\contentsline {paragraph}{Policy}{131}{section*.179}}
-\@writefile{toc}{\contentsline {section}{\numberline {9.4}Learning}{131}{section.9.4}}
-\newlabel{cp9.sec.optimization}{{9.4}{131}{Learning}{section.9.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.4.1}Pre-training}{131}{subsection.9.4.1}}
+\@writefile{toc}{\contentsline {paragraph}{Action}{132}{section*.177}}
+\@writefile{toc}{\contentsline {paragraph}{Policy}{132}{section*.178}}
+\@writefile{toc}{\contentsline {section}{\numberline {9.4}Learning}{132}{section.9.4}}
+\newlabel{cp9.sec.optimization}{{9.4}{132}{Learning}{section.9.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.4.1}Pre-training}{132}{subsection.9.4.1}}
 \citation{papineni2002bleu}
 \citation{lin2004automatic}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {4}{\ignorespaces Simultaneous Greedy Decoding\relax }}{132}{algorithm.4}}
-\newlabel{cp9.algo.algo1}{{4}{132}{Simultaneous Greedy Decoding\relax }{algorithm.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.4.2}Reward Function}{132}{subsection.9.4.2}}
-\newlabel{cp9.sec.reward}{{9.4.2}{132}{Reward Function}{subsection.9.4.2}{}}
-\@writefile{toc}{\contentsline {paragraph}{Quality}{132}{section*.180}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {4}{\ignorespaces Simultaneous Greedy Decoding\relax }}{133}{algorithm.4}}
+\newlabel{cp9.algo.algo1}{{4}{133}{Simultaneous Greedy Decoding\relax }{algorithm.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.4.2}Reward Function}{133}{subsection.9.4.2}}
+\newlabel{cp9.sec.reward}{{9.4.2}{133}{Reward Function}{subsection.9.4.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{Quality}{133}{section*.179}}
 \citation{cho2016can}
-\@writefile{toc}{\contentsline {paragraph}{Delay}{133}{section*.181}}
+\@writefile{toc}{\contentsline {paragraph}{Delay}{134}{section*.180}}
 \citation{williams1992simple}
-\newlabel{cp9.eq.rd}{{9.9}{134}{Delay}{equation.9.4.9}{}}
-\@writefile{toc}{\contentsline {paragraph}{Trade-off between quality and delay}{134}{section*.182}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.4.3}Reinforcement Learning}{134}{subsection.9.4.3}}
-\@writefile{toc}{\contentsline {paragraph}{Policy Gradient}{134}{section*.183}}
-\newlabel{cp9.eq.train}{{9.10}{134}{Policy Gradient}{equation.9.4.10}{}}
+\newlabel{cp9.eq.rd}{{9.9}{135}{Delay}{equation.9.4.9}{}}
+\@writefile{toc}{\contentsline {paragraph}{Trade-off between quality and delay}{135}{section*.181}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.4.3}Reinforcement Learning}{135}{subsection.9.4.3}}
+\@writefile{toc}{\contentsline {paragraph}{Policy Gradient}{135}{section*.182}}
+\newlabel{cp9.eq.train}{{9.10}{135}{Policy Gradient}{equation.9.4.10}{}}
 \citation{mnih2014neural}
 \citation{sutskever2014sequence}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {5}{\ignorespaces Learning with Policy Gradient\relax }}{135}{algorithm.5}}
-\newlabel{cp9.algo.algo2}{{5}{135}{Learning with Policy Gradient\relax }{algorithm.5}{}}
-\@writefile{toc}{\contentsline {paragraph}{Variance Reduction}{135}{section*.184}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {5}{\ignorespaces Learning with Policy Gradient\relax }}{136}{algorithm.5}}
+\newlabel{cp9.algo.algo2}{{5}{136}{Learning with Policy Gradient\relax }{algorithm.5}{}}
+\@writefile{toc}{\contentsline {paragraph}{Variance Reduction}{136}{section*.183}}
 \citation{sennrich2015neural}
-\@writefile{lof}{\contentsline {figure}{\numberline {9.3}{\ignorespaces  {Illustrations of (A)\nobreakspace  {}beam-search, (B)\nobreakspace  {}simultaneous greedy decoding and (C)\nobreakspace  {}simultaneous beam-search.}\relax }}{136}{figure.caption.185}}
-\newlabel{cp9.fig.beam}{{9.3}{136}{{Illustrations of (A)~beam-search, (B)~simultaneous greedy decoding and (C)~simultaneous beam-search.}\relax }{figure.caption.185}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {9.5}Simultaneous Beam Search}{136}{section.9.5}}
-\newlabel{cp9.sec.beamsearch}{{9.5}{136}{Simultaneous Beam Search}{section.9.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9.3}{\ignorespaces  {Illustrations of (A)\nobreakspace  {}beam-search, (B)\nobreakspace  {}simultaneous greedy decoding and (C)\nobreakspace  {}simultaneous beam-search.}\relax }}{137}{figure.caption.184}}
+\newlabel{cp9.fig.beam}{{9.3}{137}{{Illustrations of (A)~beam-search, (B)~simultaneous greedy decoding and (C)~simultaneous beam-search.}\relax }{figure.caption.184}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {9.5}Simultaneous Beam Search}{137}{section.9.5}}
+\newlabel{cp9.sec.beamsearch}{{9.5}{137}{Simultaneous Beam Search}{section.9.5}{}}
 \citation{cho2016can}
 \citation{kingma2014adam}
 \citation{cho2016can}
-\@writefile{toc}{\contentsline {section}{\numberline {9.6}Experiments}{137}{section.9.6}}
-\newlabel{cp9.sec.experiments}{{9.6}{137}{Experiments}{section.9.6}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.6.1}Settings}{137}{subsection.9.6.1}}
-\@writefile{toc}{\contentsline {paragraph}{Dataset}{137}{section*.186}}
-\@writefile{toc}{\contentsline {paragraph}{Environment \& Agent Settings}{137}{section*.187}}
-\@writefile{toc}{\contentsline {paragraph}{Baselines}{137}{section*.188}}
+\@writefile{toc}{\contentsline {section}{\numberline {9.6}Experiments}{138}{section.9.6}}
+\newlabel{cp9.sec.experiments}{{9.6}{138}{Experiments}{section.9.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.6.1}Settings}{138}{subsection.9.6.1}}
+\@writefile{toc}{\contentsline {paragraph}{Dataset}{138}{section*.185}}
+\@writefile{toc}{\contentsline {paragraph}{Environment \& Agent Settings}{138}{section*.186}}
+\@writefile{toc}{\contentsline {paragraph}{Baselines}{138}{section*.187}}
 \citation{oda-EtAl:2014:P14-2}
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.6.2}Quantitative Analysis}{138}{subsection.9.6.2}}
-\@writefile{toc}{\contentsline {paragraph}{Learning Curves}{138}{section*.192}}
-\@writefile{toc}{\contentsline {paragraph}{Quality v.s. Delay}{138}{section*.193}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9.4}{\ignorespaces {Learning progress curves for variant delay targets on the validation dataset for EN $\rightarrow $ RU. Every time we only keep one target for one delay measure. For instance when using target AP, the coefficient of $\alpha $ in Eq.\nobreakspace  {}\textup  {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref  {cp9.eq.rd}\unskip \@@italiccorr )}} will be set $0$.}\relax }}{139}{figure.caption.189}}
-\newlabel{cp9.fig.lr}{{9.4}{139}{{Learning progress curves for variant delay targets on the validation dataset for EN $\rightarrow $ RU. Every time we only keep one target for one delay measure. For instance when using target AP, the coefficient of $\alpha $ in Eq.~\eqref {cp9.eq.rd} will be set $0$.}\relax }{figure.caption.189}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {BLEU (EN $\rightarrow $ RU)}}}{139}{figure.caption.189}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {AP (EN $\rightarrow $ RU)}}}{139}{figure.caption.189}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {CW (EN $\rightarrow $ RU)}}}{139}{figure.caption.189}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9.5}{\ignorespaces {Delay\nobreakspace  {}(AP) v.s. BLEU for both language pair--directions. The shown point-pairs are the results of simultaneous greedy decoding and beam-search (beam-size = 5) respectively with models trained for various delay targets: ($\color {green!70!blue}\blacktriangleleft \triangleleft $: CW=$8$, $\color {green!70!blue}\blacktriangle \triangle $: CW=$5$, $\color {green!70!blue}\blacklozenge \lozenge $: CW=$2$, $\color {red} \blacktriangleright \triangleright $: AP=$0.3$, $\color {red} \blacktriangledown \triangledown $: AP=$0.5$, $\color {red} \blacksquare \square $: AP=$0.7$)}. For each target, we select the model that maximizes the quality-to-delay ratio ($\frac  {\text  {BLEU}}{\text  {AP}}$) on the validation set. The baselines are also plotted ($\color {blue}\bigstar $: WOS $\color {black}\bigstar ${\fontfamily  {pzd}\fontencoding  {U}\fontseries  {m}\fontshape  {n}\selectfont  \char 73}: WUE, $\times $: WID, $+$: WIW).\relax }}{140}{figure.caption.190}}
-\newlabel{cp9.fig.bvd}{{9.5}{140}{{Delay~(AP) v.s. BLEU for both language pair--directions. The shown point-pairs are the results of simultaneous greedy decoding and beam-search (beam-size = 5) respectively with models trained for various delay targets: ($\color {green!70!blue}\blacktriangleleft \triangleleft $: CW=$8$, $\color {green!70!blue}\blacktriangle \triangle $: CW=$5$, $\color {green!70!blue}\blacklozenge \lozenge $: CW=$2$, $\color {red} \blacktriangleright \triangleright $: AP=$0.3$, $\color {red} \blacktriangledown \triangledown $: AP=$0.5$, $\color {red} \blacksquare \square $: AP=$0.7$)}. For each target, we select the model that maximizes the quality-to-delay ratio ($\frac {\text {BLEU}}{\text {AP}}$) on the validation set. The baselines are also plotted ($\color {blue}\bigstar $: WOS $\color {black}\bigstar $\ding {73}: WUE, $\times $: WID, $+$: WIW).\relax }{figure.caption.190}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {EN$\rightarrow $RU}}}{140}{figure.caption.190}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {RU$\rightarrow $EN}}}{140}{figure.caption.190}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {EN$\rightarrow $DE}}}{140}{figure.caption.190}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {DE$\rightarrow $EN}}}{140}{figure.caption.190}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.6.2}Quantitative Analysis}{139}{subsection.9.6.2}}
+\@writefile{toc}{\contentsline {paragraph}{Learning Curves}{139}{section*.191}}
+\@writefile{toc}{\contentsline {paragraph}{Quality v.s. Delay}{139}{section*.192}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9.4}{\ignorespaces {Learning progress curves for variant delay targets on the validation dataset for EN $\rightarrow $ RU. Every time we only keep one target for one delay measure. For instance when using target AP, the coefficient of $\alpha $ in Eq.\nobreakspace  {}\textup  {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref  {cp9.eq.rd}\unskip \@@italiccorr )}} will be set $0$.}\relax }}{140}{figure.caption.188}}
+\newlabel{cp9.fig.lr}{{9.4}{140}{{Learning progress curves for variant delay targets on the validation dataset for EN $\rightarrow $ RU. Every time we only keep one target for one delay measure. For instance when using target AP, the coefficient of $\alpha $ in Eq.~\eqref {cp9.eq.rd} will be set $0$.}\relax }{figure.caption.188}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {BLEU (EN $\rightarrow $ RU)}}}{140}{figure.caption.188}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {AP (EN $\rightarrow $ RU)}}}{140}{figure.caption.188}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {CW (EN $\rightarrow $ RU)}}}{140}{figure.caption.188}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9.5}{\ignorespaces {Delay\nobreakspace  {}(AP) v.s. BLEU for both language pair--directions. The shown point-pairs are the results of simultaneous greedy decoding and beam-search (beam-size = 5) respectively with models trained for various delay targets: ($\color {green!70!blue}\blacktriangleleft \triangleleft $: CW=$8$, $\color {green!70!blue}\blacktriangle \triangle $: CW=$5$, $\color {green!70!blue}\blacklozenge \lozenge $: CW=$2$, $\color {red} \blacktriangleright \triangleright $: AP=$0.3$, $\color {red} \blacktriangledown \triangledown $: AP=$0.5$, $\color {red} \blacksquare \square $: AP=$0.7$)}. For each target, we select the model that maximizes the quality-to-delay ratio ($\frac  {\text  {BLEU}}{\text  {AP}}$) on the validation set. The baselines are also plotted ($\color {blue}\bigstar $: WOS $\color {black}\bigstar ${\fontfamily  {pzd}\fontencoding  {U}\fontseries  {m}\fontshape  {n}\selectfont  \char 73}: WUE, $\times $: WID, $+$: WIW).\relax }}{141}{figure.caption.189}}
+\newlabel{cp9.fig.bvd}{{9.5}{141}{{Delay~(AP) v.s. BLEU for both language pair--directions. The shown point-pairs are the results of simultaneous greedy decoding and beam-search (beam-size = 5) respectively with models trained for various delay targets: ($\color {green!70!blue}\blacktriangleleft \triangleleft $: CW=$8$, $\color {green!70!blue}\blacktriangle \triangle $: CW=$5$, $\color {green!70!blue}\blacklozenge \lozenge $: CW=$2$, $\color {red} \blacktriangleright \triangleright $: AP=$0.3$, $\color {red} \blacktriangledown \triangledown $: AP=$0.5$, $\color {red} \blacksquare \square $: AP=$0.7$)}. For each target, we select the model that maximizes the quality-to-delay ratio ($\frac {\text {BLEU}}{\text {AP}}$) on the validation set. The baselines are also plotted ($\color {blue}\bigstar $: WOS $\color {black}\bigstar $\ding {73}: WUE, $\times $: WID, $+$: WIW).\relax }{figure.caption.189}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {EN$\rightarrow $RU}}}{141}{figure.caption.189}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {RU$\rightarrow $EN}}}{141}{figure.caption.189}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {EN$\rightarrow $DE}}}{141}{figure.caption.189}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {DE$\rightarrow $EN}}}{141}{figure.caption.189}}
 \citation{cho2016can}
 \citation{oda-EtAl:2014:P14-2}
-\@writefile{lof}{\contentsline {figure}{\numberline {9.6}{\ignorespaces  {Delay\nobreakspace  {}(CW) v.s. BLEU score for EN $\rightarrow $ RU, ($\color {green!70!blue}\blacktriangleleft \triangleleft $: CW=$8$, $\color {green!70!blue}\blacktriangle \triangle $: CW=$5$, $\color {green!70!blue}\blacklozenge \lozenge $: CW=$2$, $\color {red} \blacktriangleright \triangleright $: AP=$0.3$, $\color {red} \blacktriangledown \triangledown $: AP=$0.5$, $\color {red} \blacksquare \square $: AP=$0.7$), against the baselines\nobreakspace  {}($\color {blue}\bigstar $: WOS $\color {black}\bigstar $: WUE, $+$: SEG1, $\times $: SEG2).}\relax }}{141}{figure.caption.191}}
-\newlabel{cp9.fig.wait}{{9.6}{141}{{Delay~(CW) v.s. BLEU score for EN $\rightarrow $ RU, ($\color {green!70!blue}\blacktriangleleft \triangleleft $: CW=$8$, $\color {green!70!blue}\blacktriangle \triangle $: CW=$5$, $\color {green!70!blue}\blacklozenge \lozenge $: CW=$2$, $\color {red} \blacktriangleright \triangleright $: AP=$0.3$, $\color {red} \blacktriangledown \triangledown $: AP=$0.5$, $\color {red} \blacksquare \square $: AP=$0.7$), against the baselines~($\color {blue}\bigstar $: WOS $\color {black}\bigstar $: WUE, $+$: SEG1, $\times $: SEG2).}\relax }{figure.caption.191}{}}
-\@writefile{toc}{\contentsline {paragraph}{v.s. Baselines}{141}{section*.194}}
-\@writefile{toc}{\contentsline {paragraph}{w/o Beam-Search}{142}{section*.195}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.6.3}Qualitative Analysis}{142}{subsection.9.6.3}}
-\@writefile{toc}{\contentsline {paragraph}{EN$\rightarrow $RU}{142}{section*.198}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9.7}{\ignorespaces  {Given the example input sentence (leftmost column), we show outputs by models trained for various delay targets. For these outputs, each row corresponds to one source word and represents the emitted words (maybe empty) after reading this word. The corresponding source and target words are in the same color for all model outputs.}\relax }}{143}{figure.caption.196}}
-\newlabel{cp9.fig.exp1}{{9.7}{143}{{Given the example input sentence (leftmost column), we show outputs by models trained for various delay targets. For these outputs, each row corresponds to one source word and represents the emitted words (maybe empty) after reading this word. The corresponding source and target words are in the same color for all model outputs.}\relax }{figure.caption.196}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9.8}{\ignorespaces {Comparison of DE$\rightarrow $EN examples using the proposed framework and usual NMT system respectively. Both the heatmaps share the same setting with Fig.\nobreakspace  {}\ref  {cp9.fig.crop}}. The verb ``gedeckt'' is incorrectly translated in simultaneous translation.\relax }}{144}{figure.caption.197}}
-\newlabel{cp9.fig.deen2}{{9.8}{144}{{Comparison of DE$\rightarrow $EN examples using the proposed framework and usual NMT system respectively. Both the heatmaps share the same setting with Fig.~\ref {cp9.fig.crop}}. The verb ``gedeckt'' is incorrectly translated in simultaneous translation.\relax }{figure.caption.197}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Simultaneous Neural Machine Translation}}}{144}{figure.caption.197}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Neural Machine Translation}}}{144}{figure.caption.197}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9.6}{\ignorespaces  {Delay\nobreakspace  {}(CW) v.s. BLEU score for EN $\rightarrow $ RU, ($\color {green!70!blue}\blacktriangleleft \triangleleft $: CW=$8$, $\color {green!70!blue}\blacktriangle \triangle $: CW=$5$, $\color {green!70!blue}\blacklozenge \lozenge $: CW=$2$, $\color {red} \blacktriangleright \triangleright $: AP=$0.3$, $\color {red} \blacktriangledown \triangledown $: AP=$0.5$, $\color {red} \blacksquare \square $: AP=$0.7$), against the baselines\nobreakspace  {}($\color {blue}\bigstar $: WOS $\color {black}\bigstar $: WUE, $+$: SEG1, $\times $: SEG2).}\relax }}{142}{figure.caption.190}}
+\newlabel{cp9.fig.wait}{{9.6}{142}{{Delay~(CW) v.s. BLEU score for EN $\rightarrow $ RU, ($\color {green!70!blue}\blacktriangleleft \triangleleft $: CW=$8$, $\color {green!70!blue}\blacktriangle \triangle $: CW=$5$, $\color {green!70!blue}\blacklozenge \lozenge $: CW=$2$, $\color {red} \blacktriangleright \triangleright $: AP=$0.3$, $\color {red} \blacktriangledown \triangledown $: AP=$0.5$, $\color {red} \blacksquare \square $: AP=$0.7$), against the baselines~($\color {blue}\bigstar $: WOS $\color {black}\bigstar $: WUE, $+$: SEG1, $\times $: SEG2).}\relax }{figure.caption.190}{}}
+\@writefile{toc}{\contentsline {paragraph}{v.s. Baselines}{142}{section*.193}}
+\@writefile{toc}{\contentsline {paragraph}{w/o Beam-Search}{143}{section*.194}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.6.3}Qualitative Analysis}{143}{subsection.9.6.3}}
+\@writefile{toc}{\contentsline {paragraph}{EN$\rightarrow $RU}{143}{section*.197}}
+\@writefile{toc}{\contentsline {paragraph}{DE$\rightarrow $EN}{143}{section*.198}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9.7}{\ignorespaces  {Given the example input sentence (leftmost column), we show outputs by models trained for various delay targets. For these outputs, each row corresponds to one source word and represents the emitted words (maybe empty) after reading this word. The corresponding source and target words are in the same color for all model outputs.}\relax }}{144}{figure.caption.195}}
+\newlabel{cp9.fig.exp1}{{9.7}{144}{{Given the example input sentence (leftmost column), we show outputs by models trained for various delay targets. For these outputs, each row corresponds to one source word and represents the emitted words (maybe empty) after reading this word. The corresponding source and target words are in the same color for all model outputs.}\relax }{figure.caption.195}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9.8}{\ignorespaces {Comparison of DE$\rightarrow $EN examples using the proposed framework and usual NMT system respectively. Both the heatmaps share the same setting with Fig.\nobreakspace  {}\ref  {cp9.fig.crop}}. The verb ``gedeckt'' is incorrectly translated in simultaneous translation.\relax }}{145}{figure.caption.196}}
+\newlabel{cp9.fig.deen2}{{9.8}{145}{{Comparison of DE$\rightarrow $EN examples using the proposed framework and usual NMT system respectively. Both the heatmaps share the same setting with Fig.~\ref {cp9.fig.crop}}. The verb ``gedeckt'' is incorrectly translated in simultaneous translation.\relax }{figure.caption.196}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Simultaneous Neural Machine Translation}}}{145}{figure.caption.196}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Neural Machine Translation}}}{145}{figure.caption.196}}
 \citation{fugen2007simultaneous,bangalore2012real,fujita2013simple,sridhar2013segmentation,yarmohammadi2013incremental}
 \citation{oda-EtAl:2014:P14-2}
 \citation{grissomii2014don}
-\@writefile{toc}{\contentsline {paragraph}{DE$\rightarrow $EN}{145}{section*.199}}
-\@writefile{toc}{\contentsline {section}{\numberline {9.7}Related Work}{145}{section.9.7}}
 \citation{cho2016can}
 \citation{satija2016simultaneous}
+\@writefile{toc}{\contentsline {section}{\numberline {9.7}Related Work}{146}{section.9.7}}
 \citation{jaitly2015online}
 \citation{luo2016learning}
 \citation{satija2016simultaneous}
 \citation{yu2016online}
-\@writefile{toc}{\contentsline {section}{\numberline {9.8}Conclusion}{146}{section.9.8}}
+\@writefile{toc}{\contentsline {section}{\numberline {9.8}Conclusion}{147}{section.9.8}}
 \@writefile{toc}{\contentsline {chapter}{\numberline {10}Conclusion}{148}{chapter.10}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \newlabel{conclusion}{{10}{148}{Conclusion}{chapter.10}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {10.1}Future Work}{149}{section.10.1}}
+\@writefile{toc}{\contentsline {paragraph}{Same quality, Better efficiency }{149}{section*.199}}
+\citation{kim2016sequence}
 \bibstyle{acl}
 \bibdata{ref}
-\@writefile{toc}{\contentsline {section}{\numberline {10.1}Future Work}{149}{section.10.1}}
+\@writefile{toc}{\contentsline {paragraph}{Light-weight NMT}{150}{section*.200}}
+\@writefile{toc}{\contentsline {paragraph}{Incorporate Linguistic Information}{150}{section*.201}}
 \bibcite{andrychowicz2016learning}{{1}{2016}{{Andrychowicz et~al.}}{{Andrychowicz, Denil, Gomez, Hoffman, Pfau, Schaul, and de~Freitas}}}
 \bibcite{Artetxe2017LearningBW}{{2}{2017}{{Artetxe et~al.}}{{Artetxe, Labaka, and Agirre}}}
 \bibcite{artetxe2017unsupervised}{{3}{2018}{{Artetxe et~al.}}{{Artetxe, Labaka, Agirre, and Cho}}}
@@ -763,115 +769,117 @@
 \bibcite{cho2016noisy}{{17}{2016}{{Cho}}{{}}}
 \bibcite{cho2016can}{{18}{2016}{{Cho and Esipova}}{{}}}
 \bibcite{cho2014learning}{{19}{2014}{{Cho et~al.}}{{Cho, Van~Merri{\"e}nboer, Gulcehre, Bahdanau, Bougares, Schwenk, and Bengio}}}
-\bibcite{Conneau2017WordTW}{{20}{2018}{{Conneau et~al.}}{{Conneau, Lample, Ranzato, Denoyer, and J{\'e}gou}}}
-\bibcite{crego2016systran}{{21}{2016}{{Crego et~al.}}{{Crego, Kim, Klein, Rebollo, Yang, Senellart, Akhanov, Brunelle, Coquard, Deng et~al.}}}
-\bibcite{devlin:2017:EMNLP2017}{{22}{2017}{{Devlin}}{{}}}
-\bibcite{devlin2015exploring}{{23}{2015}{{Devlin et~al.}}{{Devlin, Gupta, Girshick, Mitchell, and Zitnick}}}
-\bibcite{dyer2013simple}{{24}{2013}{{Dyer et~al.}}{{Dyer, Chahuneau, and Smith}}}
-\bibcite{eriguchi2017learning}{{25}{2017}{{Eriguchi et~al.}}{{Eriguchi, Tsuruoka, and Cho}}}
-\bibcite{finn2017model}{{26}{2017}{{Finn et~al.}}{{Finn, Abbeel, and Levine}}}
-\bibcite{firat2016multi}{{27}{2016{a}}{{Firat et~al.}}{{Firat, Cho, and Bengio}}}
-\bibcite{firat2016zero}{{28}{2016{b}}{{Firat et~al.}}{{Firat, Sankaran, Al-Onaizan, Vural, and Cho}}}
-\bibcite{fugen2007simultaneous}{{29}{2007}{{F{\"u}gen et~al.}}{{F{\"u}gen, Waibel, and Kolss}}}
-\bibcite{fujita2013simple}{{30}{2013}{{Fujita et~al.}}{{Fujita, Neubig, Sakti, Toda, and Nakamura}}}
-\bibcite{gehring2017convolutional}{{31}{2017}{{Gehring et~al.}}{{Gehring, Auli, Grangier, Yarats, and Dauphin}}}
-\bibcite{graves2014neural}{{32}{2014}{{Graves et~al.}}{{Graves, Wayne, and Danihelka}}}
-\bibcite{grissomii2014don}{{33}{2014}{{Grissom~II et~al.}}{{Grissom~II, He, Boyd-Graber, Morgan, and Daum\'{e}~III}}}
-\bibcite{Gu2017NonAutoregressiveNM}{{34}{2018{a}}{{Gu et~al.}}{{Gu, Bradbury, Xiong, Li, and Socher}}}
-\bibcite{gu2018universal}{{35}{2018{b}}{{Gu et~al.}}{{Gu, Hassan, Devlin, and Li}}}
-\bibcite{gu2016incorporating}{{36}{2016{a}}{{Gu et~al.}}{{Gu, Lu, Li, and Li}}}
-\bibcite{gu2016learning}{{37}{2016{b}}{{Gu et~al.}}{{Gu, Neubig, Cho, and Li}}}
-\bibcite{gulcehre2016pointing}{{38}{2016}{{Gulcehre et~al.}}{{Gulcehre, Ahn, Nallapati, Zhou, and Bengio}}}
-\bibcite{gulcehre2018dynamic}{{39}{2018}{{Gulcehre et~al.}}{{Gulcehre, Chandar, Cho, and Bengio}}}
-\bibcite{Gulcehre-Orhan-et-al-2015}{{40}{2015}{{Gulcehre et~al.}}{{Gulcehre, Firat, Xu, Cho, Barrault, Lin, Bougares, Schwenk, and Bengio}}}
-\bibcite{ha2016hypernetworks}{{41}{2016{a}}{{Ha et~al.}}{{Ha, Dai, and Le}}}
-\bibcite{ha2016toward}{{42}{2016{b}}{{Ha et~al.}}{{Ha, Niehues, and Waibel}}}
-\bibcite{hassan-hp}{{43}{2018}{{Hassan et~al.}}{{Hassan, Aue, Chen, Chowdhary, Clark, Federmann, Huang, Junczys{-}Dowmunt, Lewis, Li, Liu, Liu, Luo, Menezes, Qin, Seide, Tan, Tian, Wu, Wu, Xia, Zhang, Zhang, and Zhou}}}
-\bibcite{he2016dual}{{44}{2016}{{He et~al.}}{{He, Xia, Qin, Wang, Yu, Liu, and Ma}}}
-\bibcite{he2015deep}{{45}{2015}{{He et~al.}}{{He, Zhang, Ren, and Sun}}}
-\bibcite{heess2015learning}{{46}{2015}{{Heess et~al.}}{{Heess, Wayne, Silver, Lillicrap, Erez, and Tassa}}}
-\bibcite{hochreiter1997long}{{47}{1997}{{Hochreiter and Schmidhuber}}{{}}}
-\bibcite{hu2015lcsts}{{48}{2015}{{Hu et~al.}}{{Hu, Chen, and Zhu}}}
-\bibcite{jaitly2015online}{{49}{2015}{{Jaitly et~al.}}{{Jaitly, Le, Vinyals, Sutskeyver, and Bengio}}}
-\bibcite{jean2017does}{{50}{2017}{{Jean et~al.}}{{Jean, Lauly, Firat, and Cho}}}
-\bibcite{FAISS}{{51}{2017{a}}{{Johnson et~al.}}{{Johnson, Douze, and J{\'e}gou}}}
-\bibcite{johnson2016google}{{52}{2017{b}}{{Johnson et~al.}}{{Johnson, Schuster, Le, Krikun, Wu, Chen, Thorat, Vi{\'e}gas, Wattenberg, Corrado, Hughes, and Dean}}}
-\bibcite{kaiser2017depthwise}{{53}{2017{a}}{{Kaiser et~al.}}{{Kaiser, Gomez, and Chollet}}}
-\bibcite{kaiser2017learning}{{54}{2017{b}}{{Kaiser et~al.}}{{Kaiser, Nachum, Roy, and Bengio}}}
-\bibcite{kalchbrenner2016neural}{{55}{2016}{{Kalchbrenner et~al.}}{{Kalchbrenner, Espeholt, Simonyan, Oord, Graves, and Kavukcuoglu}}}
-\bibcite{kim2016character}{{56}{2016}{{Kim et~al.}}{{Kim, Jernite, Sontag, and Rush}}}
-\bibcite{kim2016sequence}{{57}{2016}{{Kim and Rush}}{{}}}
-\bibcite{kingma2014adam}{{58}{2014}{{Kingma and Ba}}{{}}}
-\bibcite{koehn2004statistical}{{59}{2004}{{Koehn}}{{}}}
-\bibcite{koehn2017six}{{60}{2017}{{Koehn and Knowles}}{{}}}
-\bibcite{koehn2003statistical}{{61}{2003}{{Koehn et~al.}}{{Koehn, Och, and Marcu}}}
-\bibcite{kurach2015neural}{{62}{2015}{{Kurach et~al.}}{{Kurach, Andrychowicz, and Sutskever}}}
-\bibcite{lake2015human}{{63}{2015}{{Lake et~al.}}{{Lake, Salakhutdinov, and Tenenbaum}}}
-\bibcite{lample2017unsupervised}{{64}{2018}{{Lample et~al.}}{{Lample, Denoyer, and Ranzato}}}
-\bibcite{lee2016fully}{{65}{2016}{{Lee et~al.}}{{Lee, Cho, and Hofmann}}}
-\bibcite{lee2017emergent}{{66}{2017}{{Lee et~al.}}{{Lee, Cho, Weston, and Kiela}}}
-\bibcite{li2016simple}{{67}{2016{a}}{{Li et~al.}}{{Li, Monroe, and Jurafsky}}}
-\bibcite{li2017learning}{{68}{2017}{{Li et~al.}}{{Li, Monroe, and Jurafsky}}}
-\bibcite{li2016phrase}{{69}{2016{b}}{{Li et~al.}}{{Li, Way, and Liu}}}
-\bibcite{lillicrap2015continuous}{{70}{2015}{{Lillicrap et~al.}}{{Lillicrap, Hunt, Pritzel, Heess, Erez, Tassa, Silver, and Wierstra}}}
-\bibcite{lin:2004:ACLsummarization}{{71}{2004}{{Lin}}{{}}}
-\bibcite{lin2004automatic}{{72}{2004}{{Lin and Och}}{{}}}
-\bibcite{luo2016learning}{{73}{2016}{{Luo et~al.}}{{Luo, Chiu, Jaitly, and Sutskever}}}
-\bibcite{luong2015multi}{{74}{2015{a}}{{Luong et~al.}}{{Luong, Le, Sutskever, Vinyals, and Kaiser}}}
-\bibcite{luong2016achieving}{{75}{2016}{{Luong and Manning}}{{}}}
-\bibcite{luong2015effective}{{76}{2015{b}}{{Luong et~al.}}{{Luong, Pham, and Manning}}}
-\bibcite{luong-EtAl:2015:ACL-IJCNLP}{{77}{2015{c}}{{Luong et~al.}}{{Luong, Sutskever, Le, Vinyals, and Zaremba}}}
-\bibcite{martin2010planning}{{78}{2010}{{Martin et~al.}}{{Martin, Crowther, Knight, Tamborello, and Yang}}}
-\bibcite{GaussianMixture}{{79}{1988}{{McLachlan and Basford}}{{}}}
-\bibcite{mieno2015speed}{{80}{2015}{{Mieno et~al.}}{{Mieno, Neubig, Sakti, Toda, and Nakamura}}}
-\bibcite{mikolov2010recurrent}{{81}{2010}{{Mikolov et~al.}}{{Mikolov, Karafi{\'a}t, Burget, Cernock{\`y}, and Khudanpur}}}
-\bibcite{miller2016key}{{82}{2016}{{Miller et~al.}}{{Miller, Fisch, Dodge, Karimi, Bordes, and Weston}}}
-\bibcite{mishra2017meta}{{83}{2017}{{Mishra et~al.}}{{Mishra, Rohaninejad, Chen, and Abbeel}}}
-\bibcite{mnih2014neural}{{84}{2014}{{Mnih and Gregor}}{{}}}
-\bibcite{nadejde2017syntax}{{85}{2017}{{Nadejde et~al.}}{{Nadejde, Reddy, Sennrich, Dwojak, Junczys-Dowmunt, Koehn, and Birch}}}
-\bibcite{nogueira2017task}{{86}{2017}{{Nogueira and Cho}}{{}}}
-\bibcite{oda-EtAl:2014:P14-2}{{87}{2014}{{Oda et~al.}}{{Oda, Neubig, Sakti, Toda, and Nakamura}}}
-\bibcite{papineni2002bleu}{{88}{2002}{{Papineni et~al.}}{{Papineni, Roukos, Ward, and Zhu}}}
-\bibcite{phillips2012modeling}{{89}{2012}{{Phillips}}{{}}}
-\bibcite{pritzel2017neural}{{90}{2017}{{Pritzel et~al.}}{{Pritzel, Uria, Srinivasan, Puigdom{\`e}nech, Vinyals, Hassabis, Wierstra, and Blundell}}}
-\bibcite{sridhar2013segmentation}{{91}{2013}{{Rangarajan~Sridhar et~al.}}{{Rangarajan~Sridhar, Chen, Bangalore, Ljolje, and Chengalvarayan}}}
-\bibcite{ranzato2015sequence}{{92}{2015}{{Ranzato et~al.}}{{Ranzato, Chopra, Auli, and Zaremba}}}
-\bibcite{robbins1951stochastic}{{93}{1951}{{Robbins and Monro}}{{}}}
-\bibcite{rumelhart1986learning}{{94}{1986}{{Rumelhart et~al.}}{{Rumelhart, Hinton, and Williams}}}
-\bibcite{rush2015neural}{{95}{2015}{{Rush et~al.}}{{Rush, Chopra, and Weston}}}
-\bibcite{satija2016simultaneous}{{96}{2016}{{Satija and Pineau}}{{}}}
-\bibcite{sennrich2015improving}{{97}{2015{a}}{{Sennrich et~al.}}{{Sennrich, Haddow, and Birch}}}
-\bibcite{sennrich2015neural}{{98}{2015{b}}{{Sennrich et~al.}}{{Sennrich, Haddow, and Birch}}}
-\bibcite{sennrich2016edinburgh}{{99}{2016}{{Sennrich et~al.}}{{Sennrich, Haddow, and Birch}}}
-\bibcite{shang2015neural}{{100}{2015}{{Shang et~al.}}{{Shang, Lu, and Li}}}
-\bibcite{shazeer2017outrageously}{{101}{2017}{{Shazeer et~al.}}{{Shazeer, Mirhoseini, Maziarz, Davis, Le, Hinton, and Dean}}}
-\bibcite{shen2015minimum}{{102}{2015}{{Shen et~al.}}{{Shen, Cheng, He, He, Wu, Sun, and Liu}}}
-\bibcite{silver2014deterministic}{{103}{2014}{{Silver et~al.}}{{Silver, Lever, Heess, Degris, Wierstra, and Riedmiller}}}
-\bibcite{smith2017offline}{{104}{2017}{{Smith et~al.}}{{Smith, Turban, Hamblin, and Hammerla}}}
-\bibcite{snell2017prototypical}{{105}{2017}{{Snell et~al.}}{{Snell, Swersky, and Zemel}}}
-\bibcite{sordoni2015neural}{{106}{2015}{{Sordoni et~al.}}{{Sordoni, Galley, Auli, Brockett, Ji, Mitchell, Nie, Gao, and Dolan}}}
-\bibcite{srivastava2015highway}{{107}{2015}{{Srivastava et~al.}}{{Srivastava, Greff, and Schmidhuber}}}
-\bibcite{steinberger2006jrc}{{108}{2006}{{Steinberger et~al.}}{{Steinberger, Pouliquen, Widiger, Ignat, Erjavec, Tufis, and Varga}}}
-\bibcite{sukhbaatar2015end}{{109}{2015}{{Sukhbaatar et~al.}}{{Sukhbaatar, Weston, Fergus et~al.}}}
-\bibcite{sutskever2014sequence}{{110}{2014}{{Sutskever et~al.}}{{Sutskever, Vinyals, and Le}}}
-\bibcite{tieleman2012lecture}{{111}{2012}{{Tieleman and Hinton}}{{}}}
-\bibcite{tu2016neural}{{112}{2016{a}}{{Tu et~al.}}{{Tu, Liu, Shang, Liu, and Li}}}
-\bibcite{tu2016modeling}{{113}{2016{b}}{{Tu et~al.}}{{Tu, Lu, Liu, Liu, and Li}}}
-\bibcite{vaswani2017attention}{{114}{2017}{{Vaswani et~al.}}{{Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez, Kaiser, and Polosukhin}}}
-\bibcite{vinyals2016matching}{{115}{2016}{{Vinyals et~al.}}{{Vinyals, Blundell, Lillicrap, Wierstra et~al.}}}
-\bibcite{vinyals2015pointer}{{116}{2015{a}}{{Vinyals et~al.}}{{Vinyals, Fortunato, and Jaitly}}}
-\bibcite{vinyals2015grammar}{{117}{2015{b}}{{Vinyals et~al.}}{{Vinyals, Kaiser, Koo, Petrov, Sutskever, and Hinton}}}
-\bibcite{vinyals2015neural}{{118}{2015}{{Vinyals and Le}}{{}}}
-\bibcite{wang2017exploiting}{{119}{2017}{{Wang et~al.}}{{Wang, Tu, Way, and Liu}}}
-\bibcite{weston2014memory}{{120}{2014}{{Weston et~al.}}{{Weston, Chopra, and Bordes}}}
-\bibcite{williams1992simple}{{121}{1992}{{Williams}}{{}}}
-\bibcite{wiseman2016sequence}{{122}{2016}{{Wiseman and Rush}}{{}}}
-\bibcite{wu2016google}{{123}{2016}{{{Wu} et~al.}}{{{Wu}, {Schuster}, {Chen}, {Le}, {Norouzi}, {Macherey}, {Krikun}, {Cao}, {Gao}, {Macherey}, {Klingner}, {Shah}, {Johnson}, {Liu}, {Kaiser}, {Gouws}, {Kato}, {Kudo}, {Kazawa}, {Stevens}, {Kurian}, {Patil}, {Wang}, {Young}, {Smith}, {Riesa}, {Rudnick}, {Vinyals}, {Corrado}, {Hughes}, and {Dean}}}}
-\bibcite{yang2018unsupervised}{{124}{2018}{{Yang et~al.}}{{Yang, Chen, Wang, and Xu}}}
-\bibcite{yarmohammadi2013incremental}{{125}{2013}{{Yarmohammadi et~al.}}{{Yarmohammadi, Sridhar, Bangalore, and Sankaran}}}
-\bibcite{yu2016online}{{126}{2016}{{Yu et~al.}}{{Yu, Buys, and Blunsom}}}
-\bibcite{zeiler2012adadelta}{{127}{2012}{{Zeiler}}{{}}}
-\bibcite{zhang2016exploiting}{{128}{2016}{{Zhang and Zong}}{{}}}
-\bibcite{Zhang2005AnEP}{{129}{2005}{{Zhang and Vogel}}{{}}}
-\bibcite{zoph2016multi}{{130}{2016}{{Zoph and Knight}}{{}}}
-\bibcite{zoph2016transfer}{{131}{2016}{{Zoph et~al.}}{{Zoph, Yuret, May, and Knight}}}
+\bibcite{chung2016character}{{20}{2016}{{Chung et~al.}}{{Chung, Cho, and Bengio}}}
+\bibcite{Conneau2017WordTW}{{21}{2018}{{Conneau et~al.}}{{Conneau, Lample, Ranzato, Denoyer, and J{\'e}gou}}}
+\bibcite{crego2016systran}{{22}{2016}{{Crego et~al.}}{{Crego, Kim, Klein, Rebollo, Yang, Senellart, Akhanov, Brunelle, Coquard, Deng et~al.}}}
+\bibcite{devlin:2017:EMNLP2017}{{23}{2017}{{Devlin}}{{}}}
+\bibcite{devlin2015exploring}{{24}{2015}{{Devlin et~al.}}{{Devlin, Gupta, Girshick, Mitchell, and Zitnick}}}
+\bibcite{dyer2013simple}{{25}{2013}{{Dyer et~al.}}{{Dyer, Chahuneau, and Smith}}}
+\bibcite{eriguchi2017learning}{{26}{2017}{{Eriguchi et~al.}}{{Eriguchi, Tsuruoka, and Cho}}}
+\bibcite{finn2017model}{{27}{2017}{{Finn et~al.}}{{Finn, Abbeel, and Levine}}}
+\bibcite{firat2016multi}{{28}{2016{a}}{{Firat et~al.}}{{Firat, Cho, and Bengio}}}
+\bibcite{firat2016zero}{{29}{2016{b}}{{Firat et~al.}}{{Firat, Sankaran, Al-Onaizan, Vural, and Cho}}}
+\bibcite{fugen2007simultaneous}{{30}{2007}{{F{\"u}gen et~al.}}{{F{\"u}gen, Waibel, and Kolss}}}
+\bibcite{fujita2013simple}{{31}{2013}{{Fujita et~al.}}{{Fujita, Neubig, Sakti, Toda, and Nakamura}}}
+\bibcite{gehring2017convolutional}{{32}{2017}{{Gehring et~al.}}{{Gehring, Auli, Grangier, Yarats, and Dauphin}}}
+\bibcite{graves2014neural}{{33}{2014}{{Graves et~al.}}{{Graves, Wayne, and Danihelka}}}
+\bibcite{grissomii2014don}{{34}{2014}{{Grissom~II et~al.}}{{Grissom~II, He, Boyd-Graber, Morgan, and Daum\'{e}~III}}}
+\bibcite{Gu2017NonAutoregressiveNM}{{35}{2018{a}}{{Gu et~al.}}{{Gu, Bradbury, Xiong, Li, and Socher}}}
+\bibcite{gu2018universal}{{36}{2018{b}}{{Gu et~al.}}{{Gu, Hassan, Devlin, and Li}}}
+\bibcite{gu2016incorporating}{{37}{2016{a}}{{Gu et~al.}}{{Gu, Lu, Li, and Li}}}
+\bibcite{gu2016learning}{{38}{2016{b}}{{Gu et~al.}}{{Gu, Neubig, Cho, and Li}}}
+\bibcite{gulcehre2016pointing}{{39}{2016}{{Gulcehre et~al.}}{{Gulcehre, Ahn, Nallapati, Zhou, and Bengio}}}
+\bibcite{gulcehre2018dynamic}{{40}{2018}{{Gulcehre et~al.}}{{Gulcehre, Chandar, Cho, and Bengio}}}
+\bibcite{Gulcehre-Orhan-et-al-2015}{{41}{2015}{{Gulcehre et~al.}}{{Gulcehre, Firat, Xu, Cho, Barrault, Lin, Bougares, Schwenk, and Bengio}}}
+\bibcite{ha2016hypernetworks}{{42}{2016{a}}{{Ha et~al.}}{{Ha, Dai, and Le}}}
+\bibcite{ha2016toward}{{43}{2016{b}}{{Ha et~al.}}{{Ha, Niehues, and Waibel}}}
+\bibcite{hassan-hp}{{44}{2018}{{Hassan et~al.}}{{Hassan, Aue, Chen, Chowdhary, Clark, Federmann, Huang, Junczys{-}Dowmunt, Lewis, Li, Liu, Liu, Luo, Menezes, Qin, Seide, Tan, Tian, Wu, Wu, Xia, Zhang, Zhang, and Zhou}}}
+\bibcite{he2016dual}{{45}{2016}{{He et~al.}}{{He, Xia, Qin, Wang, Yu, Liu, and Ma}}}
+\bibcite{he2015deep}{{46}{2015}{{He et~al.}}{{He, Zhang, Ren, and Sun}}}
+\bibcite{heess2015learning}{{47}{2015}{{Heess et~al.}}{{Heess, Wayne, Silver, Lillicrap, Erez, and Tassa}}}
+\bibcite{hochreiter1997long}{{48}{1997}{{Hochreiter and Schmidhuber}}{{}}}
+\bibcite{hu2015lcsts}{{49}{2015}{{Hu et~al.}}{{Hu, Chen, and Zhu}}}
+\bibcite{jaitly2015online}{{50}{2015}{{Jaitly et~al.}}{{Jaitly, Le, Vinyals, Sutskeyver, and Bengio}}}
+\bibcite{jean2017does}{{51}{2017}{{Jean et~al.}}{{Jean, Lauly, Firat, and Cho}}}
+\bibcite{FAISS}{{52}{2017{a}}{{Johnson et~al.}}{{Johnson, Douze, and J{\'e}gou}}}
+\bibcite{johnson2016google}{{53}{2017{b}}{{Johnson et~al.}}{{Johnson, Schuster, Le, Krikun, Wu, Chen, Thorat, Vi{\'e}gas, Wattenberg, Corrado, Hughes, and Dean}}}
+\bibcite{kaiser2017depthwise}{{54}{2017{a}}{{Kaiser et~al.}}{{Kaiser, Gomez, and Chollet}}}
+\bibcite{kaiser2017learning}{{55}{2017{b}}{{Kaiser et~al.}}{{Kaiser, Nachum, Roy, and Bengio}}}
+\bibcite{kalchbrenner2016neural}{{56}{2016}{{Kalchbrenner et~al.}}{{Kalchbrenner, Espeholt, Simonyan, Oord, Graves, and Kavukcuoglu}}}
+\bibcite{kim2016character}{{57}{2016}{{Kim et~al.}}{{Kim, Jernite, Sontag, and Rush}}}
+\bibcite{kim2016sequence}{{58}{2016}{{Kim and Rush}}{{}}}
+\bibcite{kingma2014adam}{{59}{2014}{{Kingma and Ba}}{{}}}
+\bibcite{koehn2004statistical}{{60}{2004}{{Koehn}}{{}}}
+\bibcite{koehn2017six}{{61}{2017}{{Koehn and Knowles}}{{}}}
+\bibcite{koehn2003statistical}{{62}{2003}{{Koehn et~al.}}{{Koehn, Och, and Marcu}}}
+\bibcite{kurach2015neural}{{63}{2015}{{Kurach et~al.}}{{Kurach, Andrychowicz, and Sutskever}}}
+\bibcite{lake2015human}{{64}{2015}{{Lake et~al.}}{{Lake, Salakhutdinov, and Tenenbaum}}}
+\bibcite{lample2017unsupervised}{{65}{2018}{{Lample et~al.}}{{Lample, Denoyer, and Ranzato}}}
+\bibcite{lee2016fully}{{66}{2016}{{Lee et~al.}}{{Lee, Cho, and Hofmann}}}
+\bibcite{lee2017emergent}{{67}{2017}{{Lee et~al.}}{{Lee, Cho, Weston, and Kiela}}}
+\bibcite{li2016simple}{{68}{2016{a}}{{Li et~al.}}{{Li, Monroe, and Jurafsky}}}
+\bibcite{li2017learning}{{69}{2017}{{Li et~al.}}{{Li, Monroe, and Jurafsky}}}
+\bibcite{li2016phrase}{{70}{2016{b}}{{Li et~al.}}{{Li, Way, and Liu}}}
+\bibcite{lillicrap2015continuous}{{71}{2015}{{Lillicrap et~al.}}{{Lillicrap, Hunt, Pritzel, Heess, Erez, Tassa, Silver, and Wierstra}}}
+\bibcite{lin:2004:ACLsummarization}{{72}{2004}{{Lin}}{{}}}
+\bibcite{lin2004automatic}{{73}{2004}{{Lin and Och}}{{}}}
+\bibcite{luo2016learning}{{74}{2016}{{Luo et~al.}}{{Luo, Chiu, Jaitly, and Sutskever}}}
+\bibcite{luong2015multi}{{75}{2015{a}}{{Luong et~al.}}{{Luong, Le, Sutskever, Vinyals, and Kaiser}}}
+\bibcite{luong2016achieving}{{76}{2016}{{Luong and Manning}}{{}}}
+\bibcite{luong2015effective}{{77}{2015{b}}{{Luong et~al.}}{{Luong, Pham, and Manning}}}
+\bibcite{luong-EtAl:2015:ACL-IJCNLP}{{78}{2015{c}}{{Luong et~al.}}{{Luong, Sutskever, Le, Vinyals, and Zaremba}}}
+\bibcite{martin2010planning}{{79}{2010}{{Martin et~al.}}{{Martin, Crowther, Knight, Tamborello, and Yang}}}
+\bibcite{GaussianMixture}{{80}{1988}{{McLachlan and Basford}}{{}}}
+\bibcite{mieno2015speed}{{81}{2015}{{Mieno et~al.}}{{Mieno, Neubig, Sakti, Toda, and Nakamura}}}
+\bibcite{mikolov2010recurrent}{{82}{2010}{{Mikolov et~al.}}{{Mikolov, Karafi{\'a}t, Burget, Cernock{\`y}, and Khudanpur}}}
+\bibcite{miller2016key}{{83}{2016}{{Miller et~al.}}{{Miller, Fisch, Dodge, Karimi, Bordes, and Weston}}}
+\bibcite{mishra2017meta}{{84}{2017}{{Mishra et~al.}}{{Mishra, Rohaninejad, Chen, and Abbeel}}}
+\bibcite{mnih2014neural}{{85}{2014}{{Mnih and Gregor}}{{}}}
+\bibcite{nadejde2017syntax}{{86}{2017}{{Nadejde et~al.}}{{Nadejde, Reddy, Sennrich, Dwojak, Junczys-Dowmunt, Koehn, and Birch}}}
+\bibcite{nogueira2017task}{{87}{2017}{{Nogueira and Cho}}{{}}}
+\bibcite{oda-EtAl:2014:P14-2}{{88}{2014}{{Oda et~al.}}{{Oda, Neubig, Sakti, Toda, and Nakamura}}}
+\bibcite{papineni2002bleu}{{89}{2002}{{Papineni et~al.}}{{Papineni, Roukos, Ward, and Zhu}}}
+\bibcite{phillips2012modeling}{{90}{2012}{{Phillips}}{{}}}
+\bibcite{pritzel2017neural}{{91}{2017}{{Pritzel et~al.}}{{Pritzel, Uria, Srinivasan, Puigdom{\`e}nech, Vinyals, Hassabis, Wierstra, and Blundell}}}
+\bibcite{sridhar2013segmentation}{{92}{2013}{{Rangarajan~Sridhar et~al.}}{{Rangarajan~Sridhar, Chen, Bangalore, Ljolje, and Chengalvarayan}}}
+\bibcite{ranzato2015sequence}{{93}{2015}{{Ranzato et~al.}}{{Ranzato, Chopra, Auli, and Zaremba}}}
+\bibcite{robbins1951stochastic}{{94}{1951}{{Robbins and Monro}}{{}}}
+\bibcite{rumelhart1986learning}{{95}{1986}{{Rumelhart et~al.}}{{Rumelhart, Hinton, and Williams}}}
+\bibcite{rush2015neural}{{96}{2015}{{Rush et~al.}}{{Rush, Chopra, and Weston}}}
+\bibcite{satija2016simultaneous}{{97}{2016}{{Satija and Pineau}}{{}}}
+\bibcite{sennrich2015improving}{{98}{2015{a}}{{Sennrich et~al.}}{{Sennrich, Haddow, and Birch}}}
+\bibcite{sennrich2015neural}{{99}{2015{b}}{{Sennrich et~al.}}{{Sennrich, Haddow, and Birch}}}
+\bibcite{sennrich2016edinburgh}{{100}{2016}{{Sennrich et~al.}}{{Sennrich, Haddow, and Birch}}}
+\bibcite{shang2015neural}{{101}{2015}{{Shang et~al.}}{{Shang, Lu, and Li}}}
+\bibcite{shazeer2017outrageously}{{102}{2017}{{Shazeer et~al.}}{{Shazeer, Mirhoseini, Maziarz, Davis, Le, Hinton, and Dean}}}
+\bibcite{shen2015minimum}{{103}{2015}{{Shen et~al.}}{{Shen, Cheng, He, He, Wu, Sun, and Liu}}}
+\bibcite{silver2014deterministic}{{104}{2014}{{Silver et~al.}}{{Silver, Lever, Heess, Degris, Wierstra, and Riedmiller}}}
+\bibcite{smith2017offline}{{105}{2017}{{Smith et~al.}}{{Smith, Turban, Hamblin, and Hammerla}}}
+\bibcite{snell2017prototypical}{{106}{2017}{{Snell et~al.}}{{Snell, Swersky, and Zemel}}}
+\bibcite{sordoni2015neural}{{107}{2015}{{Sordoni et~al.}}{{Sordoni, Galley, Auli, Brockett, Ji, Mitchell, Nie, Gao, and Dolan}}}
+\bibcite{srivastava2015highway}{{108}{2015}{{Srivastava et~al.}}{{Srivastava, Greff, and Schmidhuber}}}
+\bibcite{steinberger2006jrc}{{109}{2006}{{Steinberger et~al.}}{{Steinberger, Pouliquen, Widiger, Ignat, Erjavec, Tufis, and Varga}}}
+\bibcite{sukhbaatar2015end}{{110}{2015}{{Sukhbaatar et~al.}}{{Sukhbaatar, Weston, Fergus et~al.}}}
+\bibcite{sutskever2014sequence}{{111}{2014}{{Sutskever et~al.}}{{Sutskever, Vinyals, and Le}}}
+\bibcite{tieleman2012lecture}{{112}{2012}{{Tieleman and Hinton}}{{}}}
+\bibcite{tu2016neural}{{113}{2016{a}}{{Tu et~al.}}{{Tu, Liu, Shang, Liu, and Li}}}
+\bibcite{tu2016modeling}{{114}{2016{b}}{{Tu et~al.}}{{Tu, Lu, Liu, Liu, and Li}}}
+\bibcite{vaswani2017attention}{{115}{2017}{{Vaswani et~al.}}{{Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez, Kaiser, and Polosukhin}}}
+\bibcite{vinyals2016matching}{{116}{2016}{{Vinyals et~al.}}{{Vinyals, Blundell, Lillicrap, Wierstra et~al.}}}
+\bibcite{vinyals2015pointer}{{117}{2015{a}}{{Vinyals et~al.}}{{Vinyals, Fortunato, and Jaitly}}}
+\bibcite{vinyals2015grammar}{{118}{2015{b}}{{Vinyals et~al.}}{{Vinyals, Kaiser, Koo, Petrov, Sutskever, and Hinton}}}
+\bibcite{vinyals2015neural}{{119}{2015}{{Vinyals and Le}}{{}}}
+\bibcite{wang2017exploiting}{{120}{2017}{{Wang et~al.}}{{Wang, Tu, Way, and Liu}}}
+\bibcite{weston2014memory}{{121}{2014}{{Weston et~al.}}{{Weston, Chopra, and Bordes}}}
+\bibcite{williams1992simple}{{122}{1992}{{Williams}}{{}}}
+\bibcite{wiseman2016sequence}{{123}{2016}{{Wiseman and Rush}}{{}}}
+\bibcite{wu2016google}{{124}{2016}{{{Wu} et~al.}}{{{Wu}, {Schuster}, {Chen}, {Le}, {Norouzi}, {Macherey}, {Krikun}, {Cao}, {Gao}, {Macherey}, {Klingner}, {Shah}, {Johnson}, {Liu}, {Kaiser}, {Gouws}, {Kato}, {Kudo}, {Kazawa}, {Stevens}, {Kurian}, {Patil}, {Wang}, {Young}, {Smith}, {Riesa}, {Rudnick}, {Vinyals}, {Corrado}, {Hughes}, and {Dean}}}}
+\bibcite{yang2018unsupervised}{{125}{2018}{{Yang et~al.}}{{Yang, Chen, Wang, and Xu}}}
+\bibcite{yarmohammadi2013incremental}{{126}{2013}{{Yarmohammadi et~al.}}{{Yarmohammadi, Sridhar, Bangalore, and Sankaran}}}
+\bibcite{yu2016online}{{127}{2016}{{Yu et~al.}}{{Yu, Buys, and Blunsom}}}
+\bibcite{zeiler2012adadelta}{{128}{2012}{{Zeiler}}{{}}}
+\bibcite{zhang2016exploiting}{{129}{2016}{{Zhang and Zong}}{{}}}
+\bibcite{Zhang2005AnEP}{{130}{2005}{{Zhang and Vogel}}{{}}}
+\bibcite{zoph2016multi}{{131}{2016}{{Zoph and Knight}}{{}}}
+\bibcite{zoph2016transfer}{{132}{2016}{{Zoph et~al.}}{{Zoph, Yuret, May, and Knight}}}
+\@input{publications.aux}
