@@ -98,7 +98,6 @@
 \usepackage{bbding}
 
 \usepackage{kotex}
-
 \usepackage{textcomp}
 \usepackage{url}
 \usepackage{hyperref}
@@ -116,8 +115,14 @@
     #4
 \end{minipage}%
 }
-%\aclfina
 
+\newcommand*{\printdate}{%
+   \ifcase \month\or January\or February\or March\or April\or May\or June\or July\or
+    August\or September\or October\or November\or December\fi \space \number\year}
+
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
 
 % other definition used in copynet
 \input{MACPdef}
@@ -128,10 +133,10 @@
 % Title
 \title{Efficient Neural Machine Translation}
 \author{Jiatao Gu}
-\principaladviser{Victor O.K. Li}
-\firstreader{Maggie Li}
-\secondreader{Kaibin Huang}
-\thirdreader{Laurence Young}
+\principaladviser{Prof. Victor O.K. Li}
+%\firstreader{Maggie Li}
+%\secondreader{Kaibin Huang}
+%\thirdreader{Laurence Young}
 
 % Preface
 \beforepreface
@@ -188,6 +193,7 @@
 
 \bibliographystyle{acl}
 \bibliography{ref}
+
 
 \include{publications}
 \cleardoublepage % Force a break to an odd page

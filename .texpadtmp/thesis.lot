@@ -1,23 +1,23 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Examples of synthetic rules and examples\relax }}{27}{table.caption.28}
-\contentsline {table}{\numberline {3.2}{\ignorespaces The test accuracy (\%) on synthetic data.\relax }}{28}{table.caption.30}
-\contentsline {table}{\numberline {3.3}{\ignorespaces The statistics of the LCSTS dataset.\relax }}{29}{table.caption.33}
-\contentsline {table}{\numberline {3.4}{\ignorespaces Testing performance of LCSTS, where ``RNN" is canonical Enc-Dec, and ``RNN context" its attentive variant.\relax }}{30}{table.caption.35}
-\contentsline {table}{\numberline {3.5}{\ignorespaces The decoding accuracy on the two testing sets. Decoding is admitted success only when the answer is found exactly in the Top-K outputs. \relax }}{34}{table.caption.41}
+\contentsline {table}{\numberline {3.1}{\ignorespaces Examples of synthetic rules and examples\relax }}{26}{table.caption.28}
+\contentsline {table}{\numberline {3.2}{\ignorespaces The test accuracy (\%) on synthetic data.\relax }}{27}{table.caption.30}
+\contentsline {table}{\numberline {3.3}{\ignorespaces The statistics of the LCSTS dataset.\relax }}{28}{table.caption.33}
+\contentsline {table}{\numberline {3.4}{\ignorespaces Testing performance of LCSTS, where ``RNN" is canonical Enc-Dec, and ``RNN context" its attentive variant.\relax }}{29}{table.caption.35}
+\contentsline {table}{\numberline {3.5}{\ignorespaces The decoding accuracy on the two testing sets. Decoding is admitted success only when the answer is found exactly in the Top-K outputs. \relax }}{33}{table.caption.41}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Statistics from the JRC-Acquis corpus. We use BPE subword symbols.\relax }}{46}{table.caption.53}
-\contentsline {table}{\numberline {4.2}{\ignorespaces The BLEU scores on JRC-Acquis corpus.\relax }}{47}{table.caption.56}
+\contentsline {table}{\numberline {4.1}{\ignorespaces Statistics from the JRC-Acquis corpus. We use BPE subword symbols.\relax }}{45}{table.caption.53}
+\contentsline {table}{\numberline {4.2}{\ignorespaces The BLEU scores on JRC-Acquis corpus.\relax }}{46}{table.caption.56}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Statistics of the available parallel resource for extremely low-resource languages in our experiments. All are translated to English.\relax }}{64}{table.caption.76}
-\contentsline {table}{\numberline {5.2}{\ignorespaces Statistics of the available parallel resource in our experiments. All the languages are translated to English.\relax }}{64}{table.caption.77}
-\contentsline {table}{\numberline {5.3}{\ignorespaces Scores over variant source languages (6k sentences for Ro \& Lv, and 10k for Ko). ``Multi" means the Multi-lingual NMT baseline.\relax }}{66}{table.caption.83}
-\contentsline {table}{\numberline {5.4}{\ignorespaces BLEU scores evaluated on test set (6k), compared with ULR and MoLE. ``vanilla" is the standard NMT system trained only on Ro-En training set\relax }}{68}{table.caption.87}
+\contentsline {table}{\numberline {5.1}{\ignorespaces Statistics of the available parallel resource for extremely low-resource languages in our experiments. All are translated to English.\relax }}{63}{table.caption.76}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Statistics of the available parallel resource in our experiments. All the languages are translated to English.\relax }}{63}{table.caption.77}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Scores over variant source languages (6k sentences for Ro \& Lv, and 10k for Ko). ``Multi" means the Multi-lingual NMT baseline.\relax }}{65}{table.caption.83}
+\contentsline {table}{\numberline {5.4}{\ignorespaces BLEU scores evaluated on test set (6k), compared with ULR and MoLE. ``vanilla" is the standard NMT system trained only on Ro-En training set\relax }}{67}{table.caption.87}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces Statistics of full datasets of the target language pairs. BLEU scores on the dev and test sets are reported from a supervised Transformer model with the same architecture.\relax }}{82}{table.caption.104}
-\contentsline {table}{\numberline {6.2}{\ignorespaces BLEU Scores w.r.t. the source task set for all five target tasks.\relax }}{87}{table.caption.117}
-\contentsline {table}{\numberline {6.3}{\ignorespaces Sample translations for Tr-En and Ko-En highlight the impact of fine-tuning which results in syntactically better formed translations. We highlight tokens of interest in terms of reordering. \relax }}{88}{table.caption.118}
+\contentsline {table}{\numberline {6.1}{\ignorespaces Statistics of full datasets of the target language pairs. BLEU scores on the dev and test sets are reported from a supervised Transformer model with the same architecture.\relax }}{81}{table.caption.104}
+\contentsline {table}{\numberline {6.2}{\ignorespaces BLEU Scores w.r.t. the source task set for all five target tasks.\relax }}{86}{table.caption.117}
+\contentsline {table}{\numberline {6.3}{\ignorespaces Sample translations for Tr-En and Ko-En highlight the impact of fine-tuning which results in syntactically better formed translations. We highlight tokens of interest in terms of reordering. \relax }}{87}{table.caption.118}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {8.1}{\ignorespaces Dataset statistics (\# of sentence pairs).\relax }}{119}{table.caption.154}

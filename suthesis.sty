@@ -485,6 +485,21 @@ of Doctor of Philosophy.
 \end{minipage}
 \end{flushright}}
 
+\long\def\selfsignature#1{%
+\begin{flushright}
+\begin{minipage}{5in}
+\parindent=0pt
+I declare that this thesis represents my own work, except where due acknowledgmentis made, and that it has not been previously included in a thesis, dissertation orreport submitted to this University or to any other institution for a degree diplomaor other qualifications.
+\par
+\vspace{\signaturespace}
+%\hbox to 4in{\hfil\shortstack{\vrule width 3in height 0.4pt\\ #1}}
+\hbox to 5in{\hfil\begin{tabular}{@{}l@{}}\vrule width 3in height
+    0.4pt depth 0pt\\ #1\end{tabular}}
+\end{minipage}
+\end{flushright}}
+
+
+
 \long\def\ucgssignature{%
 \begin{flushright}
 \begin{minipage}{5in}
@@ -504,6 +519,7 @@ of Doctor of Philosophy.
 \def\thepage{}
 \thispagestyle{myheadings}
 \markboth{\rm \@author}{\rm \@author}\fi
+\selfsignature{\@author}\vfill
 \signature{(\@principaladviser)\quad Principal \advis@r}
   \vfill
 % if second principal advisor
@@ -524,7 +540,7 @@ of Doctor of Philosophy.
         \if*\@fourthreader \else 
         \signature{(\@fourthreader)}
         \vfill\fi
-\ucgssignature
+%\ucgssignature
 }
 
 \def\onlinesignature{
@@ -549,6 +565,7 @@ of Doctor of Philosophy.
 \def\prefacesection#1{%
         \chapter*{#1}
         \addcontentsline{toc}{chapter}{#1}}
+
 
 \def\afterpreface{\newpage
         \tableofcontents

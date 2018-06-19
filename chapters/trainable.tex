@@ -3,7 +3,9 @@
 
 As we have introduced in Chapter \ref{background}, neural machine translation has recently become a method of choice in machine translation research.  
 A typical scenario of  NMT starts with training a model to maximize its log-likelihood. That is, we often train a model to maximize the conditional probability of a reference translation given a source sentence over a large parallel corpus. 
-Once the model is trained in this way, it defines the conditional distribution over all possible translations given a source sentence, and the task of translation becomes equivalent to finding a translation to which the model assigns the highest conditional probability. Since it is computationally intractable to do so exactly, it is a usual practice to resort to approximate search/decoding algorithms such as greedy decoding or beam search. Despite its preferable computational complexity, greedy decoding has been over time found to be undesirably sub-optimal; In contrast, beam search can usually achieve a better translation by searching in beams, whereas  the computational complexity grows linearly w.r.t. the size of beam. 
+Once the model is trained in this way, it defines the conditional distribution over all possible translations given a source sentence, and the task of translation becomes  finding a translation to which the model assigns the highest conditional probability. 
+Since it is computationally intractable to do so exactly, it is a usual practice to resort to approximate search/decoding algorithms such as greedy decoding or beam search. 
+Despite its preferable computational complexity, greedy decoding has been found over time to be undesirably sub-optimal. In contrast, beam search can usually achieve a better translation by searching in beams, whereas  the computational complexity grows linearly w.r.t. the size of beam. 
 In this scenario, we have identified two points where improvements could be made. They are (1) training (including the selection of a model architecture) and (2) decoding.
 
 
@@ -462,7 +464,7 @@ We present the improvements of BLEU and perplexity (or its negation) in Fig.~\re
   %\vspace{-1mm}
   (b) Beam Search + Trainable Greedy Decoding
   
-  \caption{
+  \caption[The plots draw the improvements by the trainable greedy decoding on the test set.]{
   \label{cp7.fig.result1}
 The plots draw the improvements by the trainable greedy decoding on the test set. The x-axes correspond to the objectives used to train trainable greedy decoding, and the y-axes to the changes in the achieved objectives (BLEU for the figures on the left, and negative perplexity on the right.) The top row (a) shows the cases when the trainable greedy decoder is used on its own, and the bottom row (b) when it is used together with beam search. When training and evaluation are both done with BLEU, we test the statistical significance \citep{koehn2004statistical}, and we mark significant cases with red stars ($p < 0.05$.) 
 The underlying neural machine translation models achieved the BLEU scores of 14.49/16.20 for En-Cs, 18.90/21.20 for Cs-En, 18.97/21.33 for En-De, 21.63/24.46 for De-En, 16.97/19.68 for En-Ru, 21.06/23.34 for Ru-En, 7.53/8.82 for En-Fi and 9.79/11.03 for Fi-En (greedy/beam).
@@ -523,8 +525,8 @@ In Fig.~\ref{cp7.fig.exp}, we present three examples from Ru-En. We defined the 
 In this chapter, we proposed a general idea of trainable greedy decoding as a way to learn a decoding algorithm for neural machine translation with an arbitrary decoding objective. The proposed trainable greedy decoder observes and manipulates the hidden state of a trained neural translation system, and is trained by a novel variant of deterministic policy gradient, called critic-aware actor learning. 
 Our extensive experiments on eight language pair-directions and two objectives confirmed its validity and usefulness. 
 
-The proposed trainable greedy decoding is a generic idea that can be applied to any (conditional) language modeling, for instance, mage caption generating and dialogue modeling. It can also greatly help to overcome the inefficiency issue for the conventional NMT decoding, by training the greedy decoding algorithm to achieve a close translation performance which requires costly beam-search.
+The proposed trainable greedy decoding is a generic idea that can be applied to any (conditional) language modeling, for instance, image caption generation and dialogue modeling. It can also greatly help to overcome the inefficiency issue for the conventional NMT decoding, by training the greedy decoding algorithm to achieve a close translation performance which requires costly beam-search.
 
-However, the proposed algorithm still relies on the generic form of auto-regressive decoding based on RNNs (as discussed in detail in Chapter~\ref{background}), which means that, no matter how hard we tried to train the decoding algorithm, we cannot avoid the autoregressive nature of the generation which has a complexity of linear to the decoded sentence length. In the next chapter, we will introduce one way which is the first attempt in NMT that can fundamentally remove the restriction of ``autoregressive'' decoding whereas keep a similar translation performance.
+However, the proposed algorithm still relies on the generic form of auto-regressive decoding based on RNNs (as discussed in detail in Chapter~\ref{background}), which means that, no matter how hard we tried to train the decoding algorithm, we cannot avoid the autoregressive nature of the generation which has a complexity of linear to the decoded sentence length. In the next chapter, we will introduce one way which is the first attempt in NMT to fundamentally remove the restriction of ``autoregressive'' decoding while keeping a similar translation performance.
 
 %and we anticipate future research both on the fundamentals of the trainable decoding as well as on the applications to more diverse tasks such as image caption generating and dialogue modeling.

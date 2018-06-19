@@ -442,12 +442,12 @@ We also show more detailed analysis and the overall schematic structure in this 
 
 
 \section{Conclusion and Next Chapter}
-In this chapter, we introduce a latent variable model for non-autoregressive machine translation that enables a decoder based on \citet{vaswani2017attention} to take full advantage of its exceptional degree of internal parallelism even at inference time. As a result, we measure translation latencies of one-tenth that of an equal-sized autoregressive model, while maintaining competitive BLEU scores. As the first attempt, the proposed method also broads a new research direction which allows us to explore on the non-autoregressive decoding.
+In this chapter, we introduce a latent variable model for non-autoregressive machine translation that enables a decoder based on \citet{vaswani2017attention} to take full advantage of its exceptional degree of internal parallelism even at inference time. As a result, we enjoy translation latencies of one-tenth that of an equal-sized autoregressive model, while maintaining competitive BLEU scores. As the first attempt, the proposed method also biazes a new research direction to explore non-autoregressive decoding.
 
-Although the proposed \model{} aims to overcome the fundamental restriction of the existing NMT models that relies on autoregressive decoding.
-There still exists one situation of inefficiency in the decoding of all NMT models, that is,  real-time translation (or so-called simultaneous translation).
-Because all the NMT models we discussed up to now (including the proposed \model{}) assumes the model to read the whole source sentence before start to translate, which means the MT system has to wait until the speaker finish his words.
-It is not suitable for cases where timing is very important, e,g. international conference. In the next chapter, we will demonstrate one method which can help to do real-time translation using NMT.
+Although the proposed \model{} aims to overcome the fundamental restriction of the existing NMT models that rely on autoregressive decoding,
+there still exists one situation of inefficiency in the decoding of all NMT models, that is,  real-time translation (or so-called simultaneous translation).
+Since all the NMT models we discussed up to now (including the proposed \model{}) assumes the model to read the whole source sentence before starting to translate,  the MT system has to wait until the speaker finishes his words.
+It is not suitable for cases where timing is very important, e.g. simultaneous translation in international events. In the next chapter, we will demonstrate one method which can do real-time translation using NMT.
 
 
   

@@ -27,10 +27,10 @@ We extensively evaluate the effectiveness and generalizing ability of the propos
 
 In the machine learning community, meta-learning, or learning-to-learn, has recently received interests. Meta-learning tries to solve the problem of “fast adaptation on new training data.”  One of the most successful applications of meta-learning has been on few-shot (or one-shot) learning~\citep{lake2015human}, where a neural network is trained to readily learn to classify inputs based on only one or a few training examples. There are two categories of meta-learning:
 \begin{enumerate}
-    \item learning a meta-policy for updating model parameters~\citep[see, e.g.,][]{andrychowicz2016learning,ha2016hypernetworks,mishra2017meta}
+    \item learning a meta-policy for updating model parameters~\citep[see, e.g.,][]{andrychowicz2016learning,ha2016hypernetworks,mishra2017meta}.
     \item  learning a good parameter initialization for fast adaptation~\citep[see, e.g.,][]{finn2017model,vinyals2016matching,snell2017prototypical}. 
 \end{enumerate}
-In this paper, we propose to use a meta-learning algorithm for low-resource neural machine translation based on the second category. More specifically, we extend the idea of model-agnostic meta-learning~\citep[MAML,][]{finn2017model} in the multilingual scenario.
+In this chapter, we propose to use a meta-learning algorithm for low-resource neural machine translation based on the second category. More specifically, we extend the idea of model-agnostic meta-learning~\citep[MAML,][]{finn2017model} in the multilingual scenario.
 
 % KC: unnecessary here. we will explain the method in detail right below.
 % Take the latter as an example, it can be summarized as repeating the following two steps: (1) simulate an episode by sampling a small amounts of training data and “train” a model starting from the meta-model; (2) based on evaluation of the “trained” model, update the meta-model. The ultimate goal of meta-learning and few-shot learning is the same for the case of low resource translation, but there is hardly any work investigating meta-learning for sequence generation tasks such as machine translation. 
@@ -152,7 +152,6 @@ to approximate the meta-gradient:\footnote{We omit the subscript $k$ for simplic
     \right],
 \end{split}
 \end{equation}
-
 % \begin{align*}
 %     \nabla_\theta & \mathcal{L}^{D'}(\theta'_k) = \nabla_{\theta'_k} \mathcal{L}^{k'}(\theta'_k) 
 %     \nabla_{\theta}(\theta - \eta \nabla_{\theta} \mathcal{L}^{k}(\theta)) \\
@@ -773,8 +772,8 @@ We present some sample translations from the tested models in Table~\ref{cp6.tab
 
 \section{Conclusion and Next Chapter}
 
-In this chapter, we proposed a meta-learning algorithm for low-resource neural machine translation that exploits the availability of high-resource languages pairs. We based the proposed algorithm on the recently proposed model-agnostic meta-learning and adapted it to work with multiple languages that do not share a common vocabulary using the technique of universal lexcal representation, resulting in MetaNMT. Our extensive evaluation, using 18 high-resource source tasks and 5 low-resource target tasks, has shown that the proposed MetaNMT significantly outperforms the existing approach of multilingual, transfer learning in low-resource neural machine translation across all the language pairs considered.
+In this chapter, we proposed a meta-learning algorithm for low-resource neural machine translation that exploits the availability of high-resource language pairs. We based the proposed algorithm on the recently proposed model-agnostic meta-learning and adapted it to work with multiple languages that do not share a common vocabulary using the technique of universal lexical representation, resulting in MetaNMT. Our extensive evaluation, using 18 high-resource source tasks and 5 low-resource target tasks, has shown that the proposed MetaNMT significantly outperforms the existing approach of multilingual, transfer learning in low-resource neural machine translation across all the language pairs considered.
 
-The proposed approach opens new opportunities for neural machine translation. First, it is a principled framework for incorporating various extra sources of data, such as source- and target-side monolingual corpora. Second, it is a generic framework that can easily accommodate existing and future neural machine translation systems. 
+The proposed approach opens new opportunities for neural machine translation. First, it is a framework for incorporating various extra sources of data, such as source- and target-side monolingual corpora. Second, it is a generic framework that can easily accommodate existing and future neural machine translation systems. 
 
-Up to now we have basically introduced one direction of achieving a data-efficient neural machine translation system. From the next chapter, we will further investigate another important component of the existing NMT, i.e., decoding. We will first start to introduce a general learning framework -- {\it trainable decoding} --which can learn to build an efficient decoding in a principle way.
+Up to now we have basically introduced one direction of achieving a data-efficient neural machine translation system. From the next chapter, we will further investigate another important component of the existing NMT, i.e., decoding. We will first start to introduce a general learning framework -- {\it trainable decoding} --which can learn to build a decoding-efficient NMT system.

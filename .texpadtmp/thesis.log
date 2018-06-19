@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.8.31)  17 JUN 2018 17:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.8.31)  20 JUN 2018 05:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1561,40 +1561,40 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 \Hy@SectionHShift=\skip93
 ) (./MACPdef.tex)
 
-Package csquotes Warning: Load 'inputenc' before 'csquotes' on input line 126.
+Package csquotes Warning: Load 'inputenc' before 'csquotes' on input line 131.
 
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
 (/Users/jiataogu/Dropbox/Thesis/Efficient-Neural-Machine-Translation/.texpadtmp/thesis.aux (/Users/jiataogu/Dropbox/Thesis/Efficient-Neural-Machine-Translation/.texpadtmp/publications.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for LUC/nanummj/m/n on input line 126.
-LaTeX Font Info:    Try loading font information for LUC+nanummj on input line 126.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for LUC/nanummj/m/n on input line 131.
+LaTeX Font Info:    Try loading font information for LUC+nanummj on input line 131.
  (/usr/local/texlive/2014/texmf-dist/tex/latex/nanumtype1/lucnanummj.fd
 File: lucnanummj.fd 2013/02/12 v0.1 Nanum Myeongjo font definitions
 )
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 126.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 126.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 131.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 131.
  (/usr/local/texlive/2014/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 126.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 131.
  (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 ) (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
@@ -1629,7 +1629,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box101
-Package hyperref Info: Link coloring OFF on input line 126.
+Package hyperref Info: Link coloring OFF on input line 131.
  (/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
  (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -1637,36 +1637,36 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count312
 )
-LaTeX Info: Redefining \ref on input line 126.
-LaTeX Info: Redefining \pageref on input line 126.
-LaTeX Info: Redefining \nameref on input line 126.
+LaTeX Info: Redefining \ref on input line 131.
+LaTeX Info: Redefining \pageref on input line 131.
+LaTeX Info: Redefining \nameref on input line 131.
  (/Users/jiataogu/Dropbox/Thesis/Efficient-Neural-Machine-Translation/.texpadtmp/thesis.out) (/Users/jiataogu/Dropbox/Thesis/Efficient-Neural-Machine-Translation/.texpadtmp/thesis.out)
 \@outlinefile=\write5
 \openout5 = `thesis.out'.
 
 \c__siunitx_mathsf_int=\count313
-LaTeX Font Info:    Try loading font information for U+lasy on input line 126.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 131.
  (/usr/local/texlive/2014/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 126.
+LaTeX Font Info:    Try loading font information for U+msa on input line 131.
  (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 126.
+LaTeX Font Info:    Try loading font information for U+msb on input line 131.
  (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+stmry on input line 126.
+LaTeX Font Info:    Try loading font information for U+stmry on input line 131.
  (/usr/local/texlive/2014/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 126.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 131.
  (/usr/local/texlive/2014/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 126.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 131.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 126.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 131.
 \c__siunitx_mathtt_int=\count314
 Package epstopdf Info: Source file: <figs/hku.eps>
 (epstopdf)                    date: 2018-06-07 16:11:10
@@ -1675,39 +1675,41 @@ Package epstopdf Info: Source file: <figs/hku.eps>
 (epstopdf)                    date: 2018-06-07 16:14:00
 (epstopdf)                    size: 45659 bytes
 (epstopdf)             Command: <repstopdf --outfile=figs/hku-eps-converted-to.pdf figs/hku.eps>
-(epstopdf)             \includegraphics on input line 137.
+(epstopdf)             \includegraphics on input line 142.
 Package epstopdf Info: Output file is already uptodate.
- <figs/hku-eps-converted-to.pdf, id=505, 328.22626pt x 371.3875pt>
+ <figs/hku-eps-converted-to.pdf, id=509, 328.22626pt x 371.3875pt>
 File: figs/hku-eps-converted-to.pdf Graphic file (type pdf)
  <use figs/hku-eps-converted-to.pdf>
-Package pdftex.def Info: figs/hku-eps-converted-to.pdf used on input line 137.
+Package pdftex.def Info: figs/hku-eps-converted-to.pdf used on input line 142.
 (pdftex.def)             Requested size: 85.35826pt x 96.58113pt.
  [1
 
 {/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./figs/hku-eps-converted-to.pdf>]
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 137.
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 142.
  (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ) [2] [3] (./preface.tex
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 8.
  [4
 
 
-]) (./ack.tex [5]) [6
+]) (./ack.tex [5] [6
 
-] (/Users/jiataogu/Dropbox/Thesis/Efficient-Neural-Machine-Translation/.texpadtmp/thesis.toc
+] [7]) [8] (/Users/jiataogu/Dropbox/Thesis/Efficient-Neural-Machine-Translation/.texpadtmp/thesis.toc
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 29.
- [7
+ [9
 
-] [8] [9] [10])
+] [10] [11] [12])
 \tf@toc=\write6
 \openout6 = `thesis.toc'.
 
- [11] (/Users/jiataogu/Dropbox/Thesis/Efficient-Neural-Machine-Translation/.texpadtmp/thesis.lot [12
+ [13] (/Users/jiataogu/Dropbox/Thesis/Efficient-Neural-Machine-Translation/.texpadtmp/thesis.lot [14
 
 ]
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 24.
@@ -1717,14 +1719,19 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 \tf@lot=\write7
 \openout7 = `thesis.lot'.
 
- [13] (/Users/jiataogu/Dropbox/Thesis/Efficient-Neural-Machine-Translation/.texpadtmp/thesis.lof
+ [15] (/Users/jiataogu/Dropbox/Thesis/Efficient-Neural-Machine-Translation/.texpadtmp/thesis.lof
 Overfull \hbox (3.4885pt too wide) in paragraph at lines 6--6
  [][] [][]\OT1/ptm/m/n/12 An il-lus-tra-tion of the com-par-i-son be-tween the con-ven-tional \OT1/ptm/m/sc/12 Seq2Seq \OT1/ptm/m/n/12 learn- 
  []
 
-[14
+[16
 
-] [15]
+]
+Overfull \hbox (8.52808pt too wide) in paragraph at lines 23--23
+ \OT1/ptm/m/n/12 parts are trained within the NMT model while un-shaded parts are not changed 
+ []
+
+[17]
 Overfull \hbox (0.76457pt too wide) in paragraph at lines 30--30
  [][] [][]\OT1/ptm/m/n/12 The graph-i-cal il-lus-tra-tion of the train-ing pro-cess of the pro-posed MetaNMT. 
  []
@@ -1735,12 +1742,12 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 32.
- [16] [17]
+ [18]
 Overfull \hbox (0.789pt too wide) in paragraph at lines 44--44
  [][] [][]\OT1/ptm/m/n/12 Three Ru-En ex-am-ples in which the dif-fer-ence be-tween the train-able greedy 
  []
 
-[18] [19]
+[19] [20]
 Overfull \hbox (0.44093pt too wide) in paragraph at lines 69--69
  [][] [][]\OT1/ptm/m/n/12 Comparison of DE$\OMS/cmsy/m/n/12 !$\OT1/ptm/m/n/12 EN ex-am-ples us-ing the pro-posed frame-work and usual 
  []
@@ -1749,12 +1756,9 @@ Overfull \hbox (0.44093pt too wide) in paragraph at lines 69--69
 \tf@lof=\write8
 \openout8 = `thesis.lof'.
 
- [20]
+ [21]
 Chapter 1.
-(./chapters/intro.tex
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
- <figs/intro/tower_of_babel.jpg, id=1027, 1284.8pt x 812.03375pt>
+(./chapters/intro.tex <figs/intro/tower_of_babel.jpg, id=1021, 1284.8pt x 812.03375pt>
 File: figs/intro/tower_of_babel.jpg Graphic file (type jpg)
  <use figs/intro/tower_of_babel.jpg>
 Package pdftex.def Info: figs/intro/tower_of_babel.jpg used on input line 9.
@@ -1767,12 +1771,12 @@ LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
 (Font)              Font shape `U/lasy/m/n' tried instead on input line 36.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
 (Font)              Font shape `U/lasy/m/n' tried instead on input line 36.
- <figs/intro/corpus_size.png, id=1063, 608.2725pt x 591.20876pt>
+ <figs/intro/corpus_size.png, id=1058, 608.2725pt x 591.20876pt>
 File: figs/intro/corpus_size.png Graphic file (type png)
  <use figs/intro/corpus_size.png>
 Package pdftex.def Info: figs/intro/corpus_size.png used on input line 40.
 (pdftex.def)             Requested size: 260.17464pt x 252.87968pt.
- [3] <figs/intro/real_time.jpg, id=1083, 144.54pt x 127.55655pt>
+ [3] <figs/intro/real_time.jpg, id=1079, 144.54pt x 127.55655pt>
 File: figs/intro/real_time.jpg Graphic file (type jpg)
  <use figs/intro/real_time.jpg>
 Package pdftex.def Info: figs/intro/real_time.jpg used on input line 50.
@@ -1788,7 +1792,7 @@ LaTeX Font Warning: Command \large invalid in math mode on input line 34.
 [9]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/sc' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/sc' tried instead on input line 44.
- [10] <figs/background/s2s_att.pdf, id=1160, 763.85374pt x 296.10625pt>
+ [10] <figs/background/s2s_att.pdf, id=1159, 763.85374pt x 296.10625pt>
 File: figs/background/s2s_att.pdf Graphic file (type pdf)
  <use figs/background/s2s_att.pdf>
 Package pdftex.def Info: figs/background/s2s_att.pdf used on input line 67.
@@ -1796,16 +1800,16 @@ Package pdftex.def Info: figs/background/s2s_att.pdf used on input line 67.
  [11 <./figs/background/s2s_att.pdf>]
 
 pdfTeX warning: /usr/local/texlive/2014/bin/x86_64-darwin/pdflatex (file ./figs/background/transformer.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/background/transformer.pdf, id=1205, 701.62125pt x 431.36156pt>
+<figs/background/transformer.pdf, id=1202, 701.62125pt x 431.36156pt>
 File: figs/background/transformer.pdf Graphic file (type pdf)
  <use figs/background/transformer.pdf>
 Package pdftex.def Info: figs/background/transformer.pdf used on input line 91.
 (pdftex.def)             Requested size: 433.62pt x 266.59889pt.
  [12] [13 <./figs/background/transformer.pdf>] [14] [15]
 
-LaTeX Font Warning: Command \large invalid in math mode on input line 171.
+LaTeX Font Warning: Command \large invalid in math mode on input line 170.
 
-[16]) [17] [18
+) [16] [17
 
 ]
 Chapter 3.
@@ -1813,37 +1817,37 @@ Chapter 3.
 LaTeX Font Info:    Try loading font information for OT1+phv on input line 6.
  (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
-) [19
+) [18
 
 ]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/sc' in size <17.28> not available
 (Font)              Font shape `OT1/ptm/b/sc' tried instead on input line 27.
- <figs/copynet/model-x.pdf, id=1314, 728.7225pt x 339.2675pt>
+ <figs/copynet/model-x.pdf, id=1306, 728.7225pt x 339.2675pt>
 File: figs/copynet/model-x.pdf Graphic file (type pdf)
  <use figs/copynet/model-x.pdf>
 Package pdftex.def Info: figs/copynet/model-x.pdf used on input line 33.
 (pdftex.def)             Requested size: 433.62pt x 201.87442pt.
- [20] [21 <./figs/copynet/model-x.pdf>]
+ [19] [20 <./figs/copynet/model-x.pdf>]
 Overfull \hbox (7.4138pt too wide) in paragraph at lines 50--51
 \OT1/ptm/m/n/12 read" to $\OT1/cmr/bx/n/12 M$\OT1/ptm/m/n/12 , which leads to a pow-er-ful hy-brid of content-based ad-dress-ing and location-
  []
 
-[22]
+[21]
 Overfull \hbox (8.4197pt too wide) in paragraph at lines 116--117
  []\OT1/ptm/b/n/12 Generate-Mode:[]  \OT1/ptm/m/n/12 The same scor-ing func-tion as in the generic RNN encoder-decoder ([]Bah-
  []
 
-<figs/copynet/oov.pdf, id=1412, 392.46625pt x 225.84375pt>
+<figs/copynet/oov.pdf, id=1405, 392.46625pt x 225.84375pt>
 File: figs/copynet/oov.pdf Graphic file (type pdf)
  <use figs/copynet/oov.pdf>
 Package pdftex.def Info: figs/copynet/oov.pdf used on input line 134.
 (pdftex.def)             Requested size: 368.57964pt x 212.11049pt.
- [23] [24 <./figs/copynet/oov.pdf>] [25] [26] [27] <figs/copynet/syn2.pdf, id=1486, 801.99625pt x 391.4625pt>
+ [22] [23 <./figs/copynet/oov.pdf>] [24] [25] [26] <figs/copynet/syn2.pdf, id=1479, 801.99625pt x 391.4625pt>
 File: figs/copynet/syn2.pdf Graphic file (type pdf)
  <use figs/copynet/syn2.pdf>
 Package pdftex.def Info: figs/copynet/syn2.pdf used on input line 335.
 (pdftex.def)             Requested size: 424.94574pt x 207.42635pt.
- [28] [29 <./figs/copynet/syn2.pdf>] <figs/copynet/summaryXYZ.pdf, id=1562, 693.59125pt x 988.69376pt>
+ [27] [28 <./figs/copynet/syn2.pdf>] <figs/copynet/summaryXYZ.pdf, id=1555, 693.59125pt x 988.69376pt>
 File: figs/copynet/summaryXYZ.pdf Graphic file (type pdf)
  <use figs/copynet/summaryXYZ.pdf>
 Package pdftex.def Info: figs/copynet/summaryXYZ.pdf used on input line 411.
@@ -1852,35 +1856,40 @@ Package pdftex.def Info: figs/copynet/summaryXYZ.pdf used on input line 411.
 
 LaTeX Warning: Float too large for page by 22.52078pt on input line 413.
 
-[30] [31 <./figs/copynet/summaryXYZ.pdf>]
+[29] [30 <./figs/copynet/summaryXYZ.pdf>]
 LaTeX Font Info:    Try loading font information for LUC+uhcmj on input line 439.
  (/usr/local/texlive/2014/texmf-dist/tex/latex/kotex-utf/lucuhcmj.fd
 File: lucuhcmj.fd 2013/09/26 UHC Myeongjo font definitions
-) <figs/copynet/ds-exp-rX.pdf, id=1617, 590.205pt x 257.96375pt>
+) <figs/copynet/ds-exp-rX.pdf, id=1610, 590.205pt x 257.96375pt>
 File: figs/copynet/ds-exp-rX.pdf Graphic file (type pdf)
  <use figs/copynet/ds-exp-rX.pdf>
 Package pdftex.def Info: figs/copynet/ds-exp-rX.pdf used on input line 452.
 (pdftex.def)             Requested size: 429.28616pt x 187.63493pt.
- [32] [33 <./figs/copynet/ds-exp-rX.pdf>] [34]
+ [31] [32 <./figs/copynet/ds-exp-rX.pdf>] [33]
 Overfull \hbox (7.52089pt too wide) in paragraph at lines 498--499
 \OT1/ptm/m/n/12 In this chap-ter, we pro-posed \OT1/ptm/m/sc/12 Copy-Net \OT1/ptm/m/n/12 to in-cor-po-rate copy-ing into the sequence-to-sequence
  []
 
-) [35]
+) [34]
 Chapter 4.
-(./chapters/seg.tex [36
+(./chapters/seg.tex
+Overfull \hbox (2.3356pt too wide) in paragraph at lines 7--8
+\OT1/ptm/m/n/12 proaches to ma-chine trans-la-tion, such as phrase-based sta-tis-ti-cal ma-chine trans-la-tion ([]Koehn
+ []
 
-] <figs/seg/picture.pdf, id=1753, 542.025pt x 241.90375pt>
+[35
+
+] <figs/seg/picture.pdf, id=1746, 542.025pt x 241.90375pt>
 File: figs/seg/picture.pdf Graphic file (type pdf)
  <use figs/seg/picture.pdf>
 Package pdftex.def Info: figs/seg/picture.pdf used on input line 13.
 (pdftex.def)             Requested size: 346.89731pt x 154.82524pt.
- [37 <./figs/seg/picture.pdf>] <figs/seg/framework2.pdf, id=1799, 769.87625pt x 390.45876pt>
+ [36 <./figs/seg/picture.pdf>] <figs/seg/framework2.pdf, id=1792, 769.87625pt x 390.45876pt>
 File: figs/seg/framework2.pdf Graphic file (type pdf)
  <use figs/seg/framework2.pdf>
 Package pdftex.def Info: figs/seg/framework2.pdf used on input line 32.
 (pdftex.def)             Requested size: 433.62pt x 219.92444pt.
- [38] [39 <./figs/seg/framework2.pdf>]
+ [37] [38 <./figs/seg/framework2.pdf>]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 78.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 82.
@@ -1889,94 +1898,94 @@ Overfull \hbox (6.82327pt too wide) in paragraph at lines 100--104
  []\OT1/ptm/b/n/12 Off-the-shelf Search En-gine[] \OT1/ptm/m/n/12 The com-pu-ta-tional com-plex-ity of the sim-i-lar-ity search grows
  []
 
-[40] [41] [42] [43] [44] [45] [46] <figs/seg/fuzzy_improv.pdf, id=1976, 354.32375pt x 146.5475pt>
+[39] [40] [41] [42] [43] [44] [45] <figs/seg/fuzzy_improv.pdf, id=1969, 354.32375pt x 146.5475pt>
 File: figs/seg/fuzzy_improv.pdf Graphic file (type pdf)
  <use figs/seg/fuzzy_improv.pdf>
 Package pdftex.def Info: figs/seg/fuzzy_improv.pdf used on input line 303.
 (pdftex.def)             Requested size: 433.62pt x 124.07002pt.
- <figs/seg/bleu_retrieved.pdf, id=1978, 354.32375pt x 146.5475pt>
+ <figs/seg/bleu_retrieved.pdf, id=1971, 354.32375pt x 146.5475pt>
 File: figs/seg/bleu_retrieved.pdf Graphic file (type pdf)
  <use figs/seg/bleu_retrieved.pdf>
 Package pdftex.def Info: figs/seg/bleu_retrieved.pdf used on input line 312.
 (pdftex.def)             Requested size: 433.62pt x 148.63843pt.
- [47] [48 <./figs/seg/fuzzy_improv.pdf> <./figs/seg/bleu_retrieved.pdf>] <figs/seg/example-c2.pdf, id=2069, 713.66624pt x 245.91875pt>
+ [46] [47 <./figs/seg/fuzzy_improv.pdf> <./figs/seg/bleu_retrieved.pdf>] <figs/seg/example-c2.pdf, id=2062, 713.66624pt x 245.91875pt>
 File: figs/seg/example-c2.pdf Graphic file (type pdf)
  <use figs/seg/example-c2.pdf>
 Package pdftex.def Info: figs/seg/example-c2.pdf used on input line 330.
 (pdftex.def)             Requested size: 433.62pt x 149.41733pt.
- <figs/seg/example-d2.pdf, id=2070, 713.66624pt x 180.675pt>
+ <figs/seg/example-d2.pdf, id=2063, 713.66624pt x 180.675pt>
 File: figs/seg/example-d2.pdf Graphic file (type pdf)
  <use figs/seg/example-d2.pdf>
 Package pdftex.def Info: figs/seg/example-d2.pdf used on input line 333.
 (pdftex.def)             Requested size: 433.62pt x 109.77599pt.
- <figs/seg/example-g3.pdf, id=2071, 716.30513pt x 34.86426pt>
+ <figs/seg/example-g3.pdf, id=2064, 716.30513pt x 34.86426pt>
 File: figs/seg/example-g3.pdf Graphic file (type pdf)
  <use figs/seg/example-g3.pdf>
 Package pdftex.def Info: figs/seg/example-g3.pdf used on input line 336.
 (pdftex.def)             Requested size: 433.62pt x 21.10544pt.
- [49] [50 <./figs/seg/example-c2.pdf> <./figs/seg/example-d2.pdf
+ [48] [49 <./figs/seg/example-c2.pdf> <./figs/seg/example-d2.pdf
 
 pdfTeX warning: /usr/local/texlive/2014/bin/x86_64-darwin/pdflatex (file ./figs/seg/example-d2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./figs/seg/example-g3.pdf
 
 pdfTeX warning: /usr/local/texlive/2014/bin/x86_64-darwin/pdflatex (file ./figs/seg/example-g3.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [51] [52]) [53]
+>] [50] [51]) [52]
 Chapter 5.
-(./chapters/ulr.tex [54
+(./chapters/ulr.tex [53
 
-] <figs/ulr/data_matters.pdf, id=2200, 439.59233pt x 216.3262pt>
+] <figs/ulr/data_matters.pdf, id=2193, 439.59233pt x 216.3262pt>
 File: figs/ulr/data_matters.pdf Graphic file (type pdf)
  <use figs/ulr/data_matters.pdf>
 Package pdftex.def Info: figs/ulr/data_matters.pdf used on input line 46.
 (pdftex.def)             Requested size: 368.57964pt x 181.38928pt.
- [55 <./figs/ulr/data_matters.pdf>] [56] <figs/ulr/cat.jpg, id=2267, 379.1766pt x 204.765pt>
+ [54 <./figs/ulr/data_matters.pdf>] [55] <figs/ulr/cat.jpg, id=2261, 379.1766pt x 204.765pt>
 File: figs/ulr/cat.jpg Graphic file (type jpg)
  <use figs/ulr/cat.jpg>
 Package pdftex.def Info: figs/ulr/cat.jpg used on input line 90.
 (pdftex.def)             Requested size: 368.57964pt x 199.04984pt.
- [57 <./figs/ulr/cat.jpg>] <figs/ulr/model2x.pdf, id=2287, 663.47874pt x 252.945pt>
+ [56 <./figs/ulr/cat.jpg>] <figs/ulr/model2x.pdf, id=2281, 663.47874pt x 252.945pt>
 File: figs/ulr/model2x.pdf Graphic file (type pdf)
  <use figs/ulr/model2x.pdf>
 Package pdftex.def Info: figs/ulr/model2x.pdf used on input line 116.
 (pdftex.def)             Requested size: 433.62pt x 165.31544pt.
- [58 <./figs/ulr/model2x.pdf>] [59] [60] <figs/ulr/preprojection.pdf, id=2319, 1024.82875pt x 413.545pt>
+ [57 <./figs/ulr/model2x.pdf>] [58] [59] <figs/ulr/preprojection.pdf, id=2313, 1024.82875pt x 413.545pt>
 File: figs/ulr/preprojection.pdf Graphic file (type pdf)
  <use figs/ulr/preprojection.pdf>
 Package pdftex.def Info: figs/ulr/preprojection.pdf used on input line 173.
 (pdftex.def)             Requested size: 433.62pt x 174.97498pt.
- [61 <./figs/ulr/preprojection.pdf>] [62] [63] [64]
+ [60 <./figs/ulr/preprojection.pdf>] [61] [62] [63]
 Overfull \hbox (0.46371pt too wide) in paragraph at lines 271--276
  []\OT1/ptm/b/n/12 Learning[] \OT1/ptm/m/n/12 All the mod-els are trained to max-i-mize the log-likelihood us-ing Adam ([]Kingma
  []
 
-[65] <figs/ulr/size.pdf, id=2403, 433.62pt x 289.08pt>
+[64] <figs/ulr/size.pdf, id=2397, 433.62pt x 289.08pt>
 File: figs/ulr/size.pdf Graphic file (type pdf)
  <use figs/ulr/size.pdf>
 Package pdftex.def Info: figs/ulr/size.pdf used on input line 336.
 (pdftex.def)             Requested size: 368.57964pt x 245.73238pt.
- <figs/ulr/missing.pdf, id=2404, 433.62pt x 289.08pt>
+ <figs/ulr/missing.pdf, id=2398, 433.62pt x 289.08pt>
 File: figs/ulr/missing.pdf Graphic file (type pdf)
  <use figs/ulr/missing.pdf>
 Package pdftex.def Info: figs/ulr/missing.pdf used on input line 342.
 (pdftex.def)             Requested size: 368.57964pt x 245.73238pt.
- [66] [67 <./figs/ulr/size.pdf> <./figs/ulr/missing.pdf
+ [65] [66 <./figs/ulr/size.pdf> <./figs/ulr/missing.pdf
 
 pdfTeX warning: /usr/local/texlive/2014/bin/x86_64-darwin/pdflatex (file ./figs/ulr/missing.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [68] <figs/ulr/examples1.pdf, id=2513, 735.74875pt x 213.79875pt>
+>] [67] <figs/ulr/examples1.pdf, id=2507, 735.74875pt x 213.79875pt>
 File: figs/ulr/examples1.pdf Graphic file (type pdf)
  <use figs/ulr/examples1.pdf>
 Package pdftex.def Info: figs/ulr/examples1.pdf used on input line 381.
-(pdftex.def)             Requested size: 433.62pt x 126.00641pt.
- <figs/ulr/vis2.pdf, id=2514, 1237.62375pt x 296.10625pt>
+(pdftex.def)             Requested size: 585.38744pt x 170.11925pt.
+ <figs/ulr/vis2.pdf, id=2508, 1237.62375pt x 296.10625pt>
 File: figs/ulr/vis2.pdf Graphic file (type pdf)
  <use figs/ulr/vis2.pdf>
 Package pdftex.def Info: figs/ulr/vis2.pdf used on input line 386.
-(pdftex.def)             Requested size: 433.62pt x 103.74716pt.
- [69 <./figs/ulr/examples1.pdf>] [70 <./figs/ulr/vis2.pdf>] [71]) [72]
+(pdftex.def)             Requested size: 585.38744pt x 140.06003pt.
+ [68] [69 <./figs/ulr/examples1.pdf>] [70 <./figs/ulr/vis2.pdf>] [71]) [72]
 Chapter 6.
 (./chapters/meta.tex [73
 
-] [74] <figs/meta/framework.pdf, id=2662, 778.91pt x 224.84pt>
+] [74] <figs/meta/framework.pdf, id=2660, 778.91pt x 224.84pt>
 File: figs/meta/framework.pdf Graphic file (type pdf)
  <use figs/meta/framework.pdf>
 Package pdftex.def Info: figs/meta/framework.pdf used on input line 52.
@@ -1987,39 +1996,49 @@ pdfTeX warning: /usr/local/texlive/2014/bin/x86_64-darwin/pdflatex (file ./figs/
 <figs/meta/illust.pdf, id=2716, 799.98875pt x 248.93pt>
 File: figs/meta/illust.pdf Graphic file (type pdf)
  <use figs/meta/illust.pdf>
-Package pdftex.def Info: figs/meta/illust.pdf used on input line 263.
+Package pdftex.def Info: figs/meta/illust.pdf used on input line 262.
 (pdftex.def)             Requested size: 433.62pt x 134.92917pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 265.
+(caption)                particular \caption on input line 264.
 See the caption package documentation for explanation.
 
-[79] [80 <./figs/meta/illust.pdf>] [81]
+[79 <./figs/meta/illust.pdf>] [80] [81]
 
-Package natbib Warning: Citation `alexis2018word' on page 82 undefined on input line 525.
+Package natbib Warning: Citation `alexis2018word' on page 82 undefined on input line 524.
 
-[82] [83] <figs/meta/ro-en.pdf, id=2852, 1142.66583pt x 599.77199pt>
+[82] <figs/meta/ro-en.pdf, id=2843, 1142.66583pt x 599.77199pt>
 File: figs/meta/ro-en.pdf Graphic file (type pdf)
  <use figs/meta/ro-en.pdf>
-Package pdftex.def Info: figs/meta/ro-en.pdf used on input line 597.
+Package pdftex.def Info: figs/meta/ro-en.pdf used on input line 596.
 (pdftex.def)             Requested size: 208.13574pt x 109.24469pt.
- <figs/meta/lv-en.pdf, id=2853, 1149.6921pt x 599.77199pt>
+ <figs/meta/lv-en.pdf, id=2844, 1149.6921pt x 599.77199pt>
 File: figs/meta/lv-en.pdf Graphic file (type pdf)
  <use figs/meta/lv-en.pdf>
-Package pdftex.def Info: figs/meta/lv-en.pdf used on input line 602.
+Package pdftex.def Info: figs/meta/lv-en.pdf used on input line 601.
 (pdftex.def)             Requested size: 208.13574pt x 108.57661pt.
- <figs/meta/fi-en.pdf, id=2854, 1149.6921pt x 599.77199pt>
+ <figs/meta/fi-en.pdf, id=2845, 1149.6921pt x 599.77199pt>
 File: figs/meta/fi-en.pdf Graphic file (type pdf)
  <use figs/meta/fi-en.pdf>
-Package pdftex.def Info: figs/meta/fi-en.pdf used on input line 607.
+Package pdftex.def Info: figs/meta/fi-en.pdf used on input line 606.
 (pdftex.def)             Requested size: 208.13574pt x 108.57661pt.
- <figs/meta/tr-en.pdf, id=2855, 1149.6921pt x 599.77199pt>
+ <figs/meta/tr-en.pdf, id=2846, 1149.6921pt x 599.77199pt>
 File: figs/meta/tr-en.pdf Graphic file (type pdf)
  <use figs/meta/tr-en.pdf>
-Package pdftex.def Info: figs/meta/tr-en.pdf used on input line 612.
+Package pdftex.def Info: figs/meta/tr-en.pdf used on input line 611.
 (pdftex.def)             Requested size: 208.13574pt x 108.57661pt.
- [84 <./figs/meta/ro-en.pdf> <./figs/meta/lv-en.pdf
+ [83] <figs/meta/support_size.pdf, id=2857, 835.17207pt x 690.75754pt>
+File: figs/meta/support_size.pdf Graphic file (type pdf)
+ <use figs/meta/support_size.pdf>
+Package pdftex.def Info: figs/meta/support_size.pdf used on input line 625.
+(pdftex.def)             Requested size: 346.89731pt x 286.91199pt.
+
+Overfull \hbox (1.64069pt too wide) in paragraph at lines 622--629
+ []\OT1/ptm/b/n/12 Impact of Val-i-da-tion Tasks[] \OT1/ptm/m/n/12 Sim-i-larly to train-ing any other neu-ral net-work, meta-learning
+ []
+
+[84 <./figs/meta/ro-en.pdf> <./figs/meta/lv-en.pdf
 
 pdfTeX warning: /usr/local/texlive/2014/bin/x86_64-darwin/pdflatex (file ./figs/meta/lv-en.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./figs/meta/fi-en.pdf
@@ -2028,82 +2047,72 @@ pdfTeX warning: /usr/local/texlive/2014/bin/x86_64-darwin/pdflatex (file ./figs/
 > <./figs/meta/tr-en.pdf
 
 pdfTeX warning: /usr/local/texlive/2014/bin/x86_64-darwin/pdflatex (file ./figs/meta/tr-en.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] <figs/meta/support_size.pdf, id=3036, 835.17207pt x 690.75754pt>
-File: figs/meta/support_size.pdf Graphic file (type pdf)
- <use figs/meta/support_size.pdf>
-Package pdftex.def Info: figs/meta/support_size.pdf used on input line 626.
-(pdftex.def)             Requested size: 346.89731pt x 286.91199pt.
-
-Overfull \hbox (1.64069pt too wide) in paragraph at lines 623--630
- []\OT1/ptm/b/n/12 Impact of Val-i-da-tion Tasks[] \OT1/ptm/m/n/12 Sim-i-larly to train-ing any other neu-ral net-work, meta-learning
- []
-
-[85 <./figs/meta/support_size.pdf>] <figs/meta/curve.pdf, id=3084, 862.61958pt x 399.14494pt>
+>] <figs/meta/curve.pdf, id=3037, 862.61958pt x 399.14494pt>
 File: figs/meta/curve.pdf Graphic file (type pdf)
  <use figs/meta/curve.pdf>
-Package pdftex.def Info: figs/meta/curve.pdf used on input line 668.
+Package pdftex.def Info: figs/meta/curve.pdf used on input line 667.
 (pdftex.def)             Requested size: 346.89731pt x 160.5139pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 702--702
+Underfull \hbox (badness 10000) in paragraph at lines 701--701
 []|\OT1/ptm/m/n/10.95 Source
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 708--708
+Underfull \hbox (badness 10000) in paragraph at lines 707--707
 []|\OT1/ptm/m/n/10.95 Source
  []
 
-[86 <./figs/meta/curve.pdf>] [87] [88]) [89] [90
+[85 <./figs/meta/support_size.pdf>] [86] [87 <./figs/meta/curve.pdf>] [88]) [89] [90
 
 ]
 Chapter 7.
 (./chapters/trainable.tex [91
 
-] [92] [93] <figs/trainable/Concept.pdf, id=3227, 337.26pt x 240.9pt>
+] [92] [93] <figs/trainable/Concept.pdf, id=3225, 337.26pt x 240.9pt>
 File: figs/trainable/Concept.pdf Graphic file (type pdf)
  <use figs/trainable/Concept.pdf>
-Package pdftex.def Info: figs/trainable/Concept.pdf used on input line 120.
+Package pdftex.def Info: figs/trainable/Concept.pdf used on input line 122.
 (pdftex.def)             Requested size: 286.19078pt x 204.4241pt.
- [94 <./figs/trainable/Concept.pdf>] [95] [96] [97] [98] <figs/trainable/framework.pdf, id=3339, 869.2475pt x 365.365pt>
+ [94 <./figs/trainable/Concept.pdf>] [95] [96] [97] [98] <figs/trainable/framework.pdf, id=3337, 869.2475pt x 365.365pt>
 File: figs/trainable/framework.pdf Graphic file (type pdf)
  <use figs/trainable/framework.pdf>
-Package pdftex.def Info: figs/trainable/framework.pdf used on input line 378.
+Package pdftex.def Info: figs/trainable/framework.pdf used on input line 380.
 (pdftex.def)             Requested size: 433.62pt x 182.26392pt.
- [99 <./figs/trainable/framework.pdf>] [100] [101] [102] <figs/trainable/greedy_bleu.pdf, id=3612, 642.4pt x 394.47375pt>
+ [99 <./figs/trainable/framework.pdf>] [100] [101] [102] <figs/trainable/greedy_bleu.pdf, id=3609, 642.4pt x 394.47375pt>
 File: figs/trainable/greedy_bleu.pdf Graphic file (type pdf)
  <use figs/trainable/greedy_bleu.pdf>
-Package pdftex.def Info: figs/trainable/greedy_bleu.pdf used on input line 439.
+Package pdftex.def Info: figs/trainable/greedy_bleu.pdf used on input line 441.
 (pdftex.def)             Requested size: 208.13574pt x 127.80518pt.
- <figs/trainable/greedy_perplexity.pdf, id=3613, 642.4pt x 395.4775pt>
+ <figs/trainable/greedy_perplexity.pdf, id=3610, 642.4pt x 395.4775pt>
 File: figs/trainable/greedy_perplexity.pdf Graphic file (type pdf)
  <use figs/trainable/greedy_perplexity.pdf>
-Package pdftex.def Info: figs/trainable/greedy_perplexity.pdf used on input line 444.
+Package pdftex.def Info: figs/trainable/greedy_perplexity.pdf used on input line 446.
 (pdftex.def)             Requested size: 208.13574pt x 128.13039pt.
- <figs/trainable/beam_bleu.pdf, id=3614, 642.4pt x 394.47375pt>
+ <figs/trainable/beam_bleu.pdf, id=3611, 642.4pt x 394.47375pt>
 File: figs/trainable/beam_bleu.pdf Graphic file (type pdf)
  <use figs/trainable/beam_bleu.pdf>
-Package pdftex.def Info: figs/trainable/beam_bleu.pdf used on input line 453.
+Package pdftex.def Info: figs/trainable/beam_bleu.pdf used on input line 455.
 (pdftex.def)             Requested size: 208.13574pt x 127.80518pt.
- <figs/trainable/beam_perplexity.pdf, id=3615, 642.4pt x 395.4775pt>
+ <figs/trainable/beam_perplexity.pdf, id=3612, 642.4pt x 395.4775pt>
 File: figs/trainable/beam_perplexity.pdf Graphic file (type pdf)
  <use figs/trainable/beam_perplexity.pdf>
-Package pdftex.def Info: figs/trainable/beam_perplexity.pdf used on input line 458.
+Package pdftex.def Info: figs/trainable/beam_perplexity.pdf used on input line 460.
 (pdftex.def)             Requested size: 208.13574pt x 128.13039pt.
- <figs/trainable/lr_curve.pdf, id=3620, 433.62pt x 289.08pt>
+ <figs/trainable/lr_curve.pdf, id=3617, 433.62pt x 289.08pt>
 File: figs/trainable/lr_curve.pdf Graphic file (type pdf)
  <use figs/trainable/lr_curve.pdf>
-Package pdftex.def Info: figs/trainable/lr_curve.pdf used on input line 483.
+Package pdftex.def Info: figs/trainable/lr_curve.pdf used on input line 485.
 (pdftex.def)             Requested size: 346.89731pt x 231.27754pt.
- <figs/trainable/example.pdf, id=3626, 979.66pt x 293.095pt>
+ <figs/trainable/example.pdf, id=3623, 979.66pt x 293.095pt>
 File: figs/trainable/example.pdf Graphic file (type pdf)
  <use figs/trainable/example.pdf>
-Package pdftex.def Info: figs/trainable/example.pdf used on input line 507.
+Package pdftex.def Info: figs/trainable/example.pdf used on input line 509.
 (pdftex.def)             Requested size: 433.62pt x 129.72694pt.
  [103] [104 <./figs/trainable/greedy_bleu.pdf> <./figs/trainable/greedy_perplexity.pdf> <./figs/trainable/beam_bleu.pdf> <./figs/trainable/beam_perplexity.pdf>] [105 <./figs/trainable/lr_curve.pdf> <./figs/trainable/example.pdf>]) [106]
 Chapter 8.
 (./chapters/nat.tex [107
 
-] <figs/nat/ar_nmt.pdf, id=3787, 346.29375pt x 280.04625pt>
+] <figs/nat/ar_nmt.pdf, id=3786, 346.29375pt x 280.04625pt>
 File: figs/nat/ar_nmt.pdf Graphic file (type pdf)
  <use figs/nat/ar_nmt.pdf>
 Package pdftex.def Info: figs/nat/ar_nmt.pdf used on input line 39.
@@ -2113,7 +2122,7 @@ Overfull \hbox (4.44087pt too wide) in paragraph at lines 46--47
  []\OT1/ptm/b/n/12 Pros and cons of au-tore-gres-sive de-cod-ing[] \OT1/ptm/m/n/12 The au-tore-gres-sive fac-tor-iza-tion (i.e. Eq. [],
  []
 
-[108 <./figs/nat/ar_nmt.pdf>] [109] <figs/nat/NAT-sub.pdf, id=3809, 659.46375pt x 363.3575pt>
+[108 <./figs/nat/ar_nmt.pdf>] [109] <figs/nat/NAT-sub.pdf, id=3808, 659.46375pt x 363.3575pt>
 File: figs/nat/NAT-sub.pdf Graphic file (type pdf)
  <use figs/nat/NAT-sub.pdf>
 Package pdftex.def Info: figs/nat/NAT-sub.pdf used on input line 81.
@@ -2138,22 +2147,22 @@ Overfull \hbox (4.82092pt too wide) in paragraph at lines 301--302
 \OT1/ptm/m/n/12 coder with the en-coder weights from its teacher, as the au-tore-gres-sive and non-autoregressive
  []
 
-[119] [120 <./figs/nat/NAT-sample-bleu.pdf>] [121] <figs/nat/examples1.pdf, id=3991, 570.62985pt x 254.05414pt>
+[119] [120 <./figs/nat/NAT-sample-bleu.pdf>] [121] <figs/nat/examples1.pdf, id=3990, 570.62985pt x 254.05414pt>
 File: figs/nat/examples1.pdf Graphic file (type pdf)
  <use figs/nat/examples1.pdf>
 Package pdftex.def Info: figs/nat/examples1.pdf used on input line 408.
 (pdftex.def)             Requested size: 433.62pt x 193.056pt.
- <figs/nat/fertility_example2.pdf, id=3992, 921.4425pt x 324.21124pt>
+ <figs/nat/fertility_example2.pdf, id=3991, 921.4425pt x 324.21124pt>
 File: figs/nat/fertility_example2.pdf Graphic file (type pdf)
  <use figs/nat/fertility_example2.pdf>
 Package pdftex.def Info: figs/nat/fertility_example2.pdf used on input line 413.
 (pdftex.def)             Requested size: 433.62pt x 152.56729pt.
- <figs/nat/length_vs_latency.pdf, id=3993, 433.62pt x 289.08pt>
+ <figs/nat/length_vs_latency.pdf, id=3992, 433.62pt x 289.08pt>
 File: figs/nat/length_vs_latency.pdf Graphic file (type pdf)
  <use figs/nat/length_vs_latency.pdf>
 Package pdftex.def Info: figs/nat/length_vs_latency.pdf used on input line 419.
 (pdftex.def)             Requested size: 325.215pt x 216.81828pt.
- <figs/nat/learning_curve.pdf, id=3994, 433.62pt x 289.08pt>
+ <figs/nat/learning_curve.pdf, id=3993, 433.62pt x 289.08pt>
 File: figs/nat/learning_curve.pdf Graphic file (type pdf)
  <use figs/nat/learning_curve.pdf>
 Package pdftex.def Info: figs/nat/learning_curve.pdf used on input line 425.
@@ -2168,7 +2177,7 @@ Package pdftex.def Info: figs/nat/NAT-overall.pdf used on input line 438.
 (pdftex.def)             Requested size: 325.215pt x 199.6194pt.
  [125 <./figs/nat/NAT-overall.pdf>]) [126]
 Chapter 9.
-(./chapters/simultrans.tex <figs/simultrans/cropped_kkkk.pdf, id=4157, 1131.22626pt x 619.31375pt>
+(./chapters/simultrans.tex <figs/simultrans/cropped_kkkk.pdf, id=4156, 1131.22626pt x 619.31375pt>
 File: figs/simultrans/cropped_kkkk.pdf Graphic file (type pdf)
  <use figs/simultrans/cropped_kkkk.pdf>
 Package pdftex.def Info: figs/simultrans/cropped_kkkk.pdf used on input line 11.
@@ -2180,7 +2189,7 @@ Overfull \hbox (0.88065pt too wide) in paragraph at lines 15--18
 
 [127
 
-] [128 <./figs/simultrans/cropped_kkkk.pdf>] <figs/simultrans/SNMT.pdf, id=4212, 343.2825pt x 278.03876pt>
+] [128 <./figs/simultrans/cropped_kkkk.pdf>] <figs/simultrans/SNMT.pdf, id=4211, 343.2825pt x 278.03876pt>
 File: figs/simultrans/SNMT.pdf Graphic file (type pdf)
  <use figs/simultrans/SNMT.pdf>
 Package pdftex.def Info: figs/simultrans/SNMT.pdf used on input line 80.
@@ -2200,17 +2209,17 @@ Overfull \hbox (0.32008pt too wide) in paragraph at lines 361--362
 []\OT1/ptm/b/n/12 Wait-If-Worse/Wait-If-Diff (WIW/WID)\OT1/ptm/m/n/12 : as pro-posed by ([]Cho and Es-ipova[], []2016[]),
  []
 
-[138] <figs/simultrans/lr_enru_BLEU.pdf, id=4328, 561.13387pt x 359.36758pt>
+[138] <figs/simultrans/lr_enru_BLEU.pdf, id=4327, 561.13387pt x 359.36758pt>
 File: figs/simultrans/lr_enru_BLEU.pdf Graphic file (type pdf)
  <use figs/simultrans/lr_enru_BLEU.pdf>
 Package pdftex.def Info: figs/simultrans/lr_enru_BLEU.pdf used on input line 371.
 (pdftex.def)             Requested size: 260.17464pt x 166.62164pt.
- <figs/simultrans/lr_enru_DELAY.pdf, id=4329, 569.49323pt x 353.8765pt>
+ <figs/simultrans/lr_enru_DELAY.pdf, id=4328, 569.49323pt x 353.8765pt>
 File: figs/simultrans/lr_enru_DELAY.pdf Graphic file (type pdf)
  <use figs/simultrans/lr_enru_DELAY.pdf>
 Package pdftex.def Info: figs/simultrans/lr_enru_DELAY.pdf used on input line 374.
 (pdftex.def)             Requested size: 260.17464pt x 161.67282pt.
- <figs/simultrans/lr_enru_WAIT.pdf, id=4330, 561.74553pt x 359.36758pt>
+ <figs/simultrans/lr_enru_WAIT.pdf, id=4329, 561.74553pt x 359.36758pt>
 File: figs/simultrans/lr_enru_WAIT.pdf Graphic file (type pdf)
  <use figs/simultrans/lr_enru_WAIT.pdf>
 Package pdftex.def Info: figs/simultrans/lr_enru_WAIT.pdf used on input line 377.
@@ -2219,27 +2228,27 @@ Package pdftex.def Info: figs/simultrans/lr_enru_WAIT.pdf used on input line 377
 
 LaTeX Warning: Float too large for page by 38.67789pt on input line 382.
 
-<figs/simultrans/lr_enru_DELAY_vs_BLEU.pdf, id=4333, 467.46556pt x 462.19551pt>
+<figs/simultrans/lr_enru_DELAY_vs_BLEU.pdf, id=4332, 467.46556pt x 462.19551pt>
 File: figs/simultrans/lr_enru_DELAY_vs_BLEU.pdf Graphic file (type pdf)
  <use figs/simultrans/lr_enru_DELAY_vs_BLEU.pdf>
 Package pdftex.def Info: figs/simultrans/lr_enru_DELAY_vs_BLEU.pdf used on input line 388.
 (pdftex.def)             Requested size: 203.80193pt x 201.50478pt.
- <figs/simultrans/lr_ruen_DELAY_vs_BLEU.pdf, id=4334, 472.28162pt x 462.19551pt>
+ <figs/simultrans/lr_ruen_DELAY_vs_BLEU.pdf, id=4333, 472.28162pt x 462.19551pt>
 File: figs/simultrans/lr_ruen_DELAY_vs_BLEU.pdf Graphic file (type pdf)
  <use figs/simultrans/lr_ruen_DELAY_vs_BLEU.pdf>
 Package pdftex.def Info: figs/simultrans/lr_ruen_DELAY_vs_BLEU.pdf used on input line 392.
 (pdftex.def)             Requested size: 203.80193pt x 199.4525pt.
- <figs/simultrans/lr_ende_DELAY_vs_BLEU.pdf, id=4335, 465.52043pt x 462.19551pt>
+ <figs/simultrans/lr_ende_DELAY_vs_BLEU.pdf, id=4334, 465.52043pt x 462.19551pt>
 File: figs/simultrans/lr_ende_DELAY_vs_BLEU.pdf Graphic file (type pdf)
  <use figs/simultrans/lr_ende_DELAY_vs_BLEU.pdf>
 Package pdftex.def Info: figs/simultrans/lr_ende_DELAY_vs_BLEU.pdf used on input line 396.
 (pdftex.def)             Requested size: 203.80193pt x 202.34404pt.
- <figs/simultrans/lr_deen_DELAY_vs_BLEU.pdf, id=4336, 468.34384pt x 462.19551pt>
+ <figs/simultrans/lr_deen_DELAY_vs_BLEU.pdf, id=4335, 468.34384pt x 462.19551pt>
 File: figs/simultrans/lr_deen_DELAY_vs_BLEU.pdf Graphic file (type pdf)
  <use figs/simultrans/lr_deen_DELAY_vs_BLEU.pdf>
 Package pdftex.def Info: figs/simultrans/lr_deen_DELAY_vs_BLEU.pdf used on input line 400.
 (pdftex.def)             Requested size: 203.80193pt x 201.131pt.
- <figs/simultrans/lr_enru_WAIT_vs_BLEU.pdf, id=4337, 570.32445pt x 353.8548pt>
+ <figs/simultrans/lr_enru_WAIT_vs_BLEU.pdf, id=4336, 570.32445pt x 353.8548pt>
 File: figs/simultrans/lr_enru_WAIT_vs_BLEU.pdf Graphic file (type pdf)
  <use figs/simultrans/lr_enru_WAIT_vs_BLEU.pdf>
 Package pdftex.def Info: figs/simultrans/lr_enru_WAIT_vs_BLEU.pdf used on input line 418.
@@ -2310,7 +2319,7 @@ Underfull \hbox (badness 1533) in paragraph at lines 845--850
 \openout2 = `publications.aux'.
 
  (./publications.tex
-Overfull \hbox (0.37189pt too wide) in paragraph at lines 9--10
+Overfull \hbox (0.37189pt too wide) in paragraph at lines 10--11
 []\OT1/ptm/b/n/12 Jiatao Gu\OT1/ptm/m/n/12 , Yong Wang, Kyunghyun Cho, and Vic-tor O.K. Li, ``Search En-gine Guided
  []
 
@@ -2318,7 +2327,7 @@ Overfull \hbox (0.37189pt too wide) in paragraph at lines 9--10
 
 
 ]
-Overfull \hbox (16.28406pt too wide) in paragraph at lines 23--24
+Overfull \hbox (16.28406pt too wide) in paragraph at lines 24--25
 []\OT1/ptm/b/n/12 Jiatao Gu\OT1/ptm/m/n/12 , Bao-tian Hu, Zheng-dong Lu, Hang Li, and Vic-tor O.K. Li, ``Guided Sequence-
  []
 
@@ -2326,20 +2335,20 @@ Overfull \hbox (16.28406pt too wide) in paragraph at lines 23--24
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 195.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 195.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 201.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 201.
 (/Users/jiataogu/Dropbox/Thesis/Efficient-Neural-Machine-Translation/.texpadtmp/thesis.aux (/Users/jiataogu/Dropbox/Thesis/Efficient-Neural-Machine-Translation/.texpadtmp/publications.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 195.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 195.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 201.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 201.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 85B245F442E414C94DB5DBFA8A6C5041;9458.
  ) 
 Here is how much of TeX's memory you used:
- 36458 strings out of 493117
- 732597 string characters out of 6135433
- 898720 words of memory out of 5000000
- 38066 multiletter control sequences out of 15000+600000
- 83025 words of font info for 213 fonts, out of 8000000 for 9000
+ 36466 strings out of 493117
+ 732660 string characters out of 6135433
+ 895639 words of memory out of 5000000
+ 38072 multiletter control sequences out of 15000+600000
+ 84103 words of font info for 214 fonts, out of 8000000 for 9000
  1305 hyphenation exceptions out of 8191
  55i,24n,73p,10419b,1139s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.13} has been referenced but does not exist, replaced by a fixed one
@@ -2352,10 +2361,10 @@ pdfTeX warning (dest): name{Hfootnote.8} has been referenced but does not exist,
 
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/nanumtype1/nanummjmac.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/nanumtype1/nanummjmad.pfb></usr/local/texlive/2014/texmf-
 dist/fonts/type1/public/nanumtype1/nanummjmae.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb2.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb4.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb9.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbc.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc0.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc1.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc5.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc9.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/nanumtype1/nanummjmcc.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/nanumtype1/nanummjmce.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd1.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd3.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd5.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/uhc/umj/umj00.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on /Users/jiataogu/Dropbox/Thesis/Efficient-Neural-Machine-Translation/.texpadtmp/thesis.pdf (186 pages, 6291758 bytes).
+Output written on /Users/jiataogu/Dropbox/Thesis/Efficient-Neural-Machine-Translation/.texpadtmp/thesis.pdf (187 pages, 6294448 bytes).
 PDF statistics:
- 5390 PDF objects out of 6186 (max. 8388607)
- 4026 compressed objects within 41 object streams
- 799 named destinations out of 1000 (max. 500000)
- 1337 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 5389 PDF objects out of 6186 (max. 8388607)
+ 4024 compressed objects within 41 object streams
+ 800 named destinations out of 1000 (max. 500000)
+ 1345 words of extra memory for PDF output out of 10000 (max. 10000000)
 

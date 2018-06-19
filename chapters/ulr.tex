@@ -39,7 +39,7 @@ We show that for the simulated ``zero-resource" settings, our model can consiste
 
 
 %\paragraph{Low-Resource NMT} 
-Neural machine translation (NMT) $\theta$  should be trained to converge using parallel training examples (details introduced in Chapter~\ref{background}). However, the performance is highly correlated to the amount of training data.  As shown in Figure.~\ref{cp5.fig.data_size}, the system cannot achieve reasonable translation quality when the number of the parallel examples is extremely small ($N \approx 13k$ sentences,  or not available at all $N =0$).  Inferior performance was also reported in the challenges noted by \newcite{koehn2017six}.
+Neural machine translation (NMT) $\theta$  should be trained to converge using parallel training examples (details introduced in Chapter~\ref{background}). However, the performance is highly correlated with the amount of training data.  As shown in Figure.~\ref{cp5.fig.data_size}, the system cannot achieve reasonable translation quality when the number of parallel examples is extremely small ($N \approx 13k$ sentences,  or not available at all $N =0$).  Inferior performance was also reported in the challenges noted by \newcite{koehn2017six}.
 
 \begin{figure}[hptb]
 	\centering
@@ -52,7 +52,7 @@ In general, there are two ways for handling the problem of low resource translat
 %By doing so, it is usually assumed the translation pairs share similar semantic information for alignment discovered from monolingual data. 
 
 \subsection{Multi-lingual NMT}
-Prior researches have worked on methods to exploit the knowledge of auxiliary translations, or even auxiliary tasks. For instance, \citet{cheng2016neural,chen2017teacher,lee2017emergent,chen2018zero} investigate the use of a pivot to build a translation path between two languages even without any directed resource. The pivot can be a third language or even an image in multimodal domains. When pivots are not easy to obtain, \citet{firat2016multi,lee2016fully,johnson2016google} have shown that the structure of NMT is suitable for multilingual translation. %\citet{gu2018universal} also showed that such a multilingual NMT system could improve the performance of low resource translation by using a universal lexical representation to share embedding information across languages. 
+Prior researches attempts to exploit the knowledge of auxiliary translations, or even auxiliary tasks. For instance, \citet{cheng2016neural,chen2017teacher,lee2017emergent,chen2018zero} investigate the use of a pivot to build a translation path between two languages even without any directed resource. The pivot can be a third language or even an image in multimodal domains. When pivots are not easy to obtain, \citet{firat2016multi,lee2016fully,johnson2016google} have shown that the structure of NMT is suitable for multilingual translation. %\citet{gu2018universal} also showed that such a multilingual NMT system could improve the performance of low resource translation by using a universal lexical representation to share embedding information across languages. 
 % KC: contradictory with the last sentence of this paragraph.
 % It showed improvement for extremely low resource languages, e.g., with only several thousand sentences. 
 %All the previous work for multilingual NMT assume the joint training of multiple high-resource languages naturally results in a universal space (for both the input representation and the model) which, however, is not necessarily true, especially for very low resource cases. 
@@ -114,7 +114,7 @@ As shown in Fig.~\ref{cp5.fig.model}, we introduce two components to extend the 
 \begin{figure}[hptb]
 	\centering
 	\includegraphics[width=\linewidth]{figs/ulr/model2x}
-      \caption{\label{cp5.fig.model} An illustration of the proposed architecture of the ULR and MoLE. Shaded parts are trained within NMT model while unshaded parts are not changed during  training.}
+      \caption{\label{cp5.fig.model} An illustration of the proposed architecture of ULR and MoLE. Shaded parts are trained within the NMT model while unshaded parts are not changed during  training.}
   \end{figure}
 
 \subsection{Universal Lexical Representation (ULR)}
@@ -179,9 +179,9 @@ It is worth noting that  $O_k$ is a language-specific matrix which maps the mono
 \paragraph{Interpolated Embeddings}
 Certain lexical categories (e.g. function words) are poorly captured by Eq.~\eqref{cp5.eq.universal_embed}. Luckily, function words often have very high frequency, and can be estimated robustly from even a tiny amount of data. This motivates an interpolated $\epsilon[x]$ where embeddings for very frequent words are optimized directly and  not through the universal tokens:
 \begin{equation}
-	\epsilon[x] = \alpha(x) \cdot \epsilon_E[x] + \beta(x) \cdot \sum_{i=1}^M \epsilon_U[u_i] \cdot q(u_i|x)
+	\epsilon[x] = \alpha(x) \cdot \epsilon_E[x] + \beta(x) \cdot \sum_{i=1}^M \epsilon_U[u_i] \cdot q(u_i|x),
 \end{equation}
-Where $\epsilon_E[x]$ is a language-specific embedding of word $x$ (as discussed in Chapter ~\ref{background}), which is optimized during NMT training. In general, we set $\alpha(x)$ to 1.0 for the top 500 most frequent words in each language, and 0.0 otherwise. Besides, we do not use an absolute frequency cutoff because this would cause a mismatch between high-resource and low-resource languages, which we want to avoid. We keep $\beta(x)$ fixed to 1.0.
+where $\epsilon_E[x]$ is a language-specific embedding of word $x$ (as discussed in Chapter ~\ref{background}), which is optimized during NMT training. In general, we set $\alpha(x)$ to 1.0 for the top 500 most frequent words in each language, and 0.0 otherwise. Besides, we do not use an absolute frequency cutoff because this would cause a mismatch between high-resource and low-resource languages, which we want to avoid. We keep $\beta(x)$ fixed to 1.0.
 
 \paragraph{An Example} To give a concrete example, imagine that our target language is English (En), our high-resource auxiliary source languages are Spanish (Es) and French (Fr), and our low-resource source language is Romanian (Ro). En is also used for the universal token set. We assume to have 10M+ parallel Es-En and Fr-En, and a few thousand in Ro-En. We also have millions of monolingual sentences in each language.
 
@@ -260,7 +260,7 @@ size
 \end{savenotes}
 
 
-It also requires additional large amount of monolingual data to obtain the word embeddings for each language, where we use the latest Wikipedia dumps~\footnote{https://dumps.wikimedia.org/} for all the languages. Typically, the monolingual corpora are much larger than the parallel corpora. For validation and testing, the standard validation and testing sets are utilized for each targeted language.
+It also requires additional large amount of monolingual data to obtain the word embeddings for each language, where we use the latest Wikipedia dumps\footnote{https://dumps.wikimedia.org/} for all the languages. Typically, the monolingual corpora are much larger than the parallel corpora. For validation and testing, the standard validation and testing sets are utilized for each targeted language.
 
 \paragraph{Preprocessing}
 All the data (parallel and monolingual) have been tokenized and segmented into subword symbols using byte-pair encoding (BPE)~\cite{sennrich2015neural}. We use sentences of length up to 50 subword symbols for all languages.  For each language, a maximum number of $40,000$ BPE operations are  learned and  applied to restrict the size of the vocabulary.  We concatenate the vocabularies of all source languages in the multilingual setting where special a ``language marker " have been appended to each word  so that there will be no embedding sharing on the surface form. Thus, we avoid sharing the representation  of words that have similar surface forms though with different meaning in various languages.
@@ -272,7 +272,7 @@ All the models are trained to maximize the log-likelihood using Adam~\cite{kingm
 % HOW MANY STEPS with batch size
 %\paragraph{Implementation}
 %The initial experiments in this paper were conducted based on Tensorflow. 
-We have open-sourced an implementation of the proposed model.~\footnote{https://github.com/MultiPath/NA-NMT/tree/universal\_translation}
+We have open-sourced an implementation of the proposed model\footnote{https://github.com/MultiPath/NA-NMT/tree/universal\_translation}.
 
 
 \subsection{Back-Translation}
@@ -376,16 +376,16 @@ We also measure the translation quality of simply training the vanilla system wh
 \paragraph{Monolingual Data}
 In Table.~\ref{cp5.table.ro_test1},  we also showed the performance when incorporating the monolingual Ro corpora to help the UniNMT training in both cases with and without ULR. The back-translation improves in both cases, while the  ULR  still obtains the best score  which indicates that the gains achieved are additive.
 
-\begin{figure*}[t]
+\begin{sidewaysfigure}[hptb]
 \centering
-\includegraphics[width=\linewidth]{figs/ulr/examples1} \vspace{-10pt}
+\includegraphics[width=\linewidth]{figs/ulr/examples1}
 \caption{\label{cp5.fig.exp}Three sets of examples on Ro-En translation with variant settings. }
-\end{figure*}
-\begin{figure*}[t]
+\end{sidewaysfigure}
+\begin{sidewaysfigure}[hptb]
 \centering
-\includegraphics[width=\linewidth]{figs/ulr/vis2}\vspace{-10pt}
+\includegraphics[width=\linewidth]{figs/ulr/vis2}
 \caption{\label{cp5.fig.moe} The activation visualization of mixture of language experts module on one randomly selected Ro source sentences trained together with different auxiliary languages. Darker color means higher activation score. }
-\end{figure*}
+\end{sidewaysfigure}
 
 \paragraph{Corpus Size}
 As shown in Fig.~\ref{cp5.fig.size}, we also evaluated our methods with varied  sizes -- 0k\footnote{For 0k experiments, we used the pre-projection learned from 6k data. It is also possible to use unsupervised learned dictionary.}, 6k, 60k and 600k -- of the Ro-En corpus. The vanilla NMT and the multi-lingual NMT are used as baselines. It is clear in  all cases that the performance gets better when the training corpus is larger. However, the multilingual with ULR works much better with a small amount of training examples. Note that, the usage of ULR universal tokens also enables us to directly work on a ``pure zero" resource translation with a shared multilingual NMT model. 
@@ -472,10 +472,10 @@ Multi-lingual NMT has been extensively studied in a number of papers such as  \n
 Two related works are targeting the same problem of  minimally supervised  or totally unsupervised NMT. \newcite{artetxe2017unsupervised} proposed a totally unsupervised approach depending on multi-lingual embedding similar to ours and dual-learning and reconstruction techniques to train the model from mono-lingual data only. \newcite{lample2017unsupervised} also proposed a quite similar approach while utilizing adversarial learning.   
 
 \section{Conclusion and Next Chapter}
- In this chapter, tackling on the data inefficiency problem for extremely low resource languages, we propose a new  universal machine translation approach that enables sharing translation knowledge from high resource languages.  Our approach is able to achieve 23 BLEU on Romanian-English WMT2016 using a tiny parallel corpus of 6k sentences, compared to the 18 BLEU of strong multi-lingual baseline system. 
+ In this chapter, to tackle on the data inefficiency problem for extremely low resource languages, we propose a new  universal machine translation approach that enables sharing translation knowledge from high resource languages.  Our approach is able to achieve 23 BLEU on Romanian-English WMT2016 using a tiny parallel corpus of 6k sentences, compared to the 18 BLEU of strong multi-lingual baseline system. 
  
- However, there still remains problems in the current solution. One of the main drawback of the proposed method is that it relies on a joint-training over a huge number of examples of high-resource languages to work on the extremely low resource language translation, which is costly and difficult to extend to other new languages. One option is to directly train the model on high resource languages, and fine-tune the trained model on low resource. Also there is no guarantee the pre-trained the parameters will be easily fine-tuned by an unknown language. 
- In the next chapter, we will discuss a principled way of fine-tuning for extremely low resource languages using meta-learning.
+ However, problems remain in the current solution. One of the main drawbacks of the proposed method is that it relies on joint-training over a huge number of examples of high-resource languages, which is costly and difficult to extend to other new languages. One option is to directly train the model on high resource languages, and fine-tune the trained model on low resource. Also there is no guarantee the pre-trained parameters will be easily fine-tuned by an unknown language. 
+ In the next chapter, we will discuss a better way of fine-tuning for extremely low resource languages using meta-learning.
  
  
  
