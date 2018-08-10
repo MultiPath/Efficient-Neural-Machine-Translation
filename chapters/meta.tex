@@ -9,7 +9,7 @@ We extensively evaluate the effectiveness and generalizing ability of the propos
 
 
 
-\section{Background: Meta-Learning}
+\section{Background}
 % \subsection{Low-Resource Neural Machine Translation}
 %\paragraph{Neural Machine Translation (NMT)}
 %Given a source sentence $X=\{x_1, ..., x_{T'}\}$, a neural machine translation model factors the distribution over possible output sentences $Y=\{y_1, ..., y_T\}$ into a chain of conditional probabilities with a left-to-right causal structure:
@@ -38,7 +38,7 @@ In this chapter, we propose to use a meta-learning algorithm for low-resource ne
 
 
 
-\section{Meta-Learning for Extremely Low-Resource Neural Machine Translation}
+\section{Model}
 \label{cp6.sec.maml-mt}
 
 The underlying idea of MAML is to use a set of source tasks $\left\{ \mathcal{T}^1, \ldots, \mathcal{T}^K \right\}$ to find the initialization of parameters $\theta^0$ from which learning a target task $\mathcal{T}^0$ would require only a small number of training examples. In the context of machine translation, this amounts to using many high-resource language pairs to find good initial parameters and training a new translation model on a low-resource language starting from the found initial parameters. This process can be understood as 

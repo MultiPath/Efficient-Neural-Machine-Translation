@@ -410,18 +410,12 @@ AND THE COMMITTEE ON GRADUATE STUDIES}
         \begin{center}
                 \Huge\uppercase\expandafter{\@title}
                  \vfill
-                 \vfill
-                 \bigskip
-                 \bigskip
                  \bigskip
                  \bigskip
                  {{\includegraphics[width=30mm]{figs/hku.eps}} \par}
                   \vfill
-                  \vfill
                 \bigskip
-                 \bigskip
         \end{center}
-        \vfill
            
         \begin{center}
 \large
@@ -439,10 +433,10 @@ AND THE COMMITTEE ON GRADUATE STUDIES}
                 DOCTOR OF PHILOSOPHY \uppercase\expandafter{\@whichend}
         \end{center}
         \vfill
-        \bigskip
+        \bigskip\vfill
         \begin{center}
-                \rm \@author\\
-                \@submitdate\\
+                \uppercase\expandafter{\@author}\\
+                 \uppercase\expandafter{\@submitdate}\\
         \end{center}\vskip.5in\newpage}
 
 \def\thesiscopyrightpage{%
@@ -558,7 +552,7 @@ I declare that this thesis represents my own work, except where due acknowledgme
 % signature page should come at end
         \ifonline\setcounter{page}{4}\else
         \ifcopyright\ifthesiscopyright\thesiscopyrightpage\else\tradcopyrightpage\fi\fi
-        \signaturepage\fi
+       \fi
         \cleardoublepage}
         
 

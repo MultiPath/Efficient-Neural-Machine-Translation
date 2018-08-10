@@ -30,7 +30,7 @@ We also analyze the effectiveness of the learning algorithm and the influence of
 Finally, qualitative visualization is utilized to discuss the potential and limitations of the framework.
 
 
-\section{Problem Definition: Simultaneous Translation}
+\section{Background}
 \label{cp9.sec.definition}
 
 % \paragraph{Simultaneous Machine Translation as Sequential Decision Making}
@@ -68,7 +68,7 @@ In the following sections, we first describe how to connect the \textsc{read}/\t
 %We call this general framework as ``Simultaneous Neural Machine Translation" and our objective is to find an optimal agent that produces best decision sequence depending on the source streams. In this paper, we solve this optimization problem via reinforcement learning techniques.
 
 
-\section{Simultaneous Neural Machine Translation}
+\section{Model}
 \label{cp9.sec.framework}
 
 %\neu{There is no reference to reader/writer in this section, so the connection with the previous section is not so clear. Can we make this flow more smoothly?}
@@ -166,6 +166,28 @@ The algorithm outputs the translation result and a sequence of observation-actio
 \EndWhile
 \end{algorithmic}
 \end{algorithm}
+
+
+\subsection{Simultaneous Beam Search}
+\label{cp9.sec.beamsearch}
+
+In previous sections we described a simultaneous greedy decoding algorithm. In standard NMT it has been shown that beam search, where the decoder keeps a beam of $k$ translation trajectories, greatly improves translation quality~\cite{sutskever2014sequence}, as shown in Fig.~\ref{cp9.fig.beam}\,(A). 
+%the final output is determined by choosing the best translation from the whole beams.
+
+It is non-trivial to directly apply beam-search in simultaneous machine translation,
+as beam search waits until the last word to write down translation. Based on our assumption \textsc{write} does not cost delay,
+we can perform a simultaneous beam-search when the agent chooses to consecutively \textsc{write}: keep multiple beams of translation trajectories in temporary buffer and output the best path when the agent switches to \textsc{read}. As shown in Fig.~\ref{cp9.fig.beam} (B) \& (C), it tries to search for a relatively better path while keeping the delay unchanged.
+
+\begin{figure}[t]
+   	\centering
+          	
+          	\includegraphics[width=\linewidth]{figs/simultrans/decoding.pdf} 
+          	%\vspace{-15pt}
+          	\caption{\label{cp9.fig.beam} {Illustrations of (A)~beam-search, (B)~simultaneous greedy decoding and (C)~simultaneous beam-search.}} 
+  
+\end{figure} 
+
+Note that we do not re-train the agent for simultaneous beam-search. At each step we simply input the observation of the current best trajectory into the agent for making next decision. As it is not optimal, we will leave the better choice of alternating the beam-search in future work.
 
 \section{Learning}
 \label{cp9.sec.optimization}
@@ -302,26 +324,7 @@ a minibatch of multiple sentences.
 \end{algorithm}
 
 
-\section{Simultaneous Beam Search}
-\label{cp9.sec.beamsearch}
 
-In previous sections we described a simultaneous greedy decoding algorithm. In standard NMT it has been shown that beam search, where the decoder keeps a beam of $k$ translation trajectories, greatly improves translation quality~\cite{sutskever2014sequence}, as shown in Fig.~\ref{cp9.fig.beam}\,(A). 
-%the final output is determined by choosing the best translation from the whole beams.
-
-It is non-trivial to directly apply beam-search in simultaneous machine translation,
-as beam search waits until the last word to write down translation. Based on our assumption \textsc{write} does not cost delay,
-we can perform a simultaneous beam-search when the agent chooses to consecutively \textsc{write}: keep multiple beams of translation trajectories in temporary buffer and output the best path when the agent switches to \textsc{read}. As shown in Fig.~\ref{cp9.fig.beam} (B) \& (C), it tries to search for a relatively better path while keeping the delay unchanged.
-
-\begin{figure}[t]
-   	\centering
-          	
-          	\includegraphics[width=\linewidth]{figs/simultrans/decoding.pdf} 
-          	%\vspace{-15pt}
-          	\caption{\label{cp9.fig.beam} {Illustrations of (A)~beam-search, (B)~simultaneous greedy decoding and (C)~simultaneous beam-search.}} 
-  
-\end{figure} 
-
-Note that we do not re-train the agent for simultaneous beam-search. At each step we simply input the observation of the current best trajectory into the agent for making next decision. %As it is not optimal, we will leave the better choice of alternating the beam-search in future work.
 
 
 

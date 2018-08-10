@@ -52,6 +52,27 @@ For instance, documents in specialized domains such as law or medical files usua
 \end{figure}
 For years, much research has been made for both cases in order to build data and decoding efficient NMT systems. As one of the building blocks of this important trend, this dissertation will specially focus on these two directions, and for each of which we claim 3-4 novel contributions to the field of machine translation research. The detailed outline of this thesis is listed below.
 
+\section{Contributions}
+The overall contribution of this thesis are clear in the following three directions:
+\begin{itemize}
+	\item Improved the translation quality on low-resource expressions:
+	\begin{enumerate}
+		\item We proposed the first-of-its-kind copying mechanism in sequence to sequence learning targeting on low-resource expressions in special domains;
+		\item We extended the copying mechanism for machine translation  with the guidance of a search engine, and significantly improved the translation performance for low-resource expressions.
+	\end{enumerate}
+	\item Improved the translation quality over low-resource languages:
+	\begin{enumerate}
+		\item We proposed a novel universal neural machine translation system that helps translate extremely low resource languages;
+		\item We enabled the universal translation system to adapt to new languages with a small number of examples through meta-learning.
+	\end{enumerate}
+	\item Improved the trade-off of translation quality and delay (speed):
+	\begin{enumerate}
+		\item We proposed the trainable greedy decoding algorithm with reinforcement learning which matched the performance of greedy decoding close to the complex search algorithms;
+		\item We proposed the first-of-its-kind non-autoregressive neural machine translation that enables translation in parallel;
+		\item We proposed the simultaneous neural machine translation which enabled to translate before reading the whole source sentence and achieved a balance between translation quality and delay.
+	\end{enumerate}
+\end{itemize}
+
 \section{Thesis Outline}
 This dissertation attempts to tackle these two challenges discussed above, respectively, with contributions in: {\it data-efficient} (Part \rom{1}) and {\it decoding-efficient} (Part \rom{2}) neural machine translation. 
 \begin{itemize}
@@ -71,3 +92,9 @@ The second part, Chapters \ref{trainable}, \ref{nat} and \ref{simul}, deal with 
 \item \textbf{Chapter~\ref{simul}} develops the NMT model that learns to translate in real-time using reinforcement learning. More precisely, we formulate the simultaneous translation as a reinforcement learning setting where two actions -- read and write -- are taken on a pre-trained normal NMT.  The resulted model successfully achieves a balance between delay and quality. 
 \end{itemize}
 Finally, we conclude and discuss future avenue for efficient NMT in \textbf{Chapter~10}.	 In the next chapter, we will start to introduce in detail the standard NMT models as the necessary background.
+
+
+\section{Open-source Implementation}
+Most pieces of the work included in this thesis have open-sourced implementation, separately\footnote{All old codes can be found at \url{https://github.com/MultiPath?tab=repositories}}.  More precisely,
+for the state-of-the-art and combined implementation of all techniques proposed in thesis,
+ please refer to \url{https://github.com/MultiPath/Squirrel} which is still under frequent maintenance and  contains implementation of both the basic neural machine translation model and our proposed efficient neural machine translation with both data- and decoding-efficiency. 

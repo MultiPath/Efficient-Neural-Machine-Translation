@@ -39,7 +39,7 @@ In this chapter, we consider a more general notion of translation memory in whic
 \end{figure}
 
 
-\section{Search Engine Guided Non-Parametric Neural Machine Translation}
+\section{Model}
 
 %\vspace{-3pt}
 We propose a non-parametric
@@ -211,7 +211,7 @@ where  $\lambda$ is a trainable parameter, and the coverage vector is defined as
 	 \beta_{t, \tau}= \sum_{t'=1}^t q_{t', \tau}\cdot\zeta_{t'}.
 \end{equation}
 
-\section{Learning and Inference}
+\subsection{Learning and Inference}
 The proposed model, including both the first and second stages, can be trained end-to-end to maximize the log-likelihood given a parallel corpus. For practical training, we preprocess a training parallel corpus by augmenting each sentence pair with a set of translation pairs retrieved by a search engine, while ensuring that the exact copy is not included in the retrieved set. See Alg.~\ref{cp4.algo.alg2} for a detailed description. 
 
 During inference, we search through the whole training set to retrieve relevant translation pairs. Similarly to a standard neural translation model, we use beam search (as noted in \S\ref{cp2.sec.bs})  to decode the best translation given a source sentence. 

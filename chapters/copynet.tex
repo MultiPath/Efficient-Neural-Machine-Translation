@@ -3,37 +3,30 @@ As introduced in Chapter~\ref{background},
 sequence-to-sequence (\sts) learning has achieved remarkable success in various natural language processing (NLP) tasks, including but not limited to  Machine Translation~\cite{cho2014learning,bahdanau2014neural}, Syntactic Parsing~\cite{vinyals2015grammar}, Text Summarization~\cite{rush2015neural} and Dialogue Systems~\cite{vinyals2015neural}. Adding the attention mechanism~\cite{bahdanau2014neural} has led to significant improvement on the performance of various tasks~\cite{shang2015neural,rush2015neural}. Different from the canonical encoder-decoder architecture, the attention-based \sts model revisits the input sequence in its raw form (array of word representations)  and dynamically fetches the relevant piece of information based mostly on the feedback from generation of the output sequence.
 %on content-based addressing. 
  
-In this chapter, we explore another mechanism important to the human language communication, called the ``copying mechanism", which targets on the data-inefficiency issue for the existing \sts learning method. Basically, it refers to the mechanism that locates a certain segment of the input sentence and puts the segment into the output sequence. For example, in the following two dialogue turns we observe different patterns in which some subsequences (colored blue) in the response (\textsf{R}) are copied from the input utterance (\textsf{I}):
+In this chapter, we explore another mechanism important to the human language communication, called the ``copying mechanism", which targets on the data-inefficiency issue for the existing \sts learning method. Basically, it refers to the mechanism that locates a certain segment of the input sentence and puts the segment into the output sequence. For example, in the following two dialogue turns we observe different patterns in which some subsequences (colored blue) in the response (\textsf{R}) are copied from the input  (\textsf{I}):
 
-\vspace{2pt}
-\noindent
+
 \begin{tabularx}{\linewidth}{@{}>{\bfseries}l@{\hspace{.4em}}X@{}}
-        \toprule
+        %\toprule
     \noindent {\sf \small I:}& \texttt{\small Hello Jack, my name is {\color{blue}Chandralekha}.}\\
     \noindent {\sf \small R:}& \texttt{\small Nice to meet you, {\color{blue}Chandralekha}.}            \\
-    \midrule
+    %\midrule
     \noindent {\sf \small I:} &\texttt{\small This new guy {\color{blue} doesn't perform exactly as we expected}.}\\
-    \noindent {\sf \small R:} &\texttt{\small What do you mean by "{\color{blue}doesn't perform exactly as we expected}"?}\\
-    \bottomrule
+    \noindent {\sf \small R:} &\texttt{\small What do you mean by "{\color{blue}doesn't perform exactly as we expected}"?}    %\bottomrule
+    \vspace{10pt}
 \end{tabularx}
- \vspace{2pt}
+
  
 The conventional attention mechanism in \sts learning rely heavily on the representation of ``meaning'' which usually requires hundreds or thousands of examples to capture. Such ``meaning'' might not be sufficiently accurate in cases where the system needs to refer to sub-sequences of input like entity names or dates, and these words or sub-sequences may be never seen during training, for instance, out-of-vocabulary (OOV) words. 
-
 In contrast, the copying mechanism is closer to the rote memorization in language processing of human being, 
-deserving a different modeling strategy in neural network-based models. We argue that it will benefit many \sts tasks to have an elegant unified model that can accommodate both understanding and rote memorization. Towards this goal, we propose \copynet, which is not only capable of the regular generation of words but also the operation of copying appropriate segments of the input sequence. Despite the seemingly ``hard" operation of copying, \copynet can be trained in an end-to-end fashion. Our empirical study on both synthetic datasets and real world datasets demonstrates the efficacy of \copynet.       
+deserving a different modeling strategy in neural network-based models. We argue that it will benefit many \sts tasks to have an elegant unified model that can accommodate both understanding and rote memorization. Towards this goal, we propose \copynet, which is not only capable of the regular generation of words but also the operation of copying appropriate segments of the input sequence. Despite the seemingly ``hard" operation of copying, \copynet can be trained in an end-to-end fashion. Our empirical study on both synthetic datasets and real world datasets demonstrates the efficacy.     
  
  
-\section{\copynet}
+\section{Model}
 From a cognitive perspective, the copying mechanism is related to rote memorization, requiring less understanding but ensuring high literal fidelity. From a modeling perspective, the copying operations are more rigid and symbolic, making it more difficult than soft attention mechanism to integrate into a fully differentiable neural model.
 In this section, we present \copynet, a differentiable \sts model with ``copying mechanism", which can be trained in an end-to-end fashion with standard stochastic gradient descent. 
 
- \begin{figure}[htbp]
-   	\centering
-          	\includegraphics[width=1\linewidth]{figs/copynet/model-x.pdf} 
-			  \caption{\label{cp3.fig.model} The overall diagram of \copynet. For simplicity, we omit some links for prediction. }
-   \end{figure} 
-   
+
   
 \subsection{Model Overview}
 As illustrated in Figure~\ref{cp3.fig.model}, \copynet is still an encoder-decoder (in a slightly generalized sense). The source sequence is transformed by \textbf{Encoder} into 
@@ -49,7 +42,12 @@ and predicts the target sequence. It is similar with the original RNN-decoder in
 	\item {\bf  State Update:}~ the predicted word at time $t-1$ is used in updating the state at $t$, but \copynet uses not only its word-embedding but also its corresponding location-specific hidden state in $\M$ (if any) (see \S\ref{cp3.sec.stateupdate} for more details);
 	\item {\bf Reading $\M$:}~ in addition to the attentive read to $\M$, \copynet also has``selective read" to $\M$, which leads to a powerful hybrid of content-based addressing and location-based addressing (see both \S\ref{cp3.sec.stateupdate} and \S\ref{cp3.sec.reading} for more discussion).
 \end{itemize}
-
+ \begin{figure}[htbp]
+   	\centering
+          	\includegraphics[width=1\linewidth]{figs/copynet/model-x.pdf} 
+			  \caption{\label{cp3.fig.model} The overall diagram of \copynet. For simplicity, we omit some links for prediction. }
+   \end{figure} 
+   
 \subsection{Prediction with Copying and Generation}
 %\vspace{-2pt}
 \label{cp3.sec.predict}
@@ -235,7 +233,7 @@ Indeed, for many NLP applications (e.g., text summarization or spoken dialogue s
 much of the OOV words on the target side, for example the proper nouns, 
 are essentially the replicates of those on the source side.
 
-\section{Learning} 	
+\subsection{Learning} 	
 Although the copying mechanism uses the ``hard" operation to copy from the source and choose to paste them or generate symbols from the vocabulary, \copynet is fully differentiable and can be optimized in an end-to-end fashion using maximum likelihood learning which was previously introduced in 	Chapter~\ref{background} as Eq.~\eqref{cp2.eq.learning}.
 %Given the batches of the source and target sequence $\{X\}_N$ and $\{Y\}_N$, the objectives are to minimize the negative log-likelihood:
 %	\begin{equation}

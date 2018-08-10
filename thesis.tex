@@ -1,6 +1,7 @@
-\documentclass[12pt]{report}
+\documentclass[a4paper,12pt,twoside]{book}
 \usepackage{suthesis}
-
+\usepackage[T1]{fontenc}
+\usepackage{calligra}
 %\documentstyle[12pt,suthesis]{report}
 
 
@@ -45,7 +46,10 @@
     \setlength{\parskip}{0pt}%
     }%
   {\end{itemize}}
-
+  
+\newenvironment{dedication}
+     {\vspace{10ex}\begin{quotation}\begin{center}\begin{em}}
+     {\par\end{em}\end{center}\end{quotation}}
 %\bibliographystyle{plainnat}
 
 \usepackage{epigraph}
@@ -133,6 +137,7 @@
 % Title
 \title{Efficient Neural Machine Translation}
 \author{Jiatao Gu}
+\submitdate{August 2018}
 \principaladviser{Prof. Victor O.K. Li}
 %\firstreader{Maggie Li}
 %\secondreader{Kaibin Huang}
@@ -140,6 +145,8 @@
 
 % Preface
 \beforepreface
+\input dedication.tex
+\input declare.tex
 \input preface.tex
 \input ack.tex
 \afterpreface

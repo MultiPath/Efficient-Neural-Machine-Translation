@@ -1,257 +1,260 @@
-\contentsline {chapter}{Abstract}{iv}{chapter*.1}
-\contentsline {chapter}{Acknowledgments}{vi}{chapter*.2}
+\contentsline {chapter}{Declaration}{v}{chapter*.2}
+\contentsline {chapter}{Abstract}{vii}{chapter*.3}
+\contentsline {chapter}{Acknowledgments}{ix}{chapter*.4}
 \contentsline {part}{I\hspace {1em}Introduction}{1}{part.1}
-\contentsline {chapter}{\numberline {1}Introduction}{2}{chapter.1}
-\contentsline {section}{\numberline {1.1}A Brief Review of Machine Translation (MT)}{2}{section.1.1}
-\contentsline {paragraph}{Rule-based MT}{2}{paragraph*.7}
-\contentsline {paragraph}{Example-based MT}{3}{paragraph*.8}
-\contentsline {paragraph}{Statistical MT}{3}{paragraph*.9}
-\contentsline {paragraph}{Neural MT}{4}{paragraph*.10}
-\contentsline {section}{\numberline {1.2}Towards Efficient Neural Machine Translation}{4}{section.1.2}
-\contentsline {section}{\numberline {1.3}Thesis Outline}{6}{section.1.3}
-\contentsline {chapter}{\numberline {2}Background}{9}{chapter.2}
-\contentsline {section}{\numberline {2.1}Modeling}{9}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Neural Language Modeling}{9}{subsection.2.1.1}
-\contentsline {paragraph}{Autoregressive Language Model}{10}{paragraph*.13}
-\contentsline {paragraph}{Parameterization}{10}{paragraph*.14}
-\contentsline {subsection}{\numberline {2.1.2}Sequence-to-Sequence Learning}{11}{subsection.2.1.2}
-\contentsline {paragraph}{Neural Machine Translation as {{\textsc {Seq2Seq}}}\xspace Learning}{11}{paragraph*.15}
-\contentsline {subsection}{\numberline {2.1.3}Attention Mechanism}{12}{subsection.2.1.3}
-\contentsline {subsection}{\numberline {2.1.4}Neural Machine Translation without RNNs}{13}{subsection.2.1.4}
-\contentsline {section}{\numberline {2.2}Training}{13}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Data}{13}{subsection.2.2.1}
-\contentsline {paragraph}{Parallel corpora}{13}{paragraph*.18}
-\contentsline {paragraph}{Vocabulary and Sub-word level translation}{14}{paragraph*.19}
-\contentsline {subsection}{\numberline {2.2.2}Maximum Likelihood Learning}{15}{subsection.2.2.2}
-\contentsline {section}{\numberline {2.3}Decoding}{15}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Greedy Decoding}{16}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Beam Search}{16}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Noisy Parallel Decoding}{17}{subsection.2.3.3}
-\contentsline {part}{II\hspace {1em}Data-Efficient Neural Machine Translation}{18}{part.2}
-\contentsline {chapter}{\numberline {3}Copying Mechanism}{19}{chapter.3}
-\contentsline {section}{\numberline {3.1}Overview}{19}{section.3.1}
-\contentsline {section}{\numberline {3.2}{\textsc {CopyNet}}\xspace }{20}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Model Overview}{21}{subsection.3.2.1}
-\contentsline {paragraph}{Encoder:}{21}{paragraph*.21}
-\contentsline {paragraph}{Decoder:}{21}{paragraph*.22}
-\contentsline {subsection}{\numberline {3.2.2}Prediction with Copying and Generation}{22}{subsection.3.2.2}
-\contentsline {paragraph}{Generate-Mode:}{23}{paragraph*.23}
-\contentsline {paragraph}{Copy-Mode:}{23}{paragraph*.24}
-\contentsline {subsection}{\numberline {3.2.3}State Update}{24}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Hybrid Addressing of Short-Term Memory}{25}{subsection.3.2.4}
-\contentsline {paragraph}{Location-based Addressing}{25}{paragraph*.26}
-\contentsline {paragraph}{Handling Out-of-Vocabulary Words}{26}{paragraph*.27}
-\contentsline {section}{\numberline {3.3}Learning}{26}{section.3.3}
-\contentsline {section}{\numberline {3.4}Experiments}{26}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Synthetic Dataset}{27}{subsection.3.4.1}
-\contentsline {paragraph}{Experimental Setting}{27}{paragraph*.29}
-\contentsline {subsection}{\numberline {3.4.2}Text Summarization}{28}{subsection.3.4.2}
-\contentsline {paragraph}{Dataset}{29}{paragraph*.32}
-\contentsline {paragraph}{Experimental Setting}{29}{paragraph*.34}
-\contentsline {paragraph}{Case Study}{30}{paragraph*.37}
-\contentsline {subsection}{\numberline {3.4.3}Single-turn Dialogue}{32}{subsection.3.4.3}
-\contentsline {paragraph}{Dataset}{32}{paragraph*.38}
-\contentsline {paragraph}{Experimental Setting}{32}{paragraph*.39}
-\contentsline {paragraph}{Case Study}{33}{paragraph*.42}
-\contentsline {section}{\numberline {3.5}Related Work}{34}{section.3.5}
-\contentsline {section}{\numberline {3.6}Conclusion and Next Chapter}{35}{section.3.6}
-\contentsline {chapter}{\numberline {4}Non-Parametric Neural Machine Translation}{36}{chapter.4}
-\contentsline {section}{\numberline {4.1}Overview}{36}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Background: Translation Memory}{38}{subsection.4.1.1}
-\contentsline {section}{\numberline {4.2}Search Engine Guided Non-Parametric Neural Machine Translation}{39}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Retrieval Stage}{40}{subsection.4.2.1}
-\contentsline {paragraph}{Similarity score function $\ensuremath {\mathcal {S}}$}{40}{paragraph*.45}
-\contentsline {paragraph}{Off-the-shelf Search Engine}{40}{paragraph*.46}
-\contentsline {paragraph}{Final selection process}{41}{paragraph*.47}
-\contentsline {subsection}{\numberline {4.2.2}Translation Stage}{41}{subsection.4.2.2}
-\contentsline {paragraph}{Key-Value Memory}{42}{paragraph*.48}
-\contentsline {paragraph}{Matching and Retrieval}{42}{paragraph*.49}
-\contentsline {paragraph}{Incorporation}{43}{paragraph*.50}
-\contentsline {paragraph}{Coverage}{43}{paragraph*.51}
-\contentsline {section}{\numberline {4.3}Learning and Inference}{45}{section.4.3}
-\contentsline {section}{\numberline {4.4}Experiments}{45}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Settings}{45}{subsection.4.4.1}
-\contentsline {paragraph}{Data}{45}{paragraph*.52}
-\contentsline {paragraph}{Retrieval Stage}{46}{paragraph*.54}
-\contentsline {paragraph}{Translation Stage}{46}{paragraph*.55}
-\contentsline {subsection}{\numberline {4.4.2}Result and Analysis}{47}{subsection.4.4.2}
-\contentsline {paragraph}{Fuzzy matching score v.s. Quality}{48}{paragraph*.57}
-\contentsline {paragraph}{Effect of the \# of Retrieved Translation Pairs}{48}{paragraph*.60}
-\contentsline {paragraph}{Deep vs. Shallow Fusion}{49}{paragraph*.61}
-\contentsline {paragraph}{Examples}{49}{paragraph*.62}
-\contentsline {paragraph}{Efficiency}{49}{paragraph*.64}
-\contentsline {section}{\numberline {4.5}Related Work}{51}{section.4.5}
-\contentsline {section}{\numberline {4.6}Conclusion and Next Chapter}{52}{section.4.6}
-\contentsline {chapter}{\numberline {5}Universal Neural Machine Translation}{54}{chapter.5}
-\contentsline {section}{\numberline {5.1}Overview}{54}{section.5.1}
-\contentsline {section}{\numberline {5.2}Motivation: Low-Resource NMT}{55}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Multi-lingual NMT}{56}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Challenges}{57}{subsection.5.2.2}
-\contentsline {paragraph}{Lexical-level Sharing}{57}{paragraph*.66}
-\contentsline {paragraph}{Sentence-level Sharing}{58}{paragraph*.68}
-\contentsline {section}{\numberline {5.3}Universal Neural Machine Translation}{58}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Universal Lexical Representation (ULR)}{58}{subsection.5.3.1}
-\contentsline {paragraph}{Lexicon Mapping to the Universal Token Space}{59}{paragraph*.70}
-\contentsline {paragraph}{Shared Monolingual Embeddings}{60}{paragraph*.71}
-\contentsline {paragraph}{Interpolated Embeddings}{61}{paragraph*.73}
-\contentsline {paragraph}{An Example}{62}{paragraph*.74}
-\contentsline {subsection}{\numberline {5.3.2}Mixture of Language Experts (MoLE)}{62}{subsection.5.3.2}
-\contentsline {section}{\numberline {5.4}Experiments}{63}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Settings}{63}{subsection.5.4.1}
-\contentsline {paragraph}{Dataset}{63}{paragraph*.75}
-\contentsline {paragraph}{Preprocessing}{64}{paragraph*.78}
-\contentsline {paragraph}{Architecture}{65}{paragraph*.79}
-\contentsline {paragraph}{Learning}{65}{paragraph*.80}
-\contentsline {subsection}{\numberline {5.4.2}Back-Translation}{65}{subsection.5.4.2}
-\contentsline {subsection}{\numberline {5.4.3}Preliminary Experiments}{66}{subsection.5.4.3}
-\contentsline {paragraph}{Training Monolingual Embeddings}{66}{paragraph*.81}
-\contentsline {paragraph}{Pre-projection}{66}{paragraph*.82}
-\contentsline {subsection}{\numberline {5.4.4}Results}{66}{subsection.5.4.4}
-\contentsline {paragraph}{Ablation Study}{68}{paragraph*.86}
-\contentsline {paragraph}{Monolingual Data}{69}{paragraph*.88}
-\contentsline {paragraph}{Corpus Size}{69}{paragraph*.91}
-\contentsline {paragraph}{Unknown Tokens}{69}{paragraph*.92}
-\contentsline {subsection}{\numberline {5.4.5}Qualitative Analysis}{72}{subsection.5.4.5}
-\contentsline {paragraph}{Examples}{72}{paragraph*.93}
-\contentsline {paragraph}{Visualization of MoLE}{72}{paragraph*.94}
-\contentsline {section}{\numberline {5.5}Related Work}{73}{section.5.5}
-\contentsline {section}{\numberline {5.6}Conclusion and Next Chapter}{73}{section.5.6}
-\contentsline {chapter}{\numberline {6}Meta Learning for Neural Machine Translation}{74}{chapter.6}
-\contentsline {section}{\numberline {6.1}Overview}{74}{section.6.1}
-\contentsline {section}{\numberline {6.2}Background: Meta-Learning}{75}{section.6.2}
-\contentsline {section}{\numberline {6.3}Meta-Learning for Extremely Low-Resource Neural Machine Translation}{76}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Learn: language-specific learning}{76}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}MetaLearn}{78}{subsection.6.3.2}
-\contentsline {paragraph}{Meta-Gradient}{79}{paragraph*.96}
-\contentsline {paragraph}{Related Work: Multilingual Transfer Learning}{80}{paragraph*.97}
-\contentsline {paragraph}{Illustration}{80}{paragraph*.98}
-\contentsline {subsection}{\numberline {6.3.3}Unified Lexical Representation}{81}{subsection.6.3.3}
-\contentsline {paragraph}{I/O mismatch across language pairs}{81}{paragraph*.100}
-\contentsline {paragraph}{Universal Lexical Representation (ULR)}{81}{paragraph*.101}
-\contentsline {paragraph}{Learning of ULR}{81}{paragraph*.102}
-\contentsline {section}{\numberline {6.4}Experiments}{82}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}Dataset}{82}{subsection.6.4.1}
-\contentsline {paragraph}{Target Tasks}{82}{paragraph*.103}
-\contentsline {paragraph}{Source Tasks}{83}{paragraph*.105}
-\contentsline {paragraph}{Validation}{83}{paragraph*.106}
-\contentsline {paragraph}{Preprocessing and ULR Initialization}{83}{paragraph*.107}
-\contentsline {subsection}{\numberline {6.4.2}Model and Learning}{83}{subsection.6.4.2}
-\contentsline {paragraph}{Model}{83}{paragraph*.108}
-\contentsline {paragraph}{Learning}{84}{paragraph*.109}
-\contentsline {paragraph}{Fine-tuning Strategies}{84}{paragraph*.110}
-\contentsline {subsection}{\numberline {6.4.3}Results}{84}{subsection.6.4.3}
-\contentsline {paragraph}{vs. Multilingual Transfer Learning}{84}{paragraph*.112}
-\contentsline {paragraph}{Impact of Validation Tasks}{85}{paragraph*.113}
-\contentsline {paragraph}{Training Set Size}{86}{paragraph*.115}
-\contentsline {paragraph}{Impact of Source Tasks}{86}{paragraph*.119}
-\contentsline {paragraph}{Training Curves}{89}{paragraph*.120}
-\contentsline {paragraph}{Sample Translations}{89}{paragraph*.121}
-\contentsline {section}{\numberline {6.5}Conclusion and Next Chapter}{89}{section.6.5}
-\contentsline {part}{III\hspace {1em}Decoding-Efficient Neural Machine Translation}{91}{part.3}
-\contentsline {chapter}{\numberline {7}Trainable Greedy Decoding}{92}{chapter.7}
-\contentsline {section}{\numberline {7.1}Overview}{92}{section.7.1}
-\contentsline {section}{\numberline {7.2}Trainable Greedy Decoding}{94}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}Many Decoding Objectives}{94}{subsection.7.2.1}
-\contentsline {subsection}{\numberline {7.2.2}Trainable Greedy Decoding}{95}{subsection.7.2.2}
-\contentsline {paragraph}{Related Work: Soothsayer prediction function}{96}{paragraph*.123}
-\contentsline {subsection}{\numberline {7.2.3}Learning and Challenges}{96}{subsection.7.2.3}
-\contentsline {section}{\numberline {7.3}Deterministic Policy Gradient with Critic-Aware Actor Learning}{97}{section.7.3}
-\contentsline {subsection}{\numberline {7.3.1}Deterministic Policy Gradient}{97}{subsection.7.3.1}
-\contentsline {subsection}{\numberline {7.3.2}Critic-Aware Actor Learning}{98}{subsection.7.3.2}
-\contentsline {paragraph}{Challenges}{98}{paragraph*.124}
-\contentsline {paragraph}{Critic-Aware Actor Learning}{98}{paragraph*.125}
-\contentsline {paragraph}{Reference Translations for Training the Critic}{100}{paragraph*.126}
-\contentsline {section}{\numberline {7.4}Experiments}{102}{section.7.4}
-\contentsline {subsection}{\numberline {7.4.1}Settings}{102}{subsection.7.4.1}
-\contentsline {paragraph}{Underlying NMT Model}{102}{paragraph*.128}
-\contentsline {paragraph}{Actor $\pi $}{102}{paragraph*.129}
-\contentsline {paragraph}{Critic $R^c$}{102}{paragraph*.130}
-\contentsline {paragraph}{Learning}{103}{paragraph*.131}
-\contentsline {paragraph}{Decoding Objectives}{103}{paragraph*.132}
-\contentsline {paragraph}{Evaluation}{103}{paragraph*.133}
-\contentsline {subsection}{\numberline {7.4.2}Results and Analysis}{104}{subsection.7.4.2}
-\contentsline {paragraph}{Importance of Critic-Aware Actor Learning}{104}{paragraph*.137}
-\contentsline {paragraph}{Examples}{107}{paragraph*.138}
-\contentsline {section}{\numberline {7.5}Conclusion and Next Chapter}{107}{section.7.5}
-\contentsline {chapter}{\numberline {8}Non-Autoregressive Neural Machine Translation}{109}{chapter.8}
-\contentsline {section}{\numberline {8.1}Overview}{109}{section.8.1}
-\contentsline {section}{\numberline {8.2}Non-Autoregressive Decoding}{110}{section.8.2}
-\contentsline {paragraph}{Pros and cons of autoregressive decoding}{110}{paragraph*.140}
-\contentsline {paragraph}{Towards non-autoregressive decoding}{111}{paragraph*.141}
-\contentsline {subsection}{\numberline {8.2.1}The Multimodality Problem}{111}{subsection.8.2.1}
-\contentsline {section}{\numberline {8.3}The Non-Autoregressive Transformer (NAT)}{112}{section.8.3}
-\contentsline {subsection}{\numberline {8.3.1}Encoder Stack}{113}{subsection.8.3.1}
-\contentsline {subsection}{\numberline {8.3.2}Decoder Stack}{113}{subsection.8.3.2}
-\contentsline {paragraph}{Decoder Inputs}{113}{paragraph*.143}
-\contentsline {paragraph}{Non-causal self-attention}{114}{paragraph*.144}
-\contentsline {paragraph}{Positional attention}{114}{paragraph*.145}
-\contentsline {subsection}{\numberline {8.3.3}Modeling Fertility to Tackle the Multimodality Problem}{114}{subsection.8.3.3}
-\contentsline {paragraph}{Latent Variable Model}{114}{paragraph*.146}
-\contentsline {paragraph}{Latent Fertility Model}{115}{paragraph*.147}
-\contentsline {paragraph}{Fertility prediction}{116}{paragraph*.148}
-\contentsline {paragraph}{Benefits of fertility}{116}{paragraph*.149}
-\contentsline {subsection}{\numberline {8.3.4}Translation Predictor and the Decoding Process}{117}{subsection.8.3.4}
-\contentsline {paragraph}{Argmax decoding}{117}{paragraph*.150}
-\contentsline {paragraph}{Average decoding}{117}{paragraph*.151}
-\contentsline {paragraph}{Noisy / Exact parallel decoding (NPD/EPD)}{117}{paragraph*.152}
-\contentsline {section}{\numberline {8.4}Learning}{118}{section.8.4}
-\contentsline {subsection}{\numberline {8.4.1}Sequence-Level Knowledge Distillation}{119}{subsection.8.4.1}
-\contentsline {subsection}{\numberline {8.4.2}Fine-Tuning}{119}{subsection.8.4.2}
-\contentsline {section}{\numberline {8.5}Experiments}{120}{section.8.5}
-\contentsline {subsection}{\numberline {8.5.1}Settings}{120}{subsection.8.5.1}
-\contentsline {paragraph}{Dataset}{120}{paragraph*.153}
-\contentsline {paragraph}{Teacher Model}{121}{paragraph*.155}
-\contentsline {paragraph}{Preparation for knowledge distillation}{121}{paragraph*.157}
-\contentsline {paragraph}{Encoder initialization}{121}{paragraph*.158}
-\contentsline {paragraph}{Fertility supervision during training}{122}{paragraph*.159}
-\contentsline {paragraph}{Hyperparameters}{122}{paragraph*.160}
-\contentsline {paragraph}{Evaluation}{122}{paragraph*.161}
-\contentsline {paragraph}{Implementation}{122}{paragraph*.162}
-\contentsline {subsection}{\numberline {8.5.2}Results}{123}{subsection.8.5.2}
-\contentsline {paragraph}{Ablation Study}{123}{paragraph*.164}
-\contentsline {paragraph}{Examples}{125}{paragraph*.170}
-\contentsline {subsection}{\numberline {8.5.3}Analysis and Schematic}{127}{subsection.8.5.3}
-\contentsline {section}{\numberline {8.6}Conclusion and Next Chapter}{127}{section.8.6}
-\contentsline {chapter}{\numberline {9}Simultaneous Neural Machine Translation}{129}{chapter.9}
-\contentsline {section}{\numberline {9.1}Overview}{129}{section.9.1}
-\contentsline {section}{\numberline {9.2}Problem Definition: Simultaneous Translation}{131}{section.9.2}
-\contentsline {section}{\numberline {9.3}Simultaneous Neural Machine Translation}{132}{section.9.3}
-\contentsline {subsection}{\numberline {9.3.1}Environment}{132}{subsection.9.3.1}
-\contentsline {paragraph}{Encoder:\nobreakspace {}\textsc {read}}{132}{paragraph*.174}
-\contentsline {paragraph}{Decoder:\nobreakspace {}\textsc {write}}{133}{paragraph*.175}
-\contentsline {subsection}{\numberline {9.3.2}Agent}{133}{subsection.9.3.2}
-\contentsline {paragraph}{Observation}{133}{paragraph*.176}
-\contentsline {paragraph}{Action}{134}{paragraph*.177}
-\contentsline {paragraph}{Policy}{134}{paragraph*.178}
-\contentsline {section}{\numberline {9.4}Learning}{135}{section.9.4}
-\contentsline {subsection}{\numberline {9.4.1}Pre-training}{135}{subsection.9.4.1}
-\contentsline {subsection}{\numberline {9.4.2}Reward Function}{135}{subsection.9.4.2}
-\contentsline {paragraph}{Quality}{135}{paragraph*.179}
-\contentsline {paragraph}{Delay}{136}{paragraph*.180}
-\contentsline {paragraph}{Trade-off between quality and delay}{137}{paragraph*.181}
-\contentsline {subsection}{\numberline {9.4.3}Reinforcement Learning}{137}{subsection.9.4.3}
-\contentsline {paragraph}{Policy Gradient}{137}{paragraph*.182}
-\contentsline {paragraph}{Variance Reduction}{138}{paragraph*.183}
-\contentsline {section}{\numberline {9.5}Simultaneous Beam Search}{139}{section.9.5}
-\contentsline {section}{\numberline {9.6}Experiments}{140}{section.9.6}
-\contentsline {subsection}{\numberline {9.6.1}Settings}{140}{subsection.9.6.1}
-\contentsline {paragraph}{Dataset}{140}{paragraph*.185}
-\contentsline {paragraph}{Environment \& Agent Settings}{140}{paragraph*.186}
-\contentsline {paragraph}{Baselines}{140}{paragraph*.187}
-\contentsline {subsection}{\numberline {9.6.2}Quantitative Analysis}{141}{subsection.9.6.2}
-\contentsline {paragraph}{Learning Curves}{141}{paragraph*.191}
-\contentsline {paragraph}{Quality v.s. Delay}{141}{paragraph*.192}
-\contentsline {paragraph}{v.s. Baselines}{144}{paragraph*.193}
-\contentsline {paragraph}{w/o Beam-Search}{145}{paragraph*.194}
-\contentsline {subsection}{\numberline {9.6.3}Qualitative Analysis}{145}{subsection.9.6.3}
-\contentsline {paragraph}{EN$\rightarrow $RU}{145}{paragraph*.197}
-\contentsline {paragraph}{DE$\rightarrow $EN}{145}{paragraph*.198}
-\contentsline {section}{\numberline {9.7}Related Work}{148}{section.9.7}
-\contentsline {section}{\numberline {9.8}Conclusion}{149}{section.9.8}
-\contentsline {part}{IV\hspace {1em}Conclusion}{150}{part.4}
-\contentsline {chapter}{\numberline {10}Conclusion}{151}{chapter.10}
-\contentsline {section}{\numberline {10.1}Future Work}{152}{section.10.1}
-\contentsline {paragraph}{Same quality, better efficiency }{152}{paragraph*.199}
-\contentsline {paragraph}{Light-weight NMT}{153}{paragraph*.200}
-\contentsline {paragraph}{Incorporating Linguistic Information}{153}{paragraph*.201}
-\contentsline {chapter}{List of Publications}{168}{chapter*.202}
+\contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}
+\contentsline {section}{\numberline {1.1}A Brief Review of Machine Translation (MT)}{3}{section.1.1}
+\contentsline {paragraph}{Rule-based MT}{3}{paragraph*.9}
+\contentsline {paragraph}{Example-based MT}{4}{paragraph*.10}
+\contentsline {paragraph}{Statistical MT}{4}{paragraph*.11}
+\contentsline {paragraph}{Neural MT}{5}{paragraph*.12}
+\contentsline {section}{\numberline {1.2}Towards Efficient Neural Machine Translation}{5}{section.1.2}
+\contentsline {section}{\numberline {1.3}Contributions}{7}{section.1.3}
+\contentsline {section}{\numberline {1.4}Thesis Outline}{8}{section.1.4}
+\contentsline {section}{\numberline {1.5}Open-source Implementation}{10}{section.1.5}
+\contentsline {chapter}{\numberline {2}Background}{11}{chapter.2}
+\contentsline {section}{\numberline {2.1}Modeling}{11}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Neural Language Modeling}{11}{subsection.2.1.1}
+\contentsline {paragraph}{Autoregressive Language Model}{12}{paragraph*.15}
+\contentsline {paragraph}{Parameterization}{12}{paragraph*.16}
+\contentsline {subsection}{\numberline {2.1.2}Sequence-to-Sequence Learning}{13}{subsection.2.1.2}
+\contentsline {paragraph}{Neural Machine Translation as {{\textsc {Seq2Seq}}}\xspace Learning}{13}{paragraph*.17}
+\contentsline {subsection}{\numberline {2.1.3}Attention Mechanism}{14}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.4}Neural Machine Translation without RNNs}{15}{subsection.2.1.4}
+\contentsline {section}{\numberline {2.2}Training}{15}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Data}{15}{subsection.2.2.1}
+\contentsline {paragraph}{Parallel corpora}{15}{paragraph*.20}
+\contentsline {paragraph}{Vocabulary and Sub-word level translation}{16}{paragraph*.21}
+\contentsline {subsection}{\numberline {2.2.2}Maximum Likelihood Learning}{17}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}Decoding}{17}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Greedy Decoding}{18}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Beam Search}{18}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Noisy Parallel Decoding}{19}{subsection.2.3.3}
+\contentsline {part}{II\hspace {1em}Data-Efficient Neural Machine Translation}{21}{part.2}
+\contentsline {chapter}{\numberline {3}Copying Mechanism}{23}{chapter.3}
+\contentsline {section}{\numberline {3.1}Overview}{23}{section.3.1}
+\contentsline {section}{\numberline {3.2}Model}{24}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Model Overview}{24}{subsection.3.2.1}
+\contentsline {paragraph}{Encoder:}{25}{paragraph*.22}
+\contentsline {paragraph}{Decoder:}{25}{paragraph*.23}
+\contentsline {subsection}{\numberline {3.2.2}Prediction with Copying and Generation}{25}{subsection.3.2.2}
+\contentsline {paragraph}{Generate-Mode:}{27}{paragraph*.25}
+\contentsline {paragraph}{Copy-Mode:}{27}{paragraph*.26}
+\contentsline {subsection}{\numberline {3.2.3}State Update}{28}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Hybrid Addressing of Short-Term Memory}{29}{subsection.3.2.4}
+\contentsline {paragraph}{Location-based Addressing}{29}{paragraph*.28}
+\contentsline {paragraph}{Handling Out-of-Vocabulary Words}{30}{paragraph*.29}
+\contentsline {subsection}{\numberline {3.2.5}Learning}{30}{subsection.3.2.5}
+\contentsline {section}{\numberline {3.3}Experiments}{30}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Synthetic Dataset}{31}{subsection.3.3.1}
+\contentsline {paragraph}{Experimental Setting}{31}{paragraph*.31}
+\contentsline {subsection}{\numberline {3.3.2}Text Summarization}{32}{subsection.3.3.2}
+\contentsline {paragraph}{Dataset}{33}{paragraph*.34}
+\contentsline {paragraph}{Experimental Setting}{33}{paragraph*.36}
+\contentsline {paragraph}{Case Study}{34}{paragraph*.39}
+\contentsline {subsection}{\numberline {3.3.3}Single-turn Dialogue}{36}{subsection.3.3.3}
+\contentsline {paragraph}{Dataset}{36}{paragraph*.40}
+\contentsline {paragraph}{Experimental Setting}{36}{paragraph*.41}
+\contentsline {paragraph}{Case Study}{37}{paragraph*.44}
+\contentsline {section}{\numberline {3.4}Related Work}{38}{section.3.4}
+\contentsline {section}{\numberline {3.5}Conclusion and Next Chapter}{39}{section.3.5}
+\contentsline {chapter}{\numberline {4}Non-Parametric Neural Machine Translation}{41}{chapter.4}
+\contentsline {section}{\numberline {4.1}Overview}{41}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Background: Translation Memory}{43}{subsection.4.1.1}
+\contentsline {section}{\numberline {4.2}Model}{44}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Retrieval Stage}{45}{subsection.4.2.1}
+\contentsline {paragraph}{Similarity score function $\ensuremath {\mathcal {S}}$}{45}{paragraph*.47}
+\contentsline {paragraph}{Off-the-shelf Search Engine}{45}{paragraph*.48}
+\contentsline {paragraph}{Final selection process}{46}{paragraph*.49}
+\contentsline {subsection}{\numberline {4.2.2}Translation Stage}{46}{subsection.4.2.2}
+\contentsline {paragraph}{Key-Value Memory}{47}{paragraph*.50}
+\contentsline {paragraph}{Matching and Retrieval}{47}{paragraph*.51}
+\contentsline {paragraph}{Incorporation}{48}{paragraph*.52}
+\contentsline {paragraph}{Coverage}{48}{paragraph*.53}
+\contentsline {subsection}{\numberline {4.2.3}Learning and Inference}{50}{subsection.4.2.3}
+\contentsline {section}{\numberline {4.3}Experiments}{50}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Settings}{50}{subsection.4.3.1}
+\contentsline {paragraph}{Data}{50}{paragraph*.54}
+\contentsline {paragraph}{Retrieval Stage}{51}{paragraph*.56}
+\contentsline {paragraph}{Translation Stage}{51}{paragraph*.57}
+\contentsline {subsection}{\numberline {4.3.2}Result and Analysis}{52}{subsection.4.3.2}
+\contentsline {paragraph}{Fuzzy matching score v.s. Quality}{53}{paragraph*.59}
+\contentsline {paragraph}{Effect of the \# of Retrieved Translation Pairs}{53}{paragraph*.62}
+\contentsline {paragraph}{Deep vs. Shallow Fusion}{54}{paragraph*.63}
+\contentsline {paragraph}{Examples}{54}{paragraph*.64}
+\contentsline {paragraph}{Efficiency}{54}{paragraph*.66}
+\contentsline {section}{\numberline {4.4}Related Work}{56}{section.4.4}
+\contentsline {section}{\numberline {4.5}Conclusion and Next Chapter}{57}{section.4.5}
+\contentsline {chapter}{\numberline {5}Universal Neural Machine Translation}{59}{chapter.5}
+\contentsline {section}{\numberline {5.1}Overview}{59}{section.5.1}
+\contentsline {section}{\numberline {5.2}Background}{60}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Multi-lingual NMT}{61}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Challenges}{62}{subsection.5.2.2}
+\contentsline {paragraph}{Lexical-level Sharing}{62}{paragraph*.68}
+\contentsline {paragraph}{Sentence-level Sharing}{63}{paragraph*.70}
+\contentsline {section}{\numberline {5.3}Model}{63}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Universal Lexical Representation (ULR)}{63}{subsection.5.3.1}
+\contentsline {paragraph}{Lexicon Mapping to the Universal Token Space}{64}{paragraph*.72}
+\contentsline {paragraph}{Shared Monolingual Embeddings}{65}{paragraph*.73}
+\contentsline {paragraph}{Interpolated Embeddings}{66}{paragraph*.75}
+\contentsline {paragraph}{An Example}{67}{paragraph*.76}
+\contentsline {subsection}{\numberline {5.3.2}Mixture of Language Experts (MoLE)}{67}{subsection.5.3.2}
+\contentsline {section}{\numberline {5.4}Experiments}{68}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Settings}{68}{subsection.5.4.1}
+\contentsline {paragraph}{Dataset}{68}{paragraph*.77}
+\contentsline {paragraph}{Preprocessing}{69}{paragraph*.80}
+\contentsline {paragraph}{Architecture}{70}{paragraph*.81}
+\contentsline {paragraph}{Learning}{70}{paragraph*.82}
+\contentsline {subsection}{\numberline {5.4.2}Back-Translation}{70}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.3}Preliminary Experiments}{71}{subsection.5.4.3}
+\contentsline {paragraph}{Training Monolingual Embeddings}{71}{paragraph*.83}
+\contentsline {paragraph}{Pre-projection}{71}{paragraph*.84}
+\contentsline {subsection}{\numberline {5.4.4}Results}{71}{subsection.5.4.4}
+\contentsline {paragraph}{Ablation Study}{73}{paragraph*.88}
+\contentsline {paragraph}{Monolingual Data}{74}{paragraph*.90}
+\contentsline {paragraph}{Corpus Size}{74}{paragraph*.93}
+\contentsline {paragraph}{Unknown Tokens}{74}{paragraph*.94}
+\contentsline {subsection}{\numberline {5.4.5}Qualitative Analysis}{77}{subsection.5.4.5}
+\contentsline {paragraph}{Examples}{77}{paragraph*.95}
+\contentsline {paragraph}{Visualization of MoLE}{77}{paragraph*.96}
+\contentsline {section}{\numberline {5.5}Related Work}{78}{section.5.5}
+\contentsline {section}{\numberline {5.6}Conclusion and Next Chapter}{78}{section.5.6}
+\contentsline {chapter}{\numberline {6}Meta Learning for Neural Machine Translation}{79}{chapter.6}
+\contentsline {section}{\numberline {6.1}Overview}{79}{section.6.1}
+\contentsline {section}{\numberline {6.2}Background}{80}{section.6.2}
+\contentsline {section}{\numberline {6.3}Model}{81}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Learn: language-specific learning}{81}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}MetaLearn}{83}{subsection.6.3.2}
+\contentsline {paragraph}{Meta-Gradient}{84}{paragraph*.98}
+\contentsline {paragraph}{Related Work: Multilingual Transfer Learning}{85}{paragraph*.99}
+\contentsline {paragraph}{Illustration}{85}{paragraph*.100}
+\contentsline {subsection}{\numberline {6.3.3}Unified Lexical Representation}{86}{subsection.6.3.3}
+\contentsline {paragraph}{I/O mismatch across language pairs}{86}{paragraph*.102}
+\contentsline {paragraph}{Universal Lexical Representation (ULR)}{86}{paragraph*.103}
+\contentsline {paragraph}{Learning of ULR}{86}{paragraph*.104}
+\contentsline {section}{\numberline {6.4}Experiments}{87}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Dataset}{87}{subsection.6.4.1}
+\contentsline {paragraph}{Target Tasks}{87}{paragraph*.105}
+\contentsline {paragraph}{Source Tasks}{88}{paragraph*.107}
+\contentsline {paragraph}{Validation}{88}{paragraph*.108}
+\contentsline {paragraph}{Preprocessing and ULR Initialization}{88}{paragraph*.109}
+\contentsline {subsection}{\numberline {6.4.2}Model and Learning}{88}{subsection.6.4.2}
+\contentsline {paragraph}{Model}{88}{paragraph*.110}
+\contentsline {paragraph}{Learning}{89}{paragraph*.111}
+\contentsline {paragraph}{Fine-tuning Strategies}{89}{paragraph*.112}
+\contentsline {subsection}{\numberline {6.4.3}Results}{89}{subsection.6.4.3}
+\contentsline {paragraph}{vs. Multilingual Transfer Learning}{89}{paragraph*.114}
+\contentsline {paragraph}{Impact of Validation Tasks}{90}{paragraph*.115}
+\contentsline {paragraph}{Training Set Size}{91}{paragraph*.117}
+\contentsline {paragraph}{Impact of Source Tasks}{91}{paragraph*.121}
+\contentsline {paragraph}{Training Curves}{94}{paragraph*.122}
+\contentsline {paragraph}{Sample Translations}{94}{paragraph*.123}
+\contentsline {section}{\numberline {6.5}Conclusion and Next Chapter}{94}{section.6.5}
+\contentsline {part}{III\hspace {1em}Decoding-Efficient Neural Machine Translation}{97}{part.3}
+\contentsline {chapter}{\numberline {7}Trainable Greedy Decoding}{99}{chapter.7}
+\contentsline {section}{\numberline {7.1}Overview}{99}{section.7.1}
+\contentsline {section}{\numberline {7.2}Model}{101}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Many Decoding Objectives}{101}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}Trainable Greedy Decoding}{102}{subsection.7.2.2}
+\contentsline {paragraph}{Related Work: Soothsayer prediction function}{103}{paragraph*.125}
+\contentsline {subsection}{\numberline {7.2.3}Learning and Challenges}{103}{subsection.7.2.3}
+\contentsline {section}{\numberline {7.3}Learning}{104}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Deterministic Policy Gradient}{104}{subsection.7.3.1}
+\contentsline {subsection}{\numberline {7.3.2}Critic-Aware Actor Learning}{105}{subsection.7.3.2}
+\contentsline {paragraph}{Challenges}{105}{paragraph*.126}
+\contentsline {paragraph}{Critic-Aware Actor Learning}{105}{paragraph*.127}
+\contentsline {paragraph}{Reference Translations for Training the Critic}{107}{paragraph*.128}
+\contentsline {section}{\numberline {7.4}Experiments}{109}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}Settings}{109}{subsection.7.4.1}
+\contentsline {paragraph}{Underlying NMT Model}{109}{paragraph*.130}
+\contentsline {paragraph}{Actor $\pi $}{109}{paragraph*.131}
+\contentsline {paragraph}{Critic $R^c$}{109}{paragraph*.132}
+\contentsline {paragraph}{Learning}{110}{paragraph*.133}
+\contentsline {paragraph}{Decoding Objectives}{110}{paragraph*.134}
+\contentsline {paragraph}{Evaluation}{110}{paragraph*.135}
+\contentsline {subsection}{\numberline {7.4.2}Results and Analysis}{111}{subsection.7.4.2}
+\contentsline {paragraph}{Importance of Critic-Aware Actor Learning}{111}{paragraph*.139}
+\contentsline {paragraph}{Examples}{114}{paragraph*.140}
+\contentsline {section}{\numberline {7.5}Conclusion and Next Chapter}{114}{section.7.5}
+\contentsline {chapter}{\numberline {8}Non-Autoregressive Neural Machine Translation}{117}{chapter.8}
+\contentsline {section}{\numberline {8.1}Overview}{117}{section.8.1}
+\contentsline {section}{\numberline {8.2}Background}{118}{section.8.2}
+\contentsline {paragraph}{Pros and cons of autoregressive decoding}{118}{paragraph*.142}
+\contentsline {paragraph}{Towards non-autoregressive decoding}{119}{paragraph*.143}
+\contentsline {subsection}{\numberline {8.2.1}The Multimodality Problem}{119}{subsection.8.2.1}
+\contentsline {section}{\numberline {8.3}Model}{120}{section.8.3}
+\contentsline {subsection}{\numberline {8.3.1}Encoder Stack}{121}{subsection.8.3.1}
+\contentsline {subsection}{\numberline {8.3.2}Decoder Stack}{121}{subsection.8.3.2}
+\contentsline {paragraph}{Decoder Inputs}{121}{paragraph*.145}
+\contentsline {paragraph}{Non-causal self-attention}{122}{paragraph*.146}
+\contentsline {paragraph}{Positional attention}{122}{paragraph*.147}
+\contentsline {subsection}{\numberline {8.3.3}Modeling Fertility to Tackle the Multimodality Problem}{122}{subsection.8.3.3}
+\contentsline {paragraph}{Latent Variable Model}{122}{paragraph*.148}
+\contentsline {paragraph}{Latent Fertility Model}{123}{paragraph*.149}
+\contentsline {paragraph}{Fertility prediction}{124}{paragraph*.150}
+\contentsline {paragraph}{Benefits of fertility}{124}{paragraph*.151}
+\contentsline {subsection}{\numberline {8.3.4}Translation Predictor and the Decoding Process}{125}{subsection.8.3.4}
+\contentsline {paragraph}{Argmax decoding}{125}{paragraph*.152}
+\contentsline {paragraph}{Average decoding}{125}{paragraph*.153}
+\contentsline {paragraph}{Noisy / Exact parallel decoding (NPD/EPD)}{125}{paragraph*.154}
+\contentsline {section}{\numberline {8.4}Learning}{126}{section.8.4}
+\contentsline {subsection}{\numberline {8.4.1}Sequence-Level Knowledge Distillation}{127}{subsection.8.4.1}
+\contentsline {subsection}{\numberline {8.4.2}Fine-Tuning}{127}{subsection.8.4.2}
+\contentsline {section}{\numberline {8.5}Experiments}{128}{section.8.5}
+\contentsline {subsection}{\numberline {8.5.1}Settings}{128}{subsection.8.5.1}
+\contentsline {paragraph}{Dataset}{128}{paragraph*.155}
+\contentsline {paragraph}{Teacher Model}{129}{paragraph*.157}
+\contentsline {paragraph}{Preparation for knowledge distillation}{129}{paragraph*.159}
+\contentsline {paragraph}{Encoder initialization}{129}{paragraph*.160}
+\contentsline {paragraph}{Fertility supervision during training}{130}{paragraph*.161}
+\contentsline {paragraph}{Hyperparameters}{130}{paragraph*.162}
+\contentsline {paragraph}{Evaluation}{130}{paragraph*.163}
+\contentsline {paragraph}{Implementation}{130}{paragraph*.164}
+\contentsline {subsection}{\numberline {8.5.2}Results}{131}{subsection.8.5.2}
+\contentsline {paragraph}{Ablation Study}{131}{paragraph*.166}
+\contentsline {paragraph}{Examples}{133}{paragraph*.172}
+\contentsline {subsection}{\numberline {8.5.3}Analysis and Schematic}{135}{subsection.8.5.3}
+\contentsline {section}{\numberline {8.6}Conclusion and Next Chapter}{135}{section.8.6}
+\contentsline {chapter}{\numberline {9}Simultaneous Neural Machine Translation}{137}{chapter.9}
+\contentsline {section}{\numberline {9.1}Overview}{137}{section.9.1}
+\contentsline {section}{\numberline {9.2}Background}{139}{section.9.2}
+\contentsline {section}{\numberline {9.3}Model}{140}{section.9.3}
+\contentsline {subsection}{\numberline {9.3.1}Environment}{140}{subsection.9.3.1}
+\contentsline {paragraph}{Encoder:\nobreakspace {}\textsc {read}}{140}{paragraph*.176}
+\contentsline {paragraph}{Decoder:\nobreakspace {}\textsc {write}}{141}{paragraph*.177}
+\contentsline {subsection}{\numberline {9.3.2}Agent}{141}{subsection.9.3.2}
+\contentsline {paragraph}{Observation}{141}{paragraph*.178}
+\contentsline {paragraph}{Action}{142}{paragraph*.179}
+\contentsline {paragraph}{Policy}{142}{paragraph*.180}
+\contentsline {subsection}{\numberline {9.3.3}Simultaneous Beam Search}{143}{subsection.9.3.3}
+\contentsline {section}{\numberline {9.4}Learning}{144}{section.9.4}
+\contentsline {subsection}{\numberline {9.4.1}Pre-training}{144}{subsection.9.4.1}
+\contentsline {subsection}{\numberline {9.4.2}Reward Function}{144}{subsection.9.4.2}
+\contentsline {paragraph}{Quality}{144}{paragraph*.182}
+\contentsline {paragraph}{Delay}{145}{paragraph*.183}
+\contentsline {paragraph}{Trade-off between quality and delay}{146}{paragraph*.184}
+\contentsline {subsection}{\numberline {9.4.3}Reinforcement Learning}{146}{subsection.9.4.3}
+\contentsline {paragraph}{Policy Gradient}{146}{paragraph*.185}
+\contentsline {paragraph}{Variance Reduction}{147}{paragraph*.186}
+\contentsline {section}{\numberline {9.5}Experiments}{148}{section.9.5}
+\contentsline {subsection}{\numberline {9.5.1}Settings}{148}{subsection.9.5.1}
+\contentsline {paragraph}{Dataset}{148}{paragraph*.187}
+\contentsline {paragraph}{Environment \& Agent Settings}{148}{paragraph*.188}
+\contentsline {paragraph}{Baselines}{148}{paragraph*.189}
+\contentsline {subsection}{\numberline {9.5.2}Quantitative Analysis}{149}{subsection.9.5.2}
+\contentsline {paragraph}{Learning Curves}{149}{paragraph*.193}
+\contentsline {paragraph}{Quality v.s. Delay}{149}{paragraph*.194}
+\contentsline {paragraph}{v.s. Baselines}{152}{paragraph*.195}
+\contentsline {paragraph}{w/o Beam-Search}{153}{paragraph*.196}
+\contentsline {subsection}{\numberline {9.5.3}Qualitative Analysis}{153}{subsection.9.5.3}
+\contentsline {paragraph}{EN$\rightarrow $RU}{153}{paragraph*.199}
+\contentsline {paragraph}{DE$\rightarrow $EN}{153}{paragraph*.200}
+\contentsline {section}{\numberline {9.6}Related Work}{156}{section.9.6}
+\contentsline {section}{\numberline {9.7}Conclusion}{157}{section.9.7}
+\contentsline {part}{IV\hspace {1em}Conclusion}{159}{part.4}
+\contentsline {chapter}{\numberline {10}Conclusion}{161}{chapter.10}
+\contentsline {section}{\numberline {10.1}Future Work}{162}{section.10.1}
+\contentsline {paragraph}{Same quality, better efficiency }{162}{paragraph*.201}
+\contentsline {paragraph}{Light-weight NMT}{163}{paragraph*.202}
+\contentsline {paragraph}{Incorporating Linguistic Information}{163}{paragraph*.203}
+\contentsline {chapter}{List of Publications}{179}{chapter*.204}

@@ -94,7 +94,7 @@ We extensively evaluate the proposed trainable greedy decoding on four language 
 
 % \paragraph{\textbf{Metric Mismatch}} The target of maximum likelihood mismatches the final sequence-level evaluation metrics, for instance BLEU score in machine translation. That is to say, even if we can find a good decoding trajectory based on the trained conditional language model $\theta$, it still does not guarantee to obtain the best BLEU score in the end. 
 
-\section{Trainable Greedy Decoding}
+\section{Model}
 
 \subsection{Many Decoding Objectives}
 Although we have described decoding in neural machine translation as a maximum-a-posteriori estimation in $\log p(Y|X)$, this is not necessarily the only %decoding objective 
@@ -155,7 +155,7 @@ There are two major challenges in learning an agent with such an objective. Firs
 
 
 
-\section{Deterministic Policy Gradient  with Critic-Aware Actor Learning}
+\section{Learning}
 
 \subsection{Deterministic Policy Gradient}
 

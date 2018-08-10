@@ -7,7 +7,7 @@ We evaluate the proposed approach on 3 different  languages with tiny or even ze
 We show that for the simulated ``zero-resource" settings, our model can consistently outperform a strong multi-lingual NMT baseline with a tiny amount of parallel sentence pairs.
 
 
-\section{Motivation: Low-Resource NMT}
+\section{Background}
 %\subsection {Multi-Lingual NMT}
 %Neural Machine Translation
 %(NMT)~\cite{bahdanau2014neural,sutskever2014sequence}  is based on Sequence-to-Sequence encoder-decoder model along with an attention mechanism to enable better  handling of  longer sentences \cite{bahdanau2014neural}. Attentional sequence-to-sequence models are modeling the log conditional probability of the translation $Y$ given an input sequence $X$.  
@@ -107,7 +107,7 @@ However, for an arbitrary low-resource language we cannot assume significant ove
 % \item utilizing the monolingual data; \vspace{-3pt}
 % \end{itemize}
 
-\section{Universal Neural Machine Translation}
+\section{Model}
 We propose a Universal NMT system that is focused on the scenario where minimal parallel sentences are available. 
 %We propose a novel approach that enable translation using very a very small amount of parallel data, including ``Zero-Resource'' translation.
 As shown in Fig.~\ref{cp5.fig.model}, we introduce two components to extend the conventional multi-lingual NMT system \cite{johnson2016google}: Universal Lexical Representation (ULR) and Mixture of Language Experts (MoLE) to enable both word-level and sentence-level sharing, respectively.

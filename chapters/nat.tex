@@ -41,7 +41,7 @@ We demonstrate substantial cumulative improvements associated with each of the t
 \end{figure}
 
 
-\section{Non-Autoregressive Decoding}
+\section{Background}
 \paragraph{Pros and cons of autoregressive decoding}
 The autoregressive factorization (i.e. Eq.~\eqref{cp2.eq.auto_sts}, see details in Chapter~\ref{background}) used by conventional NMT models has several benefits. It corresponds to the word-by-word nature of human language production and effectively captures the distribution of real translations. Autoregressive models achieve state-of-the-art performance on large-scale corpora and are easy to train, while beam search provides an effective local search method for finding approximately-optimal output translations.
 
@@ -67,7 +67,7 @@ In particular, consider an English source sentence like ``Thank you.'' This can 
 The conditional independence assumption prevents a model from properly capturing the highly multimodal distribution of target translations.
 We call this the ``multimodality problem'' and introduce both a modified model and new training techniques to tackle this issue.
 
-\section{The Non-Autoregressive Transformer (NAT)}
+\section{Model}
 \label{cp8.sec.mainModelSection}
 
 In this section, we introduce a novel NMT model---the Non-Autoregressive Transformer (\model)---that can produce an entire output translation in parallel.
